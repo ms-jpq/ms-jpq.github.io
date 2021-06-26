@@ -1,0 +1,402 @@
+<!doctype html>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="So you can run KDE inside a browser" />
+    <title>Creative Portfolio</title>
+    <link rel="stylesheet" href="/pages_repo.css" />
+
+    <script type="module" src="/layout.js"></script>
+  </head>
+
+  <body class="m-0 flex min-h-screen w-screen p-0">
+    <input
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+      aria-hidden="true"
+    />
+    <div
+      class="group/layout grid w-full content-start scroll-smooth bg-gray-50 break-words text-neutral-800 selection:bg-fuchsia-200"
+    >
+      <header
+        class="mb-4 grid grid-flow-col justify-between gap-x-2 px-8 pt-4 md:mb-0"
+      >
+        <label
+          class="big-button inline-block font-medium md:hidden"
+          for="layout-checkbox"
+        >
+          <i class="fas fa-bars"></i>
+          Menu
+        </label>
+        <div class="prose text-right text-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
+        </div>
+      </header>
+
+      <aside
+        class="hidden grid-flow-row grid-cols-1 content-start gap-4 px-8 group-[input:checked+_&]/layout:grid md:grid"
+      >
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square h-full w-full rounded-full object-cover px-3 py-3"
+            src="https://raw.githubusercontent.com/ms-jpq/simple-markdown-showcase/show/assets/images/face.png"
+          />
+        </section>
+
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
+
+        <section>
+          <nav>
+            <ul>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a class="no-underline hover:text-pink-400" href="/index.html">
+                  home
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a
+                  class="no-underline hover:text-pink-400"
+                  href="/about_me.html"
+                >
+                  about
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a
+                  class="no-underline hover:text-pink-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="flex flex-wrap gap-2">
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
+
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </section>
+      </aside>
+
+      <div
+        class="w-full bg-neutral-100 px-8 pt-2 group-[input:checked+_&]/layout:hidden md:block! md:pt-8"
+      >
+        <main class="grid grid-flow-row grid-cols-1 justify-items-center">
+          <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+            <section
+              class="grid grid-flow-col items-center justify-end gap-x-4"
+            >
+              <span class="github-stars">
+                <i class="fas fa-star"></i>
+                120
+              </span>
+
+              <span class="github-forks">
+                <i class="fas fa-code-branch"></i>
+                20
+              </span>
+
+              <a
+                class="big-button invis-link border-dashed"
+                href="https://github.com/ms-jpq/kde-in-docker"
+              >
+                View on Github
+                <i class="fab fa-github"></i>
+              </a>
+            </section>
+
+            <section class="self-center">
+              <article class="markdown">
+                <h1 id="kid-kde-in-docker">
+                  <a href="https://ms-jpq.github.io/kde-in-docker/"
+                    >KID - KDE in Docker</a
+                  >
+                </h1>
+                <p>Docker + VNC + noVNC web UI</p>
+                <p><strong>WHY?</strong></p>
+                <p><strong>So you can run KDE inside a browser</strong></p>
+                <h2 id="usage">Usage</h2>
+                <h3 id="common-environmental-variables">
+                  Common Environmental Variables
+                </h3>
+                <h4 id="rootless">Rootless</h4>
+                <p>These images by default runs as root.</p>
+                <p>
+                  To change that, set these two variables to a non Zero value.
+                </p>
+                <ul>
+                  <li><code>-e PGID=0</code></li>
+                  <li><code>-e PUID=0</code></li>
+                </ul>
+                <h4 id="vnc">VNC</h4>
+                <ul>
+                  <li><code>-e SCR_WIDTH=1600</code></li>
+                  <li><code>-e SCR_HEIGHT=900</code></li>
+                </ul>
+                <h4 id="novnc-ui">noVNC UI</h4>
+                <ul>
+                  <li><code>-e PATH_PREFIX=/</code></li>
+                  <li>
+                    <code>-e VNC_RESIZE=scale|remote|off</code> remote = rescale
+                    remote desktop, scale = stretch remote desktop
+                  </li>
+                  <li>
+                    <code>-e RECON_DELAY=250</code> reconnection delay (ms)
+                  </li>
+                  <li><code>-e PAGE_TITLE=🐳</code></li>
+                </ul>
+                <h4 id="misc">Misc</h4>
+                <p>This is your password even under non-root user</p>
+                <ul>
+                  <li><code>-e ROOT_PASSWORD=password</code></li>
+                </ul>
+                <h3 id="common-ports">Common Ports</h3>
+                <ul>
+                  <li>
+                    <p><code>-p 80:8080</code> noVNC web UI</p>
+                  </li>
+                  <li>
+                    <p><code>-p 5900:5900</code> VNC</p>
+                  </li>
+                </ul>
+                <h3 id="common-volumes">Common Volumes</h3>
+                <ul>
+                  <li><code>-v ./appconfig:/config</code></li>
+                </ul>
+                <h3 id="special-thanks">Special Thanks</h3>
+                <p>
+                  <a href="https://github.com/McGriddle">McGriddle</a> for
+                  helping with rootless!
+                </p>
+                <h2 id="images">Images</h2>
+                <h3 id="firefox">
+                  <a href="https://hub.docker.com/r/msjpq/firefox-vnc/"
+                    >Firefox</a
+                  >
+                </h3>
+                <p>
+                  <a href="https://hub.docker.com/r/msjpq/firefox-vnc/"
+                    ><img
+                      alt="Docker Pulls"
+                      src="https://img.shields.io/docker/pulls/msjpq/firefox-vnc.svg"
+                  /></a>
+                </p>
+                <p>🦊</p>
+                <p>
+                  <strong>RUN</strong> -
+                  <code
+                    >docker run -p 8080:8080 -p 5900:5900
+                    msjpq/firefox-vnc</code
+                  >
+                </p>
+                <p>
+                  <img
+                    alt="firefox preview.png"
+                    src="https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/firefox.png"
+                  />
+                </p>
+                <hr />
+                <h3 id="adobe-acrobat">
+                  <a href="https://hub.docker.com/r/msjpq/adobe-acrobat-vnc/"
+                    >Adobe Acrobat</a
+                  >
+                </h3>
+                <p>
+                  <a href="https://hub.docker.com/r/msjpq/adobe-acrobat-vnc/"
+                    ><img
+                      alt="Docker Pulls"
+                      src="https://img.shields.io/docker/pulls/msjpq/adobe-acrobat-vnc.svg"
+                  /></a>
+                </p>
+                <p>Adobe PDF Reader <code>9.5.5</code></p>
+                <p>(first launch slow)</p>
+                <p>
+                  <strong>RUN</strong> -
+                  <code
+                    >docker run -p 8080:8080 -p 5900:5900
+                    msjpq/adobe-acrobat-vnc</code
+                  >
+                </p>
+                <p>
+                  <img
+                    alt="acrobat preview.png"
+                    src="https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/acrobat.png"
+                  />
+                </p>
+                <hr />
+                <h3 id="motrix">
+                  <a href="https://hub.docker.com/r/msjpq/motrix-vnc/"
+                    >Motrix</a
+                  >
+                </h3>
+                <p>
+                  <a href="https://hub.docker.com/r/msjpq/motrix-vnc/"
+                    ><img
+                      alt="Docker Pulls"
+                      src="https://img.shields.io/docker/pulls/msjpq/motrix-vnc.svg"
+                  /></a>
+                </p>
+                <p>
+                  Really cool download client.
+                  <a href="https://motrix.app/">https://motrix.app/</a>
+                </p>
+                <p>
+                  <strong><code>thunder://</code></strong> !! 迅雷
+                </p>
+                <p>
+                  <strong>RUN</strong> -
+                  <code
+                    >docker run -p 8080:8080 -p 5900:5900 msjpq/motrix-vnc</code
+                  >
+                </p>
+                <p>
+                  <img
+                    alt="motrix preview.png"
+                    src="https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/motrix.png"
+                  />
+                </p>
+                <hr />
+                <h3 id="baseubuntu-bionic">
+                  <a href="https://hub.docker.com/r/msjpq/kde-vnc/"
+                    >Base:Ubuntu-Bionic</a
+                  >
+                </h3>
+                <p>
+                  <a href="https://hub.docker.com/r/msjpq/kde-vnc/"
+                    ><img
+                      alt="Docker Pulls"
+                      src="https://img.shields.io/docker/pulls/msjpq/kde-vnc.svg"
+                  /></a>
+                </p>
+                <p>KDE on 18.04 lts. <code>620MB</code></p>
+                <p>
+                  <strong>RUN</strong> -
+                  <code
+                    >docker run -p 8080:8080 -p 5900:5900
+                    msjpq/kde-vnc:bionic</code
+                  >
+                </p>
+                <p>
+                  <img
+                    alt="bionic preview.png"
+                    src="https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/bionic.png"
+                  />
+                </p>
+                <hr />
+                <h3 id="baseubuntu-focal">
+                  <a href="https://hub.docker.com/r/msjpq/kde-vnc/"
+                    >Base:Ubuntu-Focal</a
+                  >
+                </h3>
+                <p>
+                  <a href="https://hub.docker.com/r/msjpq/kde-vnc/"
+                    ><img
+                      alt="Docker Pulls"
+                      src="https://img.shields.io/docker/pulls/msjpq/kde-vnc.svg"
+                  /></a>
+                </p>
+                <p>KDE on 20.04 lts. <code>730MB</code></p>
+                <p>
+                  <strong>RUN</strong> -
+                  <code
+                    >docker run -p 8080:8080 -p 5900:5900
+                    msjpq/kde-vnc:focal</code
+                  >
+                </p>
+                <p>
+                  <img
+                    alt="focal preview.png"
+                    src="https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/focal.png"
+                  />
+                </p>
+                <hr />
+                <h3 id="basewine-bionic">
+                  <a href="https://hub.docker.com/r/msjpq/wine-vnc/"
+                    >Base:Wine-Bionic</a
+                  >
+                </h3>
+                <p>
+                  <a href="https://hub.docker.com/r/msjpq/wine-vnc/"
+                    ><img
+                      alt="Docker Pulls"
+                      src="https://img.shields.io/docker/pulls/msjpq/wine-vnc.svg"
+                  /></a>
+                </p>
+                <p>WINE 5.3 with dependencies. <code>1.3GB</code></p>
+                <p>
+                  <strong>RUN</strong> -
+                  <code
+                    >docker run -p 8080:8080 -p 5900:5900
+                    msjpq/wine-vnc:bionic</code
+                  >
+                </p>
+                <p>
+                  <img
+                    alt="wine preview.png"
+                    src="https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/wine.png"
+                  />
+                </p>
+              </article>
+            </section>
+
+            <section
+              class="grid grid-flow-col items-center justify-end gap-x-4"
+            >
+              <div>
+                <i class="fas fa-baby text-left"></i>
+                <time datetime="2020-02-18T20:48:16+0000"></time>
+              </div>
+              <div>
+                <i class="fas fa-user-edit text-left"></i>
+                <time datetime="2025-04-18T22:16:56+0000"></time>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <footer class="mt-4 grid items-center justify-items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2025
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

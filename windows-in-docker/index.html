@@ -1,0 +1,272 @@
+<!doctype html>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Manage Windows in Docker (easy)" />
+    <title>Creative Portfolio</title>
+    <link rel="stylesheet" href="/pages_repo.css" />
+
+    <script type="module" src="/layout.js"></script>
+  </head>
+
+  <body class="m-0 flex min-h-screen w-screen p-0">
+    <input
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+      aria-hidden="true"
+    />
+    <div
+      class="group/layout grid w-full content-start scroll-smooth bg-gray-50 break-words text-neutral-800 selection:bg-fuchsia-200"
+    >
+      <header
+        class="mb-4 grid grid-flow-col justify-between gap-x-2 px-8 pt-4 md:mb-0"
+      >
+        <label
+          class="big-button inline-block font-medium md:hidden"
+          for="layout-checkbox"
+        >
+          <i class="fas fa-bars"></i>
+          Menu
+        </label>
+        <div class="prose text-right text-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
+        </div>
+      </header>
+
+      <aside
+        class="hidden grid-flow-row grid-cols-1 content-start gap-4 px-8 group-[input:checked+_&]/layout:grid md:grid"
+      >
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square h-full w-full rounded-full object-cover px-3 py-3"
+            src="https://raw.githubusercontent.com/ms-jpq/simple-markdown-showcase/show/assets/images/face.png"
+          />
+        </section>
+
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
+
+        <section>
+          <nav>
+            <ul>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a class="no-underline hover:text-pink-400" href="/index.html">
+                  home
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a
+                  class="no-underline hover:text-pink-400"
+                  href="/about_me.html"
+                >
+                  about
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a
+                  class="no-underline hover:text-pink-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="flex flex-wrap gap-2">
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
+
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </section>
+      </aside>
+
+      <div
+        class="w-full bg-neutral-100 px-8 pt-2 group-[input:checked+_&]/layout:hidden md:block! md:pt-8"
+      >
+        <main class="grid grid-flow-row grid-cols-1 justify-items-center">
+          <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+            <section
+              class="grid grid-flow-col items-center justify-end gap-x-4"
+            >
+              <span class="github-stars">
+                <i class="fas fa-star"></i>
+                69
+              </span>
+
+              <span class="github-forks">
+                <i class="fas fa-code-branch"></i>
+                15
+              </span>
+
+              <a
+                class="big-button invis-link border-dashed"
+                href="https://github.com/ms-jpq/windows-in-docker"
+              >
+                View on Github
+                <i class="fab fa-github"></i>
+              </a>
+            </section>
+
+            <section class="self-center">
+              <article class="markdown">
+                <h1 id="windows-in-docker">
+                  <a href="https://ms-jpq.github.io/windows-in-docker"
+                    >Windows in Docker</a
+                  >
+                </h1>
+                <p>
+                  <a href="https://hub.docker.com/r/msjpq/windows-in-docker/"
+                    ><img
+                      alt="Docker Pulls"
+                      src="https://img.shields.io/docker/pulls/msjpq/windows-in-docker.svg"
+                  /></a>
+                </p>
+                <p>
+                  You really can run any VM / container you want under this. But
+                  I made it specifically to make headless windows less of a
+                  PITA.
+                </p>
+                <p>
+                  Technically this is more of a &ldquo;manage Windows in
+                  Docker&rdquo; type of project, you can shutdown
+                  <code>dockerd</code> and all of your VMs won&rsquo;t be
+                  effected.
+                </p>
+                <h2 id="what-it-does">What It Does</h2>
+                <h3 id="download-virtio-windows-drivers">
+                  Download VirtIO Windows Drivers
+                </h3>
+                <p>
+                  Periodically dump latest <code>virtio-win.iso</code> into
+                  <code>/data</code>
+                </p>
+                <p>
+                  <a href="https://github.com/virtio-win/virtio-win-pkg-scripts"
+                    >From latest stable release</a
+                  >
+                </p>
+                <h3 id="web-gui-4-virt-manager">Web GUI 4 Virt Manager</h3>
+                <p>
+                  <img
+                    alt="virt man"
+                    src="https://raw.githubusercontent.com/ms-jpq/windows-in-docker/main/screenshots/virtman.png"
+                  />
+                </p>
+                <h2 id="usage">Usage</h2>
+                <ol>
+                  <li>
+                    <p>
+                      Install <code>libvirt-daemon</code> under
+                      <strong>linux host</strong>, ie
+                      <code>apt install -- libvirt-daemon-system</code>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>Run the following <code>docker-compose</code>.</p>
+                  </li>
+                </ol>
+                <div class="codehilite friendly">
+                  <pre><span></span><code><span class="nn">---</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.9&quot;</span>
+
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">libvirt</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">msjpq/windows-in-docker:latest</span>
+<span class="w">    </span><span class="nt">security_opt</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apparmor=unconfined</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">TZ</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># Make sure DATA_DIR is the same across the three `${DATA_DIR}`s</span>
+<span class="w">      </span><span class="c1"># The windows drivers are also downloaded under here.</span>
+<span class="w">      </span><span class="nt">DATA_DIR</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${DATA_DIR}&quot;</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80:8080</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/run/libvirt/libvirt-sock:/var/run/libvirt/libvirt-sock:ro</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;${DATA_DIR}:${DATA_DIR}&quot;</span>
+</code></pre>
+                </div>
+
+                <ol start="3">
+                  <li>
+                    <p>
+                      Drag in some ISOs you want to install under
+                      <code>${DATA_DIR}</code>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>Go to port 80, follow the GUI, you are good to go.</p>
+                  </li>
+                </ol>
+                <h2 id="wait-a-minute">Wait A Minute</h2>
+                <p>Libvirt doesn&rsquo;t run under Docker tho?</p>
+                <p>
+                  Well, I realized running <code>libvirt</code> under Docker was
+                  actually a stupid idea.
+                </p>
+                <p>
+                  You can&rsquo;t say provision a ZFS storage pool for example.
+                </p>
+              </article>
+            </section>
+
+            <section
+              class="grid grid-flow-col items-center justify-end gap-x-4"
+            >
+              <div>
+                <i class="fas fa-baby text-left"></i>
+                <time datetime="2022-01-09T05:17:00+0000"></time>
+              </div>
+              <div>
+                <i class="fas fa-user-edit text-left"></i>
+                <time datetime="2025-04-30T16:29:06+0000"></time>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <footer class="mt-4 grid items-center justify-items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2025
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

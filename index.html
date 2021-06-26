@@ -1,0 +1,1180 @@
+<!doctype html>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ms-jpq" />
+    <title>Creative Portfolio</title>
+    <link rel="stylesheet" href="/pages_index.css" />
+
+    <script type="module" src="/layout.js"></script>
+  </head>
+
+  <body class="m-0 flex min-h-screen w-screen p-0">
+    <input
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+      aria-hidden="true"
+    />
+    <div
+      class="group/layout grid w-full content-start scroll-smooth bg-gray-50 break-words text-neutral-800 selection:bg-fuchsia-200"
+    >
+      <header
+        class="mb-4 grid grid-flow-col justify-between gap-x-2 px-8 pt-4 md:mb-0"
+      >
+        <label
+          class="big-button inline-block font-medium md:hidden"
+          for="layout-checkbox"
+        >
+          <i class="fas fa-bars"></i>
+          Menu
+        </label>
+        <div class="prose text-right text-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
+        </div>
+      </header>
+
+      <aside
+        class="hidden grid-flow-row grid-cols-1 content-start gap-4 px-8 group-[input:checked+_&]/layout:grid md:grid"
+      >
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square h-full w-full rounded-full object-cover px-3 py-3"
+            src="https://raw.githubusercontent.com/ms-jpq/simple-markdown-showcase/show/assets/images/face.png"
+          />
+        </section>
+
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
+
+        <section>
+          <nav>
+            <ul>
+              <li
+                class="active capitalize active:font-bold active:text-pink-400"
+              >
+                <a class="no-underline hover:text-pink-400" href="/index.html">
+                  home
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a
+                  class="no-underline hover:text-pink-400"
+                  href="/about_me.html"
+                >
+                  about
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a
+                  class="no-underline hover:text-pink-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="flex flex-wrap gap-2">
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
+
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </section>
+      </aside>
+
+      <div
+        class="w-full bg-neutral-100 px-8 pt-2 group-[input:checked+_&]/layout:hidden md:block! md:pt-8"
+      >
+        <main class="@container m-0 px-4 py-4 md:px-0">
+          <div
+            class="@7xl:columns-5 w-full columns-1 @2xl:columns-2 @5xl:columns-3 @6xl:columns-4"
+          >
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <a
+                  class="figure-img group/index m-0 grid w-full p-0 no-underline"
+                  href="/coq_nvim/index.html"
+                >
+                  <img
+                    class="col-span-full row-span-full m-0 h-auto w-full max-w-full bg-fuchsia-50 object-contain object-center p-0"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/pretty.gif"
+                    alt="coq.nvim 🐔.img"
+                  />
+                  <div
+                    class="figure-facade col-span-full row-span-full hidden items-center justify-items-center bg-gray-100 opacity-70 group-hover/index:grid"
+                  >
+                    <i class="fas fa-chevron-right text-5xl text-stone-300"></i>
+                  </div>
+                </a>
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/coq_nvim/index.html">
+                    coq.nvim 🐔
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #3572a5"
+                    ></i>
+                    Python
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    3682
+                  </span>
+
+                  <span class="github-forks">
+                    <i class="fas fa-code-branch"></i>
+                    101
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  Fast as FUCK nvim completion. SQLite, concurrent scheduler,
+                  hundreds of hours of optimization.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <a
+                  class="figure-img group/index m-0 grid w-full p-0 no-underline"
+                  href="/sad/index.html"
+                >
+                  <img
+                    class="col-span-full row-span-full m-0 h-auto w-full max-w-full bg-fuchsia-50 object-contain object-center p-0"
+                    src="https://github.com/ms-jpq/sad/raw/senpai/previews/preview1.gif"
+                    alt="sad.img"
+                  />
+                  <div
+                    class="figure-facade col-span-full row-span-full hidden items-center justify-items-center bg-gray-100 opacity-70 group-hover/index:grid"
+                  >
+                    <i class="fas fa-chevron-right text-5xl text-stone-300"></i>
+                  </div>
+                </a>
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/sad/index.html"> sad </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #dea584"
+                    ></i>
+                    Rust
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    1897
+                  </span>
+
+                  <span class="github-forks">
+                    <i class="fas fa-code-branch"></i>
+                    22
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  CLI search and replace | Space Age seD
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <a
+                  class="figure-img group/index m-0 grid w-full p-0 no-underline"
+                  href="/chadtree/index.html"
+                >
+                  <img
+                    class="col-span-full row-span-full m-0 h-auto w-full max-w-full bg-fuchsia-50 object-contain object-center p-0"
+                    src="https://raw.githubusercontent.com/ms-jpq/chadtree/chad/docs/img/visual_select.gif"
+                    alt="CHADTree.img"
+                  />
+                  <div
+                    class="figure-facade col-span-full row-span-full hidden items-center justify-items-center bg-gray-100 opacity-70 group-hover/index:grid"
+                  >
+                    <i class="fas fa-chevron-right text-5xl text-stone-300"></i>
+                  </div>
+                </a>
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/chadtree/index.html">
+                    CHADTree
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #3572a5"
+                    ></i>
+                    Python
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    1676
+                  </span>
+
+                  <span class="github-forks">
+                    <i class="fas fa-code-branch"></i>
+                    64
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  File manager for Neovim. Better than NERDTree.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/lua-async-await/index.html">
+                    lua Async Await
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #000080"
+                    ></i>
+                    Lua
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    356
+                  </span>
+
+                  <span class="github-forks">
+                    <i class="fas fa-code-branch"></i>
+                    21
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  Async Await in 90 lines of code.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <a
+                  class="figure-img group/index m-0 grid w-full p-0 no-underline"
+                  href="/gay/index.html"
+                >
+                  <img
+                    class="col-span-full row-span-full m-0 h-auto w-full max-w-full bg-fuchsia-50 object-contain object-center p-0"
+                    src="https://raw.githubusercontent.com/ms-jpq/gay/%3C3/preview/flags.gif"
+                    alt="Gay 🏳️‍🌈.img"
+                  />
+                  <div
+                    class="figure-facade col-span-full row-span-full hidden items-center justify-items-center bg-gray-100 opacity-70 group-hover/index:grid"
+                  >
+                    <i class="fas fa-chevron-right text-5xl text-stone-300"></i>
+                  </div>
+                </a>
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/gay/index.html"> Gay 🏳️‍🌈 </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #3572a5"
+                    ></i>
+                    Python
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    326
+                  </span>
+
+                  <span class="github-forks">
+                    <i class="fas fa-code-branch"></i>
+                    14
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  Colour your text / terminal to be more gay. 🏳️‍🌈
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <a
+                  class="figure-img group/index m-0 grid w-full p-0 no-underline"
+                  href="/noact/index.html"
+                >
+                  <img
+                    class="col-span-full row-span-full m-0 h-auto w-full max-w-full bg-fuchsia-50 object-contain object-center p-0"
+                    src="https://raw.githubusercontent.com/ms-jpq/Noact/noact/_assets/type_demo.png"
+                    alt="Noact.img"
+                  />
+                  <div
+                    class="figure-facade col-span-full row-span-full hidden items-center justify-items-center bg-gray-100 opacity-70 group-hover/index:grid"
+                  >
+                    <i class="fas fa-chevron-right text-5xl text-stone-300"></i>
+                  </div>
+                </a>
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/noact/index.html"> Noact </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #3178c6"
+                    ></i>
+                    TypeScript
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    322
+                  </span>
+
+                  <span class="github-forks">
+                    <i class="fas fa-code-branch"></i>
+                    12
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  Minimalist React (&lt; 70 lines)
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <a
+                  class="figure-img group/index m-0 grid w-full p-0 no-underline"
+                  href="/isomorphic_copy/index.html"
+                >
+                  <img
+                    class="col-span-full row-span-full m-0 h-auto w-full max-w-full bg-fuchsia-50 object-contain object-center p-0"
+                    src="https://raw.githubusercontent.com/ms-jpq/isomorphic-copy/master/preview/clippy.jpg"
+                    alt="Isomorphic Copy.img"
+                  />
+                  <div
+                    class="figure-facade col-span-full row-span-full hidden items-center justify-items-center bg-gray-100 opacity-70 group-hover/index:grid"
+                  >
+                    <i class="fas fa-chevron-right text-5xl text-stone-300"></i>
+                  </div>
+                </a>
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/isomorphic_copy/index.html">
+                    Isomorphic Copy
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #3572a5"
+                    ></i>
+                    Python
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    230
+                  </span>
+
+                  <span class="github-forks">
+                    <i class="fas fa-code-branch"></i>
+                    6
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  Cross platform clipboard | networkless! remote copy
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <a
+                  class="figure-img group/index m-0 grid w-full p-0 no-underline"
+                  href="/kde-in-docker/index.html"
+                >
+                  <img
+                    class="col-span-full row-span-full m-0 h-auto w-full max-w-full bg-fuchsia-50 object-contain object-center p-0"
+                    src="https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/firefox.png"
+                    alt="KID - KDE in Docker.img"
+                  />
+                  <div
+                    class="figure-facade col-span-full row-span-full hidden items-center justify-items-center bg-gray-100 opacity-70 group-hover/index:grid"
+                  >
+                    <i class="fas fa-chevron-right text-5xl text-stone-300"></i>
+                  </div>
+                </a>
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/kde-in-docker/index.html">
+                    KID - KDE in Docker
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #384d54"
+                    ></i>
+                    Dockerfile
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    120
+                  </span>
+
+                  <span class="github-forks">
+                    <i class="fas fa-code-branch"></i>
+                    20
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  So you can run KDE inside a browser
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/docker-time-machine/index.html">
+                    Docker Tim🍎 Machine
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #89e051"
+                    ></i>
+                    Shell
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    94
+                  </span>
+
+                  <span class="github-forks">
+                    <i class="fas fa-code-branch"></i>
+                    16
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  Zero Configuration, time machine for MacOS | Docker 🐳
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <a
+                  class="figure-img group/index m-0 grid w-full p-0 no-underline"
+                  href="/markdown-live-preview/index.html"
+                >
+                  <img
+                    class="col-span-full row-span-full m-0 h-auto w-full max-w-full bg-fuchsia-50 object-contain object-center p-0"
+                    src="https://github.com/ms-jpq/markdown-live-preview/raw/md/preview/preview.gif"
+                    alt="Markdown Live Preview.img"
+                  />
+                  <div
+                    class="figure-facade col-span-full row-span-full hidden items-center justify-items-center bg-gray-100 opacity-70 group-hover/index:grid"
+                  >
+                    <i class="fas fa-chevron-right text-5xl text-stone-300"></i>
+                  </div>
+                </a>
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a
+                    class="invis-link"
+                    href="/markdown-live-preview/index.html"
+                  >
+                    Markdown Live Preview
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #3572a5"
+                    ></i>
+                    Python
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    78
+                  </span>
+
+                  <span class="github-forks">
+                    <i class="fas fa-code-branch"></i>
+                    7
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  markdown live preview | works with any editor
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <a
+                  class="figure-img group/index m-0 grid w-full p-0 no-underline"
+                  href="/windows-in-docker/index.html"
+                >
+                  <img
+                    class="col-span-full row-span-full m-0 h-auto w-full max-w-full bg-fuchsia-50 object-contain object-center p-0"
+                    src="https://raw.githubusercontent.com/ms-jpq/windows-in-docker/main/screenshots/virtman.png"
+                    alt="Windows in Docker.img"
+                  />
+                  <div
+                    class="figure-facade col-span-full row-span-full hidden items-center justify-items-center bg-gray-100 opacity-70 group-hover/index:grid"
+                  >
+                    <i class="fas fa-chevron-right text-5xl text-stone-300"></i>
+                  </div>
+                </a>
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/windows-in-docker/index.html">
+                    Windows in Docker
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #3572a5"
+                    ></i>
+                    Python
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    69
+                  </span>
+
+                  <span class="github-forks">
+                    <i class="fas fa-code-branch"></i>
+                    15
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  Manage Windows in Docker (easy)
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <a
+                  class="figure-img group/index m-0 grid w-full p-0 no-underline"
+                  href="/simple-traefik-dash/index.html"
+                >
+                  <img
+                    class="col-span-full row-span-full m-0 h-auto w-full max-w-full bg-fuchsia-50 object-contain object-center p-0"
+                    src="https://github.com/ms-jpq/simple-traefik-dash/raw/pride/src/views/background.png"
+                    alt="Simple Traefik Dash.img"
+                  />
+                  <div
+                    class="figure-facade col-span-full row-span-full hidden items-center justify-items-center bg-gray-100 opacity-70 group-hover/index:grid"
+                  >
+                    <i class="fas fa-chevron-right text-5xl text-stone-300"></i>
+                  </div>
+                </a>
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/simple-traefik-dash/index.html">
+                    Simple Traefik Dash
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #b845fc"
+                    ></i>
+                    F#
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    33
+                  </span>
+
+                  <span class="github-forks">
+                    <i class="fas fa-code-branch"></i>
+                    4
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  Zero conf service dashboard for Traefik v2 Ingress Controller
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a
+                    class="invis-link"
+                    href="/sync-dockerhub-readme/index.html"
+                  >
+                    Dockerhub Sync Readme
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #3572a5"
+                    ></i>
+                    Python
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    22
+                  </span>
+
+                  <span class="github-forks">
+                    <i class="fas fa-code-branch"></i>
+                    3
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  Github action to sync &lt;readme.md&gt; to Dockerhub
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <a
+                  class="figure-img group/index m-0 grid w-full p-0 no-underline"
+                  href="/simple-traefik-identity/index.html"
+                >
+                  <img
+                    class="col-span-full row-span-full m-0 h-auto w-full max-w-full bg-fuchsia-50 object-contain object-center p-0"
+                    src="https://github.com/ms-jpq/simple-traefik-identity/raw/xp/preview/login.png"
+                    alt="Simple Traefik Identity.img"
+                  />
+                  <div
+                    class="figure-facade col-span-full row-span-full hidden items-center justify-items-center bg-gray-100 opacity-70 group-hover/index:grid"
+                  >
+                    <i class="fas fa-chevron-right text-5xl text-stone-300"></i>
+                  </div>
+                </a>
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a
+                    class="invis-link"
+                    href="/simple-traefik-identity/index.html"
+                  >
+                    Simple Traefik Identity
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #b845fc"
+                    ></i>
+                    F#
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    22
+                  </span>
+
+                  <span class="github-forks hidden">
+                    <i class="fas fa-code-branch"></i>
+                    0
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  Simple &amp; Configurable -- single sign-on auth, for Traefik.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/download-windows-iso/index.html">
+                    Download Windows
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #3572a5"
+                    ></i>
+                    Python
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    9
+                  </span>
+
+                  <span class="github-forks">
+                    <i class="fas fa-code-branch"></i>
+                    2
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  Python script to download official windows iso
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <a
+                  class="figure-img group/index m-0 grid w-full p-0 no-underline"
+                  href="/kaleidoscope/index.html"
+                >
+                  <img
+                    class="col-span-full row-span-full m-0 h-auto w-full max-w-full bg-fuchsia-50 object-contain object-center p-0"
+                    src="https://raw.githubusercontent.com/ms-jpq/Kaleidoscope/kaleidoscope/_assets/demo_heavy.gif"
+                    alt="Kaleidoscope.img"
+                  />
+                  <div
+                    class="figure-facade col-span-full row-span-full hidden items-center justify-items-center bg-gray-100 opacity-70 group-hover/index:grid"
+                  >
+                    <i class="fas fa-chevron-right text-5xl text-stone-300"></i>
+                  </div>
+                </a>
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/kaleidoscope/index.html">
+                    Kaleidoscope
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #3178c6"
+                    ></i>
+                    TypeScript
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    5
+                  </span>
+
+                  <span class="github-forks">
+                    <i class="fas fa-code-branch"></i>
+                    1
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  Interactive &amp; arbitrary Chaos Game fractal visualization
+                  tool
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/nda/index.html">
+                    NPM Domain Agnostic
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #3178c6"
+                    ></i>
+                    TypeScript
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    5
+                  </span>
+
+                  <span class="github-forks hidden">
+                    <i class="fas fa-code-branch"></i>
+                    0
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  NPM - Domain Agnostic :: use with NPM dependency manager
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <a
+                  class="figure-img group/index m-0 grid w-full p-0 no-underline"
+                  href="/simple-markdown-showcase/index.html"
+                >
+                  <img
+                    class="col-span-full row-span-full m-0 h-auto w-full max-w-full bg-fuchsia-50 object-contain object-center p-0"
+                    src="https://raw.githubusercontent.com/ms-jpq/simple-markdown-showcase/show/preview/screenshot.png"
+                    alt="Simple Markdown Showcase.img"
+                  />
+                  <div
+                    class="figure-facade col-span-full row-span-full hidden items-center justify-items-center bg-gray-100 opacity-70 group-hover/index:grid"
+                  >
+                    <i class="fas fa-chevron-right text-5xl text-stone-300"></i>
+                  </div>
+                </a>
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a
+                    class="invis-link"
+                    href="/simple-markdown-showcase/index.html"
+                  >
+                    Simple Markdown Showcase
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #3572a5"
+                    ></i>
+                    Python
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    5
+                  </span>
+
+                  <span class="github-forks hidden">
+                    <i class="fas fa-code-branch"></i>
+                    0
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  Responsive personal portfolio pages using Github APIs.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/auto-github-push/index.html">
+                    Auto Github Push
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #3572a5"
+                    ></i>
+                    Python
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    4
+                  </span>
+
+                  <span class="github-forks hidden">
+                    <i class="fas fa-code-branch"></i>
+                    0
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  Github action to refresh various Github inactivity countdowns.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/simple-reeducks/index.html">
+                    Simple Reeducks 🦆🦆
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #f05138"
+                    ></i>
+                    Swift
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    4
+                  </span>
+
+                  <span class="github-forks hidden">
+                    <i class="fas fa-code-branch"></i>
+                    0
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  Minimalist Classless Redux in Swift
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="card mb-4 break-inside-avoid-column drop-shadow-lg hover:drop-shadow-xl focus:drop-shadow-xl active:drop-shadow-xl"
+            >
+              <figure class="prose mx-0 grid overflow-x-hidden bg-gray-100">
+                <h4
+                  class="figure-title px-4 pt-2 text-center text-ellipsis uppercase"
+                >
+                  <a class="invis-link" href="/cda/index.html">
+                    SASS Domain Agnostic
+                  </a>
+                </h4>
+                <div
+                  class="figure-meta grid grid-flow-col justify-start gap-x-4 px-4 pb-2"
+                >
+                  <span>
+                    <i
+                      class="inline-block h-3 w-3 rounded-full"
+                      style="background-color: #c6538c"
+                    ></i>
+                    SCSS
+                  </span>
+
+                  <span class="github-stars">
+                    <i class="fas fa-star"></i>
+                    1
+                  </span>
+
+                  <span class="github-forks hidden">
+                    <i class="fas fa-code-branch"></i>
+                    0
+                  </span>
+                </div>
+                <figcaption
+                  class="figure-detail px-4 pb-2 text-justify text-ellipsis"
+                >
+                  SASS - Domain Agnostic :: use with NPM dependency manager
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <footer class="mt-4 grid items-center justify-items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2025
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

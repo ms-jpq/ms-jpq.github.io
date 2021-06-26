@@ -1,0 +1,111 @@
+/*! tailwindcss v4.1.6 | MIT License | https://tailwindcss.com */
+@import url("./font-awesome.css");
+@import url("./tailwind.css");
+@import url("./markdown.css");
+@layer properties;
+a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-pink-400, oklch(71.8% 0.202 349.761));
+  text-decoration-style: solid;
+  &:active, &:hover, &:focus {
+    color: inherit;
+    text-decoration-style: dashed;
+  }
+}
+ul {
+  padding-left: calc(var(--spacing, 0.25rem) * 2);
+  & > li {
+    display: list-item;
+    & > * {
+      display: inline;
+    }
+    &.active::before {
+      color: var(--color-pink-400, oklch(71.8% 0.202 349.761));
+    }
+    &::before {
+      padding-right: calc(var(--spacing, 0.25rem) * 1);
+      --tw-font-weight: var(--font-weight-semibold, 600);
+      font-weight: var(--font-weight-semibold, 600);
+      font-family: "Font Awesome 5 Free", monospace;
+      content: "\f105";
+    }
+  }
+}
+pre, code, kbd, samp {
+  font-size: var(--text-sm, 0.875rem);
+  line-height: var(--tw-leading, var(--text-sm--line-height, calc(1.25 / 0.875)));
+}
+body > div {
+  & > header {
+    grid-area: header;
+  }
+  & > aside {
+    grid-area: aside;
+  }
+  & > div {
+    grid-area: main;
+  }
+  & > footer {
+    grid-area: footer;
+  }
+}
+:root > body {
+  & > div {
+    grid-template-areas: "header" "aside" "main" "footer";
+  }
+  @media (width >= 48rem) {
+    & > div {
+      grid-template-areas: "header main" "aside  main" "footer main";
+      grid-template-columns: minmax(auto, min(30ch, 30vw)) 1fr;
+      grid-template-rows: auto 1fr auto;
+    }
+  }
+}
+.big-button {
+  cursor: pointer;
+  align-self: center;
+  border-style: var(--tw-border-style);
+  border-width: 2px;
+  border-color: var(--color-pink-400, oklch(71.8% 0.202 349.761));
+  padding-inline: calc(var(--spacing, 0.25rem) * 2);
+  padding-block: calc(var(--spacing, 0.25rem) * 1);
+  background-color: transparent;
+  text-align: justify;
+  color: var(--color-pink-400, oklch(71.8% 0.202 349.761));
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-pink-400, oklch(71.8% 0.202 349.761));
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-neutral-100, oklch(97% 0 0));
+    }
+  }
+}
+a.invis-link {
+  text-decoration-line: none;
+  &:hover {
+    text-decoration-line: underline;
+    text-decoration-color: var(--color-pink-400, oklch(71.8% 0.202 349.761));
+    text-decoration-style: dotted;
+  }
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-font-weight: initial;
+      --tw-border-style: solid;
+    }
+  }
+}

@@ -1,0 +1,1238 @@
+<!doctype html>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Fast as FUCK nvim completion. SQLite, concurrent scheduler, hundreds of hours of optimization."
+    />
+    <title>Creative Portfolio</title>
+    <link rel="stylesheet" href="/pages_repo.css" />
+
+    <script type="module" src="/layout.js"></script>
+  </head>
+
+  <body class="m-0 flex min-h-screen w-screen p-0">
+    <input
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+      aria-hidden="true"
+    />
+    <div
+      class="group/layout grid w-full content-start scroll-smooth bg-gray-50 break-words text-neutral-800 selection:bg-fuchsia-200"
+    >
+      <header
+        class="mb-4 grid grid-flow-col justify-between gap-x-2 px-8 pt-4 md:mb-0"
+      >
+        <label
+          class="big-button inline-block font-medium md:hidden"
+          for="layout-checkbox"
+        >
+          <i class="fas fa-bars"></i>
+          Menu
+        </label>
+        <div class="prose text-right text-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
+        </div>
+      </header>
+
+      <aside
+        class="hidden grid-flow-row grid-cols-1 content-start gap-4 px-8 group-[input:checked+_&]/layout:grid md:grid"
+      >
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square h-full w-full rounded-full object-cover px-3 py-3"
+            src="https://raw.githubusercontent.com/ms-jpq/simple-markdown-showcase/show/assets/images/face.png"
+          />
+        </section>
+
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
+
+        <section>
+          <nav>
+            <ul>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a class="no-underline hover:text-pink-400" href="/index.html">
+                  home
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a
+                  class="no-underline hover:text-pink-400"
+                  href="/about_me.html"
+                >
+                  about
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a
+                  class="no-underline hover:text-pink-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="flex flex-wrap gap-2">
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
+
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </section>
+      </aside>
+
+      <div
+        class="w-full bg-neutral-100 px-8 pt-2 group-[input:checked+_&]/layout:hidden md:block! md:pt-8"
+      >
+        <main class="grid grid-flow-row grid-cols-1 justify-items-center">
+          <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+            <section
+              class="grid grid-flow-col items-center justify-end gap-x-4"
+            >
+              <span class="github-stars">
+                <i class="fas fa-star"></i>
+                3682
+              </span>
+
+              <span class="github-forks">
+                <i class="fas fa-code-branch"></i>
+                101
+              </span>
+
+              <a
+                class="big-button invis-link border-dashed"
+                href="https://github.com/ms-jpq/coq_nvim"
+              >
+                View on Github
+                <i class="fab fa-github"></i>
+              </a>
+            </section>
+
+            <section class="self-center">
+              <article class="markdown">
+                <h1 id="coqnvim">
+                  <a href="https://ms-jpq.github.io/coq_nvim">coq.nvim 🐔</a>
+                </h1>
+                <p>
+                  Named after the
+                  <a href="https://coq.inria.fr/">famous theorem prover</a>
+                </p>
+                <p>
+                  <code>coq</code> also means <code>鸡</code> in
+                  <a href="https://youtu.be/ZoAhZPRBMgE"
+                    ><code>français québécois</code></a
+                  >, and I guess <code>🥖</code>.
+                </p>
+                <p>Fast as FUCK and loads of features.</p>
+                <h2 id="faster-than-pure-lua">Faster Than Pure Lua</h2>
+                <ul>
+                  <li>
+                    <p>Native C in-memory B-trees</p>
+                  </li>
+                  <li>
+                    <p>SQLite VM interrupts</p>
+                  </li>
+                  <li>
+                    <p>
+                      Coroutine based incremental &amp; interruptible scheduler
+                    </p>
+                  </li>
+                  <li>
+                    <p>TCP-esque flow control</p>
+                  </li>
+                </ul>
+                <p>
+                  More details at the
+                  <a
+                    href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/PERF.md"
+                    >PERFORMANCE.md</a
+                  >
+                </p>
+                <h2 id="features">Features</h2>
+                <p>
+                  <strong
+                    >Note: Due to compression, reality is <em>faster</em> than
+                    gifs</strong
+                  >
+                </p>
+                <h3 id="fast-as-fuck">Fast as fuck</h3>
+                <ul>
+                  <li>
+                    <p>Results on <strong>every keystroke</strong></p>
+                  </li>
+                  <li>
+                    <p>Throttling? Never heard of her</p>
+                  </li>
+                  <li>
+                    <p>
+                      Real time
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/STATS.md"
+                        >performance statistics</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Look at the gifs! The bottom few are the
+                      <strong
+                        >fastest when I didn&rsquo;t slow down on
+                        purpose</strong
+                      >
+                      to show features.
+                    </p>
+                  </li>
+                </ul>
+                <h3 id="fuzzy-search">Fuzzy Search</h3>
+                <ul>
+                  <li>
+                    <p><strong>Typo resistant</strong></p>
+                  </li>
+                  <li>
+                    <p>Recency bonus</p>
+                  </li>
+                  <li>
+                    <p>Proximity bonus</p>
+                  </li>
+                  <li>
+                    <p>
+                      Weighted average of
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/FUZZY.md"
+                        >relative ranks &amp; ensemble metrics</a
+                      >
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  Error correction: <code>cour</code> -&gt;
+                  <code>colour_space</code>, <code>flgr</code> -&gt;
+                  <code>flag_group</code>, <code>nasp</code> -&gt;
+                  <code>Namespace</code>
+                </p>
+                <p>
+                  <img
+                    alt="fuzz_search.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/fuzzy.gif"
+                  />
+                </p>
+                <h3 id="preview">Preview</h3>
+                <ul>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/KEYBIND.md"
+                        >Press key</a
+                      >
+                      to view documentation in big buffer
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Auto open preview on <strong>side with most space</strong>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/DISPLAY.md"
+                        >Customizable location</a
+                      >: n, s, w, e
+                    </p>
+                  </li>
+                  <li>
+                    <p>Ubiquitous: Tags, LSP, TreeSitter, Paths, Snippets</p>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    alt="doc_popup.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/preview.gif"
+                  />
+                </p>
+                <h3 id="lsp">LSP</h3>
+                <ul>
+                  <li>
+                    <p><strong>Incremental completion</strong></p>
+                  </li>
+                  <li>
+                    <p><strong>Client-side caching</strong></p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>Multi-server</strong> completion (i.e.
+                      <code>tailwind</code> + <code>cssls</code>)
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>Multi-encoding</strong> <code>utf-8</code>,
+                      <code>utf-16</code>, <code>utf-32</code>
+                    </p>
+                  </li>
+                  <li>
+                    <p>Header imports</p>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    alt="lsp_imports.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/lsp_import.gif"
+                  />
+                </p>
+                <ul>
+                  <li>Snippet Support</li>
+                </ul>
+                <p>
+                  <img
+                    alt="lsp_snippets.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/lsp_snippet.gif"
+                  />
+                </p>
+                <p>
+                  Install the
+                  <a href="https://github.com/neovim/nvim-lspconfig"
+                    >Nvim Official LSP integration</a
+                  >
+                </p>
+                <p>
+                  <strong
+                    >Requires 2 lines of change to support LSP snippets</strong
+                  >
+                </p>
+                <div class="codehilite friendly">
+                  <pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">lsp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="w"> </span><span class="s2">&quot;lspconfig&quot;</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">coq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="w"> </span><span class="s2">&quot;coq&quot;</span><span class="w"> </span><span class="c1">-- add this</span>
+
+<span class="nv">lsp</span><span class="p">.</span><span class="err">&lt;</span><span class="py">server</span><span class="o">&gt;</span><span class="p">.</span><span class="nf">setup</span><span class="p">(</span><span class="o">&lt;</span><span class="nv">stuff</span><span class="o">..</span><span class="p">.</span><span class="o">&gt;</span><span class="p">)</span><span class="w">                              </span><span class="c1">-- before</span>
+<span class="nv">lsp</span><span class="p">.</span><span class="err">&lt;</span><span class="py">server</span><span class="o">&gt;</span><span class="p">.</span><span class="nf">setup</span><span class="p">(</span><span class="nv">coq</span><span class="p">.</span><span class="nf">lsp_ensure_capabilities</span><span class="p">(</span><span class="o">&lt;</span><span class="nv">stuff</span><span class="o">..</span><span class="p">.</span><span class="o">&gt;</span><span class="p">))</span><span class="w"> </span><span class="c1">-- after</span>
+</code></pre>
+                </div>
+
+                <h3 id="snippets">Snippets</h3>
+                <ul>
+                  <li>
+                    <p>
+                      <a
+                        href="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/coq%2Bsnippets%2Bv2.json"
+                        ><strong>Over 9000</strong> built-in snippets</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>99% of LSP grammar, 95% of Vim grammar</p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/KEYBIND.md"
+                        >Press key</a
+                      >
+                      to jump to next edit region.
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    alt="snippet_norm.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/snip.gif"
+                  />
+                </p>
+                <ul>
+                  <li>Linked regions</li>
+                </ul>
+                <p>
+                  <img
+                    alt="snippet_expand.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/expand_snippet.gif"
+                  />
+                </p>
+                <ul>
+                  <li>
+                    Custom snippets with
+                    <a
+                      href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/SNIPS.md"
+                      ><strong>Live Repl</strong></a
+                    >
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    alt="snip_load.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/snip_load.gif"
+                  />
+                </p>
+                <p>
+                  <em
+                    >The <code>%</code> statistic comes from compiling the
+                    10,000 snippets</em
+                  >
+                </p>
+                <h3 id="treesitter">TreeSitter</h3>
+                <ul>
+                  <li>
+                    <p><strong>Shows context</strong></p>
+                  </li>
+                  <li>
+                    <p><strong>Partial document parsing</strong></p>
+                  </li>
+                  <li>
+                    <p>Auto-disable if document is too big</p>
+                  </li>
+                  <li>
+                    <p>Unicode ready</p>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    alt="treesitter.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/treesitter.gif"
+                  />
+                </p>
+                <p>
+                  <strong
+                    >Treesitter is still unstable in nvim0.5: slow and crash
+                    prone</strong
+                  >
+                </p>
+                <p>
+                  The promise is that Treesitter will have real time parsing on
+                  every keystroke, but it&rsquo;s actually too slow on big
+                  files.
+                </p>
+                <p>
+                  The Treesitter source only parses a limited number of lines
+                  about the cursor and only on <code>Idle</code> events due to
+                  unrealized performance promises.
+                </p>
+                <h3 id="ctags">CTags</h3>
+                <ul>
+                  <li>
+                    <p><strong>LSP like</strong></p>
+                  </li>
+                  <li>
+                    <p>
+                      Incremental &amp; automatic
+                      <strong>background compilation</strong>
+                    </p>
+                  </li>
+                  <li>
+                    <p>Non-blocking</p>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    alt="ctags.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/tags.gif"
+                  />
+                </p>
+                <p>
+                  <strong
+                    >Requires <code>Universal CTags</code>, NOT
+                    <code>ctags</code></strong
+                  >
+                </p>
+                <div class="codehilite friendly">
+                  <pre><span></span><code><span class="c1"># MacOS</span>
+brew<span class="w"> </span>uninstall<span class="w"> </span>ctags<span class="w">           </span><span class="c1"># bad</span>
+brew<span class="w"> </span>install<span class="w">   </span>universal-ctags<span class="w"> </span><span class="c1"># good</span>
+
+<span class="c1"># Ubuntu</span>
+apt<span class="w"> </span>remove<span class="w">  </span>ctags<span class="w">              </span><span class="c1"># bad</span>
+apt<span class="w"> </span>install<span class="w"> </span>universal-ctags<span class="w">    </span><span class="c1"># good</span>
+</code></pre>
+                </div>
+
+                <h3 id="paths">Paths</h3>
+                <ul>
+                  <li>
+                    <p><strong>Preview contents</strong></p>
+                  </li>
+                  <li>
+                    <p>
+                      <code>$VARIABLE</code> expansion,
+                      <code>%EVEN_UNDER_WINDOWS%</code>
+                    </p>
+                  </li>
+                  <li>
+                    <p>Relative to both <code>cwd</code> and file path</p>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    alt="paths.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/paths.gif"
+                  />
+                </p>
+                <h3 id="buffers">Buffers</h3>
+                <ul>
+                  <li>
+                    <p><strong>Real time</strong> completion</p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>Fast</strong> in files with thousands of lines
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    alt="buffers.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/buffers.gif"
+                  />
+                </p>
+                <h3 id="registers">Registers</h3>
+                <ul>
+                  <li>
+                    <p>
+                      <strong>words</strong> Last yank <code>0</code> + custom
+                      <code>a-z</code>
+                      <code>coq_settings.clients.registers.words</code>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>lines</strong>
+                      <code>coq_settings.clients.registers.lines</code>
+                      (<code>a-z</code>)
+                    </p>
+                  </li>
+                </ul>
+                <h3 id="tmux">Tmux</h3>
+                <p>
+                  <img
+                    alt="tmux.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/tmux.gif"
+                  />
+                </p>
+                <h3 id="tabnine">Tabnine</h3>
+                <ul>
+                  <li>
+                    <p>CPU preserving flow control</p>
+                  </li>
+                  <li>
+                    <p>Auto download &amp; install &amp; update</p>
+                  </li>
+                  <li>
+                    <p>
+                      Platform specific <code>cgroupv2</code> &amp;
+                      <code>taskpolicy</code> core pinning / CPU management.
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    alt="tabnine.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/tabnine.gif"
+                  />
+                </p>
+                <p>
+                  <em
+                    >T9 is disabled by default, I might remove it, if they do
+                    not improve the CPU usage.
+                    <a href="https://github.com/codota/TabNine/issues/43"
+                      >Their own bug tracker</a
+                    >.</em
+                  >
+                </p>
+                <p>
+                  Enable via:
+                  <code>coq_settings.clients.tabnine.enabled=true</code>
+                </p>
+                <h3 id="modular-lua-sources-external-third-party-integrations">
+                  <a href="https://github.com/ms-jpq/coq.thirdparty"
+                    >Modular lua sources</a
+                  >
+                  &amp; external third party integrations
+                </h3>
+                <ul>
+                  <li>
+                    <p>
+                      <strong>Even faster than pure lua</strong>! (transparent
+                      <code>sqlite</code> caching)
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/ms-jpq/coq.thirdparty"
+                        ><strong>Tons of built-ins</strong></a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>External third party plugins too</p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/CUSTOM_SOURCES.md"
+                        >Easy to hack</a
+                      >
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    alt="repl.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/repl.gif"
+                  />
+                </p>
+                <p>Shown above: shell repl.</p>
+                <p>Some other built-ins:</p>
+                <ul>
+                  <li>
+                    <p>nvim lua API</p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/neovim/neovim/tree/master/runtime/autoload"
+                        >vim runtime</a
+                      >:
+                      <code
+                        >ada, c, clojure, css, haskell, html, js, php,
+                        syntax</code
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://linux.die.net/man/1/bc"
+                        >scientific calculator</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://linux.die.net/man/6/figlet"
+                        >comment banners</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p><a href="https://linux.die.net/man/1/cowsay">moo!</a></p>
+                  </li>
+                  <li>
+                    <p><a href="https://github.com/lervag/vimtex">vimtex</a></p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/kristijanhusak/orgmode.nvim"
+                        >orgmode.nvim</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/kristijanhusak/vim-dadbod-completion"
+                        >vim dadbod</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/mfussenegger/nvim-dap"
+                        >nvim-dap</a
+                      >
+                    </p>
+                  </li>
+                </ul>
+                <h3 id="statistics">Statistics</h3>
+                <p><code>:COQstats</code></p>
+                <p>
+                  <img
+                    alt="statistics.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/stats.gif"
+                  />
+                </p>
+                <h3 id="validating-config-parser">Validating config parser</h3>
+                <ul>
+                  <li>Prevents typos &amp; type errors in your config</li>
+                </ul>
+                <p>
+                  Here I make a type error on purpose inputting
+                  <code>string</code> instead of an <code>integer</code>.
+                </p>
+                <p>
+                  <img
+                    alt="conf_demo.img"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/conf.png"
+                  />
+                </p>
+                <h3 id="pretty">Pretty</h3>
+                <ul>
+                  <li>
+                    <a
+                      href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/DISPLAY.md"
+                      >Customizable</a
+                    >
+                  </li>
+                </ul>
+                <p>
+                  <img
+                    alt="pretty.gif"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/pretty.gif"
+                  />
+                </p>
+                <p><strong>If you can&rsquo;t see icons properly</strong>:</p>
+                <p>
+                  Either set
+                  <code
+                    >let g:coq_settings = { 'display.icons.mode': 'none' }</code
+                  >
+                  to disable icons, or
+                  <a href="https://www.nerdfonts.com/#home"
+                    >install a supported font</a
+                  >
+                </p>
+                <h2 id="install">Install</h2>
+                <p>
+                  <strong>Windows</strong> requires symlinks support in git.
+                </p>
+                <div class="codehilite friendly">
+                  <pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.symlinks<span class="w"> </span><span class="nb">true</span>
+</code></pre>
+                </div>
+
+                <p>Needs python virtual env</p>
+                <div class="codehilite friendly">
+                  <pre><span></span><code>apt<span class="w"> </span>install<span class="w"> </span>--yes<span class="w"> </span>--<span class="w"> </span>python3-venv
+</code></pre>
+                </div>
+
+                <p>
+                  <strong>Minimum version</strong>: python:<code>3.8.2</code>,
+                  nvim: <code>0.5</code>, sqlite: <code>recentish</code>
+                </p>
+                <details>
+                  <summary>Vim</summary>
+
+                  Install the usual way, ie. VimPlug, Vundle, etc ```VimL " main
+                  one Plug 'ms-jpq/coq_nvim', {'branch': 'coq'} " 9000+ Snippets
+                  Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'} " lua &
+                  third party sources -- See
+                  https://github.com/ms-jpq/coq.thirdparty " Need to **configure
+                  separately** Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'} "
+                  - shell repl " - nvim lua api " - scientific calculator " -
+                  comment banner " - etc ```
+                </details>
+
+                <details>
+                  <summary>Neovim</summary>
+
+                  ### lazy.nvim ```lua { "neovim/nvim-lspconfig", -- REQUIRED:
+                  for native Neovim LSP integration lazy = false, -- REQUIRED:
+                  tell lazy.nvim to start this plugin at startup dependencies =
+                  { -- main one { "ms-jpq/coq_nvim", branch = "coq" }, -- 9000+
+                  Snippets { "ms-jpq/coq.artifacts", branch = "artifacts" }, --
+                  lua & third party sources -- See
+                  https://github.com/ms-jpq/coq.thirdparty -- Need to
+                  **configure separately** { 'ms-jpq/coq.thirdparty', branch =
+                  "3p" } -- - shell repl -- - nvim lua api -- - scientific
+                  calculator -- - comment banner -- - etc }, init = function()
+                  vim.g.coq_settings = { auto_start = true, -- if you want to
+                  start COQ at startup -- Your COQ settings here } end, config =
+                  function() -- Your LSP settings here end, } ```
+                </details>
+
+                <h2 id="documentation">Documentation</h2>
+                <p>To start <code>coq</code></p>
+                <div class="codehilite friendly">
+                  <pre><span></span><code>&quot; the [-s, --shut-up] flag will remove the greeting message
+:COQnow [--shut-up]
+</code></pre>
+                </div>
+
+                <p>
+                  🌟 If required, it will ask you to run <code>:COQdeps</code>,
+                  please run it and do <code>:COQnow</code> again.
+                </p>
+                <p>
+                  There is built-in
+                  <a
+                    href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/README.md"
+                    >help command</a
+                  >
+                </p>
+                <div class="codehilite friendly">
+                  <pre><span></span><code><span class="err">:</span><span class="n">COQhelp</span><span class="w"> </span><span class="o">[</span><span class="n">--web</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">topic</span><span class="o">]</span>
+</code></pre>
+                </div>
+
+                <ul>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/CONF.md"
+                        >:COQhelp config</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/KEYBIND.md"
+                        >:COQhelp keybind</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/SNIPS.md"
+                        >:COQhelp snips</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/FUZZY.md"
+                        >:COQhelp fuzzy</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/COMPLETION.md"
+                        >:COQhelp comp</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/DISPLAY.md"
+                        >:COQhelp display</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/SOURCES.md"
+                        >:COQhelp sources</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/MISC.md"
+                        >:COQhelp misc</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/PERF.md"
+                        >:COQhelp perf</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/STATS.md"
+                        >:COQhelp stats</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/CUSTOM_SOURCES.md"
+                        >:COQhelp custom_sources</a
+                      >
+                    </p>
+                  </li>
+                </ul>
+                <h2 id="faq">FAQ</h2>
+                <h4 id="default-hotkeys">Default hotkeys?</h4>
+                <p>Always:</p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>key</th>
+                      <th>function</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>&lt;c-space&gt;</code></td>
+                      <td>manual completion</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;c-h&gt;</code></td>
+                      <td>edit snippet placeholder</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>When completion menu is open:</p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>key</th>
+                      <th>function</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>&lt;c-k&gt;</code></td>
+                      <td>move preview to bigger window</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;esc&gt;</code></td>
+                      <td>exit to normal</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;backspace&gt;</code></td>
+                      <td>backspace</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;enter&gt;</code></td>
+                      <td>select completion</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;tab&gt;</code></td>
+                      <td>next result</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;s-tab&gt;</code></td>
+                      <td>prev result</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>Unbound:</p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>keymap</th>
+                      <th>function</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>coq_settings.keymap.repeat</code></td>
+                      <td>repeat last edit</td>
+                    </tr>
+                    <tr>
+                      <td><code>coq_settings.keymap.eval_snips</code></td>
+                      <td>evulate snippet in document / under selection</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>
+                  <strong
+                    >When hovering over a result, entering any key [a-z] will
+                    select it</strong
+                  >
+                </p>
+                <p>This is a vim thing, I have zero control over :(</p>
+                <h4 id="repeat"><code>.</code> Repeat</h4>
+                <p>Set <code>coq_settings.keymap.repeat</code> to a hotkey.</p>
+                <p>See <code>:COQhelp keybind</code> for details</p>
+                <h4 id="flickering">Flickering</h4>
+                <p>
+                  By default, the old results are cleared on each keystroke, so
+                  the popup menu is closed right away.
+                </p>
+                <p>
+                  You can disable this: at the cost of having stale results
+                  shown until the new ones come in.
+                </p>
+                <p>
+                  <code
+                    >let g:coq_settings = { 'display.pum.fast_close': v:false
+                    }</code
+                  >
+                </p>
+                <p>
+                  This is not the default because some LSP servers are very slow
+                  (ie. tailwindcss), leading to stale results being shown for
+                  too long.
+                </p>
+                <h4 id="autostart-coq">Autostart COQ</h4>
+                <p>
+                  <code>let g:coq_settings = { 'auto_start': v:true }</code> or
+                  <code>let g:coq_settings = { 'auto_start': 'shut-up' }</code>
+                </p>
+                <p>
+                  This must be set <strong>BEFORE</strong>
+                  <code>require("coq")</code>
+                </p>
+                <h4 id="lsp-too-slow-to-show-up-on-keystroke">
+                  LSP too slow to show up on keystroke.
+                </h4>
+                <p>You have some options, each has its trade off:</p>
+                <ol>
+                  <li>
+                    Increase the
+                    <code>coq_settings.limits.completion_auto_timeout</code>.
+                  </li>
+                </ol>
+                <p>
+                  This will slow down feedback on <em>every keystroke</em>, as
+                  <code>coq</code> waits for LSP.
+                </p>
+                <ol start="2">
+                  <li>
+                    Use the manual completion hotkey (default
+                    <code>&lt;c-space&gt;</code>)
+                  </li>
+                </ol>
+                <p>
+                  Annoying! And the manual completion also has a timeout
+                  <code>coq_settings.limits.completion_manual_timeout</code>.
+                </p>
+                <p>
+                  Some LSP servers will still fail to respond within the default
+                  <code>.66</code> seconds, in that case pressing
+                  <code>&lt;c-space&gt;</code> multiple times might actually
+                  help some LSP servers catch up, depending on their
+                  implementation.
+                </p>
+                <h4 id="lsp-sometimes-not-importing">
+                  LSP sometimes not importing
+                </h4>
+                <p>
+                  Increase <code>coq_settings.clients.lsp.resolve_timeout</code>
+                </p>
+                <p>This will however, make applying edits slower.</p>
+                <h4 id="missing-results">Missing Results</h4>
+                <p>
+                  On keystroke only a max of
+                  <code>coq_settings.match.max_results</code> are shown.
+                </p>
+                <p>Use manual completion hotkey to show all results.</p>
+                <h4 id="some-lsp-servers-give-inconsistent-completions">
+                  Some LSP servers give inconsistent completions
+                </h4>
+                <p>
+                  This happens when certain LSP servers give you 1000s of
+                  unfiltered results in <em>alphabetical order</em> and you
+                  still have to respond in a few dozen milliseconds.
+                </p>
+                <p>
+                  To eliminate <code>a-z</code> bias, <code>coq</code> does a
+                  random sort on the resultset and process and cache as many of
+                  them as possible within the performance window.
+                </p>
+                <p>
+                  So if some results are not in the SQLite cache, and have yet
+                  to be processed, they will be missing. They might however
+                  still show up on later keystrokes.
+                </p>
+                <p>Use the manual hotkey if you need to see everything.</p>
+                <h4 id="my-vim-crashed">My vim crashed!</h4>
+                <p><strong>Disable TreeSitter</strong></p>
+                <p>Treesitter still needs stability work.</p>
+                <h4 id="i-want-to-use-a-different-python-version">
+                  I want to use a different python version
+                </h4>
+                <p>
+                  <code
+                    >vim.g.python3_host_prog=&lt;absolute path to
+                    python&gt;</code
+                  >
+                </p>
+                <h2 id="if-you-like-this">If you like this&hellip;</h2>
+                <p>Also check out</p>
+                <ul>
+                  <li>
+                    <p>
+                      <a href="https://github.com/ms-jpq/sad"
+                        ><code>sad</code></a
+                      >, it&rsquo;s a modern <code>sed</code> that does previews
+                      with syntax highlighting, and lets you pick and choose
+                      which chunks to edit.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/ms-jpq/chadtree"
+                        ><code>CHADTree</code></a
+                      >, it&rsquo;s a FULLY featured file manager.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/ms-jpq/isomorphic-copy"
+                        >isomorphic-copy</a
+                      >, it&rsquo;s a cross platform clipboard that is
+                      daemonless, and does not require third party support.
+                    </p>
+                  </li>
+                </ul>
+                <h2 id="special-thanks-acknowledgements">
+                  Special Thanks &amp; Acknowledgements
+                </h2>
+                <p>
+                  The snippets are compiled from the following open source
+                  projects:
+                </p>
+                <ul>
+                  <li>
+                    <p>
+                      <a href="https://github.com/Shougo/neosnippet-snippets"
+                        >Shougo/neosnippet-snippets</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/fatih/vim-go">fatih/vim-go</a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/honza/vim-snippets"
+                        >honza/vim-snippets</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/Ikuyadeu/vscode-R"
+                        >Ikuyadeu/vscode-R</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/Rocketseat/rocketseat-vscode-react-native-snippets"
+                        >Rocketseat/rocketseat-vscode-react-native-snippets</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/dsznajder/vscode-es7-javascript-react-snippets"
+                        >dsznajder/vscode-es7-javascript-react-snippets</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://github.com/johnpapa/vscode-angular-snippets"
+                        >johnpapa/vscode-angular-snippets</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/sdras/vue-vscode-snippets"
+                        >sdras/vue-vscode-snippets</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/snipsnapdev/snipsnap"
+                        >snipsnapdev/snipsnap</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/xabikos/vscode-javascript"
+                        >xabikos/vscode-javascript</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/xabikos/vscode-react"
+                        >xabikos/vscode-react</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/rafamadriz/friendly-snippets"
+                        >rafamadriz/friendly-snippets</a
+                      >
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  Super special thanks goes to
+                  <a
+                    href="https://github.com/typescript-language-server/typescript-language-server"
+                    >Typescript LSP</a
+                  >.
+                </p>
+                <p>
+                  Nothing like good motivation to improve my design than dumping
+                  1000 results on my client every other keystroke.
+                </p>
+              </article>
+            </section>
+
+            <section
+              class="grid grid-flow-col items-center justify-end gap-x-4"
+            >
+              <div>
+                <i class="fas fa-baby text-left"></i>
+                <time datetime="2020-07-16T03:58:40+0000"></time>
+              </div>
+              <div>
+                <i class="fas fa-user-edit text-left"></i>
+                <time datetime="2025-05-09T21:43:43+0000"></time>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <footer class="mt-4 grid items-center justify-items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2025
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,272 @@
+<!doctype html>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Zero conf service dashboard for Traefik v2 Ingress Controller"
+    />
+    <title>Creative Portfolio</title>
+    <link rel="stylesheet" href="/pages_repo.css" />
+
+    <script type="module" src="/layout.js"></script>
+  </head>
+
+  <body class="m-0 flex min-h-screen w-screen p-0">
+    <input
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+      aria-hidden="true"
+    />
+    <div
+      class="group/layout grid w-full content-start scroll-smooth bg-gray-50 break-words text-neutral-800 selection:bg-fuchsia-200"
+    >
+      <header
+        class="mb-4 grid grid-flow-col justify-between gap-x-2 px-8 pt-4 md:mb-0"
+      >
+        <label
+          class="big-button inline-block font-medium md:hidden"
+          for="layout-checkbox"
+        >
+          <i class="fas fa-bars"></i>
+          Menu
+        </label>
+        <div class="prose text-right text-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
+        </div>
+      </header>
+
+      <aside
+        class="hidden grid-flow-row grid-cols-1 content-start gap-4 px-8 group-[input:checked+_&]/layout:grid md:grid"
+      >
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square h-full w-full rounded-full object-cover px-3 py-3"
+            src="https://raw.githubusercontent.com/ms-jpq/simple-markdown-showcase/show/assets/images/face.png"
+          />
+        </section>
+
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
+
+        <section>
+          <nav>
+            <ul>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a class="no-underline hover:text-pink-400" href="/index.html">
+                  home
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a
+                  class="no-underline hover:text-pink-400"
+                  href="/about_me.html"
+                >
+                  about
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a
+                  class="no-underline hover:text-pink-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="flex flex-wrap gap-2">
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
+
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </section>
+      </aside>
+
+      <div
+        class="w-full bg-neutral-100 px-8 pt-2 group-[input:checked+_&]/layout:hidden md:block! md:pt-8"
+      >
+        <main class="grid grid-flow-row grid-cols-1 justify-items-center">
+          <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+            <section
+              class="grid grid-flow-col items-center justify-end gap-x-4"
+            >
+              <span class="github-stars">
+                <i class="fas fa-star"></i>
+                33
+              </span>
+
+              <span class="github-forks">
+                <i class="fas fa-code-branch"></i>
+                4
+              </span>
+
+              <a
+                class="big-button invis-link border-dashed"
+                href="https://github.com/ms-jpq/simple-traefik-dash"
+              >
+                View on Github
+                <i class="fab fa-github"></i>
+              </a>
+            </section>
+
+            <section class="self-center">
+              <article class="markdown">
+                <h1 id="simple-traefik-dash">
+                  <a href="https://ms-jpq.github.io/simple-traefik-dash/"
+                    >Simple Traefik Dash</a
+                  >
+                </h1>
+                <p>
+                  <a href="https://hub.docker.com/r/msjpq/simple-traefik-dash/"
+                    ><img
+                      alt="Docker Pulls"
+                      src="https://img.shields.io/docker/pulls/msjpq/simple-traefik-dash.svg"
+                  /></a>
+                </p>
+                <p>
+                  <strong>Zero conf</strong> service dashboard for
+                  <a href="https://traefik.io/">Traefik v2</a> reverse proxy
+                </p>
+                <p>
+                  Parses Traefik&rsquo;s
+                  <a href="https://docs.traefik.io/routing/overview/"
+                    >Routers</a
+                  >
+                  and generates all deterministic routes
+                </p>
+                <p>
+                  <code>Tested for Docker, Docker Swarm, and Kubernetes!</code>
+                </p>
+                <h2 id="screenshot">Screenshot</h2>
+                <p>
+                  <strong
+                    >You can totally change this background, don&rsquo;t
+                    worry</strong
+                  >
+                </p>
+                <p>
+                  <img
+                    alt="promo img"
+                    src="https://raw.githubusercontent.com/ms-jpq/simple-traefik-dash/pride/example/screenshot.png"
+                  />
+                </p>
+                <h2 id="usage">Usage</h2>
+                <div class="codehilite friendly">
+                  <pre><span></span><code><span class="c1"># SIMPLE TRAEFIK DASH #</span>
+<span class="n">simple</span><span class="o">-</span><span class="n">traefik</span><span class="o">-</span><span class="n">dash</span><span class="p">:</span>
+<span class="w">  </span><span class="n">image</span><span class="p">:</span><span class="w"> </span><span class="n">msjpq</span><span class="o">/</span><span class="n">simple</span><span class="o">-</span><span class="n">traefik</span><span class="o">-</span><span class="n">dash</span>
+<span class="w">  </span><span class="n">labels</span><span class="p">:</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">traefik</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">services</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">port</span><span class="o">=</span><span class="mi">5050</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">traefik</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">routers</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">tls</span><span class="o">.</span><span class="n">options</span><span class="o">=</span><span class="n">default</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">traefik</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">routers</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">rule</span><span class="o">=</span><span class="n">Host</span><span class="p">(</span><span class="s2">&quot;&lt;Something&gt;&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">environment</span><span class="p">:</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">STD_TRAEFIK_API</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">traefik</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="w"> </span><span class="c1"># Required, make sure you can actually talk to Traefik</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">STD_TRAEFIK_ENTRY_POINTS</span><span class="o">=</span><span class="n">web</span><span class="o">-</span><span class="n">secure</span><span class="w"> </span><span class="c1"># Required, only routes using entrypoints will be parsed</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">STD_TRAEFIK_EXIT_PORT</span><span class="o">=</span><span class="mi">443</span><span class="w"> </span><span class="c1"># Required, your exit port</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">STD_KUBECRD_FIX</span><span class="o">=</span><span class="n">True</span><span class="w"> </span><span class="c1"># Optional, enable if you see &lt;ns&gt;-name-&lt;randomstring&gt; with in Kubernetes</span>
+
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">STD_TITLE</span><span class="o">=</span><span class="err">🐳</span><span class="w"> </span><span class="c1"># Optional, page title</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">STD_BACKGROUND</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//...</span><span class="w"> </span><span class="c1"># Optional, changes the background image</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">STD_PATH_PREFIX</span><span class="o">=/</span><span class="n">std</span><span class="w"> </span><span class="c1"># Optional, for reverse proxy</span>
+<span class="w">  </span><span class="n">volumes</span><span class="p">:</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="o">./</span><span class="n">more</span><span class="o">.</span><span class="n">csv</span><span class="p">:</span><span class="o">/</span><span class="n">std</span><span class="o">/</span><span class="n">more</span><span class="o">-</span><span class="n">routes</span><span class="o">/</span><span class="n">more</span><span class="o">.</span><span class="n">csv</span><span class="w"> </span><span class="c1"># Optional - CSV Columns: name, uri</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="o">./</span><span class="n">ignore</span><span class="o">.</span><span class="n">csv</span><span class="p">:</span><span class="o">/</span><span class="n">std</span><span class="o">/</span><span class="n">ignore</span><span class="o">-</span><span class="n">routes</span><span class="o">/</span><span class="n">ignore</span><span class="o">.</span><span class="n">csv</span><span class="w"> </span><span class="c1"># Optional - CSV Column: name</span>
+</code></pre>
+                </div>
+
+                <p>You can test your Routers rules like so:</p>
+                <p>
+                  <code
+                    >docker run --rm msjpq/simple-traefik-dash
+                    "&lt;RULE&gt;"</code
+                  >
+                </p>
+                <p>i.e.</p>
+                <p>
+                  <code
+                    >docker run --rm msjpq/simple-traefik-dash "Host('qbz',
+                    'kfc') &amp;&amp; (PathPrefix('chicken') || PathPrefix( '95'
+                    )) || Host('dog.org', 'otters.moo') &amp;&amp;
+                    PathPrefix('cat')"</code
+                  >
+                </p>
+                <h2 id="customization">Customization</h2>
+                <p>
+                  You can customize all you want! <code>js</code>,
+                  <code>css</code>, <code>images</code>, everything!
+                </p>
+                <p>
+                  Simply override the files under <code>/std/views</code>, all
+                  the static content will be served
+                </p>
+                <h2 id="sister">Sister</h2>
+                <p>
+                  Check out my sister:
+                  <a href="https://ms-jpq.github.io/simple-traefik-identity/"
+                    >Simple Traefik Identity</a
+                  >
+                </p>
+                <p>Simple &amp; Configurable &ndash; SSO, for Traefik.</p>
+              </article>
+            </section>
+
+            <section
+              class="grid grid-flow-col items-center justify-end gap-x-4"
+            >
+              <div>
+                <i class="fas fa-baby text-left"></i>
+                <time datetime="2019-11-03T01:08:42+0000"></time>
+              </div>
+              <div>
+                <i class="fas fa-user-edit text-left"></i>
+                <time datetime="2024-01-12T18:10:51+0000"></time>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <footer class="mt-4 grid items-center justify-items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2025
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

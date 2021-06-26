@@ -1,0 +1,282 @@
+<!doctype html>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Interactive &amp; arbitrary Chaos Game fractal visualization tool"
+    />
+    <title>Creative Portfolio</title>
+    <link rel="stylesheet" href="/pages_repo.css" />
+
+    <script type="module" src="/layout.js"></script>
+  </head>
+
+  <body class="m-0 flex min-h-screen w-screen p-0">
+    <input
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+      aria-hidden="true"
+    />
+    <div
+      class="group/layout grid w-full content-start scroll-smooth bg-gray-50 break-words text-neutral-800 selection:bg-fuchsia-200"
+    >
+      <header
+        class="mb-4 grid grid-flow-col justify-between gap-x-2 px-8 pt-4 md:mb-0"
+      >
+        <label
+          class="big-button inline-block font-medium md:hidden"
+          for="layout-checkbox"
+        >
+          <i class="fas fa-bars"></i>
+          Menu
+        </label>
+        <div class="prose text-right text-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
+        </div>
+      </header>
+
+      <aside
+        class="hidden grid-flow-row grid-cols-1 content-start gap-4 px-8 group-[input:checked+_&]/layout:grid md:grid"
+      >
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square h-full w-full rounded-full object-cover px-3 py-3"
+            src="https://raw.githubusercontent.com/ms-jpq/simple-markdown-showcase/show/assets/images/face.png"
+          />
+        </section>
+
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
+
+        <section>
+          <nav>
+            <ul>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a class="no-underline hover:text-pink-400" href="/index.html">
+                  home
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a
+                  class="no-underline hover:text-pink-400"
+                  href="/about_me.html"
+                >
+                  about
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a
+                  class="no-underline hover:text-pink-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="flex flex-wrap gap-2">
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
+
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </section>
+      </aside>
+
+      <div
+        class="w-full bg-neutral-100 px-8 pt-2 group-[input:checked+_&]/layout:hidden md:block! md:pt-8"
+      >
+        <main class="grid grid-flow-row grid-cols-1 justify-items-center">
+          <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+            <section
+              class="grid grid-flow-col items-center justify-end gap-x-4"
+            >
+              <span class="github-stars">
+                <i class="fas fa-star"></i>
+                5
+              </span>
+
+              <span class="github-forks">
+                <i class="fas fa-code-branch"></i>
+                1
+              </span>
+
+              <a
+                class="big-button invis-link border-dashed"
+                href="https://github.com/ms-jpq/kaleidoscope"
+              >
+                View on Github
+                <i class="fab fa-github"></i>
+              </a>
+            </section>
+
+            <section class="self-center">
+              <article class="markdown">
+                <h1 id="kaleidoscope">
+                  <a href="https://ms-jpq.github.io/kaleidoscope/"
+                    >Kaleidoscope</a
+                  >
+                </h1>
+                <p>
+                  The Chaos Game is a
+                  <a
+                    href="https://en.wikipedia.org/wiki/Iterated_function_system"
+                    >randomized fractal generation algorithm</a
+                  >.
+                </p>
+                <ul>
+                  <li>
+                    <p>Pick any regular polygon</p>
+                  </li>
+                  <li>
+                    <p>Pick any arbitrary point inside the polygon</p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>Iterate:</strong> Put down another point anywhere
+                      in the line between the previous point and a random (or
+                      algorithmically chosen) vertex of the polygon.
+                    </p>
+                  </li>
+                </ul>
+                <hr />
+                <h2 id="play-here-desktop-firefox-chrome">
+                  <a href="https://ms-jpq.github.io/kaleidoscope-page/"
+                    >Play here</a
+                  >
+                  (Desktop Firefox / Chrome)
+                </h2>
+                <p>
+                  Its no
+                  <a href="https://en.wikipedia.org/wiki/Mandelbrot_set"
+                    >Mandelbrot Set</a
+                  >, but you do have the ability to curate your own unique
+                  fractals by adjusting the following params during the live
+                  generation process.
+                </p>
+                <ul>
+                  <li>
+                    <p>Jump ratio [0, 1]</p>
+                  </li>
+                  <li>
+                    <p>
+                      Forbidden jump positions, ie. only allow clockwise
+                      rotations with regards to the previous jump(s)
+                    </p>
+                  </li>
+                </ul>
+                <h2 id="demo">Demo</h2>
+                <p>
+                  I made the demo run at ludicrous speed, for a better look, you
+                  can slow things down a bit in the actual game.
+                </p>
+                <p>(Settings panel to your left.)</p>
+                <p>
+                  <img
+                    alt="demo"
+                    src="https://raw.githubusercontent.com/ms-jpq/Kaleidoscope/kaleidoscope/_assets/demo_heavy.gif"
+                  />
+                </p>
+                <h2 id="some-interesting-chaos-game-fractals">
+                  Some interesting Chaos Game fractals
+                </h2>
+                <p>
+                  <img
+                    alt="hexagon_noacross_0.5.png"
+                    src="https://raw.githubusercontent.com/ms-jpq/Kaleidoscope/kaleidoscope/_assets/hexagon_noacross_0.5.png"
+                  /><br />
+                  <img
+                    alt="sierpinski_triangle.png"
+                    src="https://raw.githubusercontent.com/ms-jpq/Kaleidoscope/kaleidoscope/_assets/sierpinski_triangle.png"
+                  /><br />
+                  <img
+                    alt="pentagon_noacross2_0.5.png"
+                    src="https://raw.githubusercontent.com/ms-jpq/Kaleidoscope/kaleidoscope/_assets/pentagon_noacross2_0.5.png"
+                  /><br />
+                  <img
+                    alt="hexagon_noajacent_0.5.png"
+                    src="https://raw.githubusercontent.com/ms-jpq/Kaleidoscope/kaleidoscope/_assets/hexagon_noajacent_0.5.png"
+                  /><br />
+                  <img
+                    alt="hexagon_norepeat2_0.5.png"
+                    src="https://raw.githubusercontent.com/ms-jpq/Kaleidoscope/kaleidoscope/_assets/hexagon_norepeat2_0.5.png"
+                  /><br />
+                  <img
+                    alt="hexagon_trial2_0.5.png"
+                    src="https://raw.githubusercontent.com/ms-jpq/Kaleidoscope/kaleidoscope/_assets/hexagon_trial2_0.5.png"
+                  /><br />
+                  <img
+                    alt="pentagon_noajacent2_0.5.png"
+                    src="https://raw.githubusercontent.com/ms-jpq/Kaleidoscope/kaleidoscope/_assets/pentagon_noajacent2_0.5.png"
+                  /><br />
+                  <img
+                    alt="hexagon_noacross2_0.5.png"
+                    src="https://raw.githubusercontent.com/ms-jpq/Kaleidoscope/kaleidoscope/_assets/hexagon_noacross2_0.5.png"
+                  /><br />
+                  <img
+                    alt="square_noacross2_0.5.png"
+                    src="https://raw.githubusercontent.com/ms-jpq/Kaleidoscope/kaleidoscope/_assets/square_noacross2_0.5.png"
+                  />
+                </p>
+              </article>
+            </section>
+
+            <section
+              class="grid grid-flow-col items-center justify-end gap-x-4"
+            >
+              <div>
+                <i class="fas fa-baby text-left"></i>
+                <time datetime="2019-08-20T18:27:34+0000"></time>
+              </div>
+              <div>
+                <i class="fas fa-user-edit text-left"></i>
+                <time datetime="2024-07-31T02:40:55+0000"></time>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <footer class="mt-4 grid items-center justify-items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2025
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

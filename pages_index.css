@@ -1,0 +1,31 @@
+@import url("../layout.css");
+
+/********
+ * CARD *
+ ********/
+
+main {
+  & > .card {
+    grid-template-areas:
+      "img"
+      "title"
+      "detail"
+      "meta";
+
+    & > .figure-img {
+      grid-area: img;
+    }
+
+    & > .figure-title {
+      grid-area: title;
+    }
+
+    & > .figure-detail {
+      grid-area: detail;
+    }
+
+    & > .figure-meta {
+      grid-area: meta;
+    }
+  }
+}

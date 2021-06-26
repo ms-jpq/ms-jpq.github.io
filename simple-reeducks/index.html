@@ -1,0 +1,288 @@
+<!doctype html>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Minimalist Classless Redux in Swift" />
+    <title>Creative Portfolio</title>
+    <link rel="stylesheet" href="/pages_repo.css" />
+
+    <script type="module" src="/layout.js"></script>
+  </head>
+
+  <body class="m-0 flex min-h-screen w-screen p-0">
+    <input
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+      aria-hidden="true"
+    />
+    <div
+      class="group/layout grid w-full content-start scroll-smooth bg-gray-50 break-words text-neutral-800 selection:bg-fuchsia-200"
+    >
+      <header
+        class="mb-4 grid grid-flow-col justify-between gap-x-2 px-8 pt-4 md:mb-0"
+      >
+        <label
+          class="big-button inline-block font-medium md:hidden"
+          for="layout-checkbox"
+        >
+          <i class="fas fa-bars"></i>
+          Menu
+        </label>
+        <div class="prose text-right text-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
+        </div>
+      </header>
+
+      <aside
+        class="hidden grid-flow-row grid-cols-1 content-start gap-4 px-8 group-[input:checked+_&]/layout:grid md:grid"
+      >
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square h-full w-full rounded-full object-cover px-3 py-3"
+            src="https://raw.githubusercontent.com/ms-jpq/simple-markdown-showcase/show/assets/images/face.png"
+          />
+        </section>
+
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
+
+        <section>
+          <nav>
+            <ul>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a class="no-underline hover:text-pink-400" href="/index.html">
+                  home
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a
+                  class="no-underline hover:text-pink-400"
+                  href="/about_me.html"
+                >
+                  about
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-pink-400">
+                <a
+                  class="no-underline hover:text-pink-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="flex flex-wrap gap-2">
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
+
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            class="flex h-[3ch] w-[3ch] items-center justify-center rounded-full border-2 border-solid border-neutral-500 p-2 text-center text-neutral-500 no-underline hover:border-pink-400 hover:text-pink-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </section>
+      </aside>
+
+      <div
+        class="w-full bg-neutral-100 px-8 pt-2 group-[input:checked+_&]/layout:hidden md:block! md:pt-8"
+      >
+        <main class="grid grid-flow-row grid-cols-1 justify-items-center">
+          <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+            <section
+              class="grid grid-flow-col items-center justify-end gap-x-4"
+            >
+              <span class="github-stars">
+                <i class="fas fa-star"></i>
+                4
+              </span>
+
+              <span class="github-forks hidden">
+                <i class="fas fa-code-branch"></i>
+                0
+              </span>
+
+              <a
+                class="big-button invis-link border-dashed"
+                href="https://github.com/ms-jpq/simple-reeducks"
+              >
+                View on Github
+                <i class="fab fa-github"></i>
+              </a>
+            </section>
+
+            <section class="self-center">
+              <article class="markdown">
+                <h1 id="simple-reeducks">
+                  <a href="https://ms-jpq.github.io/simple-reeducks/"
+                    >Simple Reeducks 🦆🦆</a
+                  >
+                </h1>
+                <h2 id="an-unceremonious-minimalist-and-idiomatic-redux-port">
+                  An unceremonious, minimalist, and idiomatic Redux port
+                </h2>
+                <p>
+                  Reeducks 🦆🦆 is
+                  <em
+                    ><a
+                      href="https://github.com/crymetothemoon/simple-reeducks/blob/master/core/simple-redux.swift"
+                      >stupidly simple</a
+                    ></em
+                  >: It uses 3 things &ndash; Functions, Closures, and Queues.
+                </p>
+                <p>It&rsquo;s also classless ☭☭☭</p>
+                <h2 id="trivial-example">Trivial Example</h2>
+                <p>Run <code>./demo.sh</code>: contains the following code</p>
+                <div class="codehilite friendly">
+                  <pre><span></span><code><span class="kd">struct</span><span class="w"> </span><span class="nc">State</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nv">counter</span><span class="p">:</span><span class="w"> </span><span class="nb">Int</span><span class="w"> </span><span class="p">}</span>
+
+
+<span class="kd">enum</span><span class="w"> </span><span class="nc">Action</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">up</span><span class="p">(</span><span class="kc">_</span><span class="w"> </span><span class="n">value</span><span class="p">:</span><span class="w"> </span><span class="nb">Int</span><span class="p">)</span><span class="w">   </span><span class="c1">// Inc by &lt;value&gt;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">down</span><span class="p">(</span><span class="kc">_</span><span class="w"> </span><span class="n">value</span><span class="p">:</span><span class="w"> </span><span class="nb">Int</span><span class="p">)</span><span class="w"> </span><span class="c1">// Dec by &lt;value&gt;</span>
+
+<span class="w">  </span><span class="c1">// Inc by 10 after 1 sec :: Async ThunkAction</span>
+<span class="w">  </span><span class="kd">static</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">asyncUp</span><span class="p">:</span><span class="w"> </span><span class="n">ThunkAction</span><span class="p">&lt;</span><span class="n">State</span><span class="p">&gt;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kc">_</span><span class="p">,</span><span class="w"> </span><span class="n">dispatch</span><span class="w"> </span><span class="k">in</span>
+<span class="w">    </span><span class="n">DispatchQueue</span><span class="p">.</span><span class="n">global</span><span class="p">().</span><span class="n">asyncAfter</span><span class="p">(</span><span class="n">deadline</span><span class="p">:</span><span class="w"> </span><span class="p">.</span><span class="n">now</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">dispatch</span><span class="p">(</span><span class="n">Action</span><span class="p">.</span><span class="n">up</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span><span class="w"> </span><span class="p">}}</span>
+
+<span class="w">  </span><span class="c1">// Dec by 10 after 1 sec :: Async ThunkAction</span>
+<span class="w">  </span><span class="kd">static</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">asyncDown</span><span class="p">:</span><span class="w"> </span><span class="n">ThunkAction</span><span class="p">&lt;</span><span class="n">State</span><span class="p">&gt;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kc">_</span><span class="p">,</span><span class="w"> </span><span class="n">dispatch</span><span class="w"> </span><span class="k">in</span>
+<span class="w">    </span><span class="n">DispatchQueue</span><span class="p">.</span><span class="n">global</span><span class="p">().</span><span class="n">asyncAfter</span><span class="p">(</span><span class="n">deadline</span><span class="p">:</span><span class="w"> </span><span class="p">.</span><span class="n">now</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">dispatch</span><span class="p">(</span><span class="n">Action</span><span class="p">.</span><span class="n">down</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span><span class="w"> </span><span class="p">}}}</span>
+
+
+<span class="kd">let</span><span class="w"> </span><span class="nv">reducer</span><span class="p">:</span><span class="w"> </span><span class="n">Reducer</span><span class="p">&lt;</span><span class="n">State</span><span class="p">&gt;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">_state</span><span class="p">,</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="k">in</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nv">state</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">_state</span>
+<span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">action</span><span class="w"> </span><span class="k">as</span><span class="p">?</span><span class="w"> </span><span class="n">Action</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="p">.</span><span class="n">up</span><span class="p">(</span><span class="n">value</span><span class="p">)?:</span>
+<span class="w">    </span><span class="n">state</span><span class="p">.</span><span class="n">counter</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">value</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="p">.</span><span class="n">down</span><span class="p">(</span><span class="n">value</span><span class="p">)?:</span>
+<span class="w">    </span><span class="n">state</span><span class="p">.</span><span class="n">counter</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">value</span>
+<span class="w">  </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="p">}</span>
+
+
+<span class="kd">let</span><span class="w"> </span><span class="nv">store</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">NewStore</span><span class="p">(</span>
+<span class="w">  </span><span class="n">initial</span><span class="p">:</span><span class="w"> </span><span class="n">State</span><span class="p">(</span><span class="n">counter</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span>
+<span class="w">  </span><span class="n">reducer</span><span class="p">:</span><span class="w"> </span><span class="n">reducer</span><span class="p">,</span>
+<span class="w">  </span><span class="n">middleware</span><span class="p">:</span><span class="w"> </span><span class="n">ApplyMiddlewares</span><span class="p">(</span><span class="n">LoggerMiddleware</span><span class="p">,</span><span class="w"> </span><span class="n">ThunkMiddleware</span><span class="p">))</span>
+
+
+<span class="kc">_</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">store</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(.</span><span class="n">main</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="k">in</span>
+<span class="w">  </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;New State : </span><span class="si">\(</span><span class="n">state</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)}</span>
+</code></pre>
+                </div>
+
+                <h2 id="why-not-reswift">
+                  Why not
+                  <a href="https://github.com/ReSwift/ReSwift">ReSwift</a>?
+                </h2>
+                <ol>
+                  <li>
+                    <p>
+                      Complexity &amp; Ceremony:
+                      <strong>Redux is stupidly simple</strong>, ReSwift adds
+                      <a
+                        href="https://github.com/ReSwift/ReSwift/tree/master/ReSwift/CoreTypes"
+                        >unnecessary ceremony</a
+                      >, with protocols and open classes.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Concurrency: ReSwift
+                      <a
+                        href="https://github.com/ReSwift/ReSwift/blob/master/ReSwift/CoreTypes/Store.swift"
+                        >Raises a <code>FatalError</code></a
+                      >
+                      for concurrent modification. This should never happen when
+                      <code>Grand Central Dispatch</code> exists.
+                    </p>
+                  </li>
+                </ol>
+                <h2 id="honest-opinion-should-you-use-redux-with-swift-apps">
+                  Honest Opinion: Should you use Redux with Swift Apps?
+                </h2>
+                <p>Answer: Maybe?</p>
+                <p>
+                  I wrote about 10,000 lines of iOS / MacOS code with
+                  <strong>Reeducks 🦆🦆</strong>, and although Unidirectional
+                  Dataflow is very neat, it takes quite a bit of ceremony and
+                  discipline to keep the <code>Views</code> and
+                  <code>ViewControllers</code> stateless, especially with
+                  <code>TableViews</code> that uses
+                  <code>NSFetchedResultsController</code>.
+                </p>
+                <p>
+                  Honestly I&rsquo;d say its probably not worth it until the
+                  more declarative
+                  <a href="https://developer.apple.com/xcode/swiftui/"
+                    >SwiftUI</a
+                  >
+                  becomes the thing, and I will give
+                  <strong>Reeducks 🦆🦆</strong> another shot.
+                </p>
+                <p>
+                  Swift&rsquo;s pattern match syntax also quite verbose compared
+                  to say <code>F#</code>, which has its own Unidirectional
+                  framework, and can be used to build both iOS and MacOS apps.
+                </p>
+              </article>
+            </section>
+
+            <section
+              class="grid grid-flow-col items-center justify-end gap-x-4"
+            >
+              <div>
+                <i class="fas fa-baby text-left"></i>
+                <time datetime="2019-05-13T21:13:12+0000"></time>
+              </div>
+              <div>
+                <i class="fas fa-user-edit text-left"></i>
+                <time datetime="2023-09-22T09:51:48+0000"></time>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <footer class="mt-4 grid items-center justify-items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2025
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
