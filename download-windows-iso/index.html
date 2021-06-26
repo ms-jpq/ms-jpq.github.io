@@ -1,0 +1,148 @@
+<!DOCTYPE html><html >
+  <head >
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title >
+      Creative Portfolio
+    </title>
+    <link href="/pages_repo.css" rel="stylesheet"/>
+ 
+    <script defer src="/layout.js"></script>
+  </head>
+  <body class="d-grid vw-100 mp-0">
+    <header class="d-grid grid-col px-4">
+      <button class="big-button text-justify">
+  <i class="fas fa-bars"></i>
+Menu
+
+</button>
+
+      <h2 class="text-uppercase text-ellipsis mb-0" id="header-title">
+  <a class="invis-link" href="/index.html">
+    Creative Portfolio
+  </a>
+</h2>
+
+    </header>
+    <aside class="grid ac-start px-4" id="left-panel">
+      <section id="about-me">
+  <div class="markdown mx-1">
+    <p >I am a polyglot programmer and software engineer with more than 5 years of experience.</p>
+  </div>
+</section>
+
+      <section id="nav">
+  <nav >
+    <ul >
+      <li class="text-capitalize ">
+        <a href="/index.html">home</a>
+      </li>
+      <li class="text-capitalize ">
+        <a href="/about_me.html">about</a>
+      </li>
+      <li class="text-capitalize ">
+        <a href="/contact_me.html">get in touch</a>
+      </li>
+    </ul>
+  </nav>
+</section>
+
+      <section class="associations d-flex flex-wrap" id="associations">
+  <a class="association-circle border-solid border-thin border-circle d-flex ai-centre jc-centre p-2 m-2 text-centre" href="mailto:github@bigly.dog">
+  <i class="far fa-envelope"></i>
+</a>
+
+  <a class="association-circle border-solid border-thin border-circle d-flex ai-centre jc-centre p-2 m-2 text-centre" href="https://www.linkedin.com/in/wang--hao">
+  <i class="fab fa-linkedin-in"></i>
+</a>
+
+  <a class="association-circle border-solid border-thin border-circle d-flex ai-centre jc-centre p-2 m-2 text-centre" href="https://github.com/ms-jpq">
+  <i class="fab fa-github"></i>
+</a>
+
+  <a class="association-circle border-solid border-thin border-circle d-flex ai-centre jc-centre p-2 m-2 text-centre" href="https://stackexchange.com/users/15744711">
+  <i class="fab fa-stack-overflow"></i>
+</a>
+
+</section>
+
+    </aside>
+    <main class="d-grid p-8 row-gap-8">
+  <section class="repo-header d-grid grid-col jc-end ai-centre mx-auto col-gap-4">
+    <span class="github-stars ">
+  <i class="fas fa-star"></i>
+  3
+</span>
+ 
+    <span class="github-forks hidden">
+  <i class="fas fa-code-branch"></i>
+  0
+</span>
+
+    <a class="invis-link" href="https://github.com/ms-jpq/download-windows-iso">
+<button class="big-button text-justify">
+   
+      View on Github <i class="fab fa-github"></i>
+
+</button>
+    </a>
+  </section>
+  <section class="repo-body d-grid mx-auto">
+    <div class="markdown w-100">
+      <h1 id="download-windows-iso">Download Windows ISO</h1>
+<p >Python script to download Windows from Microsoft’s website</p>
+<h2 id="requirements">Requirements</h2>
+<ol >
+<li >
+<p >Python</p>
+</li>
+<li >
+<p >Docker</p>
+</li>
+</ol>
+<p >No other dependencies.</p>
+<h2 id="how-to-use">How to use</h2>
+<div class="codehilite friendly"><pre ><span ></span><code >wget https://raw.githubusercontent.com/ms-jpq/download-windows-iso/bindows/download.py
+python3 download.py
+</code></pre></div>
+
+<p >It will keep trying to download image until it succeeds.</p>
+<p >If you are unlucky, it might take 2 or 3 runs.</p>
+<h2 id="to-pack-windows-iso-for-kvm-with-virtio-drivers">To pack Windows ISO for KVM (with VirtIO Drivers)</h2>
+<p >Only works on Ubuntu</p>
+<div class="codehilite friendly"><pre ><span ></span><code >wget https://raw.githubusercontent.com/ms-jpq/download-windows-iso/bindows/download.py
+wget https://raw.githubusercontent.com/ms-jpq/download-windows-iso/bindows/pack.py
+python3 pack.py
+</code></pre></div>
+
+<h2 id="how-do-you-know-it-still-works">How do you know it still works?</h2>
+<p ><a href="https://github.com/ms-jpq/download-windows-iso/actions">Look at the CI</a></p>
+<p >It has a simple test, if the script downloads <code >*.iso</code> over 1000MB, it’s probably the Windows ISO.</p>
+<p >I will try to update it whenever it breaks.</p>
+<h2 id="why-are-my-fans-so-loud">Why are my fans so loud?</h2>
+<p >This script is designed to run on a CI, AKA not your hardware.</p>
+<p >It will spin up <strong >by default</strong> <code >cpu_count()</code> instances of headless browsers in Docker at the same time.</p>
+<p >This will help to cut down flakiness at cost of compute.</p>
+<p >Since I am running this on Microsoft’s dime, I don’t really care about the resource usage.</p>
+    </div>
+  </section>
+  <section class="repo-footer d-grid ji-end mx-auto col-gap-4">
+    <div >
+      <i class="fas fa-user-edit text-start"></i>
+      <time datetime="2021-06-26T00:25:50+0000"></time>
+    </div>
+    <div >
+      <i class="fas fa-baby text-start"></i>
+      <time datetime="2021-03-08T04:02:01+0000"></time>
+    </div>
+  </section>
+</main>
+
+    <footer class="d-grid ji-centre ai-centre">
+      <div class="markdown">
+  <p >© 2021 <a href="https://github.com/ms-jpq">ms-jpq</a></p>
+</div>
+
+    </footer>
+  </body>
+</html>

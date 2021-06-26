@@ -1,0 +1,151 @@
+<!DOCTYPE html><html >
+  <head >
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title >
+      Creative Portfolio
+    </title>
+    <link href="/pages_repo.css" rel="stylesheet"/>
+ 
+    <script defer src="/layout.js"></script>
+  </head>
+  <body class="d-grid vw-100 mp-0">
+    <header class="d-grid grid-col px-4">
+      <button class="big-button text-justify">
+  <i class="fas fa-bars"></i>
+Menu
+
+</button>
+
+      <h2 class="text-uppercase text-ellipsis mb-0" id="header-title">
+  <a class="invis-link" href="/index.html">
+    Creative Portfolio
+  </a>
+</h2>
+
+    </header>
+    <aside class="grid ac-start px-4" id="left-panel">
+      <section id="about-me">
+  <div class="markdown mx-1">
+    <p >I am a polyglot programmer and software engineer with more than 5 years of experience.</p>
+  </div>
+</section>
+
+      <section id="nav">
+  <nav >
+    <ul >
+      <li class="text-capitalize ">
+        <a href="/index.html">home</a>
+      </li>
+      <li class="text-capitalize ">
+        <a href="/about_me.html">about</a>
+      </li>
+      <li class="text-capitalize ">
+        <a href="/contact_me.html">get in touch</a>
+      </li>
+    </ul>
+  </nav>
+</section>
+
+      <section class="associations d-flex flex-wrap" id="associations">
+  <a class="association-circle border-solid border-thin border-circle d-flex ai-centre jc-centre p-2 m-2 text-centre" href="mailto:github@bigly.dog">
+  <i class="far fa-envelope"></i>
+</a>
+
+  <a class="association-circle border-solid border-thin border-circle d-flex ai-centre jc-centre p-2 m-2 text-centre" href="https://www.linkedin.com/in/wang--hao">
+  <i class="fab fa-linkedin-in"></i>
+</a>
+
+  <a class="association-circle border-solid border-thin border-circle d-flex ai-centre jc-centre p-2 m-2 text-centre" href="https://github.com/ms-jpq">
+  <i class="fab fa-github"></i>
+</a>
+
+  <a class="association-circle border-solid border-thin border-circle d-flex ai-centre jc-centre p-2 m-2 text-centre" href="https://stackexchange.com/users/15744711">
+  <i class="fab fa-stack-overflow"></i>
+</a>
+
+</section>
+
+    </aside>
+    <main class="d-grid p-8 row-gap-8">
+  <section class="repo-header d-grid grid-col jc-end ai-centre mx-auto col-gap-4">
+    <span class="github-stars ">
+  <i class="fas fa-star"></i>
+  1
+</span>
+ 
+    <span class="github-forks hidden">
+  <i class="fas fa-code-branch"></i>
+  0
+</span>
+
+    <a class="invis-link" href="https://github.com/ms-jpq/kaleidoscope">
+<button class="big-button text-justify">
+   
+      View on Github <i class="fab fa-github"></i>
+
+</button>
+    </a>
+  </section>
+  <section class="repo-body d-grid mx-auto">
+    <div class="markdown w-100">
+      <h1 id="kaleidoscope"><a href="https://ms-jpq.github.io/kaleidoscope/">Kaleidoscope</a></h1>
+<p >The Chaos Game is a <a href="https://en.wikipedia.org/wiki/Iterated_function_system">randomized fractal generation algorithm</a>.</p>
+<ul >
+<li >
+<p >Pick any regular polygon</p>
+</li>
+<li >
+<p >Pick any arbitrary point inside the polygon</p>
+</li>
+<li >
+<p ><strong >Iterate:</strong> Put down another point anywhere in the line between the previous point and a random (or algorithmically chosen) vertex of the polygon.</p>
+</li>
+</ul>
+<hr />
+<h2 id="play-here-desktop-firefox-chrome"><a href="https://ms-jpq.github.io/kaleidoscope-page/">Play here</a> (Desktop Firefox / Chrome)</h2>
+<p >Its no <a href="https://en.wikipedia.org/wiki/Mandelbrot_set">Mandelbrot Set</a>, but you do have the ability to curate your own unique fractals by adjusting the following params during the live generation process.</p>
+<ul >
+<li >
+<p >Jump ratio [0, 1]</p>
+</li>
+<li >
+<p >Forbidden jump positions, ie. only allow clockwise rotations with regards to the previous jump(s)</p>
+</li>
+</ul>
+<h2 id="demo">Demo</h2>
+<p >I made the demo run at ludicrous speed, for a better look, you can slow things down a bit in the actual game.</p>
+<p >(Settings panel to your left.)</p>
+<p ><img alt="demo" height="1355" loading="lazy" src="/05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef.webp" srcset="/05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef--1000x1000.webp 1000w, /05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef--200x200.webp 200w, /05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef--400x400.webp 400w, /05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef--600x600.webp 600w, /05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef--800x800.webp 800w" width="1355"/></p>
+<h2 id="some-interesting-chaos-game-fractals">Some interesting Chaos Game fractals</h2>
+<p ><img alt="hexagon_noacross_0.5.png" height="1440" loading="lazy" src="/2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22.webp" srcset="/2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22--1000x1000.webp 1000w, /2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22--200x200.webp 200w, /2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22--400x400.webp 400w, /2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22--600x600.webp 600w, /2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22--800x800.webp 800w" width="1440"/><br />
+<img alt="sierpinski_triangle.png" height="1440" loading="lazy" src="/a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956.webp" srcset="/a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956--1000x1000.webp 1000w, /a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956--200x200.webp 200w, /a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956--400x400.webp 400w, /a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956--600x600.webp 600w, /a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956--800x800.webp 800w" width="1440"/><br />
+<img alt="pentagon_noacross2_0.5.png" height="1440" loading="lazy" src="/04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf.webp" srcset="/04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf--1000x1000.webp 1000w, /04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf--200x200.webp 200w, /04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf--400x400.webp 400w, /04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf--600x600.webp 600w, /04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf--800x800.webp 800w" width="1440"/><br />
+<img alt="hexagon_noajacent_0.5.png" height="1440" loading="lazy" src="/e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e.webp" srcset="/e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e--1000x1000.webp 1000w, /e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e--200x200.webp 200w, /e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e--400x400.webp 400w, /e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e--600x600.webp 600w, /e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e--800x800.webp 800w" width="1440"/><br />
+<img alt="hexagon_norepeat2_0.5.png" height="1440" loading="lazy" src="/134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9.webp" srcset="/134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9--1000x1000.webp 1000w, /134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9--200x200.webp 200w, /134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9--400x400.webp 400w, /134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9--600x600.webp 600w, /134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9--800x800.webp 800w" width="1440"/><br />
+<img alt="hexagon_trial2_0.5.png" height="1440" loading="lazy" src="/59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95.webp" srcset="/59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95--1000x1000.webp 1000w, /59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95--200x200.webp 200w, /59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95--400x400.webp 400w, /59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95--600x600.webp 600w, /59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95--800x800.webp 800w" width="1440"/><br />
+<img alt="pentagon_noajacent2_0.5.png" height="1440" loading="lazy" src="/18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a.webp" srcset="/18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a--1000x1000.webp 1000w, /18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a--200x200.webp 200w, /18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a--400x400.webp 400w, /18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a--600x600.webp 600w, /18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a--800x800.webp 800w" width="1440"/><br />
+<img alt="hexagon_noacross2_0.5.png" height="1440" loading="lazy" src="/e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d.webp" srcset="/e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d--1000x1000.webp 1000w, /e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d--200x200.webp 200w, /e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d--400x400.webp 400w, /e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d--600x600.webp 600w, /e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d--800x800.webp 800w" width="1440"/><br />
+<img alt="square_noacross2_0.5.png" height="1440" loading="lazy" src="/884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16.webp" srcset="/884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16--1000x1000.webp 1000w, /884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16--200x200.webp 200w, /884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16--400x400.webp 400w, /884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16--600x600.webp 600w, /884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16--800x800.webp 800w" width="1440"/></p>
+    </div>
+  </section>
+  <section class="repo-footer d-grid ji-end mx-auto col-gap-4">
+    <div >
+      <i class="fas fa-user-edit text-start"></i>
+      <time datetime="2021-06-26T00:25:51+0000"></time>
+    </div>
+    <div >
+      <i class="fas fa-baby text-start"></i>
+      <time datetime="2019-08-20T18:27:34+0000"></time>
+    </div>
+  </section>
+</main>
+
+    <footer class="d-grid ji-centre ai-centre">
+      <div class="markdown">
+  <p >© 2021 <a href="https://github.com/ms-jpq">ms-jpq</a></p>
+</div>
+
+    </footer>
+  </body>
+</html>

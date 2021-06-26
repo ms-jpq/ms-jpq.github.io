@@ -1,0 +1,153 @@
+<!DOCTYPE html><html >
+  <head >
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title >
+      Creative Portfolio
+    </title>
+    <link href="/pages_repo.css" rel="stylesheet"/>
+ 
+    <script defer src="/layout.js"></script>
+  </head>
+  <body class="d-grid vw-100 mp-0">
+    <header class="d-grid grid-col px-4">
+      <button class="big-button text-justify">
+  <i class="fas fa-bars"></i>
+Menu
+
+</button>
+
+      <h2 class="text-uppercase text-ellipsis mb-0" id="header-title">
+  <a class="invis-link" href="/index.html">
+    Creative Portfolio
+  </a>
+</h2>
+
+    </header>
+    <aside class="grid ac-start px-4" id="left-panel">
+      <section id="about-me">
+  <div class="markdown mx-1">
+    <p >I am a polyglot programmer and software engineer with more than 5 years of experience.</p>
+  </div>
+</section>
+
+      <section id="nav">
+  <nav >
+    <ul >
+      <li class="text-capitalize ">
+        <a href="/index.html">home</a>
+      </li>
+      <li class="text-capitalize ">
+        <a href="/about_me.html">about</a>
+      </li>
+      <li class="text-capitalize ">
+        <a href="/contact_me.html">get in touch</a>
+      </li>
+    </ul>
+  </nav>
+</section>
+
+      <section class="associations d-flex flex-wrap" id="associations">
+  <a class="association-circle border-solid border-thin border-circle d-flex ai-centre jc-centre p-2 m-2 text-centre" href="mailto:github@bigly.dog">
+  <i class="far fa-envelope"></i>
+</a>
+
+  <a class="association-circle border-solid border-thin border-circle d-flex ai-centre jc-centre p-2 m-2 text-centre" href="https://www.linkedin.com/in/wang--hao">
+  <i class="fab fa-linkedin-in"></i>
+</a>
+
+  <a class="association-circle border-solid border-thin border-circle d-flex ai-centre jc-centre p-2 m-2 text-centre" href="https://github.com/ms-jpq">
+  <i class="fab fa-github"></i>
+</a>
+
+  <a class="association-circle border-solid border-thin border-circle d-flex ai-centre jc-centre p-2 m-2 text-centre" href="https://stackexchange.com/users/15744711">
+  <i class="fab fa-stack-overflow"></i>
+</a>
+
+</section>
+
+    </aside>
+    <main class="d-grid p-8 row-gap-8">
+  <section class="repo-header d-grid grid-col jc-end ai-centre mx-auto col-gap-4">
+    <span class="github-stars ">
+  <i class="fas fa-star"></i>
+  32
+</span>
+ 
+    <span class="github-forks ">
+  <i class="fas fa-code-branch"></i>
+  2
+</span>
+
+    <a class="invis-link" href="https://github.com/ms-jpq/simple-traefik-dash">
+<button class="big-button text-justify">
+   
+      View on Github <i class="fab fa-github"></i>
+
+</button>
+    </a>
+  </section>
+  <section class="repo-body d-grid mx-auto">
+    <div class="markdown w-100">
+      <h1 id="simple-traefik-dash"><a href="https://ms-jpq.github.io/simple-traefik-dash/">Simple Traefik Dash</a></h1>
+<p ><a href="https://hub.docker.com/r/msjpq/simple-traefik-dash/"><img alt="Docker Pulls" loading="lazy" src="/32c6d4cdbc0df6c24bfac3aedd2ded25880ae0040878859bdc51e9b898ef3112.svg"/></a></p>
+<p ><strong >Zero conf</strong> service dashboard for <a href="https://traefik.io/">Traefik v2</a> reverse proxy</p>
+<p >Parses Traefik’s <a href="https://docs.traefik.io/routing/overview/">Routers</a> and generates all deterministic routes</p>
+<p ><code >Tested for Docker, Docker Swarm, and Kubernetes!</code></p>
+<h2 id="screenshot">Screenshot</h2>
+<p ><strong >You can totally change this background, don’t worry</strong></p>
+<p ><img alt="promo img" height="1004" loading="lazy" src="/3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2.webp" srcset="/3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--1000x786.webp 1000w, /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--200x157.webp 200w, /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--400x314.webp 400w, /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--600x471.webp 600w, /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--800x628.webp 800w" width="1278"/></p>
+<h2 id="usage">Usage</h2>
+<div class="codehilite friendly"><pre ><span ></span><code ><span class="c1"># SIMPLE TRAEFIK DASH #</span>
+<span class="n">simple</span><span class="o">-</span><span class="n">traefik</span><span class="o">-</span><span class="n">dash</span><span class="p">:</span>
+  <span class="n">image</span><span class="p">:</span> <span class="n">msjpq</span><span class="o">/</span><span class="n">simple</span><span class="o">-</span><span class="n">traefik</span><span class="o">-</span><span class="n">dash</span>
+  <span class="n">labels</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">traefik</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">services</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">port</span><span class="o">=</span><span class="mi">5050</span>
+    <span class="o">-</span> <span class="n">traefik</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">routers</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">tls</span><span class="o">.</span><span class="n">options</span><span class="o">=</span><span class="n">default</span>
+    <span class="o">-</span> <span class="n">traefik</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">routers</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">rule</span><span class="o">=</span><span class="n">Host</span><span class="p">(</span><span class="s2">&quot;&lt;Something&gt;&quot;</span><span class="p">)</span>
+  <span class="n">environment</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">STD_TRAEFIK_API</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">traefik</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span> <span class="c1"># Required, make sure you can actually talk to Traefik</span>
+    <span class="o">-</span> <span class="n">STD_TRAEFIK_ENTRY_POINTS</span><span class="o">=</span><span class="n">web</span><span class="o">-</span><span class="n">secure</span> <span class="c1"># Required, only routes using entrypoints will be parsed</span>
+    <span class="o">-</span> <span class="n">STD_TRAEFIK_EXIT_PORT</span><span class="o">=</span><span class="mi">443</span> <span class="c1"># Required, your exit port</span>
+    <span class="o">-</span> <span class="n">STD_KUBECRD_FIX</span><span class="o">=</span><span class="n">True</span> <span class="c1"># Optional, enable if you see &lt;ns&gt;-name-&lt;randomstring&gt; with in Kubernetes</span>
+
+    <span class="o">-</span> <span class="n">STD_TITLE</span><span class="o">=</span><span class="err">🐳</span> <span class="c1"># Optional, page title</span>
+    <span class="o">-</span> <span class="n">STD_BACKGROUND</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//...</span> <span class="c1"># Optional, changes the background image</span>
+    <span class="o">-</span> <span class="n">STD_PATH_PREFIX</span><span class="o">=/</span><span class="n">std</span> <span class="c1"># Optional, for reverse proxy</span>
+  <span class="n">volumes</span><span class="p">:</span>
+    <span class="o">-</span> <span class="o">./</span><span class="n">more</span><span class="o">.</span><span class="n">csv</span><span class="p">:</span><span class="o">/</span><span class="n">std</span><span class="o">/</span><span class="n">more</span><span class="o">-</span><span class="n">routes</span><span class="o">/</span><span class="n">more</span><span class="o">.</span><span class="n">csv</span> <span class="c1"># Optional - CSV Columns: name, uri</span>
+    <span class="o">-</span> <span class="o">./</span><span class="n">ignore</span><span class="o">.</span><span class="n">csv</span><span class="p">:</span><span class="o">/</span><span class="n">std</span><span class="o">/</span><span class="n">ignore</span><span class="o">-</span><span class="n">routes</span><span class="o">/</span><span class="n">ignore</span><span class="o">.</span><span class="n">csv</span> <span class="c1"># Optional - CSV Column: name</span>
+</code></pre></div>
+
+<p >You can test your Routers rules like so:</p>
+<p ><code >docker run --rm msjpq/simple-traefik-dash &quot;&lt;RULE&gt;&quot;</code></p>
+<p >i.e.</p>
+<p ><code >docker run --rm msjpq/simple-traefik-dash  &quot;Host(&#x27;qbz&#x27;, &#x27;kfc&#x27;) &amp;&amp; (PathPrefix(&#x27;chicken&#x27;) || PathPrefix( &#x27;95&#x27; )) || Host(&#x27;dog.org&#x27;, &#x27;otters.moo&#x27;) &amp;&amp; PathPrefix(&#x27;cat&#x27;)&quot;</code></p>
+<h2 id="customization">Customization</h2>
+<p >You can customize all you want! <code >js</code>, <code >css</code>, <code >images</code>, everything!</p>
+<p >Simply override the files under <code >/std/views</code>, all the static content will be served</p>
+<h2 id="sister">Sister</h2>
+<p >Check out my sister: <a href="https://ms-jpq.github.io/simple-traefik-identity/">Simple Traefik Identity</a></p>
+<p >Simple &amp; Configurable – SSO, for Traefik.</p>
+    </div>
+  </section>
+  <section class="repo-footer d-grid ji-end mx-auto col-gap-4">
+    <div >
+      <i class="fas fa-user-edit text-start"></i>
+      <time datetime="2021-06-26T00:25:51+0000"></time>
+    </div>
+    <div >
+      <i class="fas fa-baby text-start"></i>
+      <time datetime="2019-11-03T01:08:42+0000"></time>
+    </div>
+  </section>
+</main>
+
+    <footer class="d-grid ji-centre ai-centre">
+      <div class="markdown">
+  <p >© 2021 <a href="https://github.com/ms-jpq">ms-jpq</a></p>
+</div>
+
+    </footer>
+  </body>
+</html>
