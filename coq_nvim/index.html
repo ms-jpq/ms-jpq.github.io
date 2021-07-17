@@ -92,37 +92,141 @@ Menu
     <div class="markdown">
       <h1 id="coqnvim"><a href="https://ms-jpq.github.io/coq_nvim">coq.nvim 🐔</a></h1>
 <p >Named after the <a href="https://coq.inria.fr/">famous theorem prover</a></p>
-<h2 id="advanced-scheduler">Advanced Scheduler</h2>
+<h2 id="faster-than-lua">Faster Than Lua</h2>
 <ul >
 <li >
-<p >Concurrent! multi source completion</p>
+<p >Native C in memory B-trees</p>
 </li>
 <li >
-<p >Streaming incremental sources</p>
+<p >SQLite VM interrupts</p>
 </li>
 <li >
-<p >Never blocks</p>
+<p >Coroutine based incremental &amp; interruptable scheduler</p>
 </li>
 <li >
-<p >Cancel culture (fetch first, cancel later)</p>
+<p >TCP-esque flow control</p>
 </li>
 </ul>
+<p >More details at the <a href="./docs/PERFORMANCE.md">PERFORMANCE.md</a></p>
+<h2 id="features">Features</h2>
+<h3 id="fast-as-fuck">Fast as fuck</h3>
+<ul >
+<li >Results on <strong >every keystroke</strong></li>
+</ul>
+<p ><em ><code >LSP</code> can be far slower, nothing I can do. I didn’t write the servers</em></p>
+<h3 id="fuzzy-search">Fuzzy Search</h3>
+<ul >
+<li >
+<p ><strong >Typo resistant</strong></p>
+</li>
+<li >
+<p >Insertion order bonus</p>
+</li>
+<li >
+<p >Proximity bonus</p>
+</li>
+<li >
+<p >Weighted average of relative ranks</p>
+</li>
+</ul>
+<h3 id="documentation">Documentation</h3>
+<ul >
+<li >
+<p >View documentation in big buffer</p>
+</li>
+<li >
+<p >Auto open preview on side with most space</p>
+</li>
+<li >
+<p >Customizable location: n, s, w, e</p>
+</li>
+</ul>
+<h3 id="lsp">LSP</h3>
+<ul >
+<li >
+<p >Client-side caching</p>
+</li>
+<li >
+<p >Multi-server completion</p>
+</li>
+<li >
+<p >Header imports</p>
+</li>
+<li >
+<p >Snippet Support</p>
+</li>
+</ul>
+<p ><strong >Need to be enabled in config</strong></p>
+<h3 id="snippets">Snippets</h3>
+<ul >
+<li >
+<p ><strong >Over 9000</strong> built-in snippets</p>
+</li>
+<li >
+<p >99% of LSP grammar, 95% of Vim grammar</p>
+</li>
+</ul>
+<p ><em >Not supported (right now): linked edits, regex, arbitrary code execution</em></p>
+<p ><em >The <code >%</code> statistic comes from compiling the 10,000 snippets</em></p>
+<h3 id="ctags">CTags</h3>
+<ul >
+<li >
+<p >Incremental &amp; automatic <strong >background compilation</strong></p>
+</li>
+<li >
+<p >Tag location &amp; context</p>
+</li>
+<li >
+<p >Non-blocking</p>
+</li>
+<li >
+<p >Fuzzy</p>
+</li>
+</ul>
+<p ><em >Normally CTags support requires Vim to do the parsing. <code >coq.nvim</code> does not</em></p>
+<p ><strong >Requires <code >Universal CTags</code>, NOT <code >ctags</code></strong></p>
+<div class="codehilite friendly"><pre ><span ></span><code >brew install universal-ctags
+apt  install universal-ctags
+</code></pre></div>
+
+<h3 id="buffers">Buffers</h3>
+<ul >
+<li >
+<p >Real time completion</p>
+</li>
+<li >
+<p >Fast in files with thousands of lines</p>
+</li>
+</ul>
+<h3 id="treesitter">TreeSitter</h3>
+<h3 id="paths">Paths</h3>
+<ul >
+<li >Relative to both <code >cwd</code> and file path</li>
+</ul>
+<h3 id="tmux">Tmux</h3>
+<h3 id="tabnine">Tabnine</h3>
+<ul >
+<li >Auto download &amp; install</li>
+</ul>
+<p ><em >T9 is disabled by default, I might remove it, if they do not improve the CPU usage. <a href="https://github.com/codota/TabNine/issues/43">Their own bug tracker</a>.</em></p>
+<h3 id="validating-config-parser">Validating config parser</h3>
+<ul >
+<li >Prevents typos</li>
+</ul>
 <h2 id="install">Install</h2>
-<p >Requires pyvim (as all python plugins do)</p>
-<div class="codehilite friendly"><pre ><span ></span><code >pip3 install pynvim
+<p ><strong >Minimum version</strong>: python:<code >3.8.2</code>, nvim: <code >0.5</code></p>
+<p >Install the usual way, ie. VimPlug, Vundle, etc</p>
+<div class="codehilite friendly"><pre ><span ></span><code >Plug &#x27;ms-jpq/coq_nvim&#x27;, {&#x27;branch&#x27;: &#x27;coq&#x27;}
 </code></pre></div>
 
-<p >Install the usual way, ie. <a href="https://github.com/junegunn/vim-plug">VimPlug</a>, <a href="https://github.com/VundleVim/Vundle.vim">Vundle</a>, etc</p>
-<div class="codehilite friendly"><pre ><span ></span><code ><span class="nv">Plug</span> <span class="s1">&#x27;</span><span class="s">ms-jpq/Coq</span><span class="s1">&#x27;</span>, {<span class="s1">&#x27;</span><span class="s">branch</span><span class="s1">&#x27;</span>: <span class="s1">&#x27;</span><span class="s">Coq</span><span class="s1">&#x27;</span>, <span class="s1">&#x27;</span><span class="s">do</span><span class="s1">&#x27;</span>: <span class="s1">&#x27;</span><span class="s">:UpdateRemotePlugins</span><span class="s1">&#x27;</span>}
-</code></pre></div>
-
-<h2 id="documentation">Documentation</h2>
+<h2 id="documentation_1">Documentation</h2>
+<hr />
     </div>
   </section>
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-07-16T00:27:46+0000"></time>
+      <time datetime="2021-07-17T00:27:43+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>
