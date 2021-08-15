@@ -73,12 +73,12 @@ Menu
   <section class="d-grid grid-col jc-end ai-centre mx-auto col-gap-4" id="repo-header">
     <span class="github-stars ">
   <i class="fas fa-star"></i>
-  497
+  516
 </span>
 
     <span class="github-forks ">
   <i class="fas fa-code-branch"></i>
-  7
+  8
 </span>
 
     <a class="invis-link" href="https://github.com/ms-jpq/sad">
@@ -205,6 +205,8 @@ find <span class="s2">&quot;</span><span class="nv">$FIND_ARGS</span><span class
 </table>
 <h2 id="regex-flags">Regex Flags</h2>
 <p >By default, <code >sad</code> uses smartcase, and multiline matching.</p>
+<p >For each options, lowercase toggles on and uppercase toggles off.</p>
+<p >ie. <code >i</code> =&gt; on, <code >I</code> =&gt; off</p>
 <table >
 <thead >
 <tr >
@@ -218,20 +220,16 @@ find <span class="s2">&quot;</span><span class="nv">$FIND_ARGS</span><span class
 <td >case insensitive (works for <code >--exact</code> mode as well)</td>
 </tr>
 <tr >
-<td ><code >I</code></td>
-<td >case sensitive (works for <code >--exact</code> mode as well)</td>
-</tr>
-<tr >
 <td ><code >m</code></td>
 <td >multiline: <code >^</code> <code >$</code> match each line</td>
 </tr>
 <tr >
-<td ><code >M</code></td>
-<td >singleline: <code >^</code> <code >$</code> match entire document</td>
-</tr>
-<tr >
 <td ><code >s</code></td>
 <td >allow <code >.</code> match <code >\n</code></td>
+</tr>
+<tr >
+<td ><code >u</code></td>
+<td >swap the meaning of <code >*</code> and <code >*?</code> patterns, (normally <code >*</code> is lazy and <code >*?</code> is greedy)</td>
 </tr>
 <tr >
 <td ><code >x</code></td>
@@ -271,7 +269,10 @@ find <span class="s2">&quot;</span><span class="nv">$FIND_ARGS</span><span class
 <h5 id="debianubuntu">Debian/Ubuntu:</h5>
 <p >You can download <code >sad</code> deb packages from the <a href="https://github.com/ms-jpq/sad/releases">github release page</a>.</p>
 <h5 id="arch-linux">Arch Linux:</h5>
-<p >You can find the <code >PKGBUILD</code> on the <a href="https://aur.archlinux.org/packages/sad/">AUR</a>.</p>
+<p >There is an official Arch Linux package that can be installed via <code >pacman</code>:</p>
+<div class="codehilite friendly"><pre ><span ></span><code >pacman -Syu sad
+</code></pre></div>
+
 <h5 id="other">Other:</h5>
 <p >Missing a package for your favourite distribution? Let us know!</p>
 <h3 id="compile-from-source">Compile from source:</h3>
@@ -307,7 +308,7 @@ flag, like so:</p>
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-08-02T00:28:07+0000"></time>
+      <time datetime="2021-08-15T00:28:43+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>

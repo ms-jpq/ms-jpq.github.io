@@ -73,7 +73,7 @@ Menu
   <section class="d-grid grid-col jc-end ai-centre mx-auto col-gap-4" id="repo-header">
     <span class="github-stars ">
   <i class="fas fa-star"></i>
-  37
+  45
 </span>
 
     <span class="github-forks ">
@@ -92,6 +92,8 @@ Menu
     <div class="markdown">
       <h1 id="coqnvim"><a href="https://ms-jpq.github.io/coq_nvim">coq.nvim 🐔</a></h1>
 <p >Named after the <a href="https://coq.inria.fr/">famous theorem prover</a></p>
+<p ><code >coq</code> also means <code >鸡</code> in <a href="https://www.youtube.com/watch?v=ZoAhZPRBMgE"><code >français québécois</code></a>, and I guess <code >🥖</code>.</p>
+<p >Fast as FUCK and loads of features.</p>
 <h2 id="faster-than-lua">Faster Than Lua</h2>
 <ul >
 <li >
@@ -107,66 +109,91 @@ Menu
 <p >TCP-esque flow control</p>
 </li>
 </ul>
-<p >More details at the <a href="./docs/PERFORMANCE.md">PERFORMANCE.md</a></p>
+<p >More details at the <a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/PERF.md">PERFORMANCE.md</a></p>
 <h2 id="features">Features</h2>
+<p ><strong >Note: Due to compression, reality is <em >faster</em> than gifs</strong></p>
 <h3 id="fast-as-fuck">Fast as fuck</h3>
 <ul >
 <li >Results on <strong >every keystroke</strong></li>
 </ul>
-<p ><em ><code >LSP</code> can be far slower, nothing I can do. I didn’t write the servers</em></p>
+<p ><code >LSP</code> and <code >TabNine</code> can be ALOT slower, nothing I can do. I didn’t write the third party servers.</p>
+<p >I did however added client side incremental background caching to LSP servers, and flow control to Tabnine.</p>
+<ul >
+<li >Real time <a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/STATS.md">performance statistics</a></li>
+</ul>
 <h3 id="fuzzy-search">Fuzzy Search</h3>
 <ul >
 <li >
 <p ><strong >Typo resistant</strong></p>
 </li>
 <li >
-<p >Insertion order bonus</p>
+<p >Recency bonus</p>
 </li>
 <li >
 <p >Proximity bonus</p>
 </li>
 <li >
-<p >Weighted average of relative ranks</p>
+<p >Weighted average of <a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/FUZZY.md">relative ranks &amp; ensemble metrics</a></p>
 </li>
 </ul>
-<h3 id="documentation">Documentation</h3>
+<p ><img alt="fuzz_search.img" height="546" loading="lazy" src="/c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1.webp" srcset="/c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1--200x109.webp 200w, /c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1--400x218.webp 400w, /c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1--600x328.webp 600w, /c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1--800x437.webp 800w, /c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1.webp 1000w" width="1000"/></p>
+<h3 id="preview">Preview</h3>
 <ul >
 <li >
-<p >View documentation in big buffer</p>
+<p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/KEYBIND.md">Press key</a> to view documentation in big buffer</p>
 </li>
 <li >
-<p >Auto open preview on side with most space</p>
+<p >Auto open preview on <strong >side with most space</strong></p>
 </li>
 <li >
-<p >Customizable location: n, s, w, e</p>
+<p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/DISPLAY.md">Customizable location</a>: n, s, w, e</p>
+</li>
+<li >
+<p >Ubiquitous: Tags, LSP, Paths, Snippets</p>
 </li>
 </ul>
+<p ><img alt="doc_popup.img" height="546" loading="lazy" src="/d05de29cf0037f7659b2a70852a9f32ff7ac8b6996ef8e17ab0e551dee60afde.webp" srcset="/d05de29cf0037f7659b2a70852a9f32ff7ac8b6996ef8e17ab0e551dee60afde--200x109.webp 200w, /d05de29cf0037f7659b2a70852a9f32ff7ac8b6996ef8e17ab0e551dee60afde--400x218.webp 400w, /d05de29cf0037f7659b2a70852a9f32ff7ac8b6996ef8e17ab0e551dee60afde--600x328.webp 600w, /d05de29cf0037f7659b2a70852a9f32ff7ac8b6996ef8e17ab0e551dee60afde--800x437.webp 800w, /d05de29cf0037f7659b2a70852a9f32ff7ac8b6996ef8e17ab0e551dee60afde.webp 1000w" width="1000"/></p>
 <h3 id="lsp">LSP</h3>
 <ul >
 <li >
-<p >Client-side caching</p>
+<p ><strong >Client-side caching</strong></p>
 </li>
 <li >
-<p >Multi-server completion</p>
+<p ><strong >Multi-server</strong> completion (i.e. <code >tailwind</code> + <code >cssls</code>)</p>
 </li>
 <li >
 <p >Header imports</p>
 </li>
-<li >
-<p >Snippet Support</p>
-</li>
 </ul>
-<p ><strong >Need to be enabled in config</strong></p>
+<p ><img alt="lsp_imports.img" height="546" loading="lazy" src="/de9951e0fc550e040418410154d4e10bdeffae9ad8252ae6741ff1dcb38fe54a.webp" srcset="/de9951e0fc550e040418410154d4e10bdeffae9ad8252ae6741ff1dcb38fe54a--200x109.webp 200w, /de9951e0fc550e040418410154d4e10bdeffae9ad8252ae6741ff1dcb38fe54a--400x218.webp 400w, /de9951e0fc550e040418410154d4e10bdeffae9ad8252ae6741ff1dcb38fe54a--600x328.webp 600w, /de9951e0fc550e040418410154d4e10bdeffae9ad8252ae6741ff1dcb38fe54a--800x437.webp 800w, /de9951e0fc550e040418410154d4e10bdeffae9ad8252ae6741ff1dcb38fe54a.webp 1000w" width="1000"/></p>
+<ul >
+<li >Snippet Support</li>
+</ul>
+<p ><img alt="lsp_snippets.img" height="546" loading="lazy" src="/fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9.webp" srcset="/fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--200x109.webp 200w, /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--400x218.webp 400w, /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--600x328.webp 600w, /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--800x437.webp 800w, /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9.webp 1000w" width="1000"/></p>
+<p ><strong >Requires 1 line of change to support LSP snippets</strong></p>
+<div class="codehilite friendly"><pre ><span ></span><code ><span class="kd">local</span> <span class="n">lsp</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;lspconfig&quot;</span>
+
+<span class="n">lsp</span><span class="p">.</span><span class="o">&lt;</span><span class="n">server</span><span class="o">&gt;</span><span class="p">.</span><span class="n">setup</span><span class="p">(</span><span class="o">&lt;</span><span class="n">stuff</span><span class="p">...</span><span class="o">&gt;</span><span class="p">)</span>                            <span class="c1">-- before</span>
+<span class="n">lsp</span><span class="p">.</span><span class="o">&lt;</span><span class="n">server</span><span class="o">&gt;</span><span class="p">.</span><span class="n">setup</span><span class="p">(</span><span class="n">coq</span><span class="p">.</span><span class="n">lsp_ensure_capabilities</span><span class="p">(</span><span class="o">&lt;</span><span class="n">stuff</span><span class="p">...</span><span class="o">&gt;</span><span class="p">))</span> <span class="c1">-- after</span>
+</code></pre></div>
+
 <h3 id="snippets">Snippets</h3>
 <ul >
 <li >
-<p ><strong >Over 9000</strong> built-in snippets</p>
+<p ><a href="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/coq%2Bsnippets.json"><strong >Over 9000</strong> built-in snippets</a></p>
 </li>
 <li >
 <p >99% of LSP grammar, 95% of Vim grammar</p>
 </li>
+<li >
+<p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/KEYBIND.md">Press key</a> to edit snippet regions.</p>
+</li>
 </ul>
-<p ><em >Not supported (right now): linked edits, regex, arbitrary code execution</em></p>
+<p ><img alt="snippet_norm.img" height="546" loading="lazy" src="/c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd.webp" srcset="/c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd--200x109.webp 200w, /c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd--400x218.webp 400w, /c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd--600x328.webp 600w, /c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd--800x437.webp 800w, /c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd.webp 1000w" width="1000"/></p>
+<ul >
+<li >Linked regions (partial support)</li>
+</ul>
+<p ><img alt="snippet_expand.img" height="546" loading="lazy" src="/053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd.webp" srcset="/053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--200x109.webp 200w, /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--400x218.webp 400w, /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--600x328.webp 600w, /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--800x437.webp 800w, /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd.webp 1000w" width="1000"/></p>
 <p ><em >The <code >%</code> statistic comes from compiling the 10,000 snippets</em></p>
 <h3 id="ctags">CTags</h3>
 <ul >
@@ -179,54 +206,165 @@ Menu
 <li >
 <p >Non-blocking</p>
 </li>
-<li >
-<p >Fuzzy</p>
-</li>
 </ul>
-<p ><em >Normally CTags support requires Vim to do the parsing. <code >coq.nvim</code> does not</em></p>
+<p ><img alt="ctags.img" height="546" loading="lazy" src="/ef5dab32f76ccbd9364276e7e3b20c64f2d0891570b5c5dbdce84687b24f0ccf.webp" srcset="/ef5dab32f76ccbd9364276e7e3b20c64f2d0891570b5c5dbdce84687b24f0ccf--200x109.webp 200w, /ef5dab32f76ccbd9364276e7e3b20c64f2d0891570b5c5dbdce84687b24f0ccf--400x218.webp 400w, /ef5dab32f76ccbd9364276e7e3b20c64f2d0891570b5c5dbdce84687b24f0ccf--600x328.webp 600w, /ef5dab32f76ccbd9364276e7e3b20c64f2d0891570b5c5dbdce84687b24f0ccf--800x437.webp 800w, /ef5dab32f76ccbd9364276e7e3b20c64f2d0891570b5c5dbdce84687b24f0ccf.webp 1000w" width="1000"/></p>
 <p ><strong >Requires <code >Universal CTags</code>, NOT <code >ctags</code></strong></p>
-<div class="codehilite friendly"><pre ><span ></span><code >brew install universal-ctags
-apt  install universal-ctags
+<div class="codehilite friendly"><pre ><span ></span><code ><span class="c1"># MacOS</span>
+brew uninstall ctags           <span class="c1"># bad</span>
+brew install   universal-ctags <span class="c1"># good</span>
+
+<span class="c1"># Ubuntu</span>
+apt remove  ctags              <span class="c1"># bad</span>
+apt install universal-ctags    <span class="c1"># good</span>
 </code></pre></div>
 
+<h3 id="paths">Paths</h3>
+<ul >
+<li >
+<p ><strong >Preview contents</strong></p>
+</li>
+<li >
+<p >Relative to both <code >cwd</code> and file path</p>
+</li>
+</ul>
+<p ><img alt="paths.img" height="546" loading="lazy" src="/fe92deede85f78c6a958d7bb49cb9ada774f9dfa66efcc73bfea92f3b3a9fea3.webp" srcset="/fe92deede85f78c6a958d7bb49cb9ada774f9dfa66efcc73bfea92f3b3a9fea3--200x109.webp 200w, /fe92deede85f78c6a958d7bb49cb9ada774f9dfa66efcc73bfea92f3b3a9fea3--400x218.webp 400w, /fe92deede85f78c6a958d7bb49cb9ada774f9dfa66efcc73bfea92f3b3a9fea3--600x328.webp 600w, /fe92deede85f78c6a958d7bb49cb9ada774f9dfa66efcc73bfea92f3b3a9fea3--800x437.webp 800w, /fe92deede85f78c6a958d7bb49cb9ada774f9dfa66efcc73bfea92f3b3a9fea3.webp 1000w" width="1000"/></p>
 <h3 id="buffers">Buffers</h3>
 <ul >
 <li >
-<p >Real time completion</p>
+<p ><strong >Real time</strong> completion</p>
 </li>
 <li >
-<p >Fast in files with thousands of lines</p>
+<p ><strong >Fast</strong> in files with thousands of lines</p>
 </li>
 </ul>
+<p ><img alt="buffers.img" height="546" loading="lazy" src="/f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1.webp" srcset="/f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1--200x109.webp 200w, /f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1--400x218.webp 400w, /f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1--600x328.webp 600w, /f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1--800x437.webp 800w, /f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1.webp 1000w" width="1000"/></p>
 <h3 id="treesitter">TreeSitter</h3>
-<h3 id="paths">Paths</h3>
 <ul >
-<li >Relative to both <code >cwd</code> and file path</li>
+<li >
+<p >Unicode ready</p>
+</li>
+<li >
+<p >I dont have a picture, its boring</p>
+</li>
 </ul>
+<p ><strong >Treesitter is still unstable in nvim0.5: slow and crash prone</strong></p>
+<p >The promise is that Treesitter will have real time parsing on every keystroke, but its actually too slow on big files.</p>
+<p >The Treesitter source only parses on <code >Idle</code> events due to unrealized performace promises.</p>
 <h3 id="tmux">Tmux</h3>
+<p ><img alt="tmux.img" height="546" loading="lazy" src="/073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525.webp" srcset="/073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--200x109.webp 200w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--400x218.webp 400w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--600x328.webp 600w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--800x437.webp 800w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525.webp 1000w" width="1000"/></p>
 <h3 id="tabnine">Tabnine</h3>
 <ul >
-<li >Auto download &amp; install</li>
+<li >Auto download &amp; install &amp; update</li>
 </ul>
+<p ><img alt="tabnine.img" height="546" loading="lazy" src="/0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b.webp" srcset="/0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--200x109.webp 200w, /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--400x218.webp 400w, /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--600x328.webp 600w, /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--800x437.webp 800w, /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b.webp 1000w" width="1000"/></p>
 <p ><em >T9 is disabled by default, I might remove it, if they do not improve the CPU usage. <a href="https://github.com/codota/TabNine/issues/43">Their own bug tracker</a>.</em></p>
+<h3 id="statistics">Statistics</h3>
+<p ><code >:COQstats</code></p>
+<p ><img alt="statistics.img" height="570" loading="lazy" src="/c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650.webp" srcset="/c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--200x114.webp 200w, /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--400x228.webp 400w, /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--600x342.webp 600w, /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--800x456.webp 800w, /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650.webp 1000w" width="1000"/></p>
 <h3 id="validating-config-parser">Validating config parser</h3>
 <ul >
-<li >Prevents typos</li>
+<li >Prevents typos &amp; type errors in your config</li>
 </ul>
+<p >Here I make a type error on purpose inputting <code >string</code> instead of an <code >integer</code>.</p>
+<p ><img alt="conf_demo.img" height="276" loading="lazy" src="/18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07.webp" srcset="/18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07--200x114.webp 200w, /18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07--400x229.webp 400w, /18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07--483x276.webp 483w" width="483"/></p>
 <h2 id="install">Install</h2>
 <p ><strong >Minimum version</strong>: python:<code >3.8.2</code>, nvim: <code >0.5</code></p>
 <p >Install the usual way, ie. VimPlug, Vundle, etc</p>
-<div class="codehilite friendly"><pre ><span ></span><code >Plug &#x27;ms-jpq/coq_nvim&#x27;, {&#x27;branch&#x27;: &#x27;coq&#x27;}
+<div class="codehilite friendly"><pre ><span ></span><code >&quot; This is the main one
+Plug &#x27;ms-jpq/coq_nvim&#x27;, {&#x27;branch&#x27;: &#x27;coq&#x27;}
+
+&quot; 9000+ Snippets
+Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27;}
 </code></pre></div>
 
-<h2 id="documentation_1">Documentation</h2>
-<hr />
+<h2 id="documentation">Documentation</h2>
+<p >To start <code >coq</code></p>
+<div class="codehilite friendly"><pre ><span ></span><code >:COQnow
+</code></pre></div>
+
+<p >There is built-in <a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/README.md">help command</a></p>
+<div class="codehilite friendly"><pre ><span ></span><code ><span class="err">:</span><span class="n">COQhelp</span><span class="w"> </span><span class="o">[</span><span class="n">--web</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">topic</span><span class="o">]</span><span class="w"></span>
+</code></pre></div>
+
+<ul >
+<li >
+<p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/CONF.md">:COQhelp config</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/KEYBIND.md">:COQhelp keybind</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/FUZZY.md">:COQhelp fuzzy</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/DISPLAY.md">:COQhelp display</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/SOURCES.md">:COQhelp sources</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/MISC.md">:COQhelp misc</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/PERF.md">:COQhelp perf</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/STATS.md">:COQhelp stats</a></p>
+</li>
+</ul>
+<h2 id="if-you-like-this">If you like this…</h2>
+<p >Also check out</p>
+<ul >
+<li >
+<p ><a href="https://github.com/ms-jpq/sad"><code >sad</code></a>, its a modern <code >sed</code> that does previews with syntax highlighting, and lets you pick and choose which chunks to edit.</p>
+</li>
+<li >
+<p ><a href="https://github.com/ms-jpq/chadtree"><code >CHADTree</code></a>, its better than NERDTree.</p>
+</li>
+</ul>
+<h2 id="special-thanks-acknowledgements">Special Thanks &amp; Acknowledgements</h2>
+<p >The snippets are compiled from the following open source projects:</p>
+<ul >
+<li >
+<p ><a href="https://github.com/Shougo/neosnippet-snippets">Shougo/neosnippet-snippets</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/fatih/vim-go">fatih/vim-go</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/honza/vim-snippets">honza/vim-snippets</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/Ikuyadeu/vscode-R">Ikuyadeu/vscode-R</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/Rocketseat/rocketseat-vscode-react-native-snippets">Rocketseat/rocketseat-vscode-react-native-snippets</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/dsznajder/vscode-es7-javascript-react-snippets">dsznajder/vscode-es7-javascript-react-snippets</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/johnpapa/vscode-angular-snippets">johnpapa/vscode-angular-snippets</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/sdras/vue-vscode-snippets">sdras/vue-vscode-snippets</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/snipsnapdev/snipsnap">snipsnapdev/snipsnap</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/xabikos/vscode-javascript">xabikos/vscode-javascript</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/xabikos/vscode-react">xabikos/vscode-react</a></p>
+</li>
+</ul>
     </div>
   </section>
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-08-02T00:41:16+0000"></time>
+      <time datetime="2021-08-15T00:28:43+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>
