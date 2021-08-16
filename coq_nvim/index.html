@@ -73,12 +73,12 @@ Menu
   <section class="d-grid grid-col jc-end ai-centre mx-auto col-gap-4" id="repo-header">
     <span class="github-stars ">
   <i class="fas fa-star"></i>
-  45
+  265
 </span>
 
     <span class="github-forks ">
   <i class="fas fa-code-branch"></i>
-  1
+  4
 </span>
 
     <a class="invis-link" href="https://github.com/ms-jpq/coq_nvim">
@@ -90,7 +90,7 @@ Menu
   </section>
   <section class="d-grid mx-auto" id="repo-body">
     <div class="markdown">
-      <h1 id="coqnvim"><a href="https://ms-jpq.github.io/coq_nvim">coq.nvim 🐔</a></h1>
+      <h1 id="coqnvim">coq.nvim 🐔</h1>
 <p >Named after the <a href="https://coq.inria.fr/">famous theorem prover</a></p>
 <p ><code >coq</code> also means <code >鸡</code> in <a href="https://www.youtube.com/watch?v=ZoAhZPRBMgE"><code >français québécois</code></a>, and I guess <code >🥖</code>.</p>
 <p >Fast as FUCK and loads of features.</p>
@@ -114,12 +114,18 @@ Menu
 <p ><strong >Note: Due to compression, reality is <em >faster</em> than gifs</strong></p>
 <h3 id="fast-as-fuck">Fast as fuck</h3>
 <ul >
-<li >Results on <strong >every keystroke</strong></li>
-</ul>
-<p ><code >LSP</code> and <code >TabNine</code> can be ALOT slower, nothing I can do. I didn’t write the third party servers.</p>
-<p >I did however added client side incremental background caching to LSP servers, and flow control to Tabnine.</p>
-<ul >
-<li >Real time <a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/STATS.md">performance statistics</a></li>
+<li >
+<p >Results on <strong >every keystroke</strong></p>
+</li>
+<li >
+<p >Throttling? Never heard of her</p>
+</li>
+<li >
+<p >Real time <a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/STATS.md">performance statistics</a></p>
+</li>
+<li >
+<p >Look at the gifs! The bottom few are the <strong >fastest when I didn’t show down on purpose</strong> to show features.</p>
+</li>
 </ul>
 <h3 id="fuzzy-search">Fuzzy Search</h3>
 <ul >
@@ -136,6 +142,7 @@ Menu
 <p >Weighted average of <a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/FUZZY.md">relative ranks &amp; ensemble metrics</a></p>
 </li>
 </ul>
+<p >Error correction: <code >cour</code> -&gt; <code >colour_space</code>, <code >flgr</code> -&gt; <code >flag_group</code>, <code >nasp</code> -&gt; <code >Namespace</code></p>
 <p ><img alt="fuzz_search.img" height="546" loading="lazy" src="/c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1.webp" srcset="/c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1--200x109.webp 200w, /c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1--400x218.webp 400w, /c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1--600x328.webp 600w, /c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1--800x437.webp 800w, /c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1.webp 1000w" width="1000"/></p>
 <h3 id="preview">Preview</h3>
 <ul >
@@ -156,6 +163,9 @@ Menu
 <h3 id="lsp">LSP</h3>
 <ul >
 <li >
+<p ><strong >Incremental completion</strong></p>
+</li>
+<li >
 <p ><strong >Client-side caching</strong></p>
 </li>
 <li >
@@ -170,10 +180,11 @@ Menu
 <li >Snippet Support</li>
 </ul>
 <p ><img alt="lsp_snippets.img" height="546" loading="lazy" src="/fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9.webp" srcset="/fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--200x109.webp 200w, /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--400x218.webp 400w, /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--600x328.webp 600w, /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--800x437.webp 800w, /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9.webp 1000w" width="1000"/></p>
+<p >Install the <a href="https://github.com/neovim/nvim-lspconfig">Nvim Official LSP integration</a></p>
 <p ><strong >Requires 1 line of change to support LSP snippets</strong></p>
 <div class="codehilite friendly"><pre ><span ></span><code ><span class="kd">local</span> <span class="n">lsp</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;lspconfig&quot;</span>
 
-<span class="n">lsp</span><span class="p">.</span><span class="o">&lt;</span><span class="n">server</span><span class="o">&gt;</span><span class="p">.</span><span class="n">setup</span><span class="p">(</span><span class="o">&lt;</span><span class="n">stuff</span><span class="p">...</span><span class="o">&gt;</span><span class="p">)</span>                            <span class="c1">-- before</span>
+<span class="n">lsp</span><span class="p">.</span><span class="o">&lt;</span><span class="n">server</span><span class="o">&gt;</span><span class="p">.</span><span class="n">setup</span><span class="p">(</span><span class="o">&lt;</span><span class="n">stuff</span><span class="p">...</span><span class="o">&gt;</span><span class="p">)</span>                              <span class="c1">-- before</span>
 <span class="n">lsp</span><span class="p">.</span><span class="o">&lt;</span><span class="n">server</span><span class="o">&gt;</span><span class="p">.</span><span class="n">setup</span><span class="p">(</span><span class="n">coq</span><span class="p">.</span><span class="n">lsp_ensure_capabilities</span><span class="p">(</span><span class="o">&lt;</span><span class="n">stuff</span><span class="p">...</span><span class="o">&gt;</span><span class="p">))</span> <span class="c1">-- after</span>
 </code></pre></div>
 
@@ -186,15 +197,16 @@ Menu
 <p >99% of LSP grammar, 95% of Vim grammar</p>
 </li>
 <li >
-<p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/KEYBIND.md">Press key</a> to edit snippet regions.</p>
+<p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/KEYBIND.md">Press key</a> to jump to next edit region.</p>
 </li>
 </ul>
 <p ><img alt="snippet_norm.img" height="546" loading="lazy" src="/c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd.webp" srcset="/c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd--200x109.webp 200w, /c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd--400x218.webp 400w, /c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd--600x328.webp 600w, /c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd--800x437.webp 800w, /c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd.webp 1000w" width="1000"/></p>
 <ul >
-<li >Linked regions (partial support)</li>
+<li >Linked regions</li>
 </ul>
 <p ><img alt="snippet_expand.img" height="546" loading="lazy" src="/053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd.webp" srcset="/053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--200x109.webp 200w, /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--400x218.webp 400w, /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--600x328.webp 600w, /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--800x437.webp 800w, /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd.webp 1000w" width="1000"/></p>
 <p ><em >The <code >%</code> statistic comes from compiling the 10,000 snippets</em></p>
+<p ><strong >See FAQ to see limitations due to upstream bug</strong></p>
 <h3 id="ctags">CTags</h3>
 <ul >
 <li >
@@ -254,10 +266,16 @@ apt install universal-ctags    <span class="c1"># good</span>
 <p ><img alt="tmux.img" height="546" loading="lazy" src="/073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525.webp" srcset="/073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--200x109.webp 200w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--400x218.webp 400w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--600x328.webp 600w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--800x437.webp 800w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525.webp 1000w" width="1000"/></p>
 <h3 id="tabnine">Tabnine</h3>
 <ul >
-<li >Auto download &amp; install &amp; update</li>
+<li >
+<p >CPU preserving flow control</p>
+</li>
+<li >
+<p >Auto download &amp; install &amp; update</p>
+</li>
 </ul>
 <p ><img alt="tabnine.img" height="546" loading="lazy" src="/0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b.webp" srcset="/0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--200x109.webp 200w, /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--400x218.webp 400w, /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--600x328.webp 600w, /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--800x437.webp 800w, /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b.webp 1000w" width="1000"/></p>
 <p ><em >T9 is disabled by default, I might remove it, if they do not improve the CPU usage. <a href="https://github.com/codota/TabNine/issues/43">Their own bug tracker</a>.</em></p>
+<p >Enable via: <code >coq_settings.clients.tabnine.enabled=true</code></p>
 <h3 id="statistics">Statistics</h3>
 <p ><code >:COQstats</code></p>
 <p ><img alt="statistics.img" height="570" loading="lazy" src="/c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650.webp" srcset="/c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--200x114.webp 200w, /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--400x228.webp 400w, /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--600x342.webp 600w, /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--800x456.webp 800w, /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650.webp 1000w" width="1000"/></p>
@@ -282,6 +300,7 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
 <div class="codehilite friendly"><pre ><span ></span><code >:COQnow
 </code></pre></div>
 
+<p >🌟 If required, it will ask you to run <code >:COQdeps</code>, please run it and do <code >:COQnow</code> again.</p>
 <p >There is built-in <a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/README.md">help command</a></p>
 <div class="codehilite friendly"><pre ><span ></span><code ><span class="err">:</span><span class="n">COQhelp</span><span class="w"> </span><span class="o">[</span><span class="n">--web</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">topic</span><span class="o">]</span><span class="w"></span>
 </code></pre></div>
@@ -312,6 +331,89 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
 <p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/STATS.md">:COQhelp stats</a></p>
 </li>
 </ul>
+<h2 id="faq">FAQ</h2>
+<h4 id="default-hotkeys">Default hotkeys?</h4>
+<p >Always:</p>
+<table >
+<thead >
+<tr >
+<th >key</th>
+<th >function</th>
+</tr>
+</thead>
+<tbody >
+<tr >
+<td ><code >&lt;c-space&gt;</code></td>
+<td >manual completion</td>
+</tr>
+<tr >
+<td ><code >&lt;c-h&gt;</code></td>
+<td >edit snippet placeholder</td>
+</tr>
+</tbody>
+</table>
+<p >When completion menu is open:</p>
+<table >
+<thead >
+<tr >
+<th >key</th>
+<th >function</th>
+</tr>
+</thead>
+<tbody >
+<tr >
+<td ><code >&lt;c-k&gt;</code></td>
+<td >move preview to bigger window</td>
+</tr>
+<tr >
+<td ><code >&lt;esc&gt;</code></td>
+<td >exit to normal</td>
+</tr>
+<tr >
+<td ><code >&lt;backspace&gt;</code></td>
+<td >backspace</td>
+</tr>
+<tr >
+<td ><code >&lt;enter&gt;</code></td>
+<td >select completion</td>
+</tr>
+<tr >
+<td ><code >&lt;tab&gt;</code></td>
+<td >next result</td>
+</tr>
+<tr >
+<td ><code >&lt;s-tab&gt;</code></td>
+<td >prev result</td>
+</tr>
+</tbody>
+</table>
+<p ><strong >When hovering over a result, entering anykey [a-z] will select it</strong></p>
+<p >This is a vim thing, I have zero control over :(</p>
+<h4 id="lsp-too-slow-to-show-up-on-keystroke">LSP too slow to show up on keystroke.</h4>
+<p >You have some options, each has it’s trade off:</p>
+<ol >
+<li >Increase the <code >coq_settings.limits.completion_auto_timeout</code>.</li>
+</ol>
+<p >This will slow down feedback on <em >every keystroke</em>, as <code >coq</code> waits for LSP.</p>
+<ol start="2">
+<li >Use the manual completion hotkey (default <code >&lt;c-space&gt;</code>)</li>
+</ol>
+<p >Annoying! And the manual completion also has a timeout <code >coq_settings.limits.completion_manual_timeout</code>.</p>
+<p >Some LSP servers will still fail to respond within the default <code >.66</code> seconds, in that case pressing <code >&lt;c-space&gt;</code> multiple times might actually help some LSP servers catch up, depending on their implementation.</p>
+<h4 id="missing-results">Missing Results</h4>
+<p >On keystroke only a max of <code >coq_settings.match.max_results</code> are shown.</p>
+<p >Use manual completion hotkey to show all results.</p>
+<h4 id="some-lsp-servers-give-inconsistent-completions">Some LSP servers give inconsistent completions</h4>
+<p >This happens when certain LSP servers give you 1000s of unfiltered results in <em >alphabetical order</em> and you still have to respond in a few dozen milliseconds.</p>
+<p >To eliminate <code >a-z</code> bias, <code >coq</code> does a random sort on the resultset and process and cache as many of them as possible within the performance window.</p>
+<p >So if some results are not in the SQLite cache, and have yet to be processed, they will be missing. They might however still show up on later keystrokes.</p>
+<p >Use the manual hotkey if you need to see everything.</p>
+<h4 id="auto-completion-mess-up-snippet-regions-the-ones-you-can-jump-to">Auto completion mess up snippet regions (the ones you can jump to)</h4>
+<p >This is an <a href="https://github.com/neovim/neovim/issues/13816">upstream nvim issue</a>.</p>
+<p >Theoretically I can work around this by writing my own nvim <code >extmark</code> reconciliator, or I can go and cuddle my puppy and let upstream fix it.</p>
+<h4 id="my-vim-crashed">My vim crashed!</h4>
+<p ><strong >Disable TreeSitter</strong></p>
+<p >Treesitter still needs stability work.</p>
 <h2 id="if-you-like-this">If you like this…</h2>
 <p >Also check out</p>
 <ul >
@@ -319,7 +421,10 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
 <p ><a href="https://github.com/ms-jpq/sad"><code >sad</code></a>, its a modern <code >sed</code> that does previews with syntax highlighting, and lets you pick and choose which chunks to edit.</p>
 </li>
 <li >
-<p ><a href="https://github.com/ms-jpq/chadtree"><code >CHADTree</code></a>, its better than NERDTree.</p>
+<p ><a href="https://github.com/ms-jpq/chadtree"><code >CHADTree</code></a>, its a FULLY featured file manager.</p>
+</li>
+<li >
+<p ><a href="https://github.com/ms-jpq/isomorphic-copy">isomorphic-copy</a>, it’s a cross platform clipboard that is daemonless, and does not require third party support.</p>
 </li>
 </ul>
 <h2 id="special-thanks-acknowledgements">Special Thanks &amp; Acknowledgements</h2>
@@ -359,12 +464,14 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
 <p ><a href="https://github.com/xabikos/vscode-react">xabikos/vscode-react</a></p>
 </li>
 </ul>
+<p >Super special thanks goes to <a href="https://github.com/typescript-language-server/typescript-language-server">Typescript LSP</a>.</p>
+<p >Nothing like good motivation to improve my design than dumping 1000 results on my client every other keystroke.</p>
     </div>
   </section>
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-08-15T00:28:43+0000"></time>
+      <time datetime="2021-08-16T00:36:46+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>
