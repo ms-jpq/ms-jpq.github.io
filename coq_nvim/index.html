@@ -73,12 +73,12 @@ Menu
   <section class="d-grid grid-col jc-end ai-centre mx-auto col-gap-4" id="repo-header">
     <span class="github-stars ">
   <i class="fas fa-star"></i>
-  265
+  446
 </span>
 
     <span class="github-forks ">
   <i class="fas fa-code-branch"></i>
-  4
+  7
 </span>
 
     <a class="invis-link" href="https://github.com/ms-jpq/coq_nvim">
@@ -97,13 +97,13 @@ Menu
 <h2 id="faster-than-lua">Faster Than Lua</h2>
 <ul >
 <li >
-<p >Native C in memory B-trees</p>
+<p >Native C in-memory B-trees</p>
 </li>
 <li >
 <p >SQLite VM interrupts</p>
 </li>
 <li >
-<p >Coroutine based incremental &amp; interruptable scheduler</p>
+<p >Coroutine based incremental &amp; interruptible scheduler</p>
 </li>
 <li >
 <p >TCP-esque flow control</p>
@@ -188,6 +188,14 @@ Menu
 <span class="n">lsp</span><span class="p">.</span><span class="o">&lt;</span><span class="n">server</span><span class="o">&gt;</span><span class="p">.</span><span class="n">setup</span><span class="p">(</span><span class="n">coq</span><span class="p">.</span><span class="n">lsp_ensure_capabilities</span><span class="p">(</span><span class="o">&lt;</span><span class="n">stuff</span><span class="p">...</span><span class="o">&gt;</span><span class="p">))</span> <span class="c1">-- after</span>
 </code></pre></div>
 
+<p ><strong >If you are using <a href="https://github.com/wbthomason/packer.nvim"><code >packer.nvim</code></a></strong></p>
+<div class="codehilite friendly"><pre ><span ></span><code ><span class="n">vim</span><span class="p">.</span><span class="n">schedule</span><span class="p">(</span><span class="kr">function</span> <span class="p">()</span>
+  <span class="kd">local</span> <span class="n">lsp</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;lspconfig&quot;</span>
+  <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;packer&quot;</span><span class="p">).</span><span class="n">loader</span><span class="p">(</span><span class="s2">&quot;coq_nvim coq.artifacts&quot;</span><span class="p">)</span>
+  <span class="n">lsp</span><span class="p">.</span><span class="o">&lt;</span><span class="n">server</span><span class="o">&gt;</span><span class="p">.</span><span class="n">setup</span><span class="p">(</span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;coq&quot;</span><span class="p">)().</span><span class="n">lsp_ensure_capabilities</span><span class="p">(</span><span class="o">&lt;</span><span class="n">stuff</span><span class="p">...</span><span class="o">&gt;</span><span class="p">))</span>
+<span class="kr">end</span><span class="p">)</span>
+</code></pre></div>
+
 <h3 id="snippets">Snippets</h3>
 <ul >
 <li >
@@ -256,12 +264,12 @@ apt install universal-ctags    <span class="c1"># good</span>
 <p >Unicode ready</p>
 </li>
 <li >
-<p >I dont have a picture, its boring</p>
+<p >I don’t have a picture, it’s boring</p>
 </li>
 </ul>
 <p ><strong >Treesitter is still unstable in nvim0.5: slow and crash prone</strong></p>
-<p >The promise is that Treesitter will have real time parsing on every keystroke, but its actually too slow on big files.</p>
-<p >The Treesitter source only parses on <code >Idle</code> events due to unrealized performace promises.</p>
+<p >The promise is that Treesitter will have real time parsing on every keystroke, but it’s actually too slow on big files.</p>
+<p >The Treesitter source only parses on <code >Idle</code> events due to unrealized performance promises.</p>
 <h3 id="tmux">Tmux</h3>
 <p ><img alt="tmux.img" height="546" loading="lazy" src="/073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525.webp" srcset="/073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--200x109.webp 200w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--400x218.webp 400w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--600x328.webp 600w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--800x437.webp 800w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525.webp 1000w" width="1000"/></p>
 <h3 id="tabnine">Tabnine</h3>
@@ -286,7 +294,11 @@ apt install universal-ctags    <span class="c1"># good</span>
 <p >Here I make a type error on purpose inputting <code >string</code> instead of an <code >integer</code>.</p>
 <p ><img alt="conf_demo.img" height="276" loading="lazy" src="/18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07.webp" srcset="/18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07--200x114.webp 200w, /18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07--400x229.webp 400w, /18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07--483x276.webp 483w" width="483"/></p>
 <h2 id="install">Install</h2>
-<p ><strong >Minimum version</strong>: python:<code >3.8.2</code>, nvim: <code >0.5</code></p>
+<p >Needs python virtual env</p>
+<div class="codehilite friendly"><pre ><span ></span><code >apt install --yes -- python3-venv
+</code></pre></div>
+
+<p ><strong >Minimum version</strong>: python:<code >3.8.2</code>, nvim: <code >0.5</code>, sqlite: <code >recentish</code></p>
 <p >Install the usual way, ie. VimPlug, Vundle, etc</p>
 <div class="codehilite friendly"><pre ><span ></span><code >&quot; This is the main one
 Plug &#x27;ms-jpq/coq_nvim&#x27;, {&#x27;branch&#x27;: &#x27;coq&#x27;}
@@ -297,7 +309,8 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
 
 <h2 id="documentation">Documentation</h2>
 <p >To start <code >coq</code></p>
-<div class="codehilite friendly"><pre ><span ></span><code >:COQnow
+<div class="codehilite friendly"><pre ><span ></span><code >&quot; the [-s, --shut-up] flag will remove the greeting message
+:COQnow [--shut-up]
 </code></pre></div>
 
 <p >🌟 If required, it will ask you to run <code >:COQdeps</code>, please run it and do <code >:COQnow</code> again.</p>
@@ -387,10 +400,10 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
 </tr>
 </tbody>
 </table>
-<p ><strong >When hovering over a result, entering anykey [a-z] will select it</strong></p>
+<p ><strong >When hovering over a result, entering any key [a-z] will select it</strong></p>
 <p >This is a vim thing, I have zero control over :(</p>
 <h4 id="lsp-too-slow-to-show-up-on-keystroke">LSP too slow to show up on keystroke.</h4>
-<p >You have some options, each has it’s trade off:</p>
+<p >You have some options, each has its trade off:</p>
 <ol >
 <li >Increase the <code >coq_settings.limits.completion_auto_timeout</code>.</li>
 </ol>
@@ -414,14 +427,17 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
 <h4 id="my-vim-crashed">My vim crashed!</h4>
 <p ><strong >Disable TreeSitter</strong></p>
 <p >Treesitter still needs stability work.</p>
+<h4 id="i-want-to-use-a-different-python-version">I want to use a different python version</h4>
+<p ><code >vim.g.python3_host_prog=&lt;absolute path to python&gt;</code></p>
+<p >Note: <code >~/</code> will not be expanded to <code >$HOME</code>, use <code >vim.env.HOME .. &lt;path&gt;</code> (lua) or <code >$HOME . &lt;path&gt;</code> (viml) instead.</p>
 <h2 id="if-you-like-this">If you like this…</h2>
 <p >Also check out</p>
 <ul >
 <li >
-<p ><a href="https://github.com/ms-jpq/sad"><code >sad</code></a>, its a modern <code >sed</code> that does previews with syntax highlighting, and lets you pick and choose which chunks to edit.</p>
+<p ><a href="https://github.com/ms-jpq/sad"><code >sad</code></a>, it’s a modern <code >sed</code> that does previews with syntax highlighting, and lets you pick and choose which chunks to edit.</p>
 </li>
 <li >
-<p ><a href="https://github.com/ms-jpq/chadtree"><code >CHADTree</code></a>, its a FULLY featured file manager.</p>
+<p ><a href="https://github.com/ms-jpq/chadtree"><code >CHADTree</code></a>, it’s a FULLY featured file manager.</p>
 </li>
 <li >
 <p ><a href="https://github.com/ms-jpq/isomorphic-copy">isomorphic-copy</a>, it’s a cross platform clipboard that is daemonless, and does not require third party support.</p>
@@ -471,7 +487,7 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-08-16T00:36:46+0000"></time>
+      <time datetime="2021-08-17T00:40:27+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>
