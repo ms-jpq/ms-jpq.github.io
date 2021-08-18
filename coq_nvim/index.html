@@ -73,12 +73,12 @@ Menu
   <section class="d-grid grid-col jc-end ai-centre mx-auto col-gap-4" id="repo-header">
     <span class="github-stars ">
   <i class="fas fa-star"></i>
-  446
+  623
 </span>
 
     <span class="github-forks ">
   <i class="fas fa-code-branch"></i>
-  7
+  14
 </span>
 
     <a class="invis-link" href="https://github.com/ms-jpq/coq_nvim">
@@ -92,7 +92,7 @@ Menu
     <div class="markdown">
       <h1 id="coqnvim">coq.nvim 🐔</h1>
 <p >Named after the <a href="https://coq.inria.fr/">famous theorem prover</a></p>
-<p ><code >coq</code> also means <code >鸡</code> in <a href="https://www.youtube.com/watch?v=ZoAhZPRBMgE"><code >français québécois</code></a>, and I guess <code >🥖</code>.</p>
+<p ><code >coq</code> also means <code >鸡</code> in <a href="https://youtu.be/ZoAhZPRBMgE"><code >français québécois</code></a>, and I guess <code >🥖</code>.</p>
 <p >Fast as FUCK and loads of features.</p>
 <h2 id="faster-than-lua">Faster Than Lua</h2>
 <ul >
@@ -300,11 +300,15 @@ apt install universal-ctags    <span class="c1"># good</span>
 
 <p ><strong >Minimum version</strong>: python:<code >3.8.2</code>, nvim: <code >0.5</code>, sqlite: <code >recentish</code></p>
 <p >Install the usual way, ie. VimPlug, Vundle, etc</p>
-<div class="codehilite friendly"><pre ><span ></span><code >&quot; This is the main one
+<div class="codehilite friendly"><pre ><span ></span><code >&quot; main one
 Plug &#x27;ms-jpq/coq_nvim&#x27;, {&#x27;branch&#x27;: &#x27;coq&#x27;}
-
 &quot; 9000+ Snippets
 Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27;}
+</code></pre></div>
+
+<div class="codehilite friendly"><pre ><span ></span><code ><span class="c1">-- packer</span>
+<span class="n">use</span> <span class="p">{</span> <span class="s1">&#x27;ms-jpq/coq_nvim&#x27;</span><span class="p">,</span> <span class="n">branch</span> <span class="o">=</span> <span class="s1">&#x27;coq&#x27;</span><span class="p">}</span> <span class="c1">-- main one</span>
+<span class="n">use</span> <span class="p">{</span> <span class="s1">&#x27;ms-jpq/coq.artifacts&#x27;</span><span class="p">,</span> <span class="n">branch</span><span class="o">=</span> <span class="s1">&#x27;artifacts&#x27;</span><span class="p">}</span> <span class="c1">-- 9000+ Snippets</span>
 </code></pre></div>
 
 <h2 id="documentation">Documentation</h2>
@@ -402,6 +406,8 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
 </table>
 <p ><strong >When hovering over a result, entering any key [a-z] will select it</strong></p>
 <p >This is a vim thing, I have zero control over :(</p>
+<h4 id="autostart-coq">Autostart COQ</h4>
+<p ><code >let g:coq_settings = { &#x27;auto_start&#x27;: v:true }</code> (or the lua way)</p>
 <h4 id="lsp-too-slow-to-show-up-on-keystroke">LSP too slow to show up on keystroke.</h4>
 <p >You have some options, each has its trade off:</p>
 <ol >
@@ -487,7 +493,7 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-08-17T00:40:27+0000"></time>
+      <time datetime="2021-08-18T00:43:42+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>
