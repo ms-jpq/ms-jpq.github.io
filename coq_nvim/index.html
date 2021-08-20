@@ -73,12 +73,12 @@ Menu
   <section class="d-grid grid-col jc-end ai-centre mx-auto col-gap-4" id="repo-header">
     <span class="github-stars ">
   <i class="fas fa-star"></i>
-  875
+  1058
 </span>
 
     <span class="github-forks ">
   <i class="fas fa-code-branch"></i>
-  20
+  22
 </span>
 
     <a class="invis-link" href="https://github.com/ms-jpq/coq_nvim">
@@ -181,19 +181,12 @@ Menu
 </ul>
 <p ><img alt="lsp_snippets.img" height="546" loading="lazy" src="/fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9.webp" srcset="/fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--200x109.webp 200w, /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--400x218.webp 400w, /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--600x328.webp 600w, /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--800x437.webp 800w, /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9.webp 1000w" width="1000"/></p>
 <p >Install the <a href="https://github.com/neovim/nvim-lspconfig">Nvim Official LSP integration</a></p>
-<p ><strong >Requires 1 line of change to support LSP snippets</strong></p>
+<p ><strong >Requires 2 lines of change to support LSP snippets</strong></p>
 <div class="codehilite friendly"><pre ><span ></span><code ><span class="kd">local</span> <span class="n">lsp</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;lspconfig&quot;</span>
+<span class="kd">local</span> <span class="n">coq</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;coq&quot;</span> <span class="c1">-- add this</span>
 
 <span class="n">lsp</span><span class="p">.</span><span class="o">&lt;</span><span class="n">server</span><span class="o">&gt;</span><span class="p">.</span><span class="n">setup</span><span class="p">(</span><span class="o">&lt;</span><span class="n">stuff</span><span class="p">...</span><span class="o">&gt;</span><span class="p">)</span>                              <span class="c1">-- before</span>
 <span class="n">lsp</span><span class="p">.</span><span class="o">&lt;</span><span class="n">server</span><span class="o">&gt;</span><span class="p">.</span><span class="n">setup</span><span class="p">(</span><span class="n">coq</span><span class="p">.</span><span class="n">lsp_ensure_capabilities</span><span class="p">(</span><span class="o">&lt;</span><span class="n">stuff</span><span class="p">...</span><span class="o">&gt;</span><span class="p">))</span> <span class="c1">-- after</span>
-</code></pre></div>
-
-<p ><strong >If you are using <a href="https://github.com/wbthomason/packer.nvim"><code >packer.nvim</code></a></strong></p>
-<div class="codehilite friendly"><pre ><span ></span><code ><span class="n">vim</span><span class="p">.</span><span class="n">schedule</span><span class="p">(</span><span class="kr">function</span> <span class="p">()</span>
-  <span class="kd">local</span> <span class="n">lsp</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;lspconfig&quot;</span>
-  <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;packer&quot;</span><span class="p">).</span><span class="n">loader</span><span class="p">(</span><span class="s2">&quot;coq_nvim coq.artifacts&quot;</span><span class="p">)</span>
-  <span class="n">lsp</span><span class="p">.</span><span class="o">&lt;</span><span class="n">server</span><span class="o">&gt;</span><span class="p">.</span><span class="n">setup</span><span class="p">(</span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;coq&quot;</span><span class="p">)().</span><span class="n">lsp_ensure_capabilities</span><span class="p">(</span><span class="o">&lt;</span><span class="n">stuff</span><span class="p">...</span><span class="o">&gt;</span><span class="p">))</span>
-<span class="kr">end</span><span class="p">)</span>
 </code></pre></div>
 
 <h3 id="snippets">Snippets</h3>
@@ -218,10 +211,10 @@ Menu
 <h3 id="ctags">CTags</h3>
 <ul >
 <li >
-<p >Incremental &amp; automatic <strong >background compilation</strong></p>
+<p ><strong >LSP like</strong></p>
 </li>
 <li >
-<p >Tag location &amp; context</p>
+<p >Incremental &amp; automatic <strong >background compilation</strong></p>
 </li>
 <li >
 <p >Non-blocking</p>
@@ -407,7 +400,7 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
 <p ><strong >When hovering over a result, entering any key [a-z] will select it</strong></p>
 <p >This is a vim thing, I have zero control over :(</p>
 <h4 id="autostart-coq">Autostart COQ</h4>
-<p ><code >let g:coq_settings = { &#x27;auto_start&#x27;: v:true }</code> (or the lua way)</p>
+<p ><code >let g:coq_settings = { &#x27;auto_start&#x27;: v:true | &#x27;shut-up&#x27; }</code> (or the lua way)</p>
 <h4 id="lsp-too-slow-to-show-up-on-keystroke">LSP too slow to show up on keystroke.</h4>
 <p >You have some options, each has its trade off:</p>
 <ol >
@@ -493,7 +486,7 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-08-19T00:27:49+0000"></time>
+      <time datetime="2021-08-20T00:34:12+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>
