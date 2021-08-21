@@ -73,12 +73,12 @@ Menu
   <section class="d-grid grid-col jc-end ai-centre mx-auto col-gap-4" id="repo-header">
     <span class="github-stars ">
   <i class="fas fa-star"></i>
-  1058
+  1133
 </span>
 
     <span class="github-forks ">
   <i class="fas fa-code-branch"></i>
-  22
+  24
 </span>
 
     <a class="invis-link" href="https://github.com/ms-jpq/coq_nvim">
@@ -412,6 +412,9 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
 </ol>
 <p >Annoying! And the manual completion also has a timeout <code >coq_settings.limits.completion_manual_timeout</code>.</p>
 <p >Some LSP servers will still fail to respond within the default <code >.66</code> seconds, in that case pressing <code >&lt;c-space&gt;</code> multiple times might actually help some LSP servers catch up, depending on their implementation.</p>
+<h4 id="lsp-sometimes-not-importing">LSP sometimes not importing</h4>
+<p >Increase <code >coq_settings.clients.lsp.resolve_timeout</code></p>
+<p >This will however, make applying edits slower.</p>
 <h4 id="missing-results">Missing Results</h4>
 <p >On keystroke only a max of <code >coq_settings.match.max_results</code> are shown.</p>
 <p >Use manual completion hotkey to show all results.</p>
@@ -486,7 +489,7 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-08-20T00:34:12+0000"></time>
+      <time datetime="2021-08-21T00:35:06+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>
