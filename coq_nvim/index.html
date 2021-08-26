@@ -73,7 +73,7 @@ Menu
   <section class="d-grid grid-col jc-end ai-centre mx-auto col-gap-4" id="repo-header">
     <span class="github-stars ">
   <i class="fas fa-star"></i>
-  1225
+  1246
 </span>
 
     <span class="github-forks ">
@@ -398,6 +398,11 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
 </table>
 <p ><strong >When hovering over a result, entering any key [a-z] will select it</strong></p>
 <p >This is a vim thing, I have zero control over :(</p>
+<h4 id="flickering">Flickering</h4>
+<p >By default, the old results are cleared on each keystroke, so the popup menu is closed right away.</p>
+<p >You can disable this: at the cost of having stale results shown until the new ones come in.</p>
+<p ><code >let g:coq_settings = { &#x27;display.pum.fast_close&#x27;: v:false }</code></p>
+<p >This is not the default because some LSP servers are very slow (ie. tailwindcss), leading to stale results being shown for too long.</p>
 <h4 id="autostart-coq">Autostart COQ</h4>
 <p ><code >let g:coq_settings = { &#x27;auto_start&#x27;: v:true | &#x27;shut-up&#x27; }</code> (or the lua way)</p>
 <h4 id="lsp-too-slow-to-show-up-on-keystroke">LSP too slow to show up on keystroke.</h4>
@@ -485,7 +490,7 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-08-25T00:28:42+0000"></time>
+      <time datetime="2021-08-26T00:27:14+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>
