@@ -73,12 +73,12 @@ Menu
   <section class="d-grid grid-col jc-end ai-centre mx-auto col-gap-4" id="repo-header">
     <span class="github-stars ">
   <i class="fas fa-star"></i>
-  1298
+  1307
 </span>
 
     <span class="github-forks ">
   <i class="fas fa-code-branch"></i>
-  23
+  27
 </span>
 
     <a class="invis-link" href="https://github.com/ms-jpq/coq_nvim">
@@ -207,6 +207,19 @@ Menu
 </ul>
 <p ><img alt="snippet_expand.img" height="546" loading="lazy" src="/053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd.webp" srcset="/053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--200x109.webp 200w, /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--400x218.webp 400w, /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--600x328.webp 600w, /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--800x437.webp 800w, /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd.webp 1000w" width="1000"/></p>
 <p ><em >The <code >%</code> statistic comes from compiling the 10,000 snippets</em></p>
+<h3 id="treesitter">TreeSitter</h3>
+<ul >
+<li >
+<p ><strong >Shows context</strong></p>
+</li>
+<li >
+<p >Unicode ready</p>
+</li>
+</ul>
+<p ><img alt="treesitter.img" height="535" loading="lazy" src="/8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1.webp" srcset="/8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--200x107.webp 200w, /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--400x214.webp 400w, /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--600x321.webp 600w, /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--800x428.webp 800w, /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1.webp 1000w" width="1000"/></p>
+<p ><strong >Treesitter is still unstable in nvim0.5: slow and crash prone</strong></p>
+<p >The promise is that Treesitter will have real time parsing on every keystroke, but it’s actually too slow on big files.</p>
+<p >The Treesitter source only parses on <code >Idle</code> events due to unrealized performance promises.</p>
 <h3 id="ctags">CTags</h3>
 <ul >
 <li >
@@ -250,19 +263,6 @@ apt install universal-ctags    <span class="c1"># good</span>
 </li>
 </ul>
 <p ><img alt="buffers.img" height="546" loading="lazy" src="/f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1.webp" srcset="/f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1--200x109.webp 200w, /f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1--400x218.webp 400w, /f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1--600x328.webp 600w, /f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1--800x437.webp 800w, /f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1.webp 1000w" width="1000"/></p>
-<h3 id="treesitter">TreeSitter</h3>
-<ul >
-<li >
-<p ><strong >Shows context</strong></p>
-</li>
-<li >
-<p >Unicode ready</p>
-</li>
-</ul>
-<p ><img alt="treesitter.img" height="535" loading="lazy" src="/8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1.webp" srcset="/8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--200x107.webp 200w, /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--400x214.webp 400w, /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--600x321.webp 600w, /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--800x428.webp 800w, /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1.webp 1000w" width="1000"/></p>
-<p ><strong >Treesitter is still unstable in nvim0.5: slow and crash prone</strong></p>
-<p >The promise is that Treesitter will have real time parsing on every keystroke, but it’s actually too slow on big files.</p>
-<p >The Treesitter source only parses on <code >Idle</code> events due to unrealized performance promises.</p>
 <h3 id="tmux">Tmux</h3>
 <p ><img alt="tmux.img" height="546" loading="lazy" src="/073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525.webp" srcset="/073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--200x109.webp 200w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--400x218.webp 400w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--600x328.webp 600w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--800x437.webp 800w, /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525.webp 1000w" width="1000"/></p>
 <h3 id="tabnine">Tabnine</h3>
@@ -286,6 +286,13 @@ apt install universal-ctags    <span class="c1"># good</span>
 </ul>
 <p >Here I make a type error on purpose inputting <code >string</code> instead of an <code >integer</code>.</p>
 <p ><img alt="conf_demo.img" height="276" loading="lazy" src="/18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07.webp" srcset="/18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07--200x114.webp 200w, /18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07--400x229.webp 400w, /18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07--483x276.webp 483w" width="483"/></p>
+<h3 id="pretty-icons">Pretty icons</h3>
+<ul >
+<li ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/DISPLAY.md">Customizable</a></li>
+</ul>
+<p ><img alt="icons.img" height="248" loading="lazy" src="/e720aa1cc5ff220afe508dd457e1c6f08d9619ea6c7ad93c840f039e84807e59.webp" srcset="/e720aa1cc5ff220afe508dd457e1c6f08d9619ea6c7ad93c840f039e84807e59--200x93.webp 200w, /e720aa1cc5ff220afe508dd457e1c6f08d9619ea6c7ad93c840f039e84807e59--400x186.webp 400w, /e720aa1cc5ff220afe508dd457e1c6f08d9619ea6c7ad93c840f039e84807e59--533x248.webp 533w" width="533"/></p>
+<p ><strong >If you can’t see icons properly</strong>:</p>
+<p >Either set <code >let g:coq_settings = { &#x27;display.icons.mode&#x27;: &#x27;none&#x27; }</code> to disable icons, or <a href="https://www.nerdfonts.com/#home">install a supported font</a></p>
 <h2 id="install">Install</h2>
 <p >Needs python virtual env</p>
 <div class="codehilite friendly"><pre ><span ></span><code >apt install --yes -- python3-venv
@@ -491,7 +498,7 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-08-30T00:35:01+0000"></time>
+      <time datetime="2021-08-31T00:29:47+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>
