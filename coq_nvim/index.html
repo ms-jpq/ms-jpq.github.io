@@ -73,12 +73,12 @@ Menu
   <section class="d-grid grid-col jc-end ai-centre mx-auto col-gap-4" id="repo-header">
     <span class="github-stars ">
   <i class="fas fa-star"></i>
-  1323
+  1346
 </span>
 
     <span class="github-forks ">
   <i class="fas fa-code-branch"></i>
-  28
+  26
 </span>
 
     <a class="invis-link" href="https://github.com/ms-jpq/coq_nvim">
@@ -213,13 +213,19 @@ Menu
 <p ><strong >Shows context</strong></p>
 </li>
 <li >
+<p ><strong >Partial document parsing</strong></p>
+</li>
+<li >
+<p >Auto-disable if document is too big</p>
+</li>
+<li >
 <p >Unicode ready</p>
 </li>
 </ul>
 <p ><img alt="treesitter.img" height="535" loading="lazy" src="/8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1.webp" srcset="/8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--200x107.webp 200w, /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--400x214.webp 400w, /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--600x321.webp 600w, /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--800x428.webp 800w, /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1.webp 1000w" width="1000"/></p>
 <p ><strong >Treesitter is still unstable in nvim0.5: slow and crash prone</strong></p>
 <p >The promise is that Treesitter will have real time parsing on every keystroke, but it’s actually too slow on big files.</p>
-<p >The Treesitter source only parses on <code >Idle</code> events due to unrealized performance promises.</p>
+<p >The Treesitter source only parses a limited number of lines about the cursor and only on <code >Idle</code> events due to unrealized performance promises.</p>
 <h3 id="ctags">CTags</h3>
 <ul >
 <li >
@@ -247,6 +253,9 @@ apt install universal-ctags    <span class="c1"># good</span>
 <ul >
 <li >
 <p ><strong >Preview contents</strong></p>
+</li>
+<li >
+<p ><code >$VARIABLE</code> expansion, <code >%EVEN_UNDER_WINDOWS%</code></p>
 </li>
 <li >
 <p >Relative to both <code >cwd</code> and file path</p>
@@ -413,6 +422,7 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
 <p >This is not the default because some LSP servers are very slow (ie. tailwindcss), leading to stale results being shown for too long.</p>
 <h4 id="autostart-coq">Autostart COQ</h4>
 <p ><code >let g:coq_settings = { &#x27;auto_start&#x27;: v:true }</code> or <code >let g:coq_settings = { &#x27;auto_start&#x27;: &#x27;shut-up&#x27; }</code></p>
+<p >This must be set <strong >BEFORE</strong> <code >require(&quot;coq&quot;)</code></p>
 <h4 id="lsp-too-slow-to-show-up-on-keystroke">LSP too slow to show up on keystroke.</h4>
 <p >You have some options, each has its trade off:</p>
 <ol >
@@ -498,7 +508,7 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-09-01T00:30:34+0000"></time>
+      <time datetime="2021-09-02T00:28:31+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>
