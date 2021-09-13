@@ -71,9 +71,9 @@ Menu
     </aside>
     <main class="d-grid row-gap-8">
   <section class="d-grid grid-col jc-end ai-centre mx-auto col-gap-4" id="repo-header">
-    <span class="github-stars ">
+    <span class="github-stars hidden">
   <i class="fas fa-star"></i>
-  1
+  0
 </span>
 
     <span class="github-forks hidden">
@@ -81,7 +81,7 @@ Menu
   0
 </span>
 
-    <a class="invis-link" href="https://github.com/ms-jpq/noact-page">
+    <a class="invis-link" href="https://github.com/ms-jpq/coq.thirdparty">
 <button class="big-button text-justify">
         View on Github <i class="fab fa-github"></i>
 
@@ -90,17 +90,38 @@ Menu
   </section>
   <section class="d-grid mx-auto" id="repo-body">
     <div class="markdown">
-      <p >Page for Noact</p>
+      <h1 id="coqnvim-thirdparty-sources">coq.nvim Thirdparty Sources</h1>
+<p >Shim layer for <a href="https://github.com/ms-jpq/coq_nvim"><code >coq.nvim</code></a> to communicate with other vim plugins.</p>
+<p >See <a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/CUSTOM_SOURCES.md"><code >:COQhelp custom_sources</code></a></p>
+<h2 id="how-to-use">How to use</h2>
+<p >Install the repo the normal way.</p>
+<div class="codehilite friendly"><pre ><span ></span><code ><span class="kd">local</span> <span class="n">setup</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;coq_3rd&quot;</span><span class="p">)</span>
+<span class="n">setup</span> <span class="p">{</span>
+  <span class="p">{</span> <span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;demo&quot;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;vimtex&quot;</span><span class="p">,</span> <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;vTEX&quot;</span> <span class="p">},</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p ><code >setup</code> takes a list of <code >{ src = ..., short_name = ..., ... }</code> objects.</p>
+<p >If <code >short_name</code> is not specified, it is uppercase <code >src</code>.</p>
+<p >The rest of object are specific to each individual source.</p>
+<h2 id="sources">Sources</h2>
+<h3 id="demo">Demo</h3>
+<p ><code >{ src = &quot;demo&quot; }</code></p>
+<p >This is a reference implementation, do not enable it unless you want to write your own plugin, and want to see how it works.</p>
+<h3 id="vimtex"><a href="https://github.com/lervag/vimtex">VimTex</a></h3>
+<p ><code >{ src = &quot;vimtex&quot; }</code></p>
     </div>
   </section>
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-09-13T00:31:56+0000"></time>
+      <time datetime="2021-09-13T00:31:55+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>
-      <time datetime="2019-05-13T20:59:49+0000"></time>
+      <time datetime="2021-09-12T22:19:35+0000"></time>
     </div>
   </section>
 </main>

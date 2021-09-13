@@ -73,7 +73,7 @@ Menu
   <section class="d-grid grid-col jc-end ai-centre mx-auto col-gap-4" id="repo-header">
     <span class="github-stars ">
   <i class="fas fa-star"></i>
-  1471
+  1478
 </span>
 
     <span class="github-forks ">
@@ -424,19 +424,26 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
 <table >
 <thead >
 <tr >
-<th >key</th>
+<th >keymap</th>
 <th >function</th>
 </tr>
 </thead>
 <tbody >
 <tr >
-<td ><code >&lt;null&gt;</code></td>
+<td ><code >coq_settings.keymap.repeat</code></td>
+<td >repeat last edit</td>
+</tr>
+<tr >
+<td ><code >coq_settings.keymap.eval_snips</code></td>
 <td >evulate snippet in document / under selection</td>
 </tr>
 </tbody>
 </table>
 <p ><strong >When hovering over a result, entering any key [a-z] will select it</strong></p>
 <p >This is a vim thing, I have zero control over :(</p>
+<h4 id="repeat"><code >.</code> Repeat</h4>
+<p >Set <code >coq_settings.keymap.repeat</code> to a hotkey.</p>
+<p >See <code >:COQhelp keybind</code> for details</p>
 <h4 id="flickering">Flickering</h4>
 <p >By default, the old results are cleared on each keystroke, so the popup menu is closed right away.</p>
 <p >You can disable this: at the cost of having stale results shown until the new ones come in.</p>
@@ -522,6 +529,9 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
 <li >
 <p ><a href="https://github.com/xabikos/vscode-react">xabikos/vscode-react</a></p>
 </li>
+<li >
+<p ><a href="https://github.com/rafamadriz/friendly-snippets">rafamadriz/friendly-snippets</a></p>
+</li>
 </ul>
 <p >Super special thanks goes to <a href="https://github.com/typescript-language-server/typescript-language-server">Typescript LSP</a>.</p>
 <p >Nothing like good motivation to improve my design than dumping 1000 results on my client every other keystroke.</p>
@@ -530,7 +540,7 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-09-12T00:34:55+0000"></time>
+      <time datetime="2021-09-13T00:31:55+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>
