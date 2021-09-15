@@ -73,7 +73,7 @@ Menu
   <section class="d-grid grid-col jc-end ai-centre mx-auto col-gap-4" id="repo-header">
     <span class="github-stars ">
   <i class="fas fa-star"></i>
-  1486
+  1498
 </span>
 
     <span class="github-forks ">
@@ -290,6 +290,23 @@ apt install universal-ctags    <span class="c1"># good</span>
 <p ><img alt="tabnine.img" height="546" loading="lazy" src="/0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b.webp" srcset="/0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--200x109.webp 200w, /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--400x218.webp 400w, /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--600x328.webp 600w, /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--800x437.webp 800w, /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b.webp 1000w" width="1000"/></p>
 <p ><em >T9 is disabled by default, I might remove it, if they do not improve the CPU usage. <a href="https://github.com/codota/TabNine/issues/43">Their own bug tracker</a>.</em></p>
 <p >Enable via: <code >coq_settings.clients.tabnine.enabled=true</code></p>
+<h3 id="scriptable-lua-sources-external-third-party-integrations">Scriptable lua sources &amp; external third party integrations</h3>
+<ul >
+<li >
+<p ><strong >Even faster</strong> than the original sources! (transparent caching)</p>
+</li>
+<li >
+<p ><a href="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/bc.gif">Many sources</a> | <a href="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/figlet.gif">out of</a> | <a href="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/cowsay.gif">the box</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/ms-jpq/coq.thirdparty">Thirdparty integrations</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/CUSTOM_SOURCES.md">Easy to write</a></p>
+</li>
+</ul>
+<p ><img alt="lua.img" height="531" loading="lazy" src="/f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709.webp" srcset="/f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709--200x106.webp 200w, /f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709--400x212.webp 400w, /f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709--600x319.webp 600w, /f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709--800x425.webp 800w, /f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709.webp 1000w" width="1000"/></p>
+<p >Pic above is <code >nvim</code>‘s lua API completion.</p>
 <h3 id="statistics">Statistics</h3>
 <p ><code >:COQstats</code></p>
 <p ><img alt="statistics.img" height="570" loading="lazy" src="/c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650.webp" srcset="/c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--200x114.webp 200w, /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--400x228.webp 400w, /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--600x342.webp 600w, /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--800x456.webp 800w, /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650.webp 1000w" width="1000"/></p>
@@ -317,11 +334,9 @@ apt install universal-ctags    <span class="c1"># good</span>
 Plug &#x27;ms-jpq/coq_nvim&#x27;, {&#x27;branch&#x27;: &#x27;coq&#x27;}
 &quot; 9000+ Snippets
 Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27;}
-</code></pre></div>
 
-<div class="codehilite friendly"><pre ><span ></span><code ><span class="c1">-- packer</span>
-<span class="n">use</span> <span class="p">{</span> <span class="s1">&#x27;ms-jpq/coq_nvim&#x27;</span><span class="p">,</span> <span class="n">branch</span> <span class="o">=</span> <span class="s1">&#x27;coq&#x27;</span><span class="p">}</span> <span class="c1">-- main one</span>
-<span class="n">use</span> <span class="p">{</span> <span class="s1">&#x27;ms-jpq/coq.artifacts&#x27;</span><span class="p">,</span> <span class="n">branch</span><span class="o">=</span> <span class="s1">&#x27;artifacts&#x27;</span><span class="p">}</span> <span class="c1">-- 9000+ Snippets</span>
+&quot; Third party sources -- See https://github.com/ms-jpq/coq.thirdparty
+Plug &#x27;ms-jpq/coq.thirdparty&#x27;, {&#x27;branch&#x27;: &#x27;3p&#x27;}
 </code></pre></div>
 
 <h2 id="documentation">Documentation</h2>
@@ -362,6 +377,9 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
 </li>
 <li >
 <p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/STATS.md">:COQhelp stats</a></p>
+</li>
+<li >
+<p ><a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/CUSTOM_SOURCES.md">:COQhelp custom_sources</a></p>
 </li>
 </ul>
 <h2 id="faq">FAQ</h2>
@@ -540,7 +558,7 @@ Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-09-14T00:30:36+0000"></time>
+      <time datetime="2021-09-15T00:29:29+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>

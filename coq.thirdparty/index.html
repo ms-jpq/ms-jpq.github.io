@@ -73,7 +73,7 @@ Menu
   <section class="d-grid grid-col jc-end ai-centre mx-auto col-gap-4" id="repo-header">
     <span class="github-stars ">
   <i class="fas fa-star"></i>
-  1
+  8
 </span>
 
     <span class="github-forks hidden">
@@ -90,26 +90,48 @@ Menu
   </section>
   <section class="d-grid mx-auto" id="repo-body">
     <div class="markdown">
-      <h1 id="coqnvim-thirdparty-sources">coq.nvim Thirdparty Sources</h1>
-<p >Shim layer for <a href="https://github.com/ms-jpq/coq_nvim"><code >coq.nvim</code></a> to communicate with other vim plugins.</p>
+      <h1 id="coqnvim-first-third-party-sources">coq.nvim (first &amp; third) party sources</h1>
+<p ><strong >PR welcome</strong></p>
+<hr />
+<p ><strong >First party lua sources</strong> &amp; <em >third party integration</em> for <a href="https://github.com/ms-jpq/coq_nvim"><code >coq.nvim</code></a></p>
 <p >See <a href="https://github.com/ms-jpq/coq_nvim/tree/coq/docs/CUSTOM_SOURCES.md"><code >:COQhelp custom_sources</code></a></p>
 <h2 id="how-to-use">How to use</h2>
 <p >Install the repo the normal way, and then:</p>
-<div class="codehilite friendly"><pre ><span ></span><code ><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;coq_3rd&quot;</span><span class="p">)</span> <span class="p">{</span>
+<div class="codehilite friendly"><pre ><span ></span><code ><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;coq_3p&quot;</span><span class="p">)</span> <span class="p">{</span>
   <span class="p">{</span> <span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;demo&quot;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;nvimlua&quot;</span><span class="p">,</span> <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;nLUA&quot;</span> <span class="p">},</span>
   <span class="p">{</span> <span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;vimtex&quot;</span><span class="p">,</span> <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;vTEX&quot;</span> <span class="p">},</span>
   <span class="p">...</span>
 <span class="p">}</span>
 </code></pre></div>
 
-<p ><code >require(&quot;coq_3rd&quot;)</code> takes a list of <code >{ src = ..., short_name = ..., ... }</code> objects.</p>
+<p ><code >require(&quot;coq_3p&quot;)</code> takes a list of <code >{ src = ..., short_name = ..., ... }</code> objects.</p>
 <p ><code >src</code> is required</p>
 <p >If <code >short_name</code> is not specified, it is uppercase <code >src</code>.</p>
 <p >The rest of object are specific to each individual source.</p>
-<h2 id="sources">Sources</h2>
-<h3 id="demo"><a href="https://github.com/ms-jpq/coq.thirdparty/blob/main/lua/coq_3rd/demo/init.lua">Demo</a></h3>
+<h2 id="first-party">First party</h2>
+<h3 id="demo"><a href="https://github.com/ms-jpq/coq.thirdparty/blob/main/lua/coq_3p/demo/init.lua">Demo</a></h3>
 <p ><code >{ src = &quot;demo&quot; }</code></p>
 <p >This is a reference implementation, do not enable it unless you want to write your own plugin, and want to see how it works.</p>
+<h3 id="nvim-lua-api">Nvim Lua API</h3>
+<p ><code >{ src = &quot;nvimlua&quot;, short_name = &quot;nLUA&quot;, conf_only = true }</code></p>
+<p ><img alt="lua.img" height="531" loading="lazy" src="/f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709.webp" srcset="/f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709--200x106.webp 200w, /f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709--400x212.webp 400w, /f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709--600x319.webp 600w, /f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709--800x425.webp 800w, /f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709.webp 1000w" width="1000"/></p>
+<ul >
+<li >conf_only :: only return results if current document is relative to <code >$NVIM_HOME</code></li>
+</ul>
+<h3 id="scientific-calculator">Scientific calculator</h3>
+<p ><code >{ src = &quot;bc&quot;, short_name = &quot;MATH&quot;, precision = 6 }</code></p>
+<p ><img alt="bc.img" height="531" loading="lazy" src="/9e1f2a21c5c7265450726a2465cee9d0c75da0139f7b8a02b13975a85a04c1fc.webp" srcset="/9e1f2a21c5c7265450726a2465cee9d0c75da0139f7b8a02b13975a85a04c1fc--200x106.webp 200w, /9e1f2a21c5c7265450726a2465cee9d0c75da0139f7b8a02b13975a85a04c1fc--400x212.webp 400w, /9e1f2a21c5c7265450726a2465cee9d0c75da0139f7b8a02b13975a85a04c1fc--600x319.webp 600w, /9e1f2a21c5c7265450726a2465cee9d0c75da0139f7b8a02b13975a85a04c1fc--800x425.webp 800w, /9e1f2a21c5c7265450726a2465cee9d0c75da0139f7b8a02b13975a85a04c1fc.webp 1000w" width="1000"/></p>
+<p >requires - <a href="https://linux.die.net/man/1/bc"><code >bc</code></a></p>
+<h3 id="comment-banner">Comment Banner</h3>
+<p ><code >{ src = &quot;figlet&quot;, short_name = &quot;BIG&quot; }</code></p>
+<p ><img alt="figlet.img" height="531" loading="lazy" src="/c256ff7747e9772771447750075d749ee16abbbb20cfc8c6246101c763fbc528.webp" srcset="/c256ff7747e9772771447750075d749ee16abbbb20cfc8c6246101c763fbc528--200x106.webp 200w, /c256ff7747e9772771447750075d749ee16abbbb20cfc8c6246101c763fbc528--400x212.webp 400w, /c256ff7747e9772771447750075d749ee16abbbb20cfc8c6246101c763fbc528--600x319.webp 600w, /c256ff7747e9772771447750075d749ee16abbbb20cfc8c6246101c763fbc528--800x425.webp 800w, /c256ff7747e9772771447750075d749ee16abbbb20cfc8c6246101c763fbc528.webp 1000w" width="1000"/></p>
+<p >requires - <a href="https://linux.die.net/man/6/figlet"><code >figlet</code></a></p>
+<h3 id="moo">Moo</h3>
+<p ><code >{ src = &quot;cow&quot; }</code></p>
+<p ><img alt="cowsay.img" height="531" loading="lazy" src="/f7f530215ea80f5a2a359dca55f497ce2944533ac50f9e652b2e3b9424b93e0b.webp" srcset="/f7f530215ea80f5a2a359dca55f497ce2944533ac50f9e652b2e3b9424b93e0b--200x106.webp 200w, /f7f530215ea80f5a2a359dca55f497ce2944533ac50f9e652b2e3b9424b93e0b--400x212.webp 400w, /f7f530215ea80f5a2a359dca55f497ce2944533ac50f9e652b2e3b9424b93e0b--600x319.webp 600w, /f7f530215ea80f5a2a359dca55f497ce2944533ac50f9e652b2e3b9424b93e0b--800x425.webp 800w, /f7f530215ea80f5a2a359dca55f497ce2944533ac50f9e652b2e3b9424b93e0b.webp 1000w" width="1000"/></p>
+<p >requires - <a href="https://linux.die.net/man/1/cowsay"><code >cowsay</code></a></p>
+<h2 id="third-parties">Third parties</h2>
 <h3 id="vimtex"><a href="https://github.com/lervag/vimtex">VimTex</a></h3>
 <p ><code >{ src = &quot;vimtex&quot;, short_name = &quot;vTEX&quot; }</code></p>
 <ul >
@@ -120,12 +142,18 @@ Menu
 <ul >
 <li >Cache enabled</li>
 </ul>
+<hr />
+<h2 id="fyi">FYI</h2>
+<p >None of the code under <code >require(&#x27;coq_3p&#x27;)</code> is public API.</p>
+<p >From the users’ prespective, any change I make should be transparent, ie. I will try to not break their stuff.</p>
+<p >For other plugin developers, if you want to re-use my code. Make a COPY, do not just <code >require &quot;blah&quot;</code> from this repo.</p>
+<p >I want to reserve the ability to fearlessly re-factor.</p>
     </div>
   </section>
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-09-14T00:46:38+0000"></time>
+      <time datetime="2021-09-15T00:29:29+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>
