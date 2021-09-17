@@ -98,10 +98,10 @@ Menu
 <h2 id="how-to-use">How to use</h2>
 <p >Install the repo the normal way, and then:</p>
 <div class="codehilite friendly"><pre ><span ></span><code ><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;coq_3p&quot;</span><span class="p">)</span> <span class="p">{</span>
-  <span class="p">{</span> <span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;demo&quot;</span> <span class="p">},</span>
   <span class="p">{</span> <span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;nvimlua&quot;</span><span class="p">,</span> <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;nLUA&quot;</span> <span class="p">},</span>
   <span class="p">{</span> <span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;vimtex&quot;</span><span class="p">,</span> <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;vTEX&quot;</span> <span class="p">},</span>
   <span class="p">...</span>
+  <span class="p">{</span> <span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;demo&quot;</span> <span class="p">},</span>
 <span class="p">}</span>
 </code></pre></div>
 
@@ -110,18 +110,61 @@ Menu
 <p >If <code >short_name</code> is not specified, it is uppercase <code >src</code>.</p>
 <p >The rest of object are specific to each individual source.</p>
 <h2 id="first-party">First party</h2>
-<h3 id="demo"><a href="https://github.com/ms-jpq/coq.thirdparty/blob/main/lua/coq_3p/demo/init.lua">Demo</a></h3>
-<p ><code >{ src = &quot;demo&quot; }</code></p>
-<p >This is a reference implementation, do not enable it unless you want to write your own plugin, and want to see how it works.</p>
+<h3 id="repl">REPL</h3>
+<div class="codehilite friendly"><pre ><span ></span><code ><span class="p">{</span>
+  <span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;repl&quot;</span><span class="p">,</span>
+  <span class="n">sh</span> <span class="o">=</span> <span class="s2">&quot;zsh&quot;</span><span class="p">,</span>
+  <span class="n">shell</span> <span class="o">=</span> <span class="p">{</span> <span class="n">p</span> <span class="o">=</span> <span class="s2">&quot;perl&quot;</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="s2">&quot;node&quot;</span><span class="p">,</span> <span class="p">...</span> <span class="p">},</span>
+  <span class="n">max_lines</span> <span class="o">=</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="n">deadline</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
+  <span class="n">unsafe</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;rm&quot;</span><span class="p">,</span> <span class="s2">&quot;poweroff&quot;</span><span class="p">,</span> <span class="s2">&quot;mv&quot;</span><span class="p">,</span> <span class="p">...</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p >Evaluates <code >...</code>:</p>
+<div class="codehilite friendly"><pre ><span ></span><code >`&lt;ctrl chars&gt;!...`
+</code></pre></div>
+
+<p >Where <code >&lt;ctrl chars&gt;</code> can be a combination of zero or more of:</p>
+<ul >
+<li >
+<p ><code >#</code> :: comment output</p>
+</li>
+<li >
+<p ><code >-</code> :: prevent indent</p>
+</li>
+</ul>
+<p >Note: <code >coq.nvim</code> has <em >very short</em> deadlines by default for auto completions, manual <code >&lt;c-space&gt;</code> might be required if <code >$SHELL</code> is slow.</p>
+<p ><img alt="repl.img" height="531" loading="lazy" src="/83c3468c17d14ac2e34f8b4ea8db2373e597f74d98d6525c49780ca79cc5e2df.webp" srcset="/83c3468c17d14ac2e34f8b4ea8db2373e597f74d98d6525c49780ca79cc5e2df--200x106.webp 200w, /83c3468c17d14ac2e34f8b4ea8db2373e597f74d98d6525c49780ca79cc5e2df--400x212.webp 400w, /83c3468c17d14ac2e34f8b4ea8db2373e597f74d98d6525c49780ca79cc5e2df--600x319.webp 600w, /83c3468c17d14ac2e34f8b4ea8db2373e597f74d98d6525c49780ca79cc5e2df--800x425.webp 800w, /83c3468c17d14ac2e34f8b4ea8db2373e597f74d98d6525c49780ca79cc5e2df.webp 1000w" width="1000"/></p>
+<ul >
+<li >
+<p >sh :: Maybe str :: default repl shell, default to <code >$SHELL</code> fallback to <code >cmd.exe</code> under NT and <code >sh</code> under POSIX</p>
+</li>
+<li >
+<p >shell :: Maybe Map ‘str, ‘str :: For the first word <code >w</code> after “`!”, if <code >w ∈ key of shell</code>, set <code >sh = shell[w]</code></p>
+</li>
+<li >
+<p >max_lines :: int :: max lines to return</p>
+</li>
+<li >
+<p >deadline :: int :: maxms to wait for execution</p>
+</li>
+<li >
+<p >unsafe :: Seq ‘str :: do not start repl with these executables, ie. <code >rm</code>, <code >sudo</code>, <code >mv</code>, etc</p>
+</li>
+</ul>
 <h3 id="nvim-lua-api">Nvim Lua API</h3>
 <p ><code >{ src = &quot;nvimlua&quot;, short_name = &quot;nLUA&quot;, conf_only = true }</code></p>
 <p ><img alt="lua.img" height="531" loading="lazy" src="/f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709.webp" srcset="/f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709--200x106.webp 200w, /f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709--400x212.webp 400w, /f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709--600x319.webp 600w, /f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709--800x425.webp 800w, /f3cb041dcc148c0699fd81166840d5a11fbf9199e2fa8fc9ee03766d0a57f709.webp 1000w" width="1000"/></p>
 <ul >
-<li >conf_only :: only return results if current document is relative to <code >$NVIM_HOME</code></li>
+<li >conf_only :: Maybe bool :: only return results if current document is relative to <code >$NVIM_HOME</code>, default yes</li>
 </ul>
 <h3 id="scientific-calculator">Scientific calculator</h3>
 <p ><code >{ src = &quot;bc&quot;, short_name = &quot;MATH&quot;, precision = 6 }</code></p>
 <p ><img alt="bc.img" height="531" loading="lazy" src="/9e1f2a21c5c7265450726a2465cee9d0c75da0139f7b8a02b13975a85a04c1fc.webp" srcset="/9e1f2a21c5c7265450726a2465cee9d0c75da0139f7b8a02b13975a85a04c1fc--200x106.webp 200w, /9e1f2a21c5c7265450726a2465cee9d0c75da0139f7b8a02b13975a85a04c1fc--400x212.webp 400w, /9e1f2a21c5c7265450726a2465cee9d0c75da0139f7b8a02b13975a85a04c1fc--600x319.webp 600w, /9e1f2a21c5c7265450726a2465cee9d0c75da0139f7b8a02b13975a85a04c1fc--800x425.webp 800w, /9e1f2a21c5c7265450726a2465cee9d0c75da0139f7b8a02b13975a85a04c1fc.webp 1000w" width="1000"/></p>
+<ul >
+<li >precision :: Maybe int</li>
+</ul>
 <p >requires - <a href="https://linux.die.net/man/1/bc"><code >bc</code></a></p>
 <h3 id="comment-banner">Comment Banner</h3>
 <p ><code >{ src = &quot;figlet&quot;, short_name = &quot;BIG&quot; }</code></p>
@@ -134,14 +177,8 @@ Menu
 <h2 id="third-parties">Third parties</h2>
 <h3 id="vimtex"><a href="https://github.com/lervag/vimtex">VimTex</a></h3>
 <p ><code >{ src = &quot;vimtex&quot;, short_name = &quot;vTEX&quot; }</code></p>
-<ul >
-<li >Cache enabled</li>
-</ul>
 <h3 id="orgmodenvim"><a href="https://github.com/kristijanhusak/orgmode.nvim">Orgmode.nvim</a></h3>
 <p ><code >{ src = &quot;orgmode&quot;, short_name = &quot;ORG&quot; }</code></p>
-<ul >
-<li >Cache enabled</li>
-</ul>
 <hr />
 <h2 id="fyi">FYI</h2>
 <p >None of the code under <code >require(&#x27;coq_3p&#x27;)</code> is public API.</p>
@@ -153,7 +190,7 @@ Menu
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-09-16T00:30:54+0000"></time>
+      <time datetime="2021-09-17T00:49:48+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>
