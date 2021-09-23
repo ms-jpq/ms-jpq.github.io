@@ -76,9 +76,9 @@ Menu
   13
 </span>
 
-    <span class="github-forks hidden">
+    <span class="github-forks ">
   <i class="fas fa-code-branch"></i>
-  0
+  1
 </span>
 
     <a class="invis-link" href="https://github.com/ms-jpq/coq.thirdparty">
@@ -110,7 +110,7 @@ Menu
 <p >If <code >short_name</code> is not specified, it is uppercase <code >src</code>.</p>
 <p >The rest of object are specific to each individual source.</p>
 <h2 id="first-party">First party</h2>
-<h3 id="repl">REPL</h3>
+<h3 id="shell-repl">Shell REPL</h3>
 <div class="codehilite friendly"><pre ><span ></span><code ><span class="p">{</span>
   <span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;repl&quot;</span><span class="p">,</span>
   <span class="n">sh</span> <span class="o">=</span> <span class="s2">&quot;zsh&quot;</span><span class="p">,</span>
@@ -147,7 +147,7 @@ Menu
 <p >max_lines :: int :: max lines to return</p>
 </li>
 <li >
-<p >deadline :: int :: maxms to wait for execution</p>
+<p >deadline :: int :: max ms to wait for execution</p>
 </li>
 <li >
 <p >unsafe :: Seq ‘str :: do not start repl with these executables, ie. <code >rm</code>, <code >sudo</code>, <code >mv</code>, etc</p>
@@ -179,6 +179,9 @@ Menu
 <p ><code >{ src = &quot;vimtex&quot;, short_name = &quot;vTEX&quot; }</code></p>
 <h3 id="orgmodenvim"><a href="https://github.com/kristijanhusak/orgmode.nvim">Orgmode.nvim</a></h3>
 <p ><code >{ src = &quot;orgmode&quot;, short_name = &quot;ORG&quot; }</code></p>
+<h3 id="nvim-dap"><a href="https://github.com/mfussenegger/nvim-dap">nvim-dap</a></h3>
+<p ><code >{ src = &quot;dap&quot; }</code></p>
+<p >Thanks <a href="https://github.com/davidatbu">@davidatbu</a> &lt;3</p>
 <hr />
 <h2 id="fyi">FYI</h2>
 <p >None of the code under <code >require(&#x27;coq_3p&#x27;)</code> is public API.</p>
@@ -190,7 +193,7 @@ Menu
   <section class="d-grid ji-end mx-auto col-gap-4" id="repo-footer">
     <div >
       <i class="fas fa-user-edit text-start"></i>
-      <time datetime="2021-09-22T00:31:03+0000"></time>
+      <time datetime="2021-09-23T00:31:25+0000"></time>
     </div>
     <div >
       <i class="fas fa-baby text-start"></i>
