@@ -1,0 +1,546 @@
+.codehilite.friendly .bp {
+  color: #007020
+}
+
+/* Name.Builtin.Pseudo */
+
+.codehilite.friendly .c {
+  color: #60a0b0;
+  font-style: italic
+}
+
+/* Comment */
+
+.codehilite.friendly .c1 {
+  color: #60a0b0;
+  font-style: italic
+}
+
+/* Comment.Single */
+
+.codehilite.friendly .ch {
+  color: #60a0b0;
+  font-style: italic
+}
+
+/* Comment.Hashbang */
+
+.codehilite.friendly .cm {
+  color: #60a0b0;
+  font-style: italic
+}
+
+/* Comment.Multiline */
+
+.codehilite.friendly .cp {
+  color: #007020
+}
+
+/* Comment.Preproc */
+
+.codehilite.friendly .cpf {
+  color: #60a0b0;
+  font-style: italic
+}
+
+/* Comment.PreprocFile */
+
+.codehilite.friendly .cs {
+  color: #60a0b0;
+  background-color: #fff0f0
+}
+
+/* Comment.Special */
+
+.codehilite.friendly .dl {
+  color: #4070a0
+}
+
+/* Literal.String.Delimiter */
+
+.codehilite.friendly .err {
+  border: 1px solid #FF0000
+}
+
+/* Error */
+
+.codehilite.friendly .fm {
+  color: #06287e
+}
+
+/* Name.Function.Magic */
+
+.codehilite.friendly .gd {
+  color: #A00000
+}
+
+/* Generic.Deleted */
+
+.codehilite.friendly .ge {
+  font-style: italic
+}
+
+/* Generic.Emph */
+
+.codehilite.friendly .gh {
+  color: #000080;
+  font-weight: bold
+}
+
+/* Generic.Heading */
+
+.codehilite.friendly .gi {
+  color: #00A000
+}
+
+/* Generic.Inserted */
+
+.codehilite.friendly .go {
+  color: #888888
+}
+
+/* Generic.Output */
+
+.codehilite.friendly .gp {
+  color: #c65d09;
+  font-weight: bold
+}
+
+/* Generic.Prompt */
+
+.codehilite.friendly .gr {
+  color: #FF0000
+}
+
+/* Generic.Error */
+
+.codehilite.friendly .gs {
+  font-weight: bold
+}
+
+/* Generic.Strong */
+
+.codehilite.friendly .gt {
+  color: #0044DD
+}
+
+/* Generic.Traceback */
+
+.codehilite.friendly .gu {
+  color: #800080;
+  font-weight: bold
+}
+
+/* Generic.Subheading */
+
+.codehilite.friendly .hll {
+  background-color: #ffffcc
+}
+
+.codehilite.friendly .il {
+  color: #40a070
+}
+
+/* Literal.Number.Integer.Long */
+
+.codehilite.friendly .k {
+  color: #007020;
+  font-weight: bold
+}
+
+/* Keyword */
+
+.codehilite.friendly .kc {
+  color: #007020;
+  font-weight: bold
+}
+
+/* Keyword.Constant */
+
+.codehilite.friendly .kd {
+  color: #007020;
+  font-weight: bold
+}
+
+/* Keyword.Declaration */
+
+.codehilite.friendly .kn {
+  color: #007020;
+  font-weight: bold
+}
+
+/* Keyword.Namespace */
+
+.codehilite.friendly .kp {
+  color: #007020
+}
+
+/* Keyword.Pseudo */
+
+.codehilite.friendly .kr {
+  color: #007020;
+  font-weight: bold
+}
+
+/* Keyword.Reserved */
+
+.codehilite.friendly .kt {
+  color: #902000
+}
+
+/* Keyword.Type */
+
+.codehilite.friendly .m {
+  color: #40a070
+}
+
+/* Literal.Number */
+
+.codehilite.friendly .mb {
+  color: #40a070
+}
+
+/* Literal.Number.Bin */
+
+.codehilite.friendly .mf {
+  color: #40a070
+}
+
+/* Literal.Number.Float */
+
+.codehilite.friendly .mh {
+  color: #40a070
+}
+
+/* Literal.Number.Hex */
+
+.codehilite.friendly .mi {
+  color: #40a070
+}
+
+/* Literal.Number.Integer */
+
+.codehilite.friendly .mo {
+  color: #40a070
+}
+
+/* Literal.Number.Oct */
+
+.codehilite.friendly .na {
+  color: #4070a0
+}
+
+/* Name.Attribute */
+
+.codehilite.friendly .nb {
+  color: #007020
+}
+
+/* Name.Builtin */
+
+.codehilite.friendly .nc {
+  color: #0e84b5;
+  font-weight: bold
+}
+
+/* Name.Class */
+
+.codehilite.friendly .nd {
+  color: #555555;
+  font-weight: bold
+}
+
+/* Name.Decorator */
+
+.codehilite.friendly .ne {
+  color: #007020
+}
+
+/* Name.Exception */
+
+.codehilite.friendly .nf {
+  color: #06287e
+}
+
+/* Name.Function */
+
+.codehilite.friendly .ni {
+  color: #d55537;
+  font-weight: bold
+}
+
+/* Name.Entity */
+
+.codehilite.friendly .nl {
+  color: #002070;
+  font-weight: bold
+}
+
+/* Name.Label */
+
+.codehilite.friendly .nn {
+  color: #0e84b5;
+  font-weight: bold
+}
+
+/* Name.Namespace */
+
+.codehilite.friendly .no {
+  color: #60add5
+}
+
+/* Name.Constant */
+
+.codehilite.friendly .nt {
+  color: #062873;
+  font-weight: bold
+}
+
+/* Name.Tag */
+
+.codehilite.friendly .nv {
+  color: #bb60d5
+}
+
+/* Name.Variable */
+
+.codehilite.friendly .o {
+  color: #666666
+}
+
+/* Operator */
+
+.codehilite.friendly .ow {
+  color: #007020;
+  font-weight: bold
+}
+
+/* Operator.Word */
+
+.codehilite.friendly .s {
+  color: #4070a0
+}
+
+/* Literal.String */
+
+.codehilite.friendly .s1 {
+  color: #4070a0
+}
+
+/* Literal.String.Single */
+
+.codehilite.friendly .s2 {
+  color: #4070a0
+}
+
+/* Literal.String.Double */
+
+.codehilite.friendly .sa {
+  color: #4070a0
+}
+
+/* Literal.String.Affix */
+
+.codehilite.friendly .sb {
+  color: #4070a0
+}
+
+/* Literal.String.Backtick */
+
+.codehilite.friendly .sc {
+  color: #4070a0
+}
+
+/* Literal.String.Char */
+
+.codehilite.friendly .sd {
+  color: #4070a0;
+  font-style: italic
+}
+
+/* Literal.String.Doc */
+
+.codehilite.friendly .se {
+  color: #4070a0;
+  font-weight: bold
+}
+
+/* Literal.String.Escape */
+
+.codehilite.friendly .sh {
+  color: #4070a0
+}
+
+/* Literal.String.Heredoc */
+
+.codehilite.friendly .si {
+  color: #70a0d0;
+  font-style: italic
+}
+
+/* Literal.String.Interpol */
+
+.codehilite.friendly .sr {
+  color: #235388
+}
+
+/* Literal.String.Regex */
+
+.codehilite.friendly .ss {
+  color: #517918
+}
+
+/* Literal.String.Symbol */
+
+.codehilite.friendly .sx {
+  color: #c65d09
+}
+
+/* Literal.String.Other */
+
+.codehilite.friendly .vc {
+  color: #bb60d5
+}
+
+/* Name.Variable.Class */
+
+.codehilite.friendly .vg {
+  color: #bb60d5
+}
+
+/* Name.Variable.Global */
+
+.codehilite.friendly .vi {
+  color: #bb60d5
+}
+
+/* Name.Variable.Instance */
+
+.codehilite.friendly .vm {
+  color: #bb60d5
+}
+
+/* Name.Variable.Magic */
+
+.codehilite.friendly .w {
+  color: #bbbbbb
+}
+
+/* Text.Whitespace */
+
+.codehilite.friendly pre {
+  line-height: 125%;
+}
+
+.codehilite.friendly span.linenos {
+  color: #666666;
+  background-color: transparent;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.codehilite.friendly span.linenos.special {
+  color: #000000;
+  background-color: #ffffc0;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.codehilite.friendly td.linenos .normal {
+  color: #666666;
+  background-color: transparent;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.codehilite.friendly td.linenos .special {
+  color: #000000;
+  background-color: #ffffc0;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.markdown tex img {
+  height: auto;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 0.25rem;
+  border-width: 2px;
+  border-color: transparent
+}
+
+.markdown ul > li {
+  line-height: 1.5
+}
+
+.markdown ul > li::before {
+  content: "";
+  --tw-text-opacity: 1;
+  color: rgba(244, 114, 182, var(--tw-text-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(244, 114, 182, var(--tw-text-opacity))
+}
+
+.markdown pre, .markdown blockquote {
+  display: grid;
+  width: 100%;
+  overflow-x: auto;
+  max-width: inherit;
+  grid-template-columns: 0.3em 1fr;
+  grid-template-rows: auto;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem
+}
+
+.markdown pre::before, .markdown blockquote::before {
+  grid-row: span 100;
+  content: "";
+  --tw-bg-opacity: 1;
+  background-color: rgba(244, 114, 182, var(--tw-bg-opacity));
+}
+
+.markdown pre > *:not(first-child), .markdown blockquote > *:not(first-child) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-radius: 0.25rem;
+  border-width: 2px;
+  border-color: transparent
+}
+
+.markdown blockquote {
+  margin-left: 0px;
+  margin-right: 0px
+}
+
+.markdown blockquote > * {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem
+}
+
+.markdown code {
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity))
+}
+
+.markdown table {
+  table-layout: auto;
+  border-collapse: collapse
+}
+
+.markdown table thead > tr > th, .markdown table tbody > tr > td {
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem
+}
+
+.markdown table tbody > tr:nth-child(even) {
+  --tw-bg-opacity: 1;
+  background-color: rgba(237, 233, 254, var(--tw-bg-opacity))
+}
