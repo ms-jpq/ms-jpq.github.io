@@ -460,126 +460,90 @@
   padding-right: 5px;
 }
 
-.markdown {
-  tex img {
-    height: auto
-  }
-  tex img {
-    max-width: 100%
-  }
-  tex img {
-    -o-object-fit: contain;
-       object-fit: contain
-  }
-  tex img {
-    border-radius: 0.25rem
-  }
-  tex img {
-    border-width: 2px
-  }
-  tex img {
-    border-color: transparent
-  }
-  ul > li {
-    line-height: 1.5
-  }
-  ul > li::before {
-    content: "";
-    --tw-text-opacity: 1;
-    color: rgba(244, 114, 182, var(--tw-text-opacity))
-  }
-  ul > li::before {
-    --tw-text-opacity: 1;
-    color: rgba(244, 114, 182, var(--tw-text-opacity))
-  }
-  pre, blockquote {
-    display: grid
-  }
-  pre, blockquote {
-    width: 100%
-  }
-  pre, blockquote {
-    overflow-x: auto
-  }
-  pre,
-  blockquote {
-    max-width: inherit;
-    grid-template-columns: 0.3em 1fr;
-    grid-template-rows: auto
-  }
-  pre, blockquote {
-    -moz-column-gap: 0.5rem;
-         column-gap: 0.5rem
-  }
-  pre, blockquote {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem
-  }
-  pre::before, blockquote::before {
-    grid-row: span 100;
-    content: "";
-  }
-  pre::before, blockquote::before {
-    --tw-bg-opacity: 1;
-    background-color: rgba(244, 114, 182, var(--tw-bg-opacity))
-  }
-  pre,
-  blockquote {
-    > *:not(first-child) {
-      grid-template-columns: repeat(2, minmax(0, 1fr))
-    }
-    > *:not(first-child) {
-      border-radius: 0.25rem
-    }
-    > *:not(first-child) {
-      border-width: 2px
-    }
-    > *:not(first-child) {
-      border-color: transparent
-    }
-  }
-  blockquote {
-    margin-left: 0px;
-    margin-right: 0px
-  }
-  blockquote {
-    > * {
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem
-    }
-  }
-  code {
-    --tw-bg-opacity: 1;
-    background-color: rgba(229, 231, 235, var(--tw-bg-opacity))
-  }
-  table {
-    table-layout: auto
-  }
-  table {
-    border-collapse: collapse
-  }
-  table {
-    thead > tr > th, tbody > tr > td {
-      border-width: 2px
-    }
-    thead > tr > th, tbody > tr > td {
-      border-style: solid
-    }
-    thead > tr > th, tbody > tr > td {
-      --tw-border-opacity: 1;
-      border-color: rgba(209, 213, 219, var(--tw-border-opacity))
-    }
-    thead > tr > th, tbody > tr > td {
-      padding-left: 0.25rem;
-      padding-right: 0.25rem
-    }
-    thead > tr > th, tbody > tr > td {
-      padding-top: 0.25rem;
-      padding-bottom: 0.25rem
-    }
-    tbody > tr:nth-child(even) {
-      --tw-bg-opacity: 1;
-      background-color: rgba(237, 233, 254, var(--tw-bg-opacity))
-    }
-  }
+/************
+ * MARKDOWN *
+ ************/
+
+.markdown img {
+  height: auto;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 0.25rem;
+  border-width: 2px;
+  border-color: transparent
+}
+
+.markdown ul > li {
+  line-height: 1.5
+}
+
+.markdown ul > li::before {
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(244 114 182 / var(--tw-text-opacity))
+}
+
+.markdown pre, .markdown blockquote {
+  display: grid;
+  width: 100%;
+  overflow-x: auto;
+  max-width: inherit;
+  grid-template-columns: 0.3em 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 0.5rem;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem
+}
+
+:is(.markdown pre,.markdown blockquote)::before {
+  grid-row: span 100;
+  content: "";
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 114 182 / var(--tw-bg-opacity));
+}
+
+:is(.markdown pre,.markdown blockquote) > *:not(first-child) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-radius: 0.25rem;
+  border-width: 2px;
+  border-color: transparent
+}
+
+.markdown blockquote {
+  margin-left: 0px;
+  margin-right: 0px
+}
+
+.markdown blockquote > * {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem
+}
+
+.markdown code {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity))
+}
+
+.markdown table {
+  table-layout: auto;
+  border-collapse: collapse
+}
+
+.markdown table thead > tr > th, .markdown table tbody > tr > td {
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem
+}
+
+.markdown table tbody > tr:nth-child(even) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 232 255 / var(--tw-bg-opacity))
 }
