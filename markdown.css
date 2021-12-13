@@ -464,13 +464,16 @@
  * MARKDOWN *
  ************/
 
+.markdown {
+  display: grid
+}
+
 .markdown img {
   height: auto;
   max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 0.25rem;
-  border-width: 2px;
   border-color: transparent
 }
 
@@ -487,15 +490,15 @@
 .markdown pre, .markdown blockquote {
   display: grid;
   width: 100%;
-  overflow-x: auto;
-  max-width: inherit;
-  grid-template-columns: 0.3em 1fr;
-  grid-template-rows: auto;
   grid-column-gap: 0.5rem;
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
+  overflow-x: auto;
   padding-left: 0.5rem;
-  padding-right: 0.5rem
+  padding-right: 0.5rem;
+  max-width: inherit;
+  grid-template-columns: 0.3em 1fr;
+  grid-template-rows: auto
 }
 
 :is(.markdown pre,.markdown blockquote)::before {

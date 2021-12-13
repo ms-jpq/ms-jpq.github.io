@@ -4,8 +4,10 @@
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <title >Creative Portfolio</title>
     <link href="/pages_repo.css" rel="stylesheet"/>
+
     <script defer src="/layout.js"></script>
   </head>
+
   <body class="grid w-screen">
     <header class="grid grid-flow-col px-8">
       <button class="
@@ -15,7 +17,6 @@
     px-2
     py-1
     text-justify
-    font-normal
     bg-transparent
     border-solid border-2
     text-pink-300
@@ -41,7 +42,7 @@ Menu
 </section>
 
       <section id="about-me">
-  <div class="markdown mx-2">
+  <div class="markdown prose mx-2">
     <p >I dunno? I guess im pretty good at programming, and … tetris.</p>
 <p >I also really like dogs.</p>
 <p >🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
@@ -70,46 +71,49 @@ Menu
   </nav>
 </section>
 
-      <section class="associations flex flex-wrap" id="associations">
+      <section class="flex flex-wrap">
   <a class="
-    association-circle
     border-solid border-2
     rounded-full
     flex
     items-center
-    justify-items-center
+    justify-center
     p-4
     m-4
     text-center text-gray-300
-  " href="mailto:github%40bigly.dog">
+    hover:text-pink-300
+    hover:border-pink-300
+  " href="mailto:github@bigly.dog">
   <i class="far fa-envelope"></i>
 </a>
 
   <a class="
-    association-circle
     border-solid border-2
     rounded-full
     flex
     items-center
-    justify-items-center
+    justify-center
     p-4
     m-4
     text-center text-gray-300
-  " href="https%3A//github.com/ms-jpq">
+    hover:text-pink-300
+    hover:border-pink-300
+  " href="https://github.com/ms-jpq">
   <i class="fab fa-github"></i>
 </a>
 
   <a class="
-    association-circle
     border-solid border-2
     rounded-full
     flex
     items-center
-    justify-items-center
+    justify-center
     p-4
     m-4
     text-center text-gray-300
-  " href="https%3A//stackexchange.com/users/15744711">
+    hover:text-pink-300
+    hover:border-pink-300
+  " href="https://stackexchange.com/users/15744711">
   <i class="fab fa-stack-overflow"></i>
 </a>
 
@@ -117,7 +121,7 @@ Menu
 
     </aside>
     <main class="grid row-gap-8">
-  <section class="grid grid-col jc-end ai-centre mx-auto col-gap-4" id="repo-header">
+  <section class="grid grid-flow-col justify-end content-center mx-auto gap-x-4" id="repo-header">
     <span class="github-stars ">
   <i class="fas fa-star"></i>
   5
@@ -136,7 +140,6 @@ Menu
     px-2
     py-1
     text-justify
-    font-normal
     bg-transparent
     border-solid border-2
     text-pink-300
@@ -151,24 +154,24 @@ Menu
     </a>
   </section>
   <section class="grid mx-auto" id="repo-body">
-    <div class="markdown">
+    <article class="markdown prose">
       <h1 id="vimbenchmarks">vim.benchmarks</h1>
-    </div>
+    </article>
   </section>
-  <section class="grid ji-end mx-auto col-gap-4" id="repo-footer">
+  <section class="grid justify-items-end mx-auto gap-x-4" id="repo-footer">
     <div >
-      <i class="fas fa-user-edit text-start"></i>
+      <i class="fas fa-user-edit text-left"></i>
       <time datetime="2021-12-13T00:33:30+0000"></time>
     </div>
     <div >
-      <i class="fas fa-baby text-start"></i>
+      <i class="fas fa-baby text-left"></i>
       <time datetime="2021-10-14T10:37:08+0000"></time>
     </div>
   </section>
 </main>
 
     <footer class="grid justify-items-center items-center">
-      <div class="markdown">
+      <div class="markdown prose">
   <p >© 2021 <a href="https://github.com/ms-jpq">ms-jpq</a></p>
 </div>
 
