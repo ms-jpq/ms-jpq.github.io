@@ -872,32 +872,27 @@
   margin-bottom: 0
 }
 
-.markdown {
-  display: grid;
-  grid-auto-flow: row
-}
-
-.markdown img {
-  height: 100%;
-  width: auto;
-  border-radius: 0.25rem;
-  border-color: transparent;
-  -o-object-fit: contain;
-     object-fit: contain
-}
-
 .markdown ul > li {
   line-height: 1.5
 }
 
-.markdown ul > li::before {
+.markdown ul > li::marker {
   --tw-text-opacity: 1;
-  color: rgb(244 114 182 / var(--tw-text-opacity))
+  color: rgb(249 168 212 / var(--tw-text-opacity))
+}
+
+.markdown ul > li::before {
+  display: none
+}
+
+.markdown ul > li > * {
+  display: inline
 }
 
 .markdown pre, .markdown blockquote {
   display: grid;
   width: 100%;
+  grid-auto-flow: column;
   grid-column-gap: 0.5rem;
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -905,8 +900,7 @@
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   max-width: inherit;
-  grid-template-columns: 0.3em 1fr;
-  grid-template-rows: auto
+  grid-template-columns: 0.3em 1fr
 }
 
 :is(.markdown pre,.markdown blockquote)::before {
@@ -921,40 +915,4 @@
   border-radius: 0.25rem;
   border-width: 2px;
   border-color: transparent
-}
-
-.markdown blockquote {
-  margin-left: 0px;
-  margin-right: 0px
-}
-
-.markdown blockquote > * {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem
-}
-
-.markdown code {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 229 229 / var(--tw-bg-opacity))
-}
-
-.markdown table {
-  table-layout: auto;
-  border-collapse: collapse
-}
-
-.markdown table thead > tr > th, .markdown table tbody > tr > td {
-  border-width: 2px;
-  border-style: solid;
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem
-}
-
-.markdown table tbody > tr:nth-child(even) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 229 229 / var(--tw-bg-opacity))
 }
