@@ -7069,7 +7069,7 @@ readers do not read off random characters that represent icons */
   color: inherit;
 }
 
-.markdown, .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6, .markdown strong, .markdown thead, .markdown figure figcaption {
+.markdown, .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6, .markdown strong, .markdown thead {
   color: inherit;
 }
 
@@ -7944,9 +7944,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 1rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .mx-2 {
@@ -8008,11 +8008,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.columns-4 {
-  -moz-columns: 4;
-       columns: 4;
 }
 
 .break-inside-avoid-column {
@@ -8167,11 +8162,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 2rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -8189,6 +8179,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
 .pb-2 {
@@ -8346,8 +8340,7 @@ body > footer {
 }
 
 :root body > header > button {
-  display: inline;
-  display: initial;
+  display: none;
 }
 
 :root body > header #header-title {
@@ -8390,6 +8383,11 @@ body > footer {
         "aside  header"
         "aside  main"
         "footer footer"
+  }
+
+  :root body.col2 > header > button {
+    display: inline;
+    display: initial;
   }
 
   :root body.col2 > aside {
@@ -8483,10 +8481,6 @@ a.invis-link:hover {
     margin-top: -0.5rem;
   }
 
-  .sm\:inline-block {
-    display: inline-block;
-  }
-
   .sm\:columns-1 {
     -moz-columns: 1;
          columns: 1;
@@ -8504,5 +8498,19 @@ a.invis-link:hover {
   .lg\:columns-3 {
     -moz-columns: 3;
          columns: 3;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:columns-4 {
+    -moz-columns: 4;
+         columns: 4;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:columns-4 {
+    -moz-columns: 4;
+         columns: 4;
   }
 }
