@@ -7982,8 +7982,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: auto;
 }
 
-.h-6 {
-  height: 1.5rem;
+.h-1 {
+  height: 0.25rem;
 }
 
 .h-full {
@@ -8084,6 +8084,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-y-8 {
   row-gap: 2rem;
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .self-center {
@@ -8352,7 +8358,7 @@ body > footer {
   display: none;
 }
 
-:root body.col2 {
+:root body.overlay {
   grid-template-columns: 1fr;
   grid-template-areas:
       "header"
@@ -8360,11 +8366,11 @@ body > footer {
       "footer"
 }
 
-:root body.col2 > aside {
+:root body.overlay > aside {
   display: grid;
 }
 
-:root body.col2 > main {
+:root body.overlay > main {
   display: none;
 }
 
@@ -8470,6 +8476,10 @@ main {
 }
 
 @media (min-width: 768px) {
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
   .md\:columns-2 {
     -moz-columns: 2;
          columns: 2;
@@ -8477,6 +8487,10 @@ main {
 }
 
 @media (min-width: 1280px) {
+  .xl\:w-1\/3 {
+    width: 33.333333%;
+  }
+
   .xl\:columns-3 {
     -moz-columns: 3;
          columns: 3;
@@ -8484,6 +8498,10 @@ main {
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:w-1\/4 {
+    width: 25%;
+  }
+
   .\32xl\:columns-4 {
     -moz-columns: 4;
          columns: 4;

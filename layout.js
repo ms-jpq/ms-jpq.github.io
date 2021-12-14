@@ -1,1 +1,1 @@
-(()=>{var o=document.body.querySelector("header > button"),n=document.body.querySelectorAll("time");for(let e of n){let t=new Date(e.dateTime);e.textContent=t.toLocaleString(void 0,{hour12:!1})}o?.addEventListener("click",()=>document.body.classList.toggle("col2"));})();
+(()=>{var o=document.body.querySelector("header > button"),n=document.body.querySelectorAll("time");for(let e of n){let t=new Date(e.dateTime);e.textContent=t.toLocaleString(void 0,{hour12:!1})}o?.addEventListener("click",()=>document.body.classList.toggle("overlay"));})();
