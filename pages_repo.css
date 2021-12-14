@@ -8036,6 +8036,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-content: flex-start;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
 }
@@ -8097,9 +8101,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-style: dashed;
 }
 
-.border-pink-300 {
+.border-primary-400 {
   --tw-border-opacity: 1;
-  border-color: rgb(249 168 212 / var(--tw-border-opacity));
+  border-color: rgb(244 114 182 / var(--tw-border-opacity));
+}
+
+.border-secondary-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(115 115 115 / var(--tw-border-opacity));
 }
 
 .bg-transparent {
@@ -8219,9 +8228,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
-.text-gray-300 {
+.text-secondary-500 {
   --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
+  color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
 .no-underline {
@@ -8410,9 +8419,9 @@ main {
   grid-template-rows: auto 1fr auto;
 }
 
-.hover\:border-pink-300:hover {
+.hover\:border-primary-400:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(249 168 212 / var(--tw-border-opacity));
+  border-color: rgb(244 114 182 / var(--tw-border-opacity));
 }
 
 .hover\:bg-primary-400:hover {
@@ -8457,6 +8466,10 @@ main {
 @media (min-width: 640px) {
   .sm\:-mt-2 {
     margin-top: -0.5rem;
+  }
+
+  .sm\:inline-block {
+    display: inline-block;
   }
 
   .sm\:columns-1 {

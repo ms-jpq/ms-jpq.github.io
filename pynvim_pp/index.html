@@ -11,7 +11,6 @@
   <body class="grid gap-4 w-screen bg-gray-50">
     <header class="grid grid-flow-col grid-flow-col px-8 pt-4">
       <button class="
-    big-button
     self-center
     cursor-pointer
     px-2
@@ -20,9 +19,9 @@
     bg-transparent
     border-solid border-2
     text-primary-400
-    border-pink-300
+    border-primary-400
     hover:text-secondary-100 hover:bg-primary-400
-    font-medium
+    font-medium hidden sm:inline-block
   ">
   <i class="fas fa-bars"></i>
 Menu
@@ -85,7 +84,7 @@ Menu
 
       <section class="flex flex-wrap">
   <a class="
-    border-solid border-2
+    border-solid border-2 border-secondary-500
     rounded-full
     flex
     items-center
@@ -93,14 +92,14 @@ Menu
     p-4
     m-4
     no-underline
-    text-center text-gray-300
-    hover:text-primary-400 hover:border-pink-300
+    text-center text-secondary-500
+    hover:text-primary-400 hover:border-primary-400
   " href="mailto:github@bigly.dog">
   <i class="far fa-envelope"></i>
 </a>
 
   <a class="
-    border-solid border-2
+    border-solid border-2 border-secondary-500
     rounded-full
     flex
     items-center
@@ -108,14 +107,14 @@ Menu
     p-4
     m-4
     no-underline
-    text-center text-gray-300
-    hover:text-primary-400 hover:border-pink-300
+    text-center text-secondary-500
+    hover:text-primary-400 hover:border-primary-400
   " href="https://github.com/ms-jpq">
   <i class="fab fa-github"></i>
 </a>
 
   <a class="
-    border-solid border-2
+    border-solid border-2 border-secondary-500
     rounded-full
     flex
     items-center
@@ -123,8 +122,8 @@ Menu
     p-4
     m-4
     no-underline
-    text-center text-gray-300
-    hover:text-primary-400 hover:border-pink-300
+    text-center text-secondary-500
+    hover:text-primary-400 hover:border-primary-400
   " href="https://stackexchange.com/users/15744711">
   <i class="fab fa-stack-overflow"></i>
 </a>
@@ -146,7 +145,6 @@ Menu
 
     <a class="invis-link" href="https://github.com/ms-jpq/pynvim_pp">
 <button class="
-    big-button
     self-center
     cursor-pointer
     px-2
@@ -155,7 +153,7 @@ Menu
     bg-transparent
     border-solid border-2
     text-primary-400
-    border-pink-300
+    border-primary-400
     hover:text-secondary-100 hover:bg-primary-400
     border-dashed
   ">
@@ -188,7 +186,11 @@ Menu
 
     <footer class="grid justify-items-center items-center">
       <div class="markdown">
-  <p >© 2021 <a href="https://github.com/ms-jpq">ms-jpq</a></p>
+  <a href="https://github.com/ms-jpq">
+    <span >©</span>
+    2021
+    <span >ms-jpq</span>
+  </a>
 </div>
 
     </footer>
