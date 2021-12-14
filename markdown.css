@@ -929,3 +929,7 @@
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
   color: inherit
 }
+
+.markdown, .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6, .markdown strong, .markdown thead, .markdown figure figcaption {
+  color: inherit
+}
