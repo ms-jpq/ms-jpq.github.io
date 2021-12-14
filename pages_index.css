@@ -6690,7 +6690,7 @@ readers do not read off random characters that represent icons */
   background-color: rgb(243 232 255 / var(--tw-bg-opacity));
 }
 
-/*! tailwindcss v3.0.1 | MIT License | https://tailwindcss.com
+/*! tailwindcss v3.0.2 | MIT License | https://tailwindcss.com
  */
 
 /*
@@ -7114,12 +7114,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-:is(.markdown pre,.markdown blockquote) > *:not(first-child), th, td, .border-2 {
+*, ::before, ::after {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
-}
-
-.drop-shadow-lg, .hover\:drop-shadow-xl, .focus\:drop-shadow-xl, .active\:drop-shadow-xl {
   --tw-blur: var(--tw-empty,/*!*/ /*!*/);
   --tw-brightness: var(--tw-empty,/*!*/ /*!*/);
   --tw-contrast: var(--tw-empty,/*!*/ /*!*/);
