@@ -872,6 +872,12 @@
   margin-bottom: 0
 }
 
+.markdown a {
+  color: inherit;
+  -webkit-text-decoration-color: #f472b6;
+          text-decoration-color: #f472b6
+}
+
 .markdown ul > li {
   line-height: 1.5
 }
@@ -899,8 +905,6 @@
   overflow-x: auto;
   border-radius: 0.25rem;
   border-width: 2px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
   max-width: inherit;
   grid-template-columns: 0.3em 1fr
 }
@@ -922,6 +926,6 @@
 
 .markdown pre, .markdown code, .markdown blockquote {
   --tw-bg-opacity: 1;
-  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
   color: inherit
 }

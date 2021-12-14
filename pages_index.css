@@ -7011,6 +7011,12 @@ readers do not read off random characters that represent icons */
   margin-bottom: 0;
 }
 
+.markdown a {
+  color: inherit;
+  -webkit-text-decoration-color: #f472b6;
+          text-decoration-color: #f472b6;
+}
+
 .markdown ul > li {
   line-height: 1.5;
 }
@@ -7038,8 +7044,6 @@ readers do not read off random characters that represent icons */
   overflow-x: auto;
   border-radius: 0.25rem;
   border-width: 2px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
   max-width: inherit;
   grid-template-columns: 0.3em 1fr;
 }
@@ -7061,7 +7065,7 @@ readers do not read off random characters that represent icons */
 
 .markdown pre, .markdown code, .markdown blockquote {
   --tw-bg-opacity: 1;
-  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
   color: inherit;
 }
 
@@ -8205,9 +8209,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2;
 }
 
-.text-primary-300 {
+.text-primary-400 {
   --tw-text-opacity: 1;
-  color: rgb(249 168 212 / var(--tw-text-opacity));
+  color: rgb(244 114 182 / var(--tw-text-opacity));
 }
 
 .text-slate-300 {
@@ -8236,8 +8240,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 a {
   color: inherit;
   text-decoration: underline;
-  -webkit-text-decoration-color: #f9a8d4;
-          text-decoration-color: #f9a8d4;
+  -webkit-text-decoration-color: #f472b6;
+          text-decoration-color: #f472b6;
   -webkit-text-decoration-style: solid;
           text-decoration-style: solid;
 }
@@ -8262,7 +8266,7 @@ ul > li* {
 
 ul > li.active::before {
   --tw-text-opacity: 1;
-  color: rgb(249 168 212 / var(--tw-text-opacity));
+  color: rgb(244 114 182 / var(--tw-text-opacity));
 }
 
 ul > li::before {
@@ -8396,8 +8400,8 @@ a.invis-link {
 
 a.invis-link:hover {
   text-decoration: underline;
-  -webkit-text-decoration-color: #f9a8d4;
-          text-decoration-color: #f9a8d4;
+  -webkit-text-decoration-color: #f472b6;
+          text-decoration-color: #f472b6;
   -webkit-text-decoration-style: dotted;
           text-decoration-style: dotted;
 }
@@ -8443,9 +8447,9 @@ a.invis-link:hover {
   border-color: rgb(249 168 212 / var(--tw-border-opacity));
 }
 
-.hover\:bg-primary-300:hover {
+.hover\:bg-primary-400:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(249 168 212 / var(--tw-bg-opacity));
+  background-color: rgb(244 114 182 / var(--tw-bg-opacity));
 }
 
 .hover\:text-secondary-100:hover {
@@ -8453,9 +8457,9 @@ a.invis-link:hover {
   color: rgb(245 245 245 / var(--tw-text-opacity));
 }
 
-.hover\:text-primary-300:hover {
+.hover\:text-primary-400:hover {
   --tw-text-opacity: 1;
-  color: rgb(249 168 212 / var(--tw-text-opacity));
+  color: rgb(244 114 182 / var(--tw-text-opacity));
 }
 
 .hover\:drop-shadow-xl:hover {
@@ -8472,9 +8476,9 @@ a.invis-link:hover {
   font-weight: 700;
 }
 
-.active\:text-primary-300:active {
+.active\:text-primary-400:active {
   --tw-text-opacity: 1;
-  color: rgb(249 168 212 / var(--tw-text-opacity));
+  color: rgb(244 114 182 / var(--tw-text-opacity));
 }
 
 .active\:drop-shadow-xl:active {
