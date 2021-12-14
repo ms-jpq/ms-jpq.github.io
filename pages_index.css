@@ -7954,8 +7954,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 0.5rem;
 }
 
-.mt-0 {
-  margin-top: 0px;
+.-mt-2 {
+  margin-top: -0.5rem;
 }
 
 .inline-block {
@@ -8010,6 +8010,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   cursor: pointer;
 }
 
+.columns-1 {
+  -moz-columns: 1;
+       columns: 1;
+}
+
 .break-inside-avoid-column {
   -moz-column-break-inside: avoid;
        break-inside: avoid-column;
@@ -8053,6 +8058,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .justify-items-center {
@@ -8197,6 +8206,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-justify {
   text-align: justify;
 }
@@ -8328,78 +8341,45 @@ body > footer {
 }
 
 :root body {
-  grid-template-columns: minmax(auto, min(22em, 30vw)) 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
-      "header main"
-      "aside  main"
-      "footer main"
-}
-
-:root body > header {
-  justify-content: space-between;
-}
-
-:root body > header > button {
-  display: none;
-}
-
-:root body > header #header-title {
-  text-align: right;
+      "header"
+      "main"
+      "footer"
 }
 
 :root body > aside {
-  display: grid;
+  display: none;
 }
 
-@media not screen and (min-width: 640px) {
+:root body.col2 {
+  grid-template-columns: 1fr;
+  grid-template-areas:
+      "header"
+      "aside"
+      "footer"
+}
+
+:root body.col2 > aside {
+  display: grid;
+  padding-top: 1rem;
+}
+
+:root body.col2 > main {
+  display: none;
+}
+
+@media (min-width: 640px) {
   :root body {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(auto, min(22em, 30vw)) 1fr;
     grid-template-areas:
-        "header"
-        "main"
-        "footer"
-  }
-
-  :root body > header {
-    justify-content: space-between;
-  }
-
-  :root body > header > button {
-    display: inline;
-    display: initial;
-  }
-
-  :root body > header #header-title {
-    text-align: right;
+        "header main"
+        "aside  main"
+        "footer main"
   }
 
   :root body > aside {
-    display: none;
-  }
-
-  :root body.col2 {
-    grid-template-columns: minmax(auto, min(22em, 30vw)) 1fr;
-    grid-template-areas:
-        "aside  header"
-        "aside  main"
-        "footer footer"
-  }
-
-  :root body.col2 > header > button {
-    display: inline;
-    display: initial;
-  }
-
-  :root body.col2 > aside {
     display: grid;
-  }
-
-  :root body.col2 > aside {
-    padding-top: 1rem;
-  }
-
-  :root body.col2 > main {
-    overflow-x: hidden;
   }
 }
 
@@ -8513,39 +8493,29 @@ a.invis-link:hover {
 }
 
 @media (min-width: 640px) {
-  .sm\:-mt-2 {
-    margin-top: -0.5rem;
+  .sm\:mt-0 {
+    margin-top: 0px;
   }
 
-  .sm\:columns-1 {
-    -moz-columns: 1;
-         columns: 1;
+  .sm\:hidden {
+    display: none;
   }
-}
 
-@media (min-width: 768px) {
-  .md\:columns-2 {
+  .sm\:columns-2 {
     -moz-columns: 2;
          columns: 2;
   }
 }
 
-@media (min-width: 1024px) {
-  .lg\:columns-3 {
+@media (min-width: 768px) {
+  .md\:columns-3 {
     -moz-columns: 3;
          columns: 3;
   }
 }
 
-@media (min-width: 1280px) {
-  .xl\:columns-4 {
-    -moz-columns: 4;
-         columns: 4;
-  }
-}
-
-@media (min-width: 1536px) {
-  .\32xl\:columns-4 {
+@media (min-width: 1024px) {
+  .lg\:columns-4 {
     -moz-columns: 4;
          columns: 4;
   }
