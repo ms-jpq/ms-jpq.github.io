@@ -7571,6 +7571,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 0.5rem;
 }
 
+.mt-0 {
+  margin-top: 0px;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -7797,7 +7801,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-transform: capitalize;
 }
 
-.text-pink-300 {
+.leading-loose {
+  line-height: 2;
+}
+
+.text-primary-300 {
   --tw-text-opacity: 1;
   color: rgb(249 168 212 / var(--tw-text-opacity));
 }
@@ -7856,8 +7864,6 @@ ul > li* {
 ul > li::before {
   padding-right: 0.25rem;
   font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
   font-family: "Font Awesome 5 Free", sans-serif;
   content: "\f105";
 }
@@ -7999,36 +8005,6 @@ body > aside > #headshot img {
   height: auto;
 }
 
-body > aside > #about-me p {
-  --tw-text-opacity: 1;
-  color: rgb(243 244 246 / var(--tw-text-opacity));
-}
-
-body > aside > #nav ul {
-  line-height: 2em;
-}
-
-body > aside > #nav ul > li {
-  --tw-text-opacity: 1;
-  color: rgb(243 244 246 / var(--tw-text-opacity));
-}
-
-body > aside > #nav ul > li.active {
-  font-weight: bold;
-  --tw-text-opacity: 1;
-  color: rgb(249 168 212 / var(--tw-text-opacity));
-}
-
-body > aside > #nav a {
-  text-decoration: unset
-}
-
-body > aside > #nav a:hover {
-  --tw-text-opacity: 1;
-  color: rgb(249 168 212 / var(--tw-text-opacity));
-  font-weight: bold;
-}
-
 /********
  * MAIN *
  ********/
@@ -8075,17 +8051,17 @@ main {
   border-color: rgb(249 168 212 / var(--tw-border-opacity));
 }
 
-.hover\:bg-pink-300:hover {
+.hover\:bg-primary-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(249 168 212 / var(--tw-bg-opacity));
 }
 
-.hover\:text-gray-50:hover {
+.hover\:text-secondary-100:hover {
   --tw-text-opacity: 1;
-  color: rgb(249 250 251 / var(--tw-text-opacity));
+  color: rgb(245 245 245 / var(--tw-text-opacity));
 }
 
-.hover\:text-pink-300:hover {
+.hover\:text-primary-300:hover {
   --tw-text-opacity: 1;
   color: rgb(249 168 212 / var(--tw-text-opacity));
 }
@@ -8100,12 +8076,25 @@ main {
   filter: var(--tw-filter);
 }
 
+.active\:font-bold:active {
+  font-weight: 700;
+}
+
+.active\:text-primary-300:active {
+  --tw-text-opacity: 1;
+  color: rgb(249 168 212 / var(--tw-text-opacity));
+}
+
 .active\:drop-shadow-xl:active {
   --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
   filter: var(--tw-filter);
 }
 
 @media (min-width: 640px) {
+  .sm\:-mt-2 {
+    margin-top: -0.5rem;
+  }
+
   .sm\:columns-1 {
     -moz-columns: 1;
          columns: 1;
