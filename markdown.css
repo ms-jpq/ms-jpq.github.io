@@ -878,7 +878,7 @@
 
 .markdown ul > li::marker {
   --tw-text-opacity: 1;
-  color: rgb(249 168 212 / var(--tw-text-opacity))
+  color: rgb(244 114 182 / var(--tw-text-opacity))
 }
 
 .markdown ul > li::before {
@@ -897,6 +897,8 @@
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
   overflow-x: auto;
+  border-radius: 0.25rem;
+  border-width: 2px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   max-width: inherit;
@@ -910,9 +912,16 @@
   background-color: rgb(244 114 182 / var(--tw-bg-opacity));
 }
 
+:is(.markdown pre,.markdown blockquote) > span {
+  display: none
+}
+
 :is(.markdown pre,.markdown blockquote) > *:not(first-child) {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-radius: 0.25rem;
-  border-width: 2px;
-  border-color: transparent
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+
+.markdown pre, .markdown code, .markdown blockquote {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+  color: inherit
 }

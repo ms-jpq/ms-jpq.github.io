@@ -7017,7 +7017,7 @@ readers do not read off random characters that represent icons */
 
 .markdown ul > li::marker {
   --tw-text-opacity: 1;
-  color: rgb(249 168 212 / var(--tw-text-opacity));
+  color: rgb(244 114 182 / var(--tw-text-opacity));
 }
 
 .markdown ul > li::before {
@@ -7036,6 +7036,8 @@ readers do not read off random characters that represent icons */
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
   overflow-x: auto;
+  border-radius: 0.25rem;
+  border-width: 2px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   max-width: inherit;
@@ -7049,11 +7051,18 @@ readers do not read off random characters that represent icons */
   background-color: rgb(244 114 182 / var(--tw-bg-opacity));
 }
 
+:is(.markdown pre,.markdown blockquote) > span {
+  display: none;
+}
+
 :is(.markdown pre,.markdown blockquote) > *:not(first-child) {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-radius: 0.25rem;
-  border-width: 2px;
-  border-color: transparent;
+}
+
+.markdown pre, .markdown code, .markdown blockquote {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+  color: inherit;
 }
 
 /*! tailwindcss v3.0.2 | MIT License | https://tailwindcss.com
@@ -8227,6 +8236,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 a {
   color: inherit;
   text-decoration: underline;
+  -webkit-text-decoration-color: #f9a8d4;
+          text-decoration-color: #f9a8d4;
   -webkit-text-decoration-style: solid;
           text-decoration-style: solid;
 }
