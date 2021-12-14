@@ -8,8 +8,8 @@
     <script defer src="/layout.js"></script>
   </head>
 
-  <body class="grid w-screen">
-    <header class="grid grid-flow-col px-8">
+  <body class="grid gap-4 w-screen bg-gray-50">
+    <header class="grid grid-flow-col grid-flow-col px-8 pt-4">
       <button class="
     big-button
     self-center
@@ -36,13 +36,13 @@ Menu
 </h2>
 
     </header>
-    <aside class="content-start px-8" id="left-panel">
+    <aside class="grid-flow-row grid-cols-1 gap-4	content-start px-8">
       <section class="grid justify-items-center" id="headshot">
-  <img class="rounded-full px-3 py-3" height="1428" loading="lazy" src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp" srcset="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x988.webp 1000w, /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x198.webp 200w, /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x395.webp 400w, /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x593.webp 600w, /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x790.webp 800w" width="1446"/>
+  <img class="object-cover rounded-full w-full h-full px-3 py-3" height="1428" loading="lazy" src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp" srcset="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x988.webp 1000w, /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x198.webp 200w, /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x395.webp 400w, /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x593.webp 600w, /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x790.webp 800w" width="1446"/>
 </section>
 
       <section id="about-me">
-  <div class="markdown prose mx-2">
+  <div class="markdown mx-2">
     <p >I dunno? I guess im pretty good at programming, and … tetris.</p>
 <p >I also really like dogs.</p>
 <p >🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
@@ -132,7 +132,7 @@ Menu
 </section>
 
     </aside>
-    <main class="grid row-gap-8">
+    <main class="row-gap-8">
   <section class="grid grid-flow-col justify-end content-center mx-auto gap-x-4" id="repo-header">
     <span class="github-stars ">
   <i class="fas fa-star"></i>
@@ -166,7 +166,7 @@ Menu
     </a>
   </section>
   <section class="grid mx-auto" id="repo-body">
-    <article class="markdown prose">
+    <article class="markdown">
       <h1 id="simple-reeducks"><a href="https://ms-jpq.github.io/simple-reeducks/">Simple Reeducks 🦆🦆</a></h1>
 <h2 id="an-unceremonious-minimalist-and-idiomatic-redux-port">An unceremonious, minimalist, and idiomatic Redux port</h2>
 <p >Reeducks 🦆🦆 is <em ><a href="https://github.com/crymetothemoon/simple-reeducks/blob/master/core/simple-redux.swift">stupidly simple</a></em>: It uses 3 things – Functions, Closures, and Queues.</p>
@@ -241,7 +241,7 @@ Menu
 </main>
 
     <footer class="grid justify-items-center items-center">
-      <div class="markdown prose">
+      <div class="markdown">
   <p >© 2021 <a href="https://github.com/ms-jpq">ms-jpq</a></p>
 </div>
 
