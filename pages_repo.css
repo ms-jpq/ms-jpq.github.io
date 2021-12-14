@@ -8362,7 +8362,6 @@ body > footer {
 
 :root body.col2 > aside {
   display: grid;
-  padding-top: 1rem;
 }
 
 :root body.col2 > main {
@@ -8371,7 +8370,7 @@ body > footer {
 
 @media (min-width: 640px) {
   :root body {
-    grid-template-columns: minmax(auto, min(22em, 30vw)) 1fr;
+    grid-template-columns: minmax(auto, min(22em, 27vw)) 1fr;
     grid-template-areas:
         "header main"
         "aside  main"
@@ -8468,22 +8467,24 @@ main {
   .sm\:hidden {
     display: none;
   }
+}
 
-  .sm\:columns-2 {
+@media (min-width: 768px) {
+  .md\:columns-2 {
     -moz-columns: 2;
          columns: 2;
   }
 }
 
-@media (min-width: 768px) {
-  .md\:columns-3 {
+@media (min-width: 1280px) {
+  .xl\:columns-3 {
     -moz-columns: 3;
          columns: 3;
   }
 }
 
-@media (min-width: 1024px) {
-  .lg\:columns-4 {
+@media (min-width: 1536px) {
+  .\32xl\:columns-4 {
     -moz-columns: 4;
          columns: 4;
   }
