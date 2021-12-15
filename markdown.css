@@ -905,6 +905,9 @@
   overflow-x: auto;
   border-radius: 0.25rem;
   border-width: 2px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+  color: inherit;
   max-width: inherit;
   grid-template-columns: 0.3em 1fr
 }
@@ -920,13 +923,18 @@
   display: none
 }
 
+:is(.markdown pre,.markdown blockquote) > code {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity))
+}
+
 :is(.markdown pre,.markdown blockquote) > *:not(first-child) {
   grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 
-.markdown pre, .markdown code, .markdown blockquote {
+.markdown code {
   --tw-bg-opacity: 1;
-  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
   color: inherit
 }
 
