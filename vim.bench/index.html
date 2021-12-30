@@ -57,7 +57,7 @@
 
       <section>
         <nav>
-          <ul class="leading-loose">
+          <ul>
             <li class="capitalize active:font-bold active:text-primary-400">
               <a class="no-underline hover:text-primary-400" href="/index.html">
                 home
@@ -106,236 +106,248 @@
         </a>
       </section>
     </aside>
-    <main class="gap-y-8">
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <span class="github-stars">
-          <i class="fas fa-star"></i>
-          12
-        </span>
+    <main class="justify-items-center">
+      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <span class="github-stars">
+            <i class="fas fa-star"></i>
+            12
+          </span>
 
-        <span class="github-forks hidden">
-          <i class="fas fa-code-branch"></i>
-          0
-        </span>
+          <span class="github-forks hidden">
+            <i class="fas fa-code-branch"></i>
+            0
+          </span>
 
-        <a class="invis-link" href="https://github.com/ms-jpq/vim.bench">
-          <button
-            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
-          >
-            View on Github
-            <i class="fab fa-github"></i>
-          </button>
-        </a>
-      </section>
-
-      <section class="self-center">
-        <article class="markdown">
-          <h1 id="nvimbench">Nvim.Bench</h1>
-          <p>Reproducible nvim completion framework benchmarks.</p>
-          <p>Runs inside Docker. Fair and balanced</p>
-          <hr />
-          <h2 id="methodology">Methodology</h2>
-          <p>
-            Note: for all “randomness”, they are generated from the same seed
-            for each run, and therefore “fair”.
-          </p>
-          <h3 id="input">Input</h3>
-          <p>
-            <code>tmux</code> is used to send keys to simulate ideal human
-            typing.
-          </p>
-          <p>
-            The words typed are <em>naive tokens</em> from parsing current
-            document into (alphanum + “_“) delimited by whitespaces and symbols.
-          </p>
-          <p>
-            This tokenization should work fairly well for
-            <strong>c family</strong> of languages, which are the industry
-            standard.
-          </p>
-          <p>
-            A uniform distribution of whitespaces is also generated from the
-            same buffer.
-          </p>
-          <h3 id="measurement">Measurement</h3>
-          <p>n keystrokes of <code>--samples</code> is performed.</p>
-          <h3 id="speed">Speed</h3>
-          <p>
-            Using <code>--avg-word-len</code>, <code>--wpm</code> and
-            <code>--variance</code>, a Normal Distribution is constructed of the
-            desired delay between keystrokes.
-          </p>
-          <h3 id="data">Data</h3>
-          <p>See <code>./fs/data/</code></p>
-          <h3 id="modularity">Modularity</h3>
-          <p>
-            Some frameworks will have by default, very little sources enabled,
-            if any.
-          </p>
-          <p>Other ones will come with more out of the box.</p>
-          <p>
-            For a fair comparison: All frameworks tested will have to following
-            enabled, on top of whatever else they come enabled by default:
-          </p>
-          <ul>
-            <li>
-              <p>buffer</p>
-            </li>
-            <li>
-              <p>lsp</p>
-            </li>
-            <li>
-              <p>path</p>
-            </li>
-          </ul>
-          <p>
-            The reasoning is that: 1) Almost all authors will have written these
-            sources firsthand, and 2) they seem to be the most useful sources.
-          </p>
-          <p>
-            No default sources will be disabled, because users don’t tend to do
-            that.
-          </p>
-          <hr />
-          <h2 id="cool-pictures">
-            <a href="https://github.com/ms-jpq/vim.bench/tree/main/plots"
-              >Cool, pictures</a
+          <a class="invis-link" href="https://github.com/ms-jpq/vim.bench">
+            <button
+              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
             >
-          </h2>
-          <p>
-            The plots are
-            <a href="https://en.wikipedia.org/wiki/Kernel_density_estimation"
-              >kernel density estimations</a
-            >, have no idea why they fitted more than 1 curve for some plots.
-          </p>
-          <p>
-            I usually use <code>R</code>, not used to python ploting. Anyways,
-            they are an estimate of the true
-            <a href="https://en.wikipedia.org/wiki/Probability_density_function"
-              >probability density function</a
-            >.
-          </p>
-          <h3 id="q0-50-95-100">Q0, 50, 95, 100?</h3>
-          <p>
-            Mean <code>min</code>, <code>median</code>, <code>1 in 20</code>,
-            <code>max</code>, respectively.
-          </p>
-          <p>Without assuming any statistical distribution:</p>
-          <p>
-            <strong
-              ><code>Q50</code> is a more robust measure than
-              <code>avg</code></strong
-            >, and <code>Q95</code> is a decent measure of a common
-            <code>bad</code> value.
-          </p>
-          <hr />
-          <h2 id="analysis">Analysis</h2>
-          <p>
-            Please keep in mind that this is purely a synthetic benchmark, which
-            definitely is one of those
-            <strong>need context to interpret</strong> type of things.
-          </p>
-          <p>
-            There is <strong>no good way</strong> to measure
-            <em>real speed</em> across frameworks, raw numbers here come with
-            big caveats.
-          </p>
-          <h3 id="study-design-limitations">Study design limitations</h3>
-          <h4 id="streaming-completion">Streaming completion</h4>
-          <p>
-            Streaming completion is very good for time to first result
-            <em>(TTFR)</em>, but it presents us with an issue:
-          </p>
-          <p>
-            While the fast sources will return right away, the slower ones might
-            never make it before the next keystroke.
-          </p>
-          <p>
-            This has the funny effect of removing the influence of slower
-            sources entirely, which is <em>disastrous</em> for study integrity.
-          </p>
-          <p>
-            The mitigation is actually to
-            <strong>set typing speed unrealistically slow</strong>, enough so
-            that we have confidence that the LSP servers can catch up.
-          </p>
-          <p>This is obviously not ideal.</p>
-          <h3 id="fast-on-paper-fast-irl">Fast on paper != fast IRL</h3>
-          <p>
-            The most responsive frameworks are not necessarily the fastest ones,
-            because <strong>humans still have to choose the results</strong>.
-          </p>
-          <p>
-            For example the streaming completion approach actually has
-            <strong>severe trade offs</strong> infavor of faster <em>TTFR</em>:
-          </p>
-          <h4 id="ranking">Ranking</h4>
-          <p>
-            Having suboptimal ranking is BAD, it pushes work
-            <strong>from fast machines onto slow humans</strong>.
-          </p>
-          <p>
-            The streaming approach has to be additive, because its too
-            disruptive to shift existing menu items around.
-          </p>
-          <p>
-            Therefore it is limited to sorting only within stream batches, and
-            to make things worse,
-            <em>slower batches typically contain higher quality results</em>.
-          </p>
-          <p>
-            That means better results will often end up at the bottom,
-            necessitating more work for humans.
-          </p>
-          <h4 id="limiting">Limiting</h4>
-          <p>This is a direct consequence of limited ranking optimizations.</p>
-          <p>
-            Because the framework have no idea how much each source will send,
-            it has the dilemma of either sending too many results or too little.
-          </p>
-          <p>
-            Sending too many results in early batches from likely inferior
-            sources will waste the users time, and sending too little will
-            obscure potentially useful completions.
-          </p>
-          <h4 id="clarity-on-when-if-results-will-come-in">
-            Clarity on when / if results will come in
-          </h4>
-          <p>This is a HCI thing:</p>
-          <p>
-            Having higher quality results come in slower is likely to
-            <strong>inadvertently train users</strong> to wait for them. This is
-            evidently bad for input speed.
-          </p>
-          <h2 id="conclusion">Conclusion</h2>
-          <p>
-            There is never going to be a closed form solution to “what is the
-            fastest framework”, because of the trade offs detailed above.
-          </p>
-          <p>
-            A toy example of a degenerate framework that returns a single fixed
-            <code>👌</code> emoji will probably beat anything out there in terms
-            of raw speed, but it is utterly useless.
-          </p>
-          <p>
-            Before you reach your own conclusion, the results of this repo
-            <strong
-              >must be considered alongside inextricably human measure</strong
-            >.
-          </p>
-        </article>
-      </section>
+              View on Github
+              <i class="fab fa-github"></i>
+            </button>
+          </a>
+        </section>
 
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <div>
-          <i class="fas fa-baby text-left"></i>
-          <time datetime="2021-09-24T17:27:41+0000"></time>
-        </div>
-        <div>
-          <i class="fas fa-user-edit text-left"></i>
-          <time datetime="2021-12-30T00:34:06+0000"></time>
-        </div>
-      </section>
+        <section class="self-center">
+          <article class="markdown">
+            <h1 id="nvimbench">Nvim.Bench</h1>
+            <p>Reproducible nvim completion framework benchmarks.</p>
+            <p>Runs inside Docker. Fair and balanced</p>
+            <hr />
+            <h2 id="methodology">Methodology</h2>
+            <p>
+              Note: for all “randomness”, they are generated from the same seed
+              for each run, and therefore “fair”.
+            </p>
+            <h3 id="input">Input</h3>
+            <p>
+              <code>tmux</code> is used to send keys to simulate ideal human
+              typing.
+            </p>
+            <p>
+              The words typed are <em>naive tokens</em> from parsing current
+              document into (alphanum + “_“) delimited by whitespaces and
+              symbols.
+            </p>
+            <p>
+              This tokenization should work fairly well for
+              <strong>c family</strong> of languages, which are the industry
+              standard.
+            </p>
+            <p>
+              A uniform distribution of whitespaces is also generated from the
+              same buffer.
+            </p>
+            <h3 id="measurement">Measurement</h3>
+            <p>n keystrokes of <code>--samples</code> is performed.</p>
+            <h3 id="speed">Speed</h3>
+            <p>
+              Using <code>--avg-word-len</code>, <code>--wpm</code> and
+              <code>--variance</code>, a Normal Distribution is constructed of
+              the desired delay between keystrokes.
+            </p>
+            <h3 id="data">Data</h3>
+            <p>See <code>./fs/data/</code></p>
+            <h3 id="modularity">Modularity</h3>
+            <p>
+              Some frameworks will have by default, very little sources enabled,
+              if any.
+            </p>
+            <p>Other ones will come with more out of the box.</p>
+            <p>
+              For a fair comparison: All frameworks tested will have to
+              following enabled, on top of whatever else they come enabled by
+              default:
+            </p>
+            <ul>
+              <li>
+                <p>buffer</p>
+              </li>
+              <li>
+                <p>lsp</p>
+              </li>
+              <li>
+                <p>path</p>
+              </li>
+            </ul>
+            <p>
+              The reasoning is that: 1) Almost all authors will have written
+              these sources firsthand, and 2) they seem to be the most useful
+              sources.
+            </p>
+            <p>
+              No default sources will be disabled, because users don’t tend to
+              do that.
+            </p>
+            <hr />
+            <h2 id="cool-pictures">
+              <a href="https://github.com/ms-jpq/vim.bench/tree/main/plots"
+                >Cool, pictures</a
+              >
+            </h2>
+            <p>
+              The plots are
+              <a href="https://en.wikipedia.org/wiki/Kernel_density_estimation"
+                >kernel density estimations</a
+              >, have no idea why they fitted more than 1 curve for some plots.
+            </p>
+            <p>
+              I usually use <code>R</code>, not used to python ploting. Anyways,
+              they are an estimate of the true
+              <a
+                href="https://en.wikipedia.org/wiki/Probability_density_function"
+                >probability density function</a
+              >.
+            </p>
+            <h3 id="q0-50-95-100">Q0, 50, 95, 100?</h3>
+            <p>
+              Mean <code>min</code>, <code>median</code>, <code>1 in 20</code>,
+              <code>max</code>, respectively.
+            </p>
+            <p>Without assuming any statistical distribution:</p>
+            <p>
+              <strong
+                ><code>Q50</code> is a more robust measure than
+                <code>avg</code></strong
+              >, and <code>Q95</code> is a decent measure of a common
+              <code>bad</code> value.
+            </p>
+            <hr />
+            <h2 id="analysis">Analysis</h2>
+            <p>
+              Please keep in mind that this is purely a synthetic benchmark,
+              which definitely is one of those
+              <strong>need context to interpret</strong> type of things.
+            </p>
+            <p>
+              There is <strong>no good way</strong> to measure
+              <em>real speed</em> across frameworks, raw numbers here come with
+              big caveats.
+            </p>
+            <h3 id="study-design-limitations">Study design limitations</h3>
+            <h4 id="streaming-completion">Streaming completion</h4>
+            <p>
+              Streaming completion is very good for time to first result
+              <em>(TTFR)</em>, but it presents us with an issue:
+            </p>
+            <p>
+              While the fast sources will return right away, the slower ones
+              might never make it before the next keystroke.
+            </p>
+            <p>
+              This has the funny effect of removing the influence of slower
+              sources entirely, which is <em>disastrous</em> for study
+              integrity.
+            </p>
+            <p>
+              The mitigation is actually to
+              <strong>set typing speed unrealistically slow</strong>, enough so
+              that we have confidence that the LSP servers can catch up.
+            </p>
+            <p>This is obviously not ideal.</p>
+            <h3 id="fast-on-paper-fast-irl">Fast on paper != fast IRL</h3>
+            <p>
+              The most responsive frameworks are not necessarily the fastest
+              ones, because
+              <strong>humans still have to choose the results</strong>.
+            </p>
+            <p>
+              For example the streaming completion approach actually has
+              <strong>severe trade offs</strong> infavor of faster
+              <em>TTFR</em>:
+            </p>
+            <h4 id="ranking">Ranking</h4>
+            <p>
+              Having suboptimal ranking is BAD, it pushes work
+              <strong>from fast machines onto slow humans</strong>.
+            </p>
+            <p>
+              The streaming approach has to be additive, because its too
+              disruptive to shift existing menu items around.
+            </p>
+            <p>
+              Therefore it is limited to sorting only within stream batches, and
+              to make things worse,
+              <em>slower batches typically contain higher quality results</em>.
+            </p>
+            <p>
+              That means better results will often end up at the bottom,
+              necessitating more work for humans.
+            </p>
+            <h4 id="limiting">Limiting</h4>
+            <p>
+              This is a direct consequence of limited ranking optimizations.
+            </p>
+            <p>
+              Because the framework have no idea how much each source will send,
+              it has the dilemma of either sending too many results or too
+              little.
+            </p>
+            <p>
+              Sending too many results in early batches from likely inferior
+              sources will waste the users time, and sending too little will
+              obscure potentially useful completions.
+            </p>
+            <h4 id="clarity-on-when-if-results-will-come-in">
+              Clarity on when / if results will come in
+            </h4>
+            <p>This is a HCI thing:</p>
+            <p>
+              Having higher quality results come in slower is likely to
+              <strong>inadvertently train users</strong> to wait for them. This
+              is evidently bad for input speed.
+            </p>
+            <h2 id="conclusion">Conclusion</h2>
+            <p>
+              There is never going to be a closed form solution to “what is the
+              fastest framework”, because of the trade offs detailed above.
+            </p>
+            <p>
+              A toy example of a degenerate framework that returns a single
+              fixed <code>👌</code> emoji will probably beat anything out there
+              in terms of raw speed, but it is utterly useless.
+            </p>
+            <p>
+              Before you reach your own conclusion, the results of this repo
+              <strong
+                >must be considered alongside inextricably human measure</strong
+              >.
+            </p>
+          </article>
+        </section>
+
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <div>
+            <i class="fas fa-baby text-left"></i>
+            <time datetime="2021-09-24T17:27:41+0000"></time>
+          </div>
+          <div>
+            <i class="fas fa-user-edit text-left"></i>
+            <time datetime="2021-12-30T00:34:06+0000"></time>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="grid justify-items-center items-center">

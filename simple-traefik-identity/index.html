@@ -57,7 +57,7 @@
 
       <section>
         <nav>
-          <ul class="leading-loose">
+          <ul>
             <li class="capitalize active:font-bold active:text-primary-400">
               <a class="no-underline hover:text-primary-400" href="/index.html">
                 home
@@ -106,82 +106,83 @@
         </a>
       </section>
     </aside>
-    <main class="gap-y-8">
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <span class="github-stars">
-          <i class="fas fa-star"></i>
-          20
-        </span>
+    <main class="justify-items-center">
+      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <span class="github-stars">
+            <i class="fas fa-star"></i>
+            20
+          </span>
 
-        <span class="github-forks hidden">
-          <i class="fas fa-code-branch"></i>
-          0
-        </span>
+          <span class="github-forks hidden">
+            <i class="fas fa-code-branch"></i>
+            0
+          </span>
 
-        <a
-          class="invis-link"
-          href="https://github.com/ms-jpq/simple-traefik-identity"
-        >
-          <button
-            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
+          <a
+            class="invis-link"
+            href="https://github.com/ms-jpq/simple-traefik-identity"
           >
-            View on Github
-            <i class="fab fa-github"></i>
-          </button>
-        </a>
-      </section>
-
-      <section class="self-center">
-        <article class="markdown">
-          <h1 id="simple-traefik-identity">
-            <a href="https://ms-jpq.github.io/simple-traefik-identity/"
-              >Simple Traefik Identity</a
+            <button
+              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
             >
-          </h1>
-          <p>
-            <a href="https://hub.docker.com/r/msjpq/simple-traefik-identity/"
-              ><img
-                alt="Docker Pulls"
-                src="/822aaeb31e39c7106675da0e3679e465a2e0213ee6a864fd653c6f8c16eaf6ee.svg"
-            /></a>
-          </p>
-          <p>Simple &amp; Configurable – SSO, for Traefik.</p>
-          <h2 id="preview">Preview</h2>
-          <h3 id="logon">Logon</h3>
-          <p>
-            <img
-              alt="login img"
-              height="357"
-              src="/a0a7eb025816e65d2a39162752ab1d2aeedf0d97b8a5947a96b881b1d700311a.webp"
-              srcset="
-                /a0a7eb025816e65d2a39162752ab1d2aeedf0d97b8a5947a96b881b1d700311a--200x159.webp 200w,
-                /a0a7eb025816e65d2a39162752ab1d2aeedf0d97b8a5947a96b881b1d700311a--400x319.webp 400w,
-                /a0a7eb025816e65d2a39162752ab1d2aeedf0d97b8a5947a96b881b1d700311a--448x357.webp 448w
-              "
-              width="448"
-            />
-          </p>
-          <h3 id="logoff">Logoff</h3>
-          <p>(if not authorized, you can login via another account)</p>
-          <p>
-            <img
-              alt="logoff img"
-              height="358"
-              src="/6f677de8a867aeca7cd6cdb31f89bb8bc31a58a3989e129beba583a8df5c1de6.webp"
-              srcset="
-                /6f677de8a867aeca7cd6cdb31f89bb8bc31a58a3989e129beba583a8df5c1de6--200x158.webp 200w,
-                /6f677de8a867aeca7cd6cdb31f89bb8bc31a58a3989e129beba583a8df5c1de6--400x315.webp 400w,
-                /6f677de8a867aeca7cd6cdb31f89bb8bc31a58a3989e129beba583a8df5c1de6--454x358.webp 454w
-              "
-              width="454"
-            />
-          </p>
-          <h2 id="features">Features</h2>
-          <h3 id="role-based-access-control-rbac">
-            Role Based Access Control (RBAC)
-          </h3>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="nt">groups</span><span class="p">:</span>
+              View on Github
+              <i class="fab fa-github"></i>
+            </button>
+          </a>
+        </section>
+
+        <section class="self-center">
+          <article class="markdown">
+            <h1 id="simple-traefik-identity">
+              <a href="https://ms-jpq.github.io/simple-traefik-identity/"
+                >Simple Traefik Identity</a
+              >
+            </h1>
+            <p>
+              <a href="https://hub.docker.com/r/msjpq/simple-traefik-identity/"
+                ><img
+                  alt="Docker Pulls"
+                  src="/822aaeb31e39c7106675da0e3679e465a2e0213ee6a864fd653c6f8c16eaf6ee.svg"
+              /></a>
+            </p>
+            <p>Simple &amp; Configurable – SSO, for Traefik.</p>
+            <h2 id="preview">Preview</h2>
+            <h3 id="logon">Logon</h3>
+            <p>
+              <img
+                alt="login img"
+                height="357"
+                src="/a0a7eb025816e65d2a39162752ab1d2aeedf0d97b8a5947a96b881b1d700311a.webp"
+                srcset="
+                  /a0a7eb025816e65d2a39162752ab1d2aeedf0d97b8a5947a96b881b1d700311a--200x159.webp 200w,
+                  /a0a7eb025816e65d2a39162752ab1d2aeedf0d97b8a5947a96b881b1d700311a--400x319.webp 400w,
+                  /a0a7eb025816e65d2a39162752ab1d2aeedf0d97b8a5947a96b881b1d700311a--448x357.webp 448w
+                "
+                width="448"
+              />
+            </p>
+            <h3 id="logoff">Logoff</h3>
+            <p>(if not authorized, you can login via another account)</p>
+            <p>
+              <img
+                alt="logoff img"
+                height="358"
+                src="/6f677de8a867aeca7cd6cdb31f89bb8bc31a58a3989e129beba583a8df5c1de6.webp"
+                srcset="
+                  /6f677de8a867aeca7cd6cdb31f89bb8bc31a58a3989e129beba583a8df5c1de6--200x158.webp 200w,
+                  /6f677de8a867aeca7cd6cdb31f89bb8bc31a58a3989e129beba583a8df5c1de6--400x315.webp 400w,
+                  /6f677de8a867aeca7cd6cdb31f89bb8bc31a58a3989e129beba583a8df5c1de6--454x358.webp 454w
+                "
+                width="454"
+              />
+            </p>
+            <h2 id="features">Features</h2>
+            <h3 id="role-based-access-control-rbac">
+              Role Based Access Control (RBAC)
+            </h3>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="nt">groups</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">quebec</span>
     <span class="nt">sub_domains</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="s">&quot;*&quot;</span>
@@ -205,11 +206,11 @@
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">saskatchewan</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">newfoundland</span>
 </code></pre>
-          </div>
+            </div>
 
-          <h3 id="rate-limit">Rate Limit</h3>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="nt">rate_limit</span><span class="p">:</span>
+            <h3 id="rate-limit">Rate Limit</h3>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="nt">rate_limit</span><span class="p">:</span>
   <span class="nt">headers</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Cf-Connecting-Ip</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Another-Header</span>
@@ -217,33 +218,33 @@
   <span class="nt">rate</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
   <span class="nt">timer</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
 </code></pre>
-          </div>
+            </div>
 
-          <h3 id="custom-ui">Custom UI</h3>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="nt">display</span><span class="p">:</span>
+            <h3 id="custom-ui">Custom UI</h3>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="nt">display</span><span class="p">:</span>
   <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Simple Traefik Identity</span>
   <span class="nt">background</span><span class="p">:</span> <span class="p p-Indicator">|-</span>
     <span class="no">https://github.com/ms-jpq/simple-traefik-identity/raw/xp/src/views/assets/xp.jpg</span>
 </code></pre>
-          </div>
+            </div>
 
-          <h2 id="usage">Usage</h2>
-          <p>
-            See
-            <a
-              href="https://github.com/ms-jpq/simple-traefik-identity/blob/xp/examples/minimal_conf.yml"
-              >minimal</a
-            >
-            and
-            <a
-              href="https://github.com/ms-jpq/simple-traefik-identity/blob/xp/examples/maximal_conf.yml"
-              >maximal</a
-            >
-            to get started.
-          </p>
-          <div class="codehilite friendly">
-            <pre><span ></span><code >  <span class="nt">sti</span><span class="p">:</span>
+            <h2 id="usage">Usage</h2>
+            <p>
+              See
+              <a
+                href="https://github.com/ms-jpq/simple-traefik-identity/blob/xp/examples/minimal_conf.yml"
+                >minimal</a
+              >
+              and
+              <a
+                href="https://github.com/ms-jpq/simple-traefik-identity/blob/xp/examples/maximal_conf.yml"
+                >maximal</a
+              >
+              to get started.
+            </p>
+            <div class="codehilite friendly">
+              <pre><span ></span><code >  <span class="nt">sti</span><span class="p">:</span>
     <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">msjpq/simple-traefik-identity</span>
     <span class="nt">container_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sti</span>
     <span class="nt">labels</span><span class="p">:</span>
@@ -253,47 +254,48 @@
     <span class="nt">volumes</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">./config/conf.yml:/sti/config/conf.yml</span>
 </code></pre>
-          </div>
+            </div>
 
-          <h2 id="security">Security</h2>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="err">👩‍💻</span> <span class="o">--------</span> <span class="n">Request</span> <span class="o">--------&gt;</span> <span class="err">👮‍♀️</span>
+            <h2 id="security">Security</h2>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="err">👩‍💻</span> <span class="o">--------</span> <span class="n">Request</span> <span class="o">--------&gt;</span> <span class="err">👮‍♀️</span>
 <span class="err">👩‍💻</span> <span class="o">&lt;----</span> <span class="n">Auth</span> <span class="n">Challenge</span> <span class="o">-----</span> <span class="err">👮‍♀️</span>
 <span class="err">👩‍💻</span> <span class="o">------</span> <span class="n">Credentials</span> <span class="o">------&gt;</span> <span class="err">👮‍♀️</span>
 <span class="err">👩‍💻</span> <span class="o">&lt;--</span> <span class="n">Samesite</span> <span class="n">JWT</span> <span class="n">Cookie</span> <span class="o">--</span> <span class="err">👮‍♀️</span>
 </code></pre>
-          </div>
+            </div>
 
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="err">👩‍💻</span> <span class="o">--</span> <span class="n">Samesite</span> <span class="n">JWT</span> <span class="n">Cookie</span> <span class="o">--&gt;</span> <span class="err">👮‍♀️</span>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="err">👩‍💻</span> <span class="o">--</span> <span class="n">Samesite</span> <span class="n">JWT</span> <span class="n">Cookie</span> <span class="o">--&gt;</span> <span class="err">👮‍♀️</span>
 <span class="err">👩‍💻</span> <span class="o">&lt;----------</span> <span class="n">OK</span> <span class="o">-----------</span> <span class="err">👮‍♀️</span>
 <span class="err">👩‍💻</span> <span class="o">--</span> <span class="n">Samesite</span> <span class="n">JWT</span> <span class="n">Cookie</span> <span class="o">--&gt;</span> <span class="err">👮‍♀️</span>
 <span class="err">👩‍💻</span> <span class="o">&lt;----------</span> <span class="n">OK</span> <span class="o">-----------</span> <span class="err">👮‍♀️</span>
 </code></pre>
+            </div>
+
+            <p>JWT payload only contain list of accessible domains</p>
+            <h2 id="sister">Sister</h2>
+            <p>
+              Check out my sister:
+              <a href="https://ms-jpq.github.io/simple-traefik-dash/"
+                >Simple Traefik Dash</a
+              >
+            </p>
+            <p>Zero conf service dashboard for Traefik v2</p>
+          </article>
+        </section>
+
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <div>
+            <i class="fas fa-baby text-left"></i>
+            <time datetime="2019-12-24T15:00:22+0000"></time>
           </div>
-
-          <p>JWT payload only contain list of accessible domains</p>
-          <h2 id="sister">Sister</h2>
-          <p>
-            Check out my sister:
-            <a href="https://ms-jpq.github.io/simple-traefik-dash/"
-              >Simple Traefik Dash</a
-            >
-          </p>
-          <p>Zero conf service dashboard for Traefik v2</p>
-        </article>
-      </section>
-
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <div>
-          <i class="fas fa-baby text-left"></i>
-          <time datetime="2019-12-24T15:00:22+0000"></time>
-        </div>
-        <div>
-          <i class="fas fa-user-edit text-left"></i>
-          <time datetime="2021-12-30T00:34:05+0000"></time>
-        </div>
-      </section>
+          <div>
+            <i class="fas fa-user-edit text-left"></i>
+            <time datetime="2021-12-30T00:34:05+0000"></time>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="grid justify-items-center items-center">

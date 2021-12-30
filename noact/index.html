@@ -54,7 +54,7 @@
 
       <section>
         <nav>
-          <ul class="leading-loose">
+          <ul>
             <li class="capitalize active:font-bold active:text-primary-400">
               <a class="no-underline hover:text-primary-400" href="/index.html">
                 home
@@ -103,132 +103,136 @@
         </a>
       </section>
     </aside>
-    <main class="gap-y-8">
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <span class="github-stars">
-          <i class="fas fa-star"></i>
-          305
-        </span>
+    <main class="justify-items-center">
+      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <span class="github-stars">
+            <i class="fas fa-star"></i>
+            305
+          </span>
 
-        <span class="github-forks">
-          <i class="fas fa-code-branch"></i>
-          11
-        </span>
+          <span class="github-forks">
+            <i class="fas fa-code-branch"></i>
+            11
+          </span>
 
-        <a class="invis-link" href="https://github.com/ms-jpq/noact">
-          <button
-            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
-          >
-            View on Github
-            <i class="fab fa-github"></i>
-          </button>
-        </a>
-      </section>
-
-      <section class="self-center">
-        <article class="markdown">
-          <h1 id="renoact">
-            <a href="https://ms-jpq.github.io/noact/">~~Re~~Noact</a>
-          </h1>
-          <p>
-            Noact is a minimal <strong><em>self-rendering</em></strong> Virtual
-            DOM library.
-          </p>
-          <ul>
-            <li>
-              <strong>Declarative:</strong> Pretty much like React, without the
-              JSX compilation of course, hence the name.
-            </li>
-            <li>
-              <strong>Type safe:</strong> Noact is completely typesafe, which
-              means you get
-              <a
-                href="https://github.com/ms-jpq/Noact/blob/noact/_assets/auto_complete.gif"
-                >static type checking</a
-              >
-              for free!
-            </li>
-            <li>
-              <strong>Simple:</strong>
-              <a href="https://github.com/ms-jpq/Noact/blob/noact/src/noact.ts"
-                >Only 60 lines</a
-              >
-              of type declarations &amp; rendering code. (and 10ish lines of
-              code-gen code)
-            </li>
-          </ul>
-          <h2 id="example-app">
-            <a href="https://ms-jpq.github.io/noact-page/">Example App</a>
-          </h2>
-          <h2 id="how-it-feels-to-write-noact">How it feels to write Noact</h2>
-          <p>
-            <img
-              alt="demo.gif"
-              height="522"
-              src="/c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced.webp"
-              srcset="
-                /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--200x120.webp 200w,
-                /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--400x239.webp 400w,
-                /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--600x359.webp 600w,
-                /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--800x479.webp 800w,
-                /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--872x522.webp 872w
-              "
-              width="872"
-            />
-          </p>
-          <p><strong>- Explosions -</strong></p>
-          <p>Even has support for <strong>style auto complete</strong></p>
-          <p>
-            <img
-              alt="typedemo.png"
-              height="246"
-              src="/83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17.webp"
-              srcset="
-                /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--200x73.webp  200w,
-                /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--400x146.webp 400w,
-                /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--600x218.webp 600w,
-                /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--676x246.webp 676w
-              "
-              width="676"
-            />
-          </p>
-          <h2 id="usage">Usage</h2>
-          <p>
-            Noact is inspired by the syntax of the
-            <a href="https://package.elm-lang.org/packages/elm/html/latest/"
-              >elm HTML engine</a
+          <a class="invis-link" href="https://github.com/ms-jpq/noact">
+            <button
+              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
             >
-          </p>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="k">import</span> <span class="p">{</span> <span class="nx">button</span><span class="p">,</span> <span class="nx">div</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;./NoactElements&quot;</span>
+              View on Github
+              <i class="fab fa-github"></i>
+            </button>
+          </a>
+        </section>
+
+        <section class="self-center">
+          <article class="markdown">
+            <h1 id="renoact">
+              <a href="https://ms-jpq.github.io/noact/">~~Re~~Noact</a>
+            </h1>
+            <p>
+              Noact is a minimal
+              <strong><em>self-rendering</em></strong> Virtual DOM library.
+            </p>
+            <ul>
+              <li>
+                <strong>Declarative:</strong> Pretty much like React, without
+                the JSX compilation of course, hence the name.
+              </li>
+              <li>
+                <strong>Type safe:</strong> Noact is completely typesafe, which
+                means you get
+                <a
+                  href="https://github.com/ms-jpq/Noact/blob/noact/_assets/auto_complete.gif"
+                  >static type checking</a
+                >
+                for free!
+              </li>
+              <li>
+                <strong>Simple:</strong>
+                <a
+                  href="https://github.com/ms-jpq/Noact/blob/noact/src/noact.ts"
+                  >Only 60 lines</a
+                >
+                of type declarations &amp; rendering code. (and 10ish lines of
+                code-gen code)
+              </li>
+            </ul>
+            <h2 id="example-app">
+              <a href="https://ms-jpq.github.io/noact-page/">Example App</a>
+            </h2>
+            <h2 id="how-it-feels-to-write-noact">
+              How it feels to write Noact
+            </h2>
+            <p>
+              <img
+                alt="demo.gif"
+                height="522"
+                src="/c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced.webp"
+                srcset="
+                  /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--200x120.webp 200w,
+                  /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--400x239.webp 400w,
+                  /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--600x359.webp 600w,
+                  /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--800x479.webp 800w,
+                  /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--872x522.webp 872w
+                "
+                width="872"
+              />
+            </p>
+            <p><strong>- Explosions -</strong></p>
+            <p>Even has support for <strong>style auto complete</strong></p>
+            <p>
+              <img
+                alt="typedemo.png"
+                height="246"
+                src="/83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17.webp"
+                srcset="
+                  /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--200x73.webp  200w,
+                  /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--400x146.webp 400w,
+                  /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--600x218.webp 600w,
+                  /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--676x246.webp 676w
+                "
+                width="676"
+              />
+            </p>
+            <h2 id="usage">Usage</h2>
+            <p>
+              Noact is inspired by the syntax of the
+              <a href="https://package.elm-lang.org/packages/elm/html/latest/"
+                >elm HTML engine</a
+              >
+            </p>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="k">import</span> <span class="p">{</span> <span class="nx">button</span><span class="p">,</span> <span class="nx">div</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;./NoactElements&quot;</span>
 <span class="kd">const</span> <span class="nx">component1</span> <span class="o">=</span> <span class="nx">div</span><span class="p">({},</span>
     <span class="nx">button</span><span class="p">({</span> <span class="nx">onclick</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;:D&quot;</span><span class="p">),</span> <span class="nx">txt</span><span class="o">:</span> <span class="s2">&quot;+&quot;</span> <span class="p">}),</span>
     <span class="nx">div</span><span class="p">({</span> <span class="nx">txt</span><span class="o">:</span> <span class="s2">&quot;♥&quot;</span> <span class="p">}),</span>
     <span class="nx">button</span><span class="p">({</span> <span class="nx">onclick</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;D:&quot;</span><span class="p">),</span> <span class="nx">txt</span><span class="o">:</span> <span class="s2">&quot;-&quot;</span> <span class="p">})</span>
 <span class="p">)</span>
 </code></pre>
-          </div>
+            </div>
 
-          <p>
-            <code>component1</code> is a memoized
-            <code>() =&gt; HTMLElement</code> function,
-            <code>component1()</code> will give you back
-          </p>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <p>
+              <code>component1</code> is a memoized
+              <code>() =&gt; HTMLElement</code> function,
+              <code>component1()</code> will give you back
+            </p>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>♥<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>-<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre>
-          </div>
+            </div>
 
-          <p>
-            You can use <code>component1</code> as it is, or compose it in a
-            Virtual DOM configuration
-          </p>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="k">import</span> <span class="p">{</span> <span class="nx">createMountPoint</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;./Noact&quot;</span>
+            <p>
+              You can use <code>component1</code> as it is, or compose it in a
+              Virtual DOM configuration
+            </p>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="k">import</span> <span class="p">{</span> <span class="nx">createMountPoint</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;./Noact&quot;</span>
 <span class="kd">const</span> <span class="nx">mount</span> <span class="o">=</span> <span class="nx">createMountPoint</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="sb">`#root`</span><span class="p">))</span>
 <span class="kd">const</span> <span class="nx">remount</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">mount</span><span class="p">(</span>
     <span class="nx">component1</span><span class="p">,</span>
@@ -236,37 +240,38 @@
 <span class="p">)</span>
 <span class="nx">setInterval</span><span class="p">(</span><span class="nx">remount</span><span class="p">,</span> <span class="mf">1000</span><span class="p">)</span>
 </code></pre>
+            </div>
+
+            <p>
+              Here the root element will be populated with both
+              <code>component1</code> and <code>span</code>. Every 1000ms,
+              <code>#root &gt; span</code> and only
+              <code>#root &gt; span</code> will be updated.
+            </p>
+            <p>
+              In essence, <code>component1</code> is both the rendering
+              function, and the virtual DOM.
+            </p>
+            <h2 id="license">License</h2>
+            <p>
+              <a href="https://github.com/ms-jpq/Noact/blob/noact/LICENSE"
+                >MIT License</a
+              >
+            </p>
+          </article>
+        </section>
+
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <div>
+            <i class="fas fa-baby text-left"></i>
+            <time datetime="2019-05-13T20:58:04+0000"></time>
           </div>
-
-          <p>
-            Here the root element will be populated with both
-            <code>component1</code> and <code>span</code>. Every 1000ms,
-            <code>#root &gt; span</code> and only
-            <code>#root &gt; span</code> will be updated.
-          </p>
-          <p>
-            In essence, <code>component1</code> is both the rendering function,
-            and the virtual DOM.
-          </p>
-          <h2 id="license">License</h2>
-          <p>
-            <a href="https://github.com/ms-jpq/Noact/blob/noact/LICENSE"
-              >MIT License</a
-            >
-          </p>
-        </article>
-      </section>
-
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <div>
-          <i class="fas fa-baby text-left"></i>
-          <time datetime="2019-05-13T20:58:04+0000"></time>
-        </div>
-        <div>
-          <i class="fas fa-user-edit text-left"></i>
-          <time datetime="2021-12-30T00:34:06+0000"></time>
-        </div>
-      </section>
+          <div>
+            <i class="fas fa-user-edit text-left"></i>
+            <time datetime="2021-12-30T00:34:06+0000"></time>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="grid justify-items-center items-center">

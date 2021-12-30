@@ -57,7 +57,7 @@
 
       <section>
         <nav>
-          <ul class="leading-loose">
+          <ul>
             <li class="capitalize active:font-bold active:text-primary-400">
               <a class="no-underline hover:text-primary-400" href="/index.html">
                 home
@@ -106,124 +106,130 @@
         </a>
       </section>
     </aside>
-    <main class="gap-y-8">
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <span class="github-stars">
-          <i class="fas fa-star"></i>
-          37
-        </span>
+    <main class="justify-items-center">
+      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <span class="github-stars">
+            <i class="fas fa-star"></i>
+            37
+          </span>
 
-        <span class="github-forks">
-          <i class="fas fa-code-branch"></i>
-          2
-        </span>
+          <span class="github-forks">
+            <i class="fas fa-code-branch"></i>
+            2
+          </span>
 
-        <a
-          class="invis-link"
-          href="https://github.com/ms-jpq/markdown-live-preview"
-        >
-          <button
-            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
+          <a
+            class="invis-link"
+            href="https://github.com/ms-jpq/markdown-live-preview"
           >
-            View on Github
-            <i class="fab fa-github"></i>
-          </button>
-        </a>
-      </section>
-
-      <section class="self-center">
-        <article class="markdown">
-          <h1 id="markdown-live-preview">
-            <a href="https://ms-jpq.github.io/markdown-live-preview"
-              >Markdown Live Preview</a
+            <button
+              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
             >
-          </h1>
-          <h2 id="features">Features</h2>
-          <ul>
-            <li>
-              <p><strong>Live Preview:</strong> Updates preview on file save</p>
-            </li>
-            <li>
-              <p><strong>Auto Follow:</strong> Focus on edited element</p>
-            </li>
-            <li>
-              <p>
-                <strong>Syntax Highlight:</strong> Highlighted using
-                <a href="https://github.com/pygments/pygments">Pygments</a>
-              </p>
-            </li>
-            <li>
-              <p><strong>Github flavoured:</strong> Looks familiar</p>
-            </li>
-          </ul>
-          <h2 id="preview">Preview</h2>
-          <p>The animation is only choppy because it’s a compressed gif.</p>
-          <p>
-            <img
-              alt="preview.gif"
-              height="524"
-              src="/92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9.webp"
-              srcset="
-                /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--200x164.webp 200w,
-                /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--400x328.webp 400w,
-                /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--600x491.webp 600w,
-                /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--640x524.webp 640w
-              "
-              width="640"
-            />
-          </p>
-          <h2 id="usage">Usage</h2>
-          <div class="codehilite friendly">
-            <pre><span ></span><code >mlp <span class="p">|</span>name of markdown<span class="p">|</span>
-</code></pre>
-          </div>
+              View on Github
+              <i class="fab fa-github"></i>
+            </button>
+          </a>
+        </section>
 
-          <table>
-            <thead>
-              <tr>
-                <th>Flags</th>
-                <th>Flags</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>-p, --port PORT=8080</code></td>
-                <td>Port to use</td>
-              </tr>
-              <tr>
-                <td><code>-o, --open</code></td>
-                <td>No localhost restriction</td>
-              </tr>
-              <tr>
-                <td><code>--nf, --no-follow</code></td>
-                <td>Do not follow edits</td>
-              </tr>
-              <tr>
-                <td><code>--nf, --no-browser</code></td>
-                <td>Do not open browser</td>
-              </tr>
-            </tbody>
-          </table>
-          <h2 id="install">
-            <a href="https://pypi.org/project/markdown-live-preview">Install</a>
-          </h2>
-          <div class="codehilite friendly">
-            <pre><span ></span><code >pip install -U markdown_live_preview
+        <section class="self-center">
+          <article class="markdown">
+            <h1 id="markdown-live-preview">
+              <a href="https://ms-jpq.github.io/markdown-live-preview"
+                >Markdown Live Preview</a
+              >
+            </h1>
+            <h2 id="features">Features</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>Live Preview:</strong> Updates preview on file save
+                </p>
+              </li>
+              <li>
+                <p><strong>Auto Follow:</strong> Focus on edited element</p>
+              </li>
+              <li>
+                <p>
+                  <strong>Syntax Highlight:</strong> Highlighted using
+                  <a href="https://github.com/pygments/pygments">Pygments</a>
+                </p>
+              </li>
+              <li>
+                <p><strong>Github flavoured:</strong> Looks familiar</p>
+              </li>
+            </ul>
+            <h2 id="preview">Preview</h2>
+            <p>The animation is only choppy because it’s a compressed gif.</p>
+            <p>
+              <img
+                alt="preview.gif"
+                height="524"
+                src="/92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9.webp"
+                srcset="
+                  /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--200x164.webp 200w,
+                  /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--400x328.webp 400w,
+                  /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--600x491.webp 600w,
+                  /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--640x524.webp 640w
+                "
+                width="640"
+              />
+            </p>
+            <h2 id="usage">Usage</h2>
+            <div class="codehilite friendly">
+              <pre><span ></span><code >mlp <span class="p">|</span>name of markdown<span class="p">|</span>
 </code></pre>
-          </div>
-        </article>
-      </section>
+            </div>
 
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <div>
-          <i class="fas fa-baby text-left"></i>
-          <time datetime="2020-06-10T00:19:44+0000"></time>
-        </div>
-        <div>
-          <i class="fas fa-user-edit text-left"></i>
-          <time datetime="2021-12-30T00:34:06+0000"></time>
-        </div>
-      </section>
+            <table>
+              <thead>
+                <tr>
+                  <th>Flags</th>
+                  <th>Flags</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>-p, --port PORT=8080</code></td>
+                  <td>Port to use</td>
+                </tr>
+                <tr>
+                  <td><code>-o, --open</code></td>
+                  <td>No localhost restriction</td>
+                </tr>
+                <tr>
+                  <td><code>--nf, --no-follow</code></td>
+                  <td>Do not follow edits</td>
+                </tr>
+                <tr>
+                  <td><code>--nf, --no-browser</code></td>
+                  <td>Do not open browser</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2 id="install">
+              <a href="https://pypi.org/project/markdown-live-preview"
+                >Install</a
+              >
+            </h2>
+            <div class="codehilite friendly">
+              <pre><span ></span><code >pip install -U markdown_live_preview
+</code></pre>
+            </div>
+          </article>
+        </section>
+
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <div>
+            <i class="fas fa-baby text-left"></i>
+            <time datetime="2020-06-10T00:19:44+0000"></time>
+          </div>
+          <div>
+            <i class="fas fa-user-edit text-left"></i>
+            <time datetime="2021-12-30T00:34:06+0000"></time>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="grid justify-items-center items-center">

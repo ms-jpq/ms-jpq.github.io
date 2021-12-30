@@ -54,7 +54,7 @@
 
       <section>
         <nav>
-          <ul class="leading-loose">
+          <ul>
             <li class="capitalize active:font-bold active:text-primary-400">
               <a class="no-underline hover:text-primary-400" href="/index.html">
                 home
@@ -103,52 +103,56 @@
         </a>
       </section>
     </aside>
-    <main class="gap-y-8">
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <span class="github-stars">
-          <i class="fas fa-star"></i>
-          3
-        </span>
+    <main class="justify-items-center">
+      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <span class="github-stars">
+            <i class="fas fa-star"></i>
+            3
+          </span>
 
-        <span class="github-forks hidden">
-          <i class="fas fa-code-branch"></i>
-          0
-        </span>
+          <span class="github-forks hidden">
+            <i class="fas fa-code-branch"></i>
+            0
+          </span>
 
-        <a class="invis-link" href="https://github.com/ms-jpq/simple-reeducks">
-          <button
-            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
+          <a
+            class="invis-link"
+            href="https://github.com/ms-jpq/simple-reeducks"
           >
-            View on Github
-            <i class="fab fa-github"></i>
-          </button>
-        </a>
-      </section>
-
-      <section class="self-center">
-        <article class="markdown">
-          <h1 id="simple-reeducks">
-            <a href="https://ms-jpq.github.io/simple-reeducks/"
-              >Simple Reeducks 🦆🦆</a
+            <button
+              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
             >
-          </h1>
-          <h2 id="an-unceremonious-minimalist-and-idiomatic-redux-port">
-            An unceremonious, minimalist, and idiomatic Redux port
-          </h2>
-          <p>
-            Reeducks 🦆🦆 is
-            <em
-              ><a
-                href="https://github.com/crymetothemoon/simple-reeducks/blob/master/core/simple-redux.swift"
-                >stupidly simple</a
-              ></em
-            >: It uses 3 things – Functions, Closures, and Queues.
-          </p>
-          <p>It’s also classless ☭☭☭</p>
-          <h2 id="trivial-example">Trivial Example</h2>
-          <p>Run <code>./demo.sh</code>: contains the following code</p>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="kd">struct</span> <span class="nc">State</span> <span class="p">{</span>
+              View on Github
+              <i class="fab fa-github"></i>
+            </button>
+          </a>
+        </section>
+
+        <section class="self-center">
+          <article class="markdown">
+            <h1 id="simple-reeducks">
+              <a href="https://ms-jpq.github.io/simple-reeducks/"
+                >Simple Reeducks 🦆🦆</a
+              >
+            </h1>
+            <h2 id="an-unceremonious-minimalist-and-idiomatic-redux-port">
+              An unceremonious, minimalist, and idiomatic Redux port
+            </h2>
+            <p>
+              Reeducks 🦆🦆 is
+              <em
+                ><a
+                  href="https://github.com/crymetothemoon/simple-reeducks/blob/master/core/simple-redux.swift"
+                  >stupidly simple</a
+                ></em
+              >: It uses 3 things – Functions, Closures, and Queues.
+            </p>
+            <p>It’s also classless ☭☭☭</p>
+            <h2 id="trivial-example">Trivial Example</h2>
+            <p>Run <code>./demo.sh</code>: contains the following code</p>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="kd">struct</span> <span class="nc">State</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nv">counter</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">}</span>
 
 
@@ -186,72 +190,73 @@
 <span class="kc">_</span> <span class="p">=</span> <span class="n">store</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(.</span><span class="n">main</span><span class="p">)</span> <span class="p">{</span> <span class="n">state</span> <span class="k">in</span>
   <span class="bp">print</span><span class="p">(</span><span class="s">&quot;New State : </span><span class="si">\(</span><span class="n">state</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)}</span>
 </code></pre>
+            </div>
+
+            <h2 id="why-not-reswift">
+              Why not <a href="https://github.com/ReSwift/ReSwift">ReSwift</a>?
+            </h2>
+            <ol>
+              <li>
+                <p>
+                  Complexity &amp; Ceremony:
+                  <strong>Redux is stupidly simple</strong>, ReSwift adds
+                  <a
+                    href="https://github.com/ReSwift/ReSwift/tree/master/ReSwift/CoreTypes"
+                    >unnecessary ceremony</a
+                  >, with protocols and open classes.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Concurrency: ReSwift
+                  <a
+                    href="https://github.com/ReSwift/ReSwift/blob/master/ReSwift/CoreTypes/Store.swift"
+                    >Raises a <code>FatalError</code></a
+                  >
+                  for concurrent modification. This should never happen when
+                  <code>Grand Central Dispatch</code> exists.
+                </p>
+              </li>
+            </ol>
+            <h2 id="honest-opinion-should-you-use-redux-with-swift-apps">
+              Honest Opinion: Should you use Redux with Swift Apps?
+            </h2>
+            <p>Answer: Maybe?</p>
+            <p>
+              I wrote about 10,000 lines of iOS / MacOS code with
+              <strong>Reeducks 🦆🦆</strong>, and although Unidirectional
+              Dataflow is very neat, it takes quite a bit of ceremony and
+              discipline to keep the <code>Views</code> and
+              <code>ViewControllers</code> stateless, especially with
+              <code>TableViews</code> that uses
+              <code>NSFetchedResultsController</code>.
+            </p>
+            <p>
+              Honestly I’d say its probably not worth it until the more
+              declarative
+              <a href="https://developer.apple.com/xcode/swiftui/">SwiftUI</a>
+              becomes the thing, and I will give
+              <strong>Reeducks 🦆🦆</strong> another shot.
+            </p>
+            <p>
+              Swift’s pattern match syntax also quite verbose compared to say
+              <code>F#</code>, which has its own Unidirectional framework, and
+              can be used to build both iOS and MacOS apps.
+            </p>
+          </article>
+        </section>
+
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <div>
+            <i class="fas fa-baby text-left"></i>
+            <time datetime="2019-05-13T21:13:12+0000"></time>
           </div>
-
-          <h2 id="why-not-reswift">
-            Why not <a href="https://github.com/ReSwift/ReSwift">ReSwift</a>?
-          </h2>
-          <ol>
-            <li>
-              <p>
-                Complexity &amp; Ceremony:
-                <strong>Redux is stupidly simple</strong>, ReSwift adds
-                <a
-                  href="https://github.com/ReSwift/ReSwift/tree/master/ReSwift/CoreTypes"
-                  >unnecessary ceremony</a
-                >, with protocols and open classes.
-              </p>
-            </li>
-            <li>
-              <p>
-                Concurrency: ReSwift
-                <a
-                  href="https://github.com/ReSwift/ReSwift/blob/master/ReSwift/CoreTypes/Store.swift"
-                  >Raises a <code>FatalError</code></a
-                >
-                for concurrent modification. This should never happen when
-                <code>Grand Central Dispatch</code> exists.
-              </p>
-            </li>
-          </ol>
-          <h2 id="honest-opinion-should-you-use-redux-with-swift-apps">
-            Honest Opinion: Should you use Redux with Swift Apps?
-          </h2>
-          <p>Answer: Maybe?</p>
-          <p>
-            I wrote about 10,000 lines of iOS / MacOS code with
-            <strong>Reeducks 🦆🦆</strong>, and although Unidirectional Dataflow
-            is very neat, it takes quite a bit of ceremony and discipline to
-            keep the <code>Views</code> and
-            <code>ViewControllers</code> stateless, especially with
-            <code>TableViews</code> that uses
-            <code>NSFetchedResultsController</code>.
-          </p>
-          <p>
-            Honestly I’d say its probably not worth it until the more
-            declarative
-            <a href="https://developer.apple.com/xcode/swiftui/">SwiftUI</a>
-            becomes the thing, and I will give
-            <strong>Reeducks 🦆🦆</strong> another shot.
-          </p>
-          <p>
-            Swift’s pattern match syntax also quite verbose compared to say
-            <code>F#</code>, which has its own Unidirectional framework, and can
-            be used to build both iOS and MacOS apps.
-          </p>
-        </article>
-      </section>
-
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <div>
-          <i class="fas fa-baby text-left"></i>
-          <time datetime="2019-05-13T21:13:12+0000"></time>
-        </div>
-        <div>
-          <i class="fas fa-user-edit text-left"></i>
-          <time datetime="2021-12-30T00:34:05+0000"></time>
-        </div>
-      </section>
+          <div>
+            <i class="fas fa-user-edit text-left"></i>
+            <time datetime="2021-12-30T00:34:05+0000"></time>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="grid justify-items-center items-center">

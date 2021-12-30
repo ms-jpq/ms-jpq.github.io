@@ -54,7 +54,7 @@
 
       <section>
         <nav>
-          <ul class="leading-loose">
+          <ul>
             <li class="capitalize active:font-bold active:text-primary-400">
               <a class="no-underline hover:text-primary-400" href="/index.html">
                 home
@@ -103,54 +103,56 @@
         </a>
       </section>
     </aside>
-    <main class="gap-y-8">
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <span class="github-stars">
-          <i class="fas fa-star"></i>
-          30
-        </span>
+    <main class="justify-items-center">
+      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <span class="github-stars">
+            <i class="fas fa-star"></i>
+            30
+          </span>
 
-        <span class="github-forks">
-          <i class="fas fa-code-branch"></i>
-          1
-        </span>
+          <span class="github-forks">
+            <i class="fas fa-code-branch"></i>
+            1
+          </span>
 
-        <a class="invis-link" href="https://github.com/ms-jpq/nvim_rc">
-          <button
-            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
-          >
-            View on Github
-            <i class="fab fa-github"></i>
-          </button>
-        </a>
-      </section>
+          <a class="invis-link" href="https://github.com/ms-jpq/nvim_rc">
+            <button
+              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
+            >
+              View on Github
+              <i class="fab fa-github"></i>
+            </button>
+          </a>
+        </section>
 
-      <section class="self-center">
-        <article class="markdown">
-          <h1 id="pure-python-neovim-configuration">
-            Pure Python Neovim Configuration
-          </h1>
-          <p>
-            Author of
-            <a href="https://github.com/ms-jpq/chadtree">CHADTree</a> here.
-          </p>
-          <p>
-            My goal is to eventually bring neovim to VSCode level of experience.
-          </p>
-          <p>
-            I cannot do this in lua, it is too painful to use for this type of
-            work.
-          </p>
-          <h2 id="disclaimer">Disclaimer</h2>
-          <p>All of my stuff here are private, including the dependencies.</p>
-          <p>
-            If you want to use my config, please fork it, because I will tinker
-            with stuff all the time.
-          </p>
-          <h3 id="configuration-dsl">Configuration DSL</h3>
-          <p>This is all type checked!</p>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="n">settings</span><span class="p">[</span><span class="s2">&quot;updatetime&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">300</span>
+        <section class="self-center">
+          <article class="markdown">
+            <h1 id="pure-python-neovim-configuration">
+              Pure Python Neovim Configuration
+            </h1>
+            <p>
+              Author of
+              <a href="https://github.com/ms-jpq/chadtree">CHADTree</a> here.
+            </p>
+            <p>
+              My goal is to eventually bring neovim to VSCode level of
+              experience.
+            </p>
+            <p>
+              I cannot do this in lua, it is too painful to use for this type of
+              work.
+            </p>
+            <h2 id="disclaimer">Disclaimer</h2>
+            <p>All of my stuff here are private, including the dependencies.</p>
+            <p>
+              If you want to use my config, please fork it, because I will
+              tinker with stuff all the time.
+            </p>
+            <h3 id="configuration-dsl">Configuration DSL</h3>
+            <p>This is all type checked!</p>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="n">settings</span><span class="p">[</span><span class="s2">&quot;updatetime&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">300</span>
 <span class="n">settings</span><span class="p">[</span><span class="s2">&quot;whichwrap&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="p">(</span><span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="s2">&quot;l&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;[&quot;</span><span class="p">,</span> <span class="s2">&quot;]&quot;</span><span class="p">)</span>
 
 <span class="n">keymap</span><span class="o">.</span><span class="n">nv</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;/\V&quot;</span>
@@ -158,16 +160,16 @@
 
 <span class="n">autocmd</span><span class="p">(</span><span class="s2">&quot;FocusLost&quot;</span><span class="p">,</span> <span class="s2">&quot;VimLeavePre&quot;</span><span class="p">,</span> <span class="n">modifiers</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="s2">&quot;nested&quot;</span><span class="p">))</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;silent wa!&quot;</span>
 </code></pre>
-          </div>
+            </div>
 
-          <h3 id="typed-config">Typed Config</h3>
-          <p>
-            Runtime validation of configuration. You can’t make typos, or type
-            errors!
-          </p>
-          <p>You can even configure LSPs from YAML!</p>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="p p-Indicator">-</span> <span class="nt">bin</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mypy</span>
+            <h3 id="typed-config">Typed Config</h3>
+            <p>
+              Runtime validation of configuration. You can’t make typos, or type
+              errors!
+            </p>
+            <p>You can even configure LSPs from YAML!</p>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="p p-Indicator">-</span> <span class="nt">bin</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mypy</span>
   <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fs</span>
   <span class="nt">args</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">--</span>
@@ -178,10 +180,10 @@
     <span class="nt">pip</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mypy</span>
 </code></pre>
-          </div>
+            </div>
 
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="p p-Indicator">-</span> <span class="nt">uri</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/junegunn/fzf.vim</span>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="p p-Indicator">-</span> <span class="nt">uri</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/junegunn/fzf.vim</span>
   <span class="nt">vals</span><span class="p">:</span>
     <span class="nt">fzf_buffers_jump</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
     <span class="nt">fzf_layout</span><span class="p">:</span>
@@ -195,202 +197,208 @@
       <span class="nt">maps</span><span class="p">:</span>
         <span class="s">&quot;&lt;leader&gt;O&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;:Rg</span><span class="nv"> </span><span class="s">&quot;</span>
 </code></pre>
-          </div>
+            </div>
 
-          <h3 id="multiple-package-management">Multiple Package Management</h3>
-          <p>
-            Will install NPM &amp; PIP &amp; go &amp; git packages for you in
-            their <strong>private</strong> namespace.
-          </p>
-          <p>Only accessible from inside <code>neovim</code>.</p>
-          <div class="codehilite friendly">
-            <pre><span ></span><code >init.py --install-packages
+            <h3 id="multiple-package-management">
+              Multiple Package Management
+            </h3>
+            <p>
+              Will install NPM &amp; PIP &amp; go &amp; git packages for you in
+              their <strong>private</strong> namespace.
+            </p>
+            <p>Only accessible from inside <code>neovim</code>.</p>
+            <div class="codehilite friendly">
+              <pre><span ></span><code >init.py --install-packages
 </code></pre>
-          </div>
+            </div>
 
-          <p>
-            Will also remind you to update weekly. Runs inside
-            <code>neovim</code> in a floating window.
-          </p>
-          <h3 id="clean-runtime-dependencies">Clean Runtime Dependencies</h3>
-          <p>
-            Will also install runtime dependencies under their
-            <strong>private</strong> namespace.
-          </p>
-          <p>The runtime is isolated from your other packages!</p>
-          <div class="codehilite friendly">
-            <pre><span ></span><code >init.py --install-runtime
+            <p>
+              Will also remind you to update weekly. Runs inside
+              <code>neovim</code> in a floating window.
+            </p>
+            <h3 id="clean-runtime-dependencies">Clean Runtime Dependencies</h3>
+            <p>
+              Will also install runtime dependencies under their
+              <strong>private</strong> namespace.
+            </p>
+            <p>The runtime is isolated from your other packages!</p>
+            <div class="codehilite friendly">
+              <pre><span ></span><code >init.py --install-runtime
 </code></pre>
+            </div>
+
+            <h3 id="extensive-built-ins">Extensive Built-ins</h3>
+            <p>
+              And many setting changes akin to <code>emacs</code>‘
+              <code>CUA</code> mode.
+            </p>
+            <h4 id="linters-and-prettiers">Linters and Prettiers</h4>
+            <ul>
+              <li>
+                <p>Not only install dependencies for you</p>
+              </li>
+              <li>
+                <p>Able to run multiple linters in parallel on the same file</p>
+              </li>
+              <li>
+                <p>
+                  Able to run multiple prettiers in sequence on the same file
+                </p>
+              </li>
+            </ul>
+            <h4 id="text-objects-and-operators">Text Objects and Operators</h4>
+            <ul>
+              <li>
+                <p>
+                  A <code>word</code> text object that works for lisps and in
+                  help docs
+                </p>
+              </li>
+              <li>
+                <p>Locale aware!</p>
+              </li>
+              <li>
+                <p>
+                  and some more basic ones like <code>move</code>,
+                  <code>replace</code>, <code>search</code>, <code>entire</code>
+                </p>
+              </li>
+            </ul>
+            <h4 id="misc">Misc</h4>
+            <ul>
+              <li>
+                <p>Built-in float term</p>
+              </li>
+              <li>
+                <p>Built-in tab detection</p>
+              </li>
+              <li>
+                <p>Debounced auto save</p>
+              </li>
+              <li>
+                <p>…</p>
+              </li>
+            </ul>
+            <h3
+              id="comparion-between-vim-style-thinking-and-a-saner-approach-with-a-saner-language"
+            >
+              Comparion between Vim style thinking and a saner approach with a
+              saner language
+            </h3>
+            <p>
+              Prefix: I am not ragging on any of the other plugin authors. In
+              fact I use alot of the plugins written in a VimL style. However, I
+              do think the old way of doing things is a bit insane, as you will
+              see in my comparison.
+            </p>
+            <p>
+              Due to the well known limitations of VimL there is this tendency
+              for things written in VimL to use alot of built-in functions,
+              especially regex, which is in my opinion is counter productive
+              because they introduce much accidental complexity.
+            </p>
+            <p>Take the example of <code>tab detection</code>.</p>
+            <p>We have two essential problems:</p>
+            <ol>
+              <li>
+                <p>Should I use tab or space for this file?</p>
+              </li>
+              <li>
+                <p>What is the predominate tab size?</p>
+              </li>
+            </ol>
+            <h4 id="viml-style">VimL Style</h4>
+            <p>
+              Look at how a popular Vim plugin
+              <a
+                href="https://github.com/tpope/vim-sleuth/blob/master/plugin/sleuth.vim"
+                >solves this</a
+              >:
+            </p>
+            <p>From a glance we can know that:</p>
+            <ul>
+              <li>
+                <p>It is language specific</p>
+              </li>
+              <li>
+                <p>It tries to detect comments</p>
+              </li>
+              <li>
+                <p>
+                  It has some fairly “intricate” regex beyond just “tell me
+                  where whitespaces are”
+                </p>
+              </li>
+            </ul>
+            <p>
+              Now something like this is not only very difficult to read, but
+              also even harder to generalize onto all filetypes, and ensure
+              there are no werid corner cases.
+            </p>
+            <h4 id="sane-style">Sane Style</h4>
+            <p>Now compare this to the following naive algorithm</p>
+            <ol>
+              <li>
+                <p>Sample some lines from the file deterministically</p>
+              </li>
+              <li>
+                <p>
+                  If the lines start with more tabs than spaces, indent with
+                  <code>tabs</code>, else with <code>spaces</code>
+                </p>
+              </li>
+              <li>
+                <p>
+                  For each line in sample, from <code>i</code> in
+                  <code>[2..8]</code>, expand tabs with <code>i</code> spaces
+                </p>
+              </li>
+              <li>
+                <p>
+                  Calculate <code>indent_level</code> for each line in
+                  <em>3)</em> and output <code>divisibility</code> as
+                  <code>indent_level % i == 0</code> if
+                  <code>indent_level &gt; 0</code>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Reverse sort by <code>divisibility, i</code> in lexicographic
+                  order, the foremost <code>i</code> is the indent level
+                </p>
+              </li>
+            </ol>
+            <p>
+              Now this is not only easy to implement, it is also very easy to
+              understand.
+            </p>
+            <p>
+              We only do <code>[2..8]</code> because no sane person would use
+              <code>&gt; 8</code> levels of indent.
+            </p>
+            <p>
+              The indent level with the greatest
+              <code>divisibility</code> implies that most lines are indented at
+              that level.
+            </p>
+            <p>
+              To solve the issue of common divisors, we sort by highest
+              <code>i</code>
+            </p>
+          </article>
+        </section>
+
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <div>
+            <i class="fas fa-baby text-left"></i>
+            <time datetime="2020-12-21T08:44:33+0000"></time>
           </div>
-
-          <h3 id="extensive-built-ins">Extensive Built-ins</h3>
-          <p>
-            And many setting changes akin to <code>emacs</code>‘
-            <code>CUA</code> mode.
-          </p>
-          <h4 id="linters-and-prettiers">Linters and Prettiers</h4>
-          <ul>
-            <li>
-              <p>Not only install dependencies for you</p>
-            </li>
-            <li>
-              <p>Able to run multiple linters in parallel on the same file</p>
-            </li>
-            <li>
-              <p>Able to run multiple prettiers in sequence on the same file</p>
-            </li>
-          </ul>
-          <h4 id="text-objects-and-operators">Text Objects and Operators</h4>
-          <ul>
-            <li>
-              <p>
-                A <code>word</code> text object that works for lisps and in help
-                docs
-              </p>
-            </li>
-            <li>
-              <p>Locale aware!</p>
-            </li>
-            <li>
-              <p>
-                and some more basic ones like <code>move</code>,
-                <code>replace</code>, <code>search</code>, <code>entire</code>
-              </p>
-            </li>
-          </ul>
-          <h4 id="misc">Misc</h4>
-          <ul>
-            <li>
-              <p>Built-in float term</p>
-            </li>
-            <li>
-              <p>Built-in tab detection</p>
-            </li>
-            <li>
-              <p>Debounced auto save</p>
-            </li>
-            <li>
-              <p>…</p>
-            </li>
-          </ul>
-          <h3
-            id="comparion-between-vim-style-thinking-and-a-saner-approach-with-a-saner-language"
-          >
-            Comparion between Vim style thinking and a saner approach with a
-            saner language
-          </h3>
-          <p>
-            Prefix: I am not ragging on any of the other plugin authors. In fact
-            I use alot of the plugins written in a VimL style. However, I do
-            think the old way of doing things is a bit insane, as you will see
-            in my comparison.
-          </p>
-          <p>
-            Due to the well known limitations of VimL there is this tendency for
-            things written in VimL to use alot of built-in functions, especially
-            regex, which is in my opinion is counter productive because they
-            introduce much accidental complexity.
-          </p>
-          <p>Take the example of <code>tab detection</code>.</p>
-          <p>We have two essential problems:</p>
-          <ol>
-            <li>
-              <p>Should I use tab or space for this file?</p>
-            </li>
-            <li>
-              <p>What is the predominate tab size?</p>
-            </li>
-          </ol>
-          <h4 id="viml-style">VimL Style</h4>
-          <p>
-            Look at how a popular Vim plugin
-            <a
-              href="https://github.com/tpope/vim-sleuth/blob/master/plugin/sleuth.vim"
-              >solves this</a
-            >:
-          </p>
-          <p>From a glance we can know that:</p>
-          <ul>
-            <li>
-              <p>It is language specific</p>
-            </li>
-            <li>
-              <p>It tries to detect comments</p>
-            </li>
-            <li>
-              <p>
-                It has some fairly “intricate” regex beyond just “tell me where
-                whitespaces are”
-              </p>
-            </li>
-          </ul>
-          <p>
-            Now something like this is not only very difficult to read, but also
-            even harder to generalize onto all filetypes, and ensure there are
-            no werid corner cases.
-          </p>
-          <h4 id="sane-style">Sane Style</h4>
-          <p>Now compare this to the following naive algorithm</p>
-          <ol>
-            <li>
-              <p>Sample some lines from the file deterministically</p>
-            </li>
-            <li>
-              <p>
-                If the lines start with more tabs than spaces, indent with
-                <code>tabs</code>, else with <code>spaces</code>
-              </p>
-            </li>
-            <li>
-              <p>
-                For each line in sample, from <code>i</code> in
-                <code>[2..8]</code>, expand tabs with <code>i</code> spaces
-              </p>
-            </li>
-            <li>
-              <p>
-                Calculate <code>indent_level</code> for each line in
-                <em>3)</em> and output <code>divisibility</code> as
-                <code>indent_level % i == 0</code> if
-                <code>indent_level &gt; 0</code>
-              </p>
-            </li>
-            <li>
-              <p>
-                Reverse sort by <code>divisibility, i</code> in lexicographic
-                order, the foremost <code>i</code> is the indent level
-              </p>
-            </li>
-          </ol>
-          <p>
-            Now this is not only easy to implement, it is also very easy to
-            understand.
-          </p>
-          <p>
-            We only do <code>[2..8]</code> because no sane person would use
-            <code>&gt; 8</code> levels of indent.
-          </p>
-          <p>
-            The indent level with the greatest <code>divisibility</code> implies
-            that most lines are indented at that level.
-          </p>
-          <p>
-            To solve the issue of common divisors, we sort by highest
-            <code>i</code>
-          </p>
-        </article>
-      </section>
-
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <div>
-          <i class="fas fa-baby text-left"></i>
-          <time datetime="2020-12-21T08:44:33+0000"></time>
-        </div>
-        <div>
-          <i class="fas fa-user-edit text-left"></i>
-          <time datetime="2021-12-30T00:34:05+0000"></time>
-        </div>
-      </section>
+          <div>
+            <i class="fas fa-user-edit text-left"></i>
+            <time datetime="2021-12-30T00:34:05+0000"></time>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="grid justify-items-center items-center">

@@ -57,7 +57,7 @@
 
       <section>
         <nav>
-          <ul class="leading-loose">
+          <ul>
             <li class="capitalize active:font-bold active:text-primary-400">
               <a class="no-underline hover:text-primary-400" href="/index.html">
                 home
@@ -106,181 +106,188 @@
         </a>
       </section>
     </aside>
-    <main class="gap-y-8">
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <span class="github-stars">
-          <i class="fas fa-star"></i>
-          141
-        </span>
+    <main class="justify-items-center">
+      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <span class="github-stars">
+            <i class="fas fa-star"></i>
+            141
+          </span>
 
-        <span class="github-forks">
-          <i class="fas fa-code-branch"></i>
-          2
-        </span>
+          <span class="github-forks">
+            <i class="fas fa-code-branch"></i>
+            2
+          </span>
 
-        <a class="invis-link" href="https://github.com/ms-jpq/isomorphic_copy">
-          <button
-            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
+          <a
+            class="invis-link"
+            href="https://github.com/ms-jpq/isomorphic_copy"
           >
-            View on Github
-            <i class="fab fa-github"></i>
-          </button>
-        </a>
-      </section>
+            <button
+              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
+            >
+              View on Github
+              <i class="fab fa-github"></i>
+            </button>
+          </a>
+        </section>
 
-      <section class="self-center">
-        <article class="markdown">
-          <h1 id="isomorphic-copy">
-            <a href="https://ms-jpq.github.io/isomorphic-copy"
-              >Isomorphic Copy</a
-            >
-          </h1>
-          <p><strong>Cross platform clipboard.</strong></p>
-          <p><strong>Both remote and local</strong></p>
-          <p>
-            <strong>Works out of the 📦</strong> with most programs that use
-            <code>pbcopy</code>, <code>xclip</code>, <code>wl-copy</code>, etc.
-          </p>
-          <p>
-            Works the same locally as over SSH, inside Docker containers, et al.
-          </p>
-          <p>
-            It even works inside Docker over SSH and then inside Docker!,
-            <strong>infinitely chainable</strong>.
-          </p>
-          <p>
-            <img
-              alt="clippy"
-              height="315"
-              src="/5979cc80dddd1f6eb5ad0b3e5f512f2fcfd23010cd300eafe82a1103f8f13d7d.webp"
-              srcset="
-                /5979cc80dddd1f6eb5ad0b3e5f512f2fcfd23010cd300eafe82a1103f8f13d7d--200x133.webp 200w,
-                /5979cc80dddd1f6eb5ad0b3e5f512f2fcfd23010cd300eafe82a1103f8f13d7d--400x266.webp 400w,
-                /5979cc80dddd1f6eb5ad0b3e5f512f2fcfd23010cd300eafe82a1103f8f13d7d--474x315.webp 474w
-              "
-              width="474"
-            />
-          </p>
-          <hr />
-          <h2 id="networkless">Networkless</h2>
-          <p>
-            <code>isomorphic-cp</code> communicates by <code>stdio</code> and
-            <code>unix socket</code> only!
-          </p>
-          <p>
-            All it does is spawn subprocesses and listen to <code>IO</code>.
-          </p>
-          <p>This makes it amazingly versatile.</p>
-          <p>
-            <img
-              alt="diagram"
-              height="859"
-              src="/01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5.webp"
-              srcset="
-                /01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5--1000x825.webp 1000w,
-                /01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5--200x165.webp   200w,
-                /01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5--400x330.webp   400w,
-                /01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5--600x495.webp   600w,
-                /01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5--800x660.webp   800w
-              "
-              width="1041"
-            />
-          </p>
-          <hr />
-          <h2 id="daemonless">Daemonless</h2>
-          <p>
-            You literally just run <code>cssh &lt;ssh-args&gt;</code> or
-            <code>cdocker &lt;container-name&gt;</code>.
-          </p>
-          <p>
-            No local daemon required. The remote “daemon” is just a subprocess
-            of a subprocess. Zero cost when you are not using it.
-          </p>
-          <hr />
-          <h2 id="how-to-use">How to use</h2>
-          <p>
-            Requires <code>xclip</code> or <code>wl-clipboard</code> under GUI
-            linux.
-          </p>
-          <p>
-            <strong>Clone</strong> this repo to the same location on two
-            machines. Either relative to <code>~</code> or <code>/</code>.
-          </p>
-          <p>
-            <strong>Prepend</strong> <code>isomorphic-copy/bin</code> to your
-            <code>PATH</code> for example:
-          </p>
-          <p>
-            <code
-              >export
-              PATH=&quot;$XDG_CONFIG_HOME/isomorphic-copy/bin:$PATH&quot;</code
-            >
-            in your <code>bash/zshrc</code> file.
-          </p>
-          <p>You need to do this on both local and remote.</p>
-          <p>–</p>
-          <p>
-            <strong>Automatically</strong> most applications that use
-            <code>xclip</code>, <code>wl-clipboard</code>,
-            <code>pbcopy</code> and so forth will use
-            <code>isomorphic-copy</code> with zero setup.
-          </p>
-          <p>Works just like python <code>virtualenv</code>!</p>
-          <p>–</p>
-          <p>I added two <strong>convenience functions</strong>:</p>
-          <p>
-            You don’t have to use these. Things like <code>pbcopy</code> and
-            <code>pbpaste</code> will continue to work.
-          </p>
-          <p>
-            <code>echo &lt;my message&gt; | c</code> Use <code>c</code> to copy
-            to system clipboard
-          </p>
-          <p>
-            <code>p &gt; my_message.txt</code> Use <code>p</code> to paste from
-            system clipboard
-          </p>
-          <p>–</p>
-          <p><strong>Connect to remote</strong> with one of</p>
-          <p><code>cssh &lt;ssh-args&gt;</code></p>
-          <p><code>cdocker &lt;docker container name&gt;</code></p>
-          <p>
-            Once daemon is launched, remote copy will propagate to local system
-            clipboard.
-          </p>
-          <p>
-            Remote applications that use <code>xclip</code>,
-            <code>pbcopy</code>, <code>wl-copy</code> will propagate to local
-            system clipboard.
-          </p>
-          <p>–</p>
-          <p><strong>Local -&gt; SSH -&gt; Docker</strong></p>
-          <p>
-            If you want to copy from a <code>Docker</code> container on a remote
-            machine.
-          </p>
-          <p>from local run <code>cssh &lt;ssh-args&gt;</code> to remote</p>
-          <p>
-            from remote run <code>cdocker &lt;container name / sha&gt;</code> to
-            container
-          </p>
-          <p>And you are set!</p>
-          <h2 id="integrations">Integrations</h2>
-          <h3 id="tmux">Tmux</h3>
-          <p>
-            Copy will automatically propagate to local / remote tmux clipboard.
-          </p>
-          <p>
-            If daemon is run under tmux, copy will also propagate to the local
-            tmux clipboard.
-          </p>
-          <p>
-            If no system clipboard is available, copy / paste will use tmux
-            clipboard.
-          </p>
-          <p>Copying <em>FROM</em> tmux will require this snippet.</p>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="nv">set</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">mouse</span> <span class="nv">on</span>
+        <section class="self-center">
+          <article class="markdown">
+            <h1 id="isomorphic-copy">
+              <a href="https://ms-jpq.github.io/isomorphic-copy"
+                >Isomorphic Copy</a
+              >
+            </h1>
+            <p><strong>Cross platform clipboard.</strong></p>
+            <p><strong>Both remote and local</strong></p>
+            <p>
+              <strong>Works out of the 📦</strong> with most programs that use
+              <code>pbcopy</code>, <code>xclip</code>, <code>wl-copy</code>,
+              etc.
+            </p>
+            <p>
+              Works the same locally as over SSH, inside Docker containers, et
+              al.
+            </p>
+            <p>
+              It even works inside Docker over SSH and then inside Docker!,
+              <strong>infinitely chainable</strong>.
+            </p>
+            <p>
+              <img
+                alt="clippy"
+                height="315"
+                src="/5979cc80dddd1f6eb5ad0b3e5f512f2fcfd23010cd300eafe82a1103f8f13d7d.webp"
+                srcset="
+                  /5979cc80dddd1f6eb5ad0b3e5f512f2fcfd23010cd300eafe82a1103f8f13d7d--200x133.webp 200w,
+                  /5979cc80dddd1f6eb5ad0b3e5f512f2fcfd23010cd300eafe82a1103f8f13d7d--400x266.webp 400w,
+                  /5979cc80dddd1f6eb5ad0b3e5f512f2fcfd23010cd300eafe82a1103f8f13d7d--474x315.webp 474w
+                "
+                width="474"
+              />
+            </p>
+            <hr />
+            <h2 id="networkless">Networkless</h2>
+            <p>
+              <code>isomorphic-cp</code> communicates by <code>stdio</code> and
+              <code>unix socket</code> only!
+            </p>
+            <p>
+              All it does is spawn subprocesses and listen to <code>IO</code>.
+            </p>
+            <p>This makes it amazingly versatile.</p>
+            <p>
+              <img
+                alt="diagram"
+                height="859"
+                src="/01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5.webp"
+                srcset="
+                  /01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5--1000x825.webp 1000w,
+                  /01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5--200x165.webp   200w,
+                  /01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5--400x330.webp   400w,
+                  /01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5--600x495.webp   600w,
+                  /01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5--800x660.webp   800w
+                "
+                width="1041"
+              />
+            </p>
+            <hr />
+            <h2 id="daemonless">Daemonless</h2>
+            <p>
+              You literally just run <code>cssh &lt;ssh-args&gt;</code> or
+              <code>cdocker &lt;container-name&gt;</code>.
+            </p>
+            <p>
+              No local daemon required. The remote “daemon” is just a subprocess
+              of a subprocess. Zero cost when you are not using it.
+            </p>
+            <hr />
+            <h2 id="how-to-use">How to use</h2>
+            <p>
+              Requires <code>xclip</code> or <code>wl-clipboard</code> under GUI
+              linux.
+            </p>
+            <p>
+              <strong>Clone</strong> this repo to the same location on two
+              machines. Either relative to <code>~</code> or <code>/</code>.
+            </p>
+            <p>
+              <strong>Prepend</strong> <code>isomorphic-copy/bin</code> to your
+              <code>PATH</code> for example:
+            </p>
+            <p>
+              <code
+                >export
+                PATH=&quot;$XDG_CONFIG_HOME/isomorphic-copy/bin:$PATH&quot;</code
+              >
+              in your <code>bash/zshrc</code> file.
+            </p>
+            <p>You need to do this on both local and remote.</p>
+            <p>–</p>
+            <p>
+              <strong>Automatically</strong> most applications that use
+              <code>xclip</code>, <code>wl-clipboard</code>,
+              <code>pbcopy</code> and so forth will use
+              <code>isomorphic-copy</code> with zero setup.
+            </p>
+            <p>Works just like python <code>virtualenv</code>!</p>
+            <p>–</p>
+            <p>I added two <strong>convenience functions</strong>:</p>
+            <p>
+              You don’t have to use these. Things like <code>pbcopy</code> and
+              <code>pbpaste</code> will continue to work.
+            </p>
+            <p>
+              <code>echo &lt;my message&gt; | c</code> Use <code>c</code> to
+              copy to system clipboard
+            </p>
+            <p>
+              <code>p &gt; my_message.txt</code> Use <code>p</code> to paste
+              from system clipboard
+            </p>
+            <p>–</p>
+            <p><strong>Connect to remote</strong> with one of</p>
+            <p><code>cssh &lt;ssh-args&gt;</code></p>
+            <p><code>cdocker &lt;docker container name&gt;</code></p>
+            <p>
+              Once daemon is launched, remote copy will propagate to local
+              system clipboard.
+            </p>
+            <p>
+              Remote applications that use <code>xclip</code>,
+              <code>pbcopy</code>, <code>wl-copy</code> will propagate to local
+              system clipboard.
+            </p>
+            <p>–</p>
+            <p><strong>Local -&gt; SSH -&gt; Docker</strong></p>
+            <p>
+              If you want to copy from a <code>Docker</code> container on a
+              remote machine.
+            </p>
+            <p>from local run <code>cssh &lt;ssh-args&gt;</code> to remote</p>
+            <p>
+              from remote run
+              <code>cdocker &lt;container name / sha&gt;</code> to container
+            </p>
+            <p>And you are set!</p>
+            <h2 id="integrations">Integrations</h2>
+            <h3 id="tmux">Tmux</h3>
+            <p>
+              Copy will automatically propagate to local / remote tmux
+              clipboard.
+            </p>
+            <p>
+              If daemon is run under tmux, copy will also propagate to the local
+              tmux clipboard.
+            </p>
+            <p>
+              If no system clipboard is available, copy / paste will use tmux
+              clipboard.
+            </p>
+            <p>Copying <em>FROM</em> tmux will require this snippet.</p>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="nv">set</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">mouse</span> <span class="nv">on</span>
 
 <span class="nv">bind</span> <span class="o">-</span><span class="nv">T</span> <span class="nv">copy</span><span class="o">-</span><span class="nv">mode</span> <span class="nv">MouseDragEnd1Pane</span> \
   <span class="k">send</span><span class="o">-</span><span class="nv">keys</span> <span class="o">-</span><span class="nv">X</span> <span class="nv">stop</span><span class="o">-</span><span class="nv">selection</span>
@@ -290,24 +297,25 @@
   <span class="k">send</span><span class="o">-</span><span class="nv">keys</span> <span class="o">-</span><span class="nv">X</span> <span class="nv">copy</span><span class="o">-</span><span class="nv">pipe</span> <span class="s2">&quot;</span><span class="s">c</span><span class="s2">&quot;</span> \<span class="c1">;\</span>
   <span class="k">send</span><span class="o">-</span><span class="nv">keys</span> <span class="o">-</span><span class="nv">X</span> <span class="nv">clear</span><span class="o">-</span><span class="nv">selection</span>
 </code></pre>
-          </div>
+            </div>
 
-          <p>Drag to select, click in dragged area to copy.</p>
-          <p>
-            Replace <code>copy-mode</code> with <code>copy-mode-vi</code> if you
-            are using vi emulation.
-          </p>
-          <h3 id="vim">Vim</h3>
-          <p>
-            Neovim will only use <code>xclip</code> if the x11 environmental
-            variable <code>DISPLAY</code> is set.
-          </p>
-          <p>Vim will require an autocmd event.</p>
-          <p>
-            Add this snippet to your <code>vimrc</code>, to work for both vims.
-          </p>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="k">if</span> <span class="n">has</span><span class="p">(&#x27;</span><span class="n">nvim</span><span class="p">&#x27;)</span>
+            <p>Drag to select, click in dragged area to copy.</p>
+            <p>
+              Replace <code>copy-mode</code> with <code>copy-mode-vi</code> if
+              you are using vi emulation.
+            </p>
+            <h3 id="vim">Vim</h3>
+            <p>
+              Neovim will only use <code>xclip</code> if the x11 environmental
+              variable <code>DISPLAY</code> is set.
+            </p>
+            <p>Vim will require an autocmd event.</p>
+            <p>
+              Add this snippet to your <code>vimrc</code>, to work for both
+              vims.
+            </p>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="k">if</span> <span class="n">has</span><span class="p">(&#x27;</span><span class="n">nvim</span><span class="p">&#x27;)</span>
   <span class="s">&quot; use unnamedplus only! or else will double set</span>
   <span class="n">set</span> <span class="n">clipboard</span><span class="o">=</span><span class="n">unnamedplus</span>
   <span class="k">if</span> <span class="n">getenv</span><span class="p">(&#x27;</span><span class="n">DISPLAY</span><span class="p">&#x27;)</span> <span class="o">==</span> <span class="nl">v:</span><span class="n">null</span>
@@ -317,34 +325,37 @@
   <span class="n">autocmd</span> <span class="n">TextYankPost</span> <span class="o">*</span> <span class="n">call</span> <span class="n">system</span><span class="p">(</span><span class="s">&quot;c&quot;</span><span class="p">,</span> <span class="n">getreg</span><span class="p">(</span><span class="sc">&#x27;&quot;&#x27;</span><span class="p">))</span>
 <span class="n">endif</span>
 </code></pre>
+            </div>
+
+            <h3 id="others">Others</h3>
+            <p>
+              Most CLI applications will work out of the box. (such as lazygit,
+              for example).
+            </p>
+            <p>
+              If not, check if they require <code>DISPLAY</code> like Neovim.
+            </p>
+            <h3 id="fallback">Fallback</h3>
+            <p>
+              If no system / tmux clipboard is found, setting environmental
+              variable <code>ISOCP_USE_FILE=1</code> will enable using a temp
+              file as a crude clipboard.
+            </p>
+            <p>It will write inside the git repo, put it somewhere safe.</p>
+          </article>
+        </section>
+
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <div>
+            <i class="fas fa-baby text-left"></i>
+            <time datetime="2020-06-08T23:56:49+0000"></time>
           </div>
-
-          <h3 id="others">Others</h3>
-          <p>
-            Most CLI applications will work out of the box. (such as lazygit,
-            for example).
-          </p>
-          <p>If not, check if they require <code>DISPLAY</code> like Neovim.</p>
-          <h3 id="fallback">Fallback</h3>
-          <p>
-            If no system / tmux clipboard is found, setting environmental
-            variable <code>ISOCP_USE_FILE=1</code> will enable using a temp file
-            as a crude clipboard.
-          </p>
-          <p>It will write inside the git repo, put it somewhere safe.</p>
-        </article>
-      </section>
-
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <div>
-          <i class="fas fa-baby text-left"></i>
-          <time datetime="2020-06-08T23:56:49+0000"></time>
-        </div>
-        <div>
-          <i class="fas fa-user-edit text-left"></i>
-          <time datetime="2021-12-30T00:34:05+0000"></time>
-        </div>
-      </section>
+          <div>
+            <i class="fas fa-user-edit text-left"></i>
+            <time datetime="2021-12-30T00:34:05+0000"></time>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="grid justify-items-center items-center">

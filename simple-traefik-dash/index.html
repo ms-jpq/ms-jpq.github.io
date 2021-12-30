@@ -57,7 +57,7 @@
 
       <section>
         <nav>
-          <ul class="leading-loose">
+          <ul>
             <li class="capitalize active:font-bold active:text-primary-400">
               <a class="no-underline hover:text-primary-400" href="/index.html">
                 home
@@ -106,77 +106,80 @@
         </a>
       </section>
     </aside>
-    <main class="gap-y-8">
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <span class="github-stars">
-          <i class="fas fa-star"></i>
-          34
-        </span>
+    <main class="justify-items-center">
+      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <span class="github-stars">
+            <i class="fas fa-star"></i>
+            34
+          </span>
 
-        <span class="github-forks">
-          <i class="fas fa-code-branch"></i>
-          2
-        </span>
+          <span class="github-forks">
+            <i class="fas fa-code-branch"></i>
+            2
+          </span>
 
-        <a
-          class="invis-link"
-          href="https://github.com/ms-jpq/simple-traefik-dash"
-        >
-          <button
-            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
+          <a
+            class="invis-link"
+            href="https://github.com/ms-jpq/simple-traefik-dash"
           >
-            View on Github
-            <i class="fab fa-github"></i>
-          </button>
-        </a>
-      </section>
-
-      <section class="self-center">
-        <article class="markdown">
-          <h1 id="simple-traefik-dash">
-            <a href="https://ms-jpq.github.io/simple-traefik-dash/"
-              >Simple Traefik Dash</a
+            <button
+              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
             >
-          </h1>
-          <p>
-            <a href="https://hub.docker.com/r/msjpq/simple-traefik-dash/"
-              ><img
-                alt="Docker Pulls"
-                src="/32c6d4cdbc0df6c24bfac3aedd2ded25880ae0040878859bdc51e9b898ef3112.svg"
-            /></a>
-          </p>
-          <p>
-            <strong>Zero conf</strong> service dashboard for
-            <a href="https://traefik.io/">Traefik v2</a> reverse proxy
-          </p>
-          <p>
-            Parses Traefik’s
-            <a href="https://docs.traefik.io/routing/overview/">Routers</a> and
-            generates all deterministic routes
-          </p>
-          <p><code>Tested for Docker, Docker Swarm, and Kubernetes!</code></p>
-          <h2 id="screenshot">Screenshot</h2>
-          <p>
-            <strong>You can totally change this background, don’t worry</strong>
-          </p>
-          <p>
-            <img
-              alt="promo img"
-              height="1004"
-              src="/3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2.webp"
-              srcset="
-                /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--1000x786.webp 1000w,
-                /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--200x157.webp   200w,
-                /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--400x314.webp   400w,
-                /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--600x471.webp   600w,
-                /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--800x628.webp   800w
-              "
-              width="1278"
-            />
-          </p>
-          <h2 id="usage">Usage</h2>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="c1"># SIMPLE TRAEFIK DASH #</span>
+              View on Github
+              <i class="fab fa-github"></i>
+            </button>
+          </a>
+        </section>
+
+        <section class="self-center">
+          <article class="markdown">
+            <h1 id="simple-traefik-dash">
+              <a href="https://ms-jpq.github.io/simple-traefik-dash/"
+                >Simple Traefik Dash</a
+              >
+            </h1>
+            <p>
+              <a href="https://hub.docker.com/r/msjpq/simple-traefik-dash/"
+                ><img
+                  alt="Docker Pulls"
+                  src="/32c6d4cdbc0df6c24bfac3aedd2ded25880ae0040878859bdc51e9b898ef3112.svg"
+              /></a>
+            </p>
+            <p>
+              <strong>Zero conf</strong> service dashboard for
+              <a href="https://traefik.io/">Traefik v2</a> reverse proxy
+            </p>
+            <p>
+              Parses Traefik’s
+              <a href="https://docs.traefik.io/routing/overview/">Routers</a>
+              and generates all deterministic routes
+            </p>
+            <p><code>Tested for Docker, Docker Swarm, and Kubernetes!</code></p>
+            <h2 id="screenshot">Screenshot</h2>
+            <p>
+              <strong
+                >You can totally change this background, don’t worry</strong
+              >
+            </p>
+            <p>
+              <img
+                alt="promo img"
+                height="1004"
+                src="/3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2.webp"
+                srcset="
+                  /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--1000x786.webp 1000w,
+                  /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--200x157.webp   200w,
+                  /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--400x314.webp   400w,
+                  /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--600x471.webp   600w,
+                  /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--800x628.webp   800w
+                "
+                width="1278"
+              />
+            </p>
+            <h2 id="usage">Usage</h2>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="c1"># SIMPLE TRAEFIK DASH #</span>
 <span class="n">simple</span><span class="o">-</span><span class="n">traefik</span><span class="o">-</span><span class="n">dash</span><span class="p">:</span>
   <span class="n">image</span><span class="p">:</span> <span class="n">msjpq</span><span class="o">/</span><span class="n">simple</span><span class="o">-</span><span class="n">traefik</span><span class="o">-</span><span class="n">dash</span>
   <span class="n">labels</span><span class="p">:</span>
@@ -196,55 +199,56 @@
     <span class="o">-</span> <span class="o">./</span><span class="n">more</span><span class="o">.</span><span class="n">csv</span><span class="p">:</span><span class="o">/</span><span class="n">std</span><span class="o">/</span><span class="n">more</span><span class="o">-</span><span class="n">routes</span><span class="o">/</span><span class="n">more</span><span class="o">.</span><span class="n">csv</span> <span class="c1"># Optional - CSV Columns: name, uri</span>
     <span class="o">-</span> <span class="o">./</span><span class="n">ignore</span><span class="o">.</span><span class="n">csv</span><span class="p">:</span><span class="o">/</span><span class="n">std</span><span class="o">/</span><span class="n">ignore</span><span class="o">-</span><span class="n">routes</span><span class="o">/</span><span class="n">ignore</span><span class="o">.</span><span class="n">csv</span> <span class="c1"># Optional - CSV Column: name</span>
 </code></pre>
+            </div>
+
+            <p>You can test your Routers rules like so:</p>
+            <p>
+              <code
+                >docker run --rm msjpq/simple-traefik-dash
+                &quot;&lt;RULE&gt;&quot;</code
+              >
+            </p>
+            <p>i.e.</p>
+            <p>
+              <code
+                >docker run --rm msjpq/simple-traefik-dash
+                &quot;Host(&#x27;qbz&#x27;, &#x27;kfc&#x27;) &amp;&amp;
+                (PathPrefix(&#x27;chicken&#x27;) || PathPrefix( &#x27;95&#x27;
+                )) || Host(&#x27;dog.org&#x27;, &#x27;otters.moo&#x27;)
+                &amp;&amp; PathPrefix(&#x27;cat&#x27;)&quot;</code
+              >
+            </p>
+            <h2 id="customization">Customization</h2>
+            <p>
+              You can customize all you want! <code>js</code>, <code>css</code>,
+              <code>images</code>, everything!
+            </p>
+            <p>
+              Simply override the files under <code>/std/views</code>, all the
+              static content will be served
+            </p>
+            <h2 id="sister">Sister</h2>
+            <p>
+              Check out my sister:
+              <a href="https://ms-jpq.github.io/simple-traefik-identity/"
+                >Simple Traefik Identity</a
+              >
+            </p>
+            <p>Simple &amp; Configurable – SSO, for Traefik.</p>
+          </article>
+        </section>
+
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <div>
+            <i class="fas fa-baby text-left"></i>
+            <time datetime="2019-11-03T01:08:42+0000"></time>
           </div>
-
-          <p>You can test your Routers rules like so:</p>
-          <p>
-            <code
-              >docker run --rm msjpq/simple-traefik-dash
-              &quot;&lt;RULE&gt;&quot;</code
-            >
-          </p>
-          <p>i.e.</p>
-          <p>
-            <code
-              >docker run --rm msjpq/simple-traefik-dash
-              &quot;Host(&#x27;qbz&#x27;, &#x27;kfc&#x27;) &amp;&amp;
-              (PathPrefix(&#x27;chicken&#x27;) || PathPrefix( &#x27;95&#x27; ))
-              || Host(&#x27;dog.org&#x27;, &#x27;otters.moo&#x27;) &amp;&amp;
-              PathPrefix(&#x27;cat&#x27;)&quot;</code
-            >
-          </p>
-          <h2 id="customization">Customization</h2>
-          <p>
-            You can customize all you want! <code>js</code>, <code>css</code>,
-            <code>images</code>, everything!
-          </p>
-          <p>
-            Simply override the files under <code>/std/views</code>, all the
-            static content will be served
-          </p>
-          <h2 id="sister">Sister</h2>
-          <p>
-            Check out my sister:
-            <a href="https://ms-jpq.github.io/simple-traefik-identity/"
-              >Simple Traefik Identity</a
-            >
-          </p>
-          <p>Simple &amp; Configurable – SSO, for Traefik.</p>
-        </article>
-      </section>
-
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <div>
-          <i class="fas fa-baby text-left"></i>
-          <time datetime="2019-11-03T01:08:42+0000"></time>
-        </div>
-        <div>
-          <i class="fas fa-user-edit text-left"></i>
-          <time datetime="2021-12-30T00:34:06+0000"></time>
-        </div>
-      </section>
+          <div>
+            <i class="fas fa-user-edit text-left"></i>
+            <time datetime="2021-12-30T00:34:06+0000"></time>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="grid justify-items-center items-center">

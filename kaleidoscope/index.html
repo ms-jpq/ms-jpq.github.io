@@ -57,7 +57,7 @@
 
       <section>
         <nav>
-          <ul class="leading-loose">
+          <ul>
             <li class="capitalize active:font-bold active:text-primary-400">
               <a class="no-underline hover:text-primary-400" href="/index.html">
                 home
@@ -106,233 +106,238 @@
         </a>
       </section>
     </aside>
-    <main class="gap-y-8">
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <span class="github-stars">
-          <i class="fas fa-star"></i>
-          4
-        </span>
+    <main class="justify-items-center">
+      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <span class="github-stars">
+            <i class="fas fa-star"></i>
+            4
+          </span>
 
-        <span class="github-forks hidden">
-          <i class="fas fa-code-branch"></i>
-          0
-        </span>
+          <span class="github-forks hidden">
+            <i class="fas fa-code-branch"></i>
+            0
+          </span>
 
-        <a class="invis-link" href="https://github.com/ms-jpq/kaleidoscope">
-          <button
-            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
-          >
-            View on Github
-            <i class="fab fa-github"></i>
-          </button>
-        </a>
-      </section>
+          <a class="invis-link" href="https://github.com/ms-jpq/kaleidoscope">
+            <button
+              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
+            >
+              View on Github
+              <i class="fab fa-github"></i>
+            </button>
+          </a>
+        </section>
 
-      <section class="self-center">
-        <article class="markdown">
-          <h1 id="kaleidoscope">
-            <a href="https://ms-jpq.github.io/kaleidoscope/">Kaleidoscope</a>
-          </h1>
-          <p>
-            The Chaos Game is a
-            <a href="https://en.wikipedia.org/wiki/Iterated_function_system"
-              >randomized fractal generation algorithm</a
-            >.
-          </p>
-          <ul>
-            <li>
-              <p>Pick any regular polygon</p>
-            </li>
-            <li>
-              <p>Pick any arbitrary point inside the polygon</p>
-            </li>
-            <li>
-              <p>
-                <strong>Iterate:</strong> Put down another point anywhere in the
-                line between the previous point and a random (or algorithmically
-                chosen) vertex of the polygon.
-              </p>
-            </li>
-          </ul>
-          <hr />
-          <h2 id="play-here-desktop-firefox-chrome">
-            <a href="https://ms-jpq.github.io/kaleidoscope-page/">Play here</a>
-            (Desktop Firefox / Chrome)
-          </h2>
-          <p>
-            Its no
-            <a href="https://en.wikipedia.org/wiki/Mandelbrot_set"
-              >Mandelbrot Set</a
-            >, but you do have the ability to curate your own unique fractals by
-            adjusting the following params during the live generation process.
-          </p>
-          <ul>
-            <li>
-              <p>Jump ratio [0, 1]</p>
-            </li>
-            <li>
-              <p>
-                Forbidden jump positions, ie. only allow clockwise rotations
-                with regards to the previous jump(s)
-              </p>
-            </li>
-          </ul>
-          <h2 id="demo">Demo</h2>
-          <p>
-            I made the demo run at ludicrous speed, for a better look, you can
-            slow things down a bit in the actual game.
-          </p>
-          <p>(Settings panel to your left.)</p>
-          <p>
-            <img
-              alt="demo"
-              height="1355"
-              src="/05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef.webp"
-              srcset="
-                /05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef--1000x1000.webp 1000w,
-                /05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef--200x200.webp    200w,
-                /05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef--400x400.webp    400w,
-                /05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef--600x600.webp    600w,
-                /05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef--800x800.webp    800w
-              "
-              width="1355"
-            />
-          </p>
-          <h2 id="some-interesting-chaos-game-fractals">
-            Some interesting Chaos Game fractals
-          </h2>
-          <p>
-            <img
-              alt="hexagon_noacross_0.5.png"
-              height="1440"
-              src="/2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22.webp"
-              srcset="
-                /2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22--1000x1000.webp 1000w,
-                /2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22--200x200.webp    200w,
-                /2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22--400x400.webp    400w,
-                /2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22--600x600.webp    600w,
-                /2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22--800x800.webp    800w
-              "
-              width="1440"
-            /><br />
-            <img
-              alt="sierpinski_triangle.png"
-              height="1440"
-              src="/a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956.webp"
-              srcset="
-                /a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956--1000x1000.webp 1000w,
-                /a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956--200x200.webp    200w,
-                /a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956--400x400.webp    400w,
-                /a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956--600x600.webp    600w,
-                /a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956--800x800.webp    800w
-              "
-              width="1440"
-            /><br />
-            <img
-              alt="pentagon_noacross2_0.5.png"
-              height="1440"
-              src="/04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf.webp"
-              srcset="
-                /04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf--1000x1000.webp 1000w,
-                /04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf--200x200.webp    200w,
-                /04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf--400x400.webp    400w,
-                /04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf--600x600.webp    600w,
-                /04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf--800x800.webp    800w
-              "
-              width="1440"
-            /><br />
-            <img
-              alt="hexagon_noajacent_0.5.png"
-              height="1440"
-              src="/e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e.webp"
-              srcset="
-                /e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e--1000x1000.webp 1000w,
-                /e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e--200x200.webp    200w,
-                /e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e--400x400.webp    400w,
-                /e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e--600x600.webp    600w,
-                /e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e--800x800.webp    800w
-              "
-              width="1440"
-            /><br />
-            <img
-              alt="hexagon_norepeat2_0.5.png"
-              height="1440"
-              src="/134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9.webp"
-              srcset="
-                /134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9--1000x1000.webp 1000w,
-                /134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9--200x200.webp    200w,
-                /134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9--400x400.webp    400w,
-                /134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9--600x600.webp    600w,
-                /134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9--800x800.webp    800w
-              "
-              width="1440"
-            /><br />
-            <img
-              alt="hexagon_trial2_0.5.png"
-              height="1440"
-              src="/59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95.webp"
-              srcset="
-                /59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95--1000x1000.webp 1000w,
-                /59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95--200x200.webp    200w,
-                /59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95--400x400.webp    400w,
-                /59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95--600x600.webp    600w,
-                /59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95--800x800.webp    800w
-              "
-              width="1440"
-            /><br />
-            <img
-              alt="pentagon_noajacent2_0.5.png"
-              height="1440"
-              src="/18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a.webp"
-              srcset="
-                /18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a--1000x1000.webp 1000w,
-                /18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a--200x200.webp    200w,
-                /18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a--400x400.webp    400w,
-                /18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a--600x600.webp    600w,
-                /18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a--800x800.webp    800w
-              "
-              width="1440"
-            /><br />
-            <img
-              alt="hexagon_noacross2_0.5.png"
-              height="1440"
-              src="/e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d.webp"
-              srcset="
-                /e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d--1000x1000.webp 1000w,
-                /e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d--200x200.webp    200w,
-                /e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d--400x400.webp    400w,
-                /e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d--600x600.webp    600w,
-                /e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d--800x800.webp    800w
-              "
-              width="1440"
-            /><br />
-            <img
-              alt="square_noacross2_0.5.png"
-              height="1440"
-              src="/884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16.webp"
-              srcset="
-                /884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16--1000x1000.webp 1000w,
-                /884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16--200x200.webp    200w,
-                /884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16--400x400.webp    400w,
-                /884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16--600x600.webp    600w,
-                /884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16--800x800.webp    800w
-              "
-              width="1440"
-            />
-          </p>
-        </article>
-      </section>
+        <section class="self-center">
+          <article class="markdown">
+            <h1 id="kaleidoscope">
+              <a href="https://ms-jpq.github.io/kaleidoscope/">Kaleidoscope</a>
+            </h1>
+            <p>
+              The Chaos Game is a
+              <a href="https://en.wikipedia.org/wiki/Iterated_function_system"
+                >randomized fractal generation algorithm</a
+              >.
+            </p>
+            <ul>
+              <li>
+                <p>Pick any regular polygon</p>
+              </li>
+              <li>
+                <p>Pick any arbitrary point inside the polygon</p>
+              </li>
+              <li>
+                <p>
+                  <strong>Iterate:</strong> Put down another point anywhere in
+                  the line between the previous point and a random (or
+                  algorithmically chosen) vertex of the polygon.
+                </p>
+              </li>
+            </ul>
+            <hr />
+            <h2 id="play-here-desktop-firefox-chrome">
+              <a href="https://ms-jpq.github.io/kaleidoscope-page/"
+                >Play here</a
+              >
+              (Desktop Firefox / Chrome)
+            </h2>
+            <p>
+              Its no
+              <a href="https://en.wikipedia.org/wiki/Mandelbrot_set"
+                >Mandelbrot Set</a
+              >, but you do have the ability to curate your own unique fractals
+              by adjusting the following params during the live generation
+              process.
+            </p>
+            <ul>
+              <li>
+                <p>Jump ratio [0, 1]</p>
+              </li>
+              <li>
+                <p>
+                  Forbidden jump positions, ie. only allow clockwise rotations
+                  with regards to the previous jump(s)
+                </p>
+              </li>
+            </ul>
+            <h2 id="demo">Demo</h2>
+            <p>
+              I made the demo run at ludicrous speed, for a better look, you can
+              slow things down a bit in the actual game.
+            </p>
+            <p>(Settings panel to your left.)</p>
+            <p>
+              <img
+                alt="demo"
+                height="1355"
+                src="/05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef.webp"
+                srcset="
+                  /05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef--1000x1000.webp 1000w,
+                  /05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef--200x200.webp    200w,
+                  /05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef--400x400.webp    400w,
+                  /05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef--600x600.webp    600w,
+                  /05b10f5a2c32f875e0c4cfc85016a38f6d45a65cc82c0027e52aa2bd760fb7ef--800x800.webp    800w
+                "
+                width="1355"
+              />
+            </p>
+            <h2 id="some-interesting-chaos-game-fractals">
+              Some interesting Chaos Game fractals
+            </h2>
+            <p>
+              <img
+                alt="hexagon_noacross_0.5.png"
+                height="1440"
+                src="/2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22.webp"
+                srcset="
+                  /2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22--1000x1000.webp 1000w,
+                  /2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22--200x200.webp    200w,
+                  /2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22--400x400.webp    400w,
+                  /2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22--600x600.webp    600w,
+                  /2584604ba62f370289f5a338ced9291a35968a57386dca53d7ee4dbd9e2ecd22--800x800.webp    800w
+                "
+                width="1440"
+              /><br />
+              <img
+                alt="sierpinski_triangle.png"
+                height="1440"
+                src="/a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956.webp"
+                srcset="
+                  /a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956--1000x1000.webp 1000w,
+                  /a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956--200x200.webp    200w,
+                  /a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956--400x400.webp    400w,
+                  /a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956--600x600.webp    600w,
+                  /a8f6717999c25e1281fe42bfd89c56475e55a55d20632aa9abff1a5cc1549956--800x800.webp    800w
+                "
+                width="1440"
+              /><br />
+              <img
+                alt="pentagon_noacross2_0.5.png"
+                height="1440"
+                src="/04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf.webp"
+                srcset="
+                  /04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf--1000x1000.webp 1000w,
+                  /04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf--200x200.webp    200w,
+                  /04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf--400x400.webp    400w,
+                  /04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf--600x600.webp    600w,
+                  /04fd4f2d0232c45f5218a5687908521e3fa7e660869f9a3b10c3d6d0fc31fcaf--800x800.webp    800w
+                "
+                width="1440"
+              /><br />
+              <img
+                alt="hexagon_noajacent_0.5.png"
+                height="1440"
+                src="/e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e.webp"
+                srcset="
+                  /e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e--1000x1000.webp 1000w,
+                  /e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e--200x200.webp    200w,
+                  /e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e--400x400.webp    400w,
+                  /e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e--600x600.webp    600w,
+                  /e2c5b899bd2faef85979d131e56524686db1d603e1258a2916bc66e5e5ba7d1e--800x800.webp    800w
+                "
+                width="1440"
+              /><br />
+              <img
+                alt="hexagon_norepeat2_0.5.png"
+                height="1440"
+                src="/134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9.webp"
+                srcset="
+                  /134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9--1000x1000.webp 1000w,
+                  /134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9--200x200.webp    200w,
+                  /134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9--400x400.webp    400w,
+                  /134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9--600x600.webp    600w,
+                  /134f5d1b3fe68b6d8df079c959980571c215fa49cea7d5bec0807d9b5902cac9--800x800.webp    800w
+                "
+                width="1440"
+              /><br />
+              <img
+                alt="hexagon_trial2_0.5.png"
+                height="1440"
+                src="/59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95.webp"
+                srcset="
+                  /59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95--1000x1000.webp 1000w,
+                  /59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95--200x200.webp    200w,
+                  /59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95--400x400.webp    400w,
+                  /59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95--600x600.webp    600w,
+                  /59348ec2fac15d86c276e89477c7bddebae895424a40562cb80f7ba887b6af95--800x800.webp    800w
+                "
+                width="1440"
+              /><br />
+              <img
+                alt="pentagon_noajacent2_0.5.png"
+                height="1440"
+                src="/18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a.webp"
+                srcset="
+                  /18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a--1000x1000.webp 1000w,
+                  /18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a--200x200.webp    200w,
+                  /18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a--400x400.webp    400w,
+                  /18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a--600x600.webp    600w,
+                  /18770a64344f4f925a0229e13a8116819a491ea8c28b7085b816ef9397a14b6a--800x800.webp    800w
+                "
+                width="1440"
+              /><br />
+              <img
+                alt="hexagon_noacross2_0.5.png"
+                height="1440"
+                src="/e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d.webp"
+                srcset="
+                  /e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d--1000x1000.webp 1000w,
+                  /e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d--200x200.webp    200w,
+                  /e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d--400x400.webp    400w,
+                  /e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d--600x600.webp    600w,
+                  /e073f87db27f7ddda0760588ac05afb9788c3fca12c0730eb9eba1c0442dc92d--800x800.webp    800w
+                "
+                width="1440"
+              /><br />
+              <img
+                alt="square_noacross2_0.5.png"
+                height="1440"
+                src="/884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16.webp"
+                srcset="
+                  /884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16--1000x1000.webp 1000w,
+                  /884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16--200x200.webp    200w,
+                  /884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16--400x400.webp    400w,
+                  /884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16--600x600.webp    600w,
+                  /884fdcb50724cfdf30e5ce35838aa36ce9bc14cb8d7ab2be5a75c8c2d5951a16--800x800.webp    800w
+                "
+                width="1440"
+              />
+            </p>
+          </article>
+        </section>
 
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <div>
-          <i class="fas fa-baby text-left"></i>
-          <time datetime="2019-08-20T18:27:34+0000"></time>
-        </div>
-        <div>
-          <i class="fas fa-user-edit text-left"></i>
-          <time datetime="2021-12-30T00:34:07+0000"></time>
-        </div>
-      </section>
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <div>
+            <i class="fas fa-baby text-left"></i>
+            <time datetime="2019-08-20T18:27:34+0000"></time>
+          </div>
+          <div>
+            <i class="fas fa-user-edit text-left"></i>
+            <time datetime="2021-12-30T00:34:07+0000"></time>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="grid justify-items-center items-center">

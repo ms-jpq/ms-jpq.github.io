@@ -54,7 +54,7 @@
 
       <section>
         <nav>
-          <ul class="leading-loose">
+          <ul>
             <li class="capitalize active:font-bold active:text-primary-400">
               <a class="no-underline hover:text-primary-400" href="/index.html">
                 home
@@ -103,49 +103,51 @@
         </a>
       </section>
     </aside>
-    <main class="gap-y-8">
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <span class="github-stars">
-          <i class="fas fa-star"></i>
-          5
-        </span>
+    <main class="justify-items-center">
+      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <span class="github-stars">
+            <i class="fas fa-star"></i>
+            5
+          </span>
 
-        <span class="github-forks hidden">
-          <i class="fas fa-code-branch"></i>
-          0
-        </span>
+          <span class="github-forks hidden">
+            <i class="fas fa-code-branch"></i>
+            0
+          </span>
 
-        <a class="invis-link" href="https://github.com/ms-jpq/forechan">
-          <button
-            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
-          >
-            View on Github
-            <i class="fab fa-github"></i>
-          </button>
-        </a>
-      </section>
-
-      <section class="self-center">
-        <article class="markdown">
-          <h1 id="forechan">Forechan</h1>
-          <p>
-            <a href="https://github.com/golang/go">go</a> style
-            <code>asyncio</code> channels.
-          </p>
-          <p>
-            <strong>Fully Typed with Generics</strong>, <code>mypy</code> ready.
-          </p>
-          <p>
-            Inspired by
-            <a href="https://github.com/clojure/core.async"
-              ><code>core.async</code></a
+          <a class="invis-link" href="https://github.com/ms-jpq/forechan">
+            <button
+              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
             >
-            from <a href="https://github.com/clojure/clojure">clojure</a>.
-          </p>
-          <h2 id="examples">Examples</h2>
-          <h3 id="send-recv">Send &amp; Recv</h3>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="n">ch</span> <span class="o">=</span> <span class="n">chan</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>         <span class="c1"># Chan[int]</span>
+              View on Github
+              <i class="fab fa-github"></i>
+            </button>
+          </a>
+        </section>
+
+        <section class="self-center">
+          <article class="markdown">
+            <h1 id="forechan">Forechan</h1>
+            <p>
+              <a href="https://github.com/golang/go">go</a> style
+              <code>asyncio</code> channels.
+            </p>
+            <p>
+              <strong>Fully Typed with Generics</strong>,
+              <code>mypy</code> ready.
+            </p>
+            <p>
+              Inspired by
+              <a href="https://github.com/clojure/core.async"
+                ><code>core.async</code></a
+              >
+              from <a href="https://github.com/clojure/clojure">clojure</a>.
+            </p>
+            <h2 id="examples">Examples</h2>
+            <h3 id="send-recv">Send &amp; Recv</h3>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="n">ch</span> <span class="o">=</span> <span class="n">chan</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>         <span class="c1"># Chan[int]</span>
 <span class="k">await</span> <span class="p">(</span><span class="n">ch</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">)</span>        <span class="c1"># or use `await ch.send(x)`</span>
 <span class="n">two</span> <span class="o">=</span> <span class="k">await</span> <span class="p">([]</span> <span class="o">&lt;&lt;</span> <span class="n">ch</span><span class="p">)</span> <span class="c1"># or use `await ch.recv()`</span>
 <span class="k">assert</span> <span class="n">two</span> <span class="o">==</span> <span class="mi">2</span>
@@ -153,11 +155,11 @@
 <span class="c1"># `ch.close()` is idempotent</span>
 <span class="k">await</span> <span class="n">ch</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre>
-          </div>
+            </div>
 
-          <h3 id="basic">Basic</h3>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="k">if</span> <span class="n">ch</span><span class="p">:</span>
+            <h3 id="basic">Basic</h3>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="k">if</span> <span class="n">ch</span><span class="p">:</span>
   <span class="c1"># if `Chan[T]` is open</span>
 
 <span class="nb">len</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span> <span class="c1"># How many items are in `ch`</span>
@@ -168,11 +170,11 @@
 <span class="k">async</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">ch</span><span class="p">:</span>
   <span class="c1"># use `ch` as AsyncIterator</span>
 </code></pre>
-          </div>
+            </div>
 
-          <h3 id="select">Select</h3>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="k">async</span> <span class="k">for</span> <span class="n">ch</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">select</span><span class="p">(</span><span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span><span class="p">,</span> <span class="n">ch3</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+            <h3 id="select">Select</h3>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="k">async</span> <span class="k">for</span> <span class="n">ch</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">select</span><span class="p">(</span><span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span><span class="p">,</span> <span class="n">ch3</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
   <span class="k">if</span> <span class="n">ch</span> <span class="o">==</span> <span class="n">ch1</span><span class="p">:</span>
     <span class="o">...</span>
   <span class="k">elif</span> <span class="n">ch</span> <span class="o">==</span> <span class="n">ch2</span><span class="p">:</span>
@@ -180,11 +182,11 @@
   <span class="k">elif</span> <span class="n">ch</span> <span class="o">==</span> <span class="n">ch3</span><span class="p">:</span>
     <span class="o">...</span>
 </code></pre>
-          </div>
+            </div>
 
-          <h3 id="wait-group">Wait Group</h3>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="n">wg</span> <span class="o">=</span> <span class="n">wait_group</span><span class="p">()</span>
+            <h3 id="wait-group">Wait Group</h3>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="n">wg</span> <span class="o">=</span> <span class="n">wait_group</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
   <span class="k">async</span> <span class="k">def</span> <span class="nf">cont</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -196,48 +198,50 @@
 <span class="c1"># will wait for all work to be completed</span>
 <span class="k">await</span> <span class="n">wg</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
 </code></pre>
-          </div>
+            </div>
 
-          <h3 id="synchronous">Synchronous</h3>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="n">head</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="n">try_peek</span><span class="p">()</span> <span class="c1"># can throw `ChanEmpty`</span>
+            <h3 id="synchronous">Synchronous</h3>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="n">head</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="n">try_peek</span><span class="p">()</span> <span class="c1"># can throw `ChanEmpty`</span>
 <span class="p">(</span><span class="n">ch</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span>             <span class="c1"># or use `ch.try_send(2)` , can throw `ChanFull`</span>
 <span class="n">two</span> <span class="o">=</span> <span class="p">([]</span> <span class="o">&lt;</span> <span class="n">ch</span><span class="p">)</span>      <span class="c1"># or use `ch.try_recv()`  , can throw `ChanEmpty`</span>
 <span class="k">assert</span> <span class="n">two</span> <span class="o">==</span> <span class="mi">2</span>
 </code></pre>
-          </div>
+            </div>
 
-          <h3 id="go-python">Go -&gt; Python</h3>
-          <p>The following are roughly equivalent</p>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="kd">func</span> <span class="nx">fn</span><span class="p">()</span> <span class="p">{</span>
+            <h3 id="go-python">Go -&gt; Python</h3>
+            <p>The following are roughly equivalent</p>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="kd">func</span> <span class="nx">fn</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// do things here</span>
 <span class="p">}</span>
 <span class="k">go</span> <span class="nx">fn</span><span class="p">()</span>
 </code></pre>
-          </div>
+            </div>
 
-          <p>When <code>GOMAXPROCS=1</code></p>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="k">async</span> <span class="k">def</span> <span class="nf">fn</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+            <p>When <code>GOMAXPROCS=1</code></p>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="k">async</span> <span class="k">def</span> <span class="nf">fn</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
   <span class="c1"># do things here</span>
 
 <span class="n">create_task</span><span class="p">(</span><span class="n">fn</span><span class="p">())</span>
 </code></pre>
-          </div>
+            </div>
 
-          <h2 id="common-concurrency-patterns">Common Concurrency Patterns</h2>
-          <h3 id="consumer">Consumer</h3>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="k">async</span> <span class="k">def</span> <span class="nf">consumer</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+            <h2 id="common-concurrency-patterns">
+              Common Concurrency Patterns
+            </h2>
+            <h3 id="consumer">Consumer</h3>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="k">async</span> <span class="k">def</span> <span class="nf">consumer</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
   <span class="k">async</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">ch</span><span class="p">:</span>
     <span class="c1"># do something with `item`, until `ch` is closed</span>
 </code></pre>
-          </div>
+            </div>
 
-          <h3 id="producer">Producer</h3>
-          <div class="codehilite friendly">
-            <pre><span ></span><code ><span class="k">def</span> <span class="nf">producer</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Chan</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+            <h3 id="producer">Producer</h3>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="k">def</span> <span class="nf">producer</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Chan</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
   <span class="n">ch</span> <span class="o">=</span> <span class="n">chan</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 
   <span class="k">async</span> <span class="k">def</span> <span class="nf">cont</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -250,22 +254,23 @@
   <span class="n">create_task</span><span class="p">(</span><span class="n">cont</span><span class="p">())</span>
   <span class="k">return</span> <span class="n">ch</span>
 </code></pre>
+            </div>
+
+            <h2 id="series-of-tubes">Series of Tubes</h2>
+          </article>
+        </section>
+
+        <section class="grid grid-flow-col justify-end items-center gap-x-4">
+          <div>
+            <i class="fas fa-baby text-left"></i>
+            <time datetime="2020-12-11T01:44:15+0000"></time>
           </div>
-
-          <h2 id="series-of-tubes">Series of Tubes</h2>
-        </article>
-      </section>
-
-      <section class="grid grid-flow-col justify-end items-center gap-x-4">
-        <div>
-          <i class="fas fa-baby text-left"></i>
-          <time datetime="2020-12-11T01:44:15+0000"></time>
-        </div>
-        <div>
-          <i class="fas fa-user-edit text-left"></i>
-          <time datetime="2021-12-30T00:34:05+0000"></time>
-        </div>
-      </section>
+          <div>
+            <i class="fas fa-user-edit text-left"></i>
+            <time datetime="2021-12-30T00:34:05+0000"></time>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="grid justify-items-center items-center">
