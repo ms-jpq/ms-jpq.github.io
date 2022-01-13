@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta
-      content="Github action to refresh various Github inactivity countdowns."
+      content="Automate Libvirt :: [XML back up, Download windows drivers]"
       name="description"
     />
     <title>Creative Portfolio</title>
@@ -109,9 +109,9 @@
     <main class="justify-items-center">
       <div class="grid grid-flow-row grid-cols-1 gap-y-8">
         <section class="grid grid-flow-col justify-end items-center gap-x-4">
-          <span class="github-stars">
+          <span class="github-stars hidden">
             <i class="fas fa-star"></i>
-            5
+            0
           </span>
 
           <span class="github-forks hidden">
@@ -119,10 +119,7 @@
             0
           </span>
 
-          <a
-            class="invis-link"
-            href="https://github.com/ms-jpq/auto-github-push"
-          >
+          <a class="invis-link" href="https://github.com/ms-jpq/libvirt-chores">
             <button
               class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
             >
@@ -134,48 +131,58 @@
 
         <section class="self-center">
           <article class="markdown">
-            <h1 id="auto-github-push">
-              <a href="https://github.com/ms-jpq/auto-github-push"
-                >Auto Github Push</a
+            <h1 id="libvirt-chores">
+              <a href="https://ms-jpq.github.io/libvirt-chores"
+                >Libvirt Chores</a
               >
             </h1>
+            <h2 id="chores">Chores</h2>
+            <h3 id="backup-xml">Backup XML</h3>
+            <p>Periodically dump libvirt XML into <code>/data/backup</code></p>
+            <ul>
+              <li>
+                <p><code>domain</code> (VMs)</p>
+              </li>
+              <li>
+                <p><code>network</code></p>
+              </li>
+              <li>
+                <p><code>storage</code></p>
+              </li>
+            </ul>
+            <h3 id="download-windows-drivers">Download Windows Drivers</h3>
             <p>
-              This Docker image will automatically push a file called
-              <code>.agp</code> under <code>.github/</code> for every public
-              repo you own.
+              Periodically dump latest virtio-win.iso into
+              <code>/data/downloads</code>
             </p>
-            <p>This will refresh various Github inactivity countdowns.</p>
-            <h2 id="how-to-use">How to use</h2>
-            <ol start="0">
-              <li>
-                <p>Create an empty repo</p>
-              </li>
-              <li>
-                <p>Create a token with repo access.</p>
-              </li>
-              <li>
-                <p>Add <code>CI_TOKEN</code> to repo’s secrets</p>
-              </li>
-              <li>
-                <p>
-                  Add <code>.github/workflows/agp.yml</code> to the repo.
-                  <a
-                    href="https://github.com/ms-jpq/auto-github-push/blob/agp/.github/workflows/agp.yml"
-                    >Example here</a
-                  >.
-                </p>
-              </li>
-            </ol>
-            <p>And you are good!</p>
-            <h2 id="disable-for-single-repo">Disable for single repo</h2>
-            <p>Add <code>.noagp</code> under <code>.github/</code></p>
+            <p>
+              <a href="https://github.com/virtio-win/virtio-win-pkg-scripts"
+                >From latest stable release</a
+              >
+            </p>
+            <h2 id="usage">Usage</h2>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="nn">---</span>
+<span class="nt">version</span><span class="p">:</span> <span class="s">&quot;3.7&quot;</span>
+
+<span class="nt">services</span><span class="p">:</span>
+  <span class="nt">libvirt-chores</span><span class="p">:</span>
+    <span class="nt">restart</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">msjpq/libvirt-chores:latest</span>
+    <span class="nt">environment</span><span class="p">:</span>
+      <span class="nt">TZ</span><span class="p">:</span>
+    <span class="nt">volumes</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/var/run/libvirt/libvirt-sock-ro:/var/run/libvirt/libvirt-sock-ro:ro</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">./data:/data</span>
+</code></pre>
+            </div>
           </article>
         </section>
 
         <section class="grid grid-flow-col justify-end items-center gap-x-4">
           <div>
             <i class="fas fa-baby text-left"></i>
-            <time datetime="2020-10-23T10:06:52+0000"></time>
+            <time datetime="2022-01-09T05:17:00+0000"></time>
           </div>
           <div>
             <i class="fas fa-user-edit text-left"></i>
