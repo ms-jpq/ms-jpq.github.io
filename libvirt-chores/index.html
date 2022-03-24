@@ -137,42 +137,37 @@
               >
             </h1>
             <h2 id="chores">Chores</h2>
-            <h3 id="backup-xml">Backup XML</h3>
-            <p>Periodically dump libvirt XML into <code>/data/backup</code></p>
-            <ul>
-              <li>
-                <p><code>domain</code> (VMs)</p>
-              </li>
-              <li>
-                <p><code>network</code></p>
-              </li>
-              <li>
-                <p><code>storage</code></p>
-              </li>
-            </ul>
             <h3 id="download-windows-drivers">Download Windows Drivers</h3>
             <p>
-              Periodically dump latest virtio-win.iso into
-              <code>/data/downloads</code>
+              Periodically dump latest virtio-win.iso into <code>/data</code>
             </p>
             <p>
               <a href="https://github.com/virtio-win/virtio-win-pkg-scripts"
                 >From latest stable release</a
               >
             </p>
+            <h3 id="virt-manager">Virt Manager</h3>
             <h2 id="usage">Usage</h2>
             <div class="codehilite friendly">
               <pre><span ></span><code ><span class="nn">---</span>
-<span class="nt">version</span><span class="p">:</span> <span class="s">&quot;3.7&quot;</span>
+<span class="nt">version</span><span class="p">:</span> <span class="s">&quot;3.9&quot;</span>
 
 <span class="nt">services</span><span class="p">:</span>
-  <span class="nt">libvirt-chores</span><span class="p">:</span>
+  <span class="nt">libvirt</span><span class="p">:</span>
     <span class="nt">restart</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
     <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">msjpq/libvirt-chores:latest</span>
     <span class="nt">environment</span><span class="p">:</span>
       <span class="nt">TZ</span><span class="p">:</span>
+    <span class="nt">ports</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">80:80</span>
     <span class="nt">volumes</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/var/run/libvirt/libvirt-admin-sock:/var/run/libvirt/libvirt-admin-sock:ro</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/var/run/libvirt/libvirt-sock-ro:/var/run/libvirt/libvirt-sock-ro:ro</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/var/run/libvirt/libvirt-sock:/var/run/libvirt/libvirt-sock:ro</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/var/run/libvirt/virtlockd-admin-sock:/var/run/libvirt/virtlockd-admin-sock:ro</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/var/run/libvirt/virtlockd-sock:/var/run/libvirt/virtlockd-sock:ro</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/var/run/libvirt/virtlogd-admin-sock:/var/run/libvirt/virtlogd-admin-sock:ro</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/var/run/libvirt/virtlogd-sock:/var/run/libvirt/virtlogd-sock:ro</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">./data:/data</span>
 </code></pre>
             </div>
