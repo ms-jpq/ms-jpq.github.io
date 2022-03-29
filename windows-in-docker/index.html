@@ -3,10 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta
-      content=' WHY? So you can run Windows "as a container"'
-      name="description"
-    />
+    <meta content="Manage Windows in Docker (easy)" name="description" />
     <title>Creative Portfolio</title>
     <link href="/pages_repo.css" rel="stylesheet" />
 
@@ -111,12 +108,12 @@
         <section class="grid grid-flow-col justify-end items-center gap-x-4">
           <span class="github-stars">
             <i class="fas fa-star"></i>
-            52
+            6
           </span>
 
-          <span class="github-forks">
+          <span class="github-forks hidden">
             <i class="fas fa-code-branch"></i>
-            10
+            0
           </span>
 
           <a
@@ -134,272 +131,121 @@
 
         <section class="self-center">
           <article class="markdown">
-            <h1 id="almost-done-work-in-progress">
-              Almost done, Work in Progress
-            </h1>
-            <h1 id="wind-windows-in-docker">
+            <h1 id="windows-in-docker">
               <a href="https://ms-jpq.github.io/windows-in-docker"
-                >WIND - Windows in Docker</a
+                >Windows in Docker</a
               >
             </h1>
-            <p>Browser &gt; Docker &gt; KVM &gt; Windows</p>
-            <p>Thank you Redhat, very legal &amp; very cool.</p>
-            <h2 id="why">WHY?</h2>
             <p>
-              QEMU + KVM has a relatively involved setup, not very user
-              friendly.
-            </p>
-            <p>This image is vastly more user friendly, it comes with:</p>
-            <ol>
-              <li>
-                <p>Browser UI</p>
-              </li>
-              <li>
-                <p>Networking out of the box</p>
-              </li>
-              <li>
-                <p>Literally copy paste install</p>
-              </li>
-              <li>
-                <p>Built-in Windows drivers</p>
-              </li>
-              <li>
-                <p>
-                  Crazy easy customizations, ie.
-                  <code>--cpus=9 --memory=6024 --size=120</code>
-                </p>
-              </li>
-            </ol>
-            <h2 id="preview">Preview</h2>
-            <p>
-              <img
-                alt="preview1 img"
-                height="1088"
-                src="/234c098ff4a5bf16903b2411da10796b12c4dacbe951b2be2bdc505e1345284c.webp"
-                srcset="
-                  /234c098ff4a5bf16903b2411da10796b12c4dacbe951b2be2bdc505e1345284c--1000x567.webp 1000w,
-                  /234c098ff4a5bf16903b2411da10796b12c4dacbe951b2be2bdc505e1345284c--200x113.webp   200w,
-                  /234c098ff4a5bf16903b2411da10796b12c4dacbe951b2be2bdc505e1345284c--400x227.webp   400w,
-                  /234c098ff4a5bf16903b2411da10796b12c4dacbe951b2be2bdc505e1345284c--600x340.webp   600w,
-                  /234c098ff4a5bf16903b2411da10796b12c4dacbe951b2be2bdc505e1345284c--800x453.webp   800w
-                "
-                width="1920"
-              />
+              <a href="https://hub.docker.com/r/msjpq/windows-in-docker/"
+                ><img
+                  alt="Docker Pulls"
+                  src="/f78a5a045f2dddf9cabb2b8a73751c9e89a8c6adbc5e54c757a8d6d291c263c0.svg"
+              /></a>
             </p>
             <p>
-              <img
-                alt="preview2 img"
-                height="764"
-                src="/2bd6be403441f2ce6c10975a4e39f88198db15b55bb46ef59705ec2231de6820.webp"
-                srcset="
-                  /2bd6be403441f2ce6c10975a4e39f88198db15b55bb46ef59705ec2231de6820--1000x747.webp 1000w,
-                  /2bd6be403441f2ce6c10975a4e39f88198db15b55bb46ef59705ec2231de6820--200x149.webp   200w,
-                  /2bd6be403441f2ce6c10975a4e39f88198db15b55bb46ef59705ec2231de6820--400x299.webp   400w,
-                  /2bd6be403441f2ce6c10975a4e39f88198db15b55bb46ef59705ec2231de6820--600x448.webp   600w,
-                  /2bd6be403441f2ce6c10975a4e39f88198db15b55bb46ef59705ec2231de6820--800x597.webp   800w
-                "
-                width="1023"
-              />
+              You really can run any VM / container you want under this. But I
+              made it specifically to make headless windows less of a PITA.
             </p>
-            <h2 id="instructions">Instructions</h2>
-            <h3 id="prerequisites">Prerequisites</h3>
             <p>
-              You hardware must be able to run <code>KVM</code>. (Most computer
-              can run at least 1 layer of virtualization now days.)
+              Technically this is more of a “manage Windows in Docker” type of
+              project, you can shutdown <code>dockerd</code> and all of your VMs
+              won’t be effected.
             </p>
-            <h3 id="install">Install</h3>
+            <h2 id="what-it-does">What It Does</h2>
+            <h3 id="download-virtio-windows-drivers">
+              Download VirtIO Windows Drivers
+            </h3>
             <p>
-              Run the command below, and head to Firefox at port 8080 to finish
-              installation
+              Periodically dump latest <code>virtio-win.iso</code> into
+              <code>/data</code>
             </p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code >docker -it --rm <span class="se">\</span>
-  --privileged <span class="se">\</span>
-  -v /lib/modules:/lib/modules:ro <span class="se">\</span>
-  -p <span class="m">8080</span>:65080 <span class="se">\</span>
-  -v /vm_image_dir:/config <span class="se">\</span>
-  -v /iso_dir:/install <span class="se">\</span>
-  msjpq/kvm-windows new &lt;windows.iso&gt; --bios
-</code></pre>
-            </div>
-
             <p>
-              <strong
-                >Add <code>--bios</code>, if your windows version is old, or
-                else it will load UEFI</strong
+              <a href="https://github.com/virtio-win/virtio-win-pkg-scripts"
+                >From latest stable release</a
               >
             </p>
+            <h3 id="web-gui-4-virt-manager">Web GUI 4 Virt Manager</h3>
             <p>
-              <code>&lt;windows.iso&gt;</code> will eject after first poweroff,
-              you will find the generated libvirt manifest under
-              <code>/config</code>.
+              <img
+                alt="virt man"
+                height="2114"
+                src="/5f40ff50c9017fd0a3fc0d9867fea704b66c2fb656d4540243533eadeb918369.webp"
+                srcset="
+                  /5f40ff50c9017fd0a3fc0d9867fea704b66c2fb656d4540243533eadeb918369--1000x656.webp 1000w,
+                  /5f40ff50c9017fd0a3fc0d9867fea704b66c2fb656d4540243533eadeb918369--200x131.webp   200w,
+                  /5f40ff50c9017fd0a3fc0d9867fea704b66c2fb656d4540243533eadeb918369--400x262.webp   400w,
+                  /5f40ff50c9017fd0a3fc0d9867fea704b66c2fb656d4540243533eadeb918369--600x394.webp   600w,
+                  /5f40ff50c9017fd0a3fc0d9867fea704b66c2fb656d4540243533eadeb918369--800x525.webp   800w
+                "
+                width="3222"
+              />
             </p>
-            <p>
-              Run the command below to finish installation, and for future
-              usage.
-            </p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code >docker -it --rm <span class="se">\</span>
-  --privileged <span class="se">\</span>
-  -v /lib/modules:/lib/modules:ro <span class="se">\</span>
-  -p <span class="m">8080</span>:65080 <span class="se">\</span>
-  -v /vm_image_dir:/config <span class="se">\</span>
-  msjpq/kvm-windows
-</code></pre>
-            </div>
-
-            <h4 id="drivers">Drivers</h4>
-            <p>
-              You will need to manually install some of drivers, (VirtIO is
-              annoying like that).
-            </p>
-            <h5 id="essential">Essential</h5>
+            <h2 id="usage">Usage</h2>
             <ol>
               <li>
                 <p>
-                  The harddrive drivers will need to be installed before first
-                  reboot.
+                  Install <code>libvirt-daemon</code> under
+                  <strong>linux host</strong>, ie
+                  <code>apt install -- libvirt-daemon-system</code>.
                 </p>
               </li>
               <li>
-                <p>
-                  The ethernet drivers will need to be installed after first
-                  login under Device Manager.
-                </p>
+                <p>Run the following <code>docker-compose</code>.</p>
               </li>
             </ol>
-            <h5 id="whatever">Whatever</h5>
-            <p>
-              Things like <code>qxl</code> can also be installed under Device
-              Manager. Not really important though.
-            </p>
-            <p>
-              <strong
-                >All drivers are included with the default install, under
-                <code>D:/</code> or <code>E:/</code> drive.</strong
-              >
-            </p>
-            <h5 id="customization">Customization</h5>
-            <p>
-              Additional flags to pass onto
-              <code>new &lt;image name&gt; &lt;flag&gt; &lt;flag&gt; ...</code>
-            </p>
-            <table>
-              <thead>
-                <tr>
-                  <th>Flag</th>
-                  <th>Default</th>
-                  <th>Option</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><code>--bios</code></td>
-                  <td><code>False</code></td>
-                  <td>Boot <code>bios</code> instead of <code>uefi</code></td>
-                </tr>
-                <tr>
-                  <td><code>-os</code></td>
-                  <td><code>win10</code></td>
-                  <td>Windows distro</td>
-                </tr>
-                <tr>
-                  <td><code>--cpus</code></td>
-                  <td><code>#cores</code></td>
-                  <td>Number of virtual cpus</td>
-                </tr>
-                <tr>
-                  <td><code>--memory</code></td>
-                  <td><code>4000</code></td>
-                  <td>(MB)</td>
-                </tr>
-                <tr>
-                  <td><code>--vram</code></td>
-                  <td><code>256</code></td>
-                  <td>(MB)</td>
-                </tr>
-                <tr>
-                  <td><code>--size</code></td>
-                  <td><code>100</code></td>
-                  <td>(GB)</td>
-                </tr>
-                <tr>
-                  <td><code>--dry-run</code></td>
-                  <td><code>False</code></td>
-                  <td>Dry run</td>
-                </tr>
-                <tr>
-                  <td><code>--extra</code></td>
-                  <td><code>None</code></td>
-                  <td>
-                    Extra args for
-                    <a href="https://linux.die.net/man/1/virt-install"
-                      ><code>virt-install</code></a
-                    >
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <h3 id="networking">Networking</h3>
-            <p>All ports from VM are forwarded to container except:</p>
-            <p><code>53</code>, <code>67-68</code>, <code>65001-65535</code></p>
-            <p>
-              <strong>NOT</strong> recommended to run with
-              <code>--net=host</code>.
-            </p>
-            <h3 id="environmental-variables">Environmental Variables</h3>
-            <h4 id="browser-ui">Browser UI</h4>
-            <ul>
-              <li><code>-e PATH_PREFIX=/</code></li>
-              <li><code>-e VNC_RESIZE=scale|off</code></li>
-              <li><code>-e RECON_DELAY=250</code> reconnection delay (ms)</li>
-            </ul>
-            <h4 id="virtualization">Virtualization</h4>
-            <p>Libvirt look for <code>VM_NAME.xml</code> to boot.</p>
-            <p>
-              <code>new</code> will create <code>VM_NAME.xml</code> and
-              <code>VM_NAME.img</code>.
-            </p>
-            <ul>
-              <li><code>-e VM_NAME=wind</code></li>
-            </ul>
-            <h3 id="ports">Ports</h3>
-            <ul>
+            <div class="codehilite friendly">
+              <pre><span ></span><code ><span class="nn">---</span>
+<span class="nt">version</span><span class="p">:</span> <span class="s">&quot;3.9&quot;</span>
+
+<span class="nt">services</span><span class="p">:</span>
+  <span class="nt">libvirt</span><span class="p">:</span>
+    <span class="nt">restart</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">msjpq/windows-in-docker:latest</span>
+    <span class="nt">security_opt</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">apparmor=unconfined</span>
+    <span class="nt">environment</span><span class="p">:</span>
+      <span class="nt">TZ</span><span class="p">:</span>
+      <span class="c1"># Make sure DATA_DIR is the same across the three `${DATA_DIR}`s</span>
+      <span class="c1"># The windows drivers are also downloaded under here.</span>
+      <span class="nt">DATA_DIR</span><span class="p">:</span> <span class="s">&quot;${DATA_DIR}&quot;</span>
+    <span class="nt">ports</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">80:8080</span>
+    <span class="nt">volumes</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/var/run/libvirt/libvirt-sock:/var/run/libvirt/libvirt-sock:ro</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;${DATA_DIR}:${DATA_DIR}&quot;</span>
+</code></pre>
+            </div>
+
+            <ol start="3">
               <li>
-                <p><code>-p 8080:65080</code> noVNC web UI</p>
+                <p>
+                  Drag in some ISOs you want to install under
+                  <code>${DATA_DIR}</code>.
+                </p>
               </li>
               <li>
-                <p><code>-p 5900:65059</code> VNC</p>
+                <p>Go to port 80, follow the GUI, you are good to go.</p>
               </li>
-            </ul>
-            <h3 id="volumes">Volumes</h3>
+            </ol>
+            <h2 id="wait-a-minute">Wait A Minute</h2>
+            <p>Libvirt doesn’t run under Docker tho?</p>
             <p>
-              Libvirt manifests are stored in<code>/config</code>, along with VM
-              images.
+              Well, I realized running <code>libvirt</code> under Docker was
+              actually a stupid idea.
             </p>
-            <ul>
-              <li><code>-v ./vm_data/:/config</code></li>
-            </ul>
-            <p>
-              You need to supply your own <code>windows.iso</code>, for obvious
-              reasons.
-            </p>
-            <ul>
-              <li><code>-v ./install_media/:/install</code></li>
-            </ul>
-            <h3 id="disclaimer">Disclaimer</h3>
-            <p>Works on my machine ™.</p>
+            <p>You can’t say provision a ZFS storage pool for example.</p>
           </article>
         </section>
 
         <section class="grid grid-flow-col justify-end items-center gap-x-4">
           <div>
             <i class="fas fa-baby text-left"></i>
-            <time datetime="2020-06-02T08:28:07+0000"></time>
+            <time datetime="2022-01-09T05:17:00+0000"></time>
           </div>
           <div>
             <i class="fas fa-user-edit text-left"></i>
-            <time datetime="2022-03-15T14:06:43+0000"></time>
+            <time datetime="2022-03-28T03:04:46+0000"></time>
           </div>
         </section>
       </div>
