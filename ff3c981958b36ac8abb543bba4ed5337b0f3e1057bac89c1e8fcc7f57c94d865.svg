@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">i love my dog's GitHub Stats, Rank: S</title>
-        <desc id="descId">Total Stars Earned: 5892, Total Commits in 2022 : 5892, Total PRs: 318, Total Issues: 52, Contributed to: 6</desc>
+        <desc id="descId">Total Stars Earned: 5904, Total Commits in 2022 : 5904, Total PRs: 318, Total Issues: 52, Contributed to: 6</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -66,7 +66,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 59.818986217550986;
+        stroke-dashoffset: 59.77991618284639;
       }
     }
   
