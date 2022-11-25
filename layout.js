@@ -1,1 +1,1 @@
-globalThis.requestIdleCallback&&await new Promise(e=>requestIdleCallback(e));var l=document.body.querySelectorAll("time");for(let e of l){let t=new Date(e.dateTime);e.textContent=t.toLocaleString(void 0,{hour12:!1})}
+await new Promise(e=>queueMicrotask(e));for(let e of document.body.querySelectorAll("time"))e.textContent=new Date(e.dateTime).toLocaleString(void 0,{hour12:!1});
