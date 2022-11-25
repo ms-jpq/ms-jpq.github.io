@@ -1,1 +1,1 @@
-var o=document.body.querySelectorAll("time");for(let e of o){let t=new Date(e.dateTime);e.textContent=t.toLocaleString(void 0,{hour12:!1})}
+globalThis.requestIdleCallback&&await new Promise(e=>requestIdleCallback(e));var l=document.body.querySelectorAll("time");for(let e of l){let t=new Date(e.dateTime);e.textContent=t.toLocaleString(void 0,{hour12:!1})}

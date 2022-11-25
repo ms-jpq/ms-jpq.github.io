@@ -13,7 +13,7 @@
     <script src="/layout.js" type="module"></script>
   </head>
 
-  <body class="m-0 p-0">
+  <body class="m-0 p-0 w-screen min-h-screen flex">
     <input
       aria-hidden="true"
       class="hidden"
@@ -21,7 +21,7 @@
       type="checkbox"
     />
     <div
-      class="scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
+      class="w-full grow scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
     >
       <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
         <label
@@ -94,7 +94,7 @@
           </nav>
         </section>
 
-        <section class="flex flex-wrap">
+        <section class="flex flex-wrap px-2">
           <a
             class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
             href="mailto:github@bigly.dog"
@@ -135,13 +135,11 @@
               </span>
 
               <a
-                class="invis-link"
+                class="big-button invis-link border-dashed"
                 href="https://github.com/ms-jpq/auto-github-push"
               >
-                <button class="big-button border-dashed">
-                  View on Github
-                  <i class="fab fa-github"></i>
-                </button>
+                View on Github
+                <i class="fab fa-github"></i>
               </a>
             </section>
 
