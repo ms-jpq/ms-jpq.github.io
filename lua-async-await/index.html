@@ -10,181 +10,197 @@
     <script src="/layout.js" type="module"></script>
   </head>
 
-  <body
-    class="scroll-smooth grid gap-4 w-screen bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
-  >
-    <header class="grid grid-flow-col justify-between gap-x-2 px-8 pt-4">
-      <button
-        class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden"
-      >
-        <i class="fas fa-bars"></i>
-        Menu
-      </button>
-
-      <div class="prose text-right overflow-ellipsis">
-        <h3 class="uppercase">
-          <a class="invis-link" href="/index.html"> Creative Portfolio </a>
-        </h3>
-      </div>
-    </header>
-    <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-      <section class="grid justify-items-center" id="headshot">
-        <img
-          class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-          height="1164"
-          src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-          srcset="
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-          "
-          width="1164"
-        />
-      </section>
-
-      <section id="about-me">
-        <div class="markdown mx-2">
-          <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
-          <p>I also really like dogs.</p>
-          <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
-        </div>
-      </section>
-
-      <section>
-        <nav>
-          <ul>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a class="no-underline hover:text-primary-400" href="/index.html">
-                home
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/about_me.html"
-              >
-                about
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/contact_me.html"
-              >
-                get in touch
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </section>
-
-      <section class="flex flex-wrap">
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="mailto:github@bigly.dog"
-        >
-          <i class="far fa-envelope"></i>
-        </a>
-
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://github.com/ms-jpq"
-        >
-          <i class="fab fa-github"></i>
-        </a>
-
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://stackexchange.com/users/15744711"
-        >
-          <i class="fab fa-stack-overflow"></i>
-        </a>
-      </section>
-    </aside>
-    <main class="justify-items-center">
-      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
-        <section class="grid grid-flow-col justify-end items-center gap-x-4">
-          <span class="github-stars">
-            <i class="fas fa-star"></i>
-            224
-          </span>
-
-          <span class="github-forks">
-            <i class="fas fa-code-branch"></i>
-            12
-          </span>
-
-          <a
-            class="invis-link"
-            href="https://github.com/ms-jpq/lua-async-await"
+  <body class="m-0 p-0">
+    <input
+      aria-hidden="true"
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+    />
+    <div
+      class="scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
+    >
+      <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
+        <label for="layout-checkbox">
+          <button
+            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden pointer-events-none"
           >
-            <button
-              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
-            >
-              View on Github
-              <i class="fab fa-github"></i>
-            </button>
-          </a>
+            <i class="fas fa-bars"></i>
+            Menu
+          </button>
+        </label>
+        <div class="prose text-right overflow-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
+        </div>
+      </header>
+      <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
+            height="1164"
+            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
+            srcset="
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
+            "
+            width="1164"
+          />
         </section>
 
-        <section class="self-center">
-          <article class="markdown">
-            <h1 id="lua-async-await">
-              <a href="https://ms-jpq.github.io/lua-async-await"
-                >Lua Async Await</a
-              >
-            </h1>
-            <p>
-              Async Await in
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
+
+        <section>
+          <nav>
+            <ul>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/index.html"
+                >
+                  home
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/about_me.html"
+                >
+                  about
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="flex flex-wrap">
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
+
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </section>
+      </aside>
+      <div class="w-full px-8">
+        <main class="grid grid-flow-row grid-cols-1 justify-items-center">
+          <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <span class="github-stars">
+                <i class="fas fa-star"></i>
+                224
+              </span>
+
+              <span class="github-forks">
+                <i class="fas fa-code-branch"></i>
+                12
+              </span>
+
               <a
-                href="https://github.com/ms-jpq/lua-async-await/blob/master/lua/async.lua"
-                >90 lines</a
+                class="invis-link"
+                href="https://github.com/ms-jpq/lua-async-await"
               >
-              of code.
-            </p>
-            <p>
-              Originally written for Neovim, because it uses the same
-              <code>libuv</code> eventloop from NodeJS.
-            </p>
-            <p><strong>Works for any LUA code</strong></p>
-            <h2 id="special-thanks">Special Thanks</h2>
-            <p>
-              <a href="https://github.com/svermeulen">svermeulen</a> for fixing
-              <a href="https://github.com/ms-jpq/lua-async-await/issues/2"
-                >inability to return functions</a
-              >.
-            </p>
-            <h2 id="preface">Preface</h2>
-            <p>
-              This tutorial assumes that you are familiar with the concept of
-              <code>async</code> <code>await</code>
-            </p>
-            <p>
-              You will also need to read through the
-              <a href="https://www.lua.org/pil/9.1.html">first 500 words</a> of
-              how coroutines work in lua.
-            </p>
-            <h2 id="luv"><a href="https://github.com/luvit/luv">Luv</a></h2>
-            <p>
-              Neovim use <a href="https://github.com/libuv/libuv">libuv</a> for
-              async, the same monster that is the heart of NodeJS.
-            </p>
-            <p>
-              The <code>libuv</code> bindings are exposed through
-              <code>luv</code> for lua, this is accessed using
-              <code>vim.loop</code>.
-            </p>
-            <p>
-              Most of the <code>luv</code> APIs are similar to that of NodeJS,
-              ie in the form of
-            </p>
-            <p><code>API :: (param1, param2, callback)</code></p>
-            <p>Our goal is avoid the dreaded calback hell.</p>
-            <h2 id="preview">Preview</h2>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;async&quot;</span>
+                <button
+                  class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
+                >
+                  View on Github
+                  <i class="fab fa-github"></i>
+                </button>
+              </a>
+            </section>
+
+            <section class="self-center">
+              <article class="markdown">
+                <h1 id="lua-async-await">
+                  <a href="https://ms-jpq.github.io/lua-async-await"
+                    >Lua Async Await</a
+                  >
+                </h1>
+                <p>
+                  Async Await in
+                  <a
+                    href="https://github.com/ms-jpq/lua-async-await/blob/master/lua/async.lua"
+                    >90 lines</a
+                  >
+                  of code.
+                </p>
+                <p>
+                  Originally written for Neovim, because it uses the same
+                  <code>libuv</code> eventloop from NodeJS.
+                </p>
+                <p><strong>Works for any LUA code</strong></p>
+                <h2 id="special-thanks">Special Thanks</h2>
+                <p>
+                  <a href="https://github.com/svermeulen">svermeulen</a> for
+                  fixing
+                  <a href="https://github.com/ms-jpq/lua-async-await/issues/2"
+                    >inability to return functions</a
+                  >.
+                </p>
+                <h2 id="preface">Preface</h2>
+                <p>
+                  This tutorial assumes that you are familiar with the concept
+                  of <code>async</code> <code>await</code>
+                </p>
+                <p>
+                  You will also need to read through the
+                  <a href="https://www.lua.org/pil/9.1.html">first 500 words</a>
+                  of how coroutines work in lua.
+                </p>
+                <h2 id="luv"><a href="https://github.com/luvit/luv">Luv</a></h2>
+                <p>
+                  Neovim use
+                  <a href="https://github.com/libuv/libuv">libuv</a> for async,
+                  the same monster that is the heart of NodeJS.
+                </p>
+                <p>
+                  The <code>libuv</code> bindings are exposed through
+                  <code>luv</code> for lua, this is accessed using
+                  <code>vim.loop</code>.
+                </p>
+                <p>
+                  Most of the <code>luv</code> APIs are similar to that of
+                  NodeJS, ie in the form of
+                </p>
+                <p><code>API :: (param1, param2, callback)</code></p>
+                <p>Our goal is avoid the dreaded calback hell.</p>
+                <h2 id="preview">Preview</h2>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;async&quot;</span>
 
 <span class="kd">local</span> <span class="n">do_thing</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="n">sync</span><span class="p">(</span><span class="kr">function</span> <span class="p">(</span><span class="n">val</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">o</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="n">async_func</span><span class="p">())</span>
@@ -200,35 +216,36 @@
 
 <span class="n">main</span><span class="p">()</span>
 </code></pre>
-            </div>
+                </div>
 
-            <h2 id="coroutines">
-              <a href="https://www.lua.org/pil/9.1.html">Coroutines</a>
-            </h2>
-            <p>
-              If you don’t know how coroutines work, go read the section on
-              generators on
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators"
-                >MDN</a
-              >.
-            </p>
-            <p>
-              It is in js, but the idea is identical, and the examples are much
-              better.
-            </p>
-            <hr />
-            <p>Here is an example of coroutines in Lua:</p>
-            <p>
-              Note that in Lua code <code>coroutine</code> is not a coroutine,
-              it is an namespace.
-            </p>
-            <p>
-              To avoid confusion, I will follow the convention used in the Lua
-              book, and use <code>thread</code> to denote coroutines in code.
-            </p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="kd">local</span> <span class="n">co</span> <span class="o">=</span> <span class="n">coroutine</span>
+                <h2 id="coroutines">
+                  <a href="https://www.lua.org/pil/9.1.html">Coroutines</a>
+                </h2>
+                <p>
+                  If you don’t know how coroutines work, go read the section on
+                  generators on
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators"
+                    >MDN</a
+                  >.
+                </p>
+                <p>
+                  It is in js, but the idea is identical, and the examples are
+                  much better.
+                </p>
+                <hr />
+                <p>Here is an example of coroutines in Lua:</p>
+                <p>
+                  Note that in Lua code <code>coroutine</code> is not a
+                  coroutine, it is an namespace.
+                </p>
+                <p>
+                  To avoid confusion, I will follow the convention used in the
+                  Lua book, and use <code>thread</code> to denote coroutines in
+                  code.
+                </p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">co</span> <span class="o">=</span> <span class="n">coroutine</span>
 
 <span class="kd">local</span> <span class="n">thread</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="kr">function</span> <span class="p">()</span>
   <span class="kd">local</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">yield</span><span class="p">(</span><span class="n">something</span><span class="p">)</span>
@@ -237,43 +254,44 @@
 
 <span class="kd">local</span> <span class="n">cont</span><span class="p">,</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">resume</span><span class="p">(</span><span class="n">thread</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 </code></pre>
-            </div>
+                </div>
 
-            <hr />
-            <p>
-              Notice the similarities with <code>async</code> <code>await</code>
-            </p>
-            <p>
-              In both <code>async</code> <code>await</code> and
-              <code>coroutines</code>, the LHS of the assignment statements
-              receives values from the RHS.
-            </p>
-            <p>
-              This is how it works in all synchronous assignments. Except, we
-              can defer the transfer of the values from RHS.
-            </p>
-            <p>
-              The idea is that we will make RHS send values to LHS, when RHS is
-              ready.
-            </p>
-            <h2 id="synchronous-coroutines">Synchronous Coroutines</h2>
-            <p>
-              To warm up, we will do a synchronous version first, where the RHS
-              is always ready.
-            </p>
-            <p>Here is how you send values to a coroutine:</p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="n">co</span><span class="p">.</span><span class="n">resume</span><span class="p">(</span><span class="n">thread</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+                <hr />
+                <p>
+                  Notice the similarities with <code>async</code>
+                  <code>await</code>
+                </p>
+                <p>
+                  In both <code>async</code> <code>await</code> and
+                  <code>coroutines</code>, the LHS of the assignment statements
+                  receives values from the RHS.
+                </p>
+                <p>
+                  This is how it works in all synchronous assignments. Except,
+                  we can defer the transfer of the values from RHS.
+                </p>
+                <p>
+                  The idea is that we will make RHS send values to LHS, when RHS
+                  is ready.
+                </p>
+                <h2 id="synchronous-coroutines">Synchronous Coroutines</h2>
+                <p>
+                  To warm up, we will do a synchronous version first, where the
+                  RHS is always ready.
+                </p>
+                <p>Here is how you send values to a coroutine:</p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="n">co</span><span class="p">.</span><span class="n">resume</span><span class="p">(</span><span class="n">thread</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 </code></pre>
-            </div>
+                </div>
 
-            <hr />
-            <p>
-              The idea is that we will repeat this until the coroutine has been
-              “unrolled”
-            </p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="kd">local</span> <span class="n">pong</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">thread</span><span class="p">)</span>
+                <hr />
+                <p>
+                  The idea is that we will repeat this until the coroutine has
+                  been “unrolled”
+                </p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">pong</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">thread</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">nxt</span> <span class="o">=</span> <span class="kc">nil</span>
   <span class="n">nxt</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">cont</span><span class="p">,</span> <span class="p">...)</span>
     <span class="kr">if</span> <span class="ow">not</span> <span class="n">cont</span>
@@ -284,15 +302,15 @@
   <span class="kr">return</span> <span class="n">nxt</span><span class="p">(</span><span class="n">co</span><span class="p">.</span><span class="n">resume</span><span class="p">(</span><span class="n">thread</span><span class="p">))</span>
 <span class="kr">end</span>
 </code></pre>
-            </div>
+                </div>
 
-            <hr />
-            <p>
-              if we give <code>pong</code> some coroutine, it will recursively
-              run the coroutine until completion
-            </p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="kd">local</span> <span class="n">thread</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="kr">function</span> <span class="p">()</span>
+                <hr />
+                <p>
+                  if we give <code>pong</code> some coroutine, it will
+                  recursively run the coroutine until completion
+                </p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">thread</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="kr">function</span> <span class="p">()</span>
   <span class="kd">local</span> <span class="n">x</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">yield</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">yield</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
@@ -301,48 +319,48 @@
 
 <span class="n">pong</span><span class="p">(</span><span class="n">thread</span><span class="p">)</span>
 </code></pre>
-            </div>
+                </div>
 
-            <p>
-              We can expect to see <code>1</code>, <code>2 3</code> printed.
-            </p>
-            <h2 id="thunk">
-              <a
-                href="https://stackoverflow.com/questions/2641489/what-is-a-thunk"
-                >Thunk</a
-              >
-            </h2>
-            <p>
-              Once you understand how the synchronous <code>pong</code> works,
-              we are super close!
-            </p>
-            <p>
-              But before we make the asynchronous version, we need to learn one
-              more simple concept.
-            </p>
-            <p>
-              For our purposes a <code>Thunk</code> is function whose purpose is
-              to invoke a callback.
-            </p>
-            <p>
-              i.e. It adds a transformation of
-              <code>(arg, callback) -&gt; void</code> to
-              <code>arg -&gt; (callback -&gt; void) -&gt; void</code>
-            </p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="kd">local</span> <span class="n">read_fs</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">file</span><span class="p">)</span>
+                <p>
+                  We can expect to see <code>1</code>, <code>2 3</code> printed.
+                </p>
+                <h2 id="thunk">
+                  <a
+                    href="https://stackoverflow.com/questions/2641489/what-is-a-thunk"
+                    >Thunk</a
+                  >
+                </h2>
+                <p>
+                  Once you understand how the synchronous
+                  <code>pong</code> works, we are super close!
+                </p>
+                <p>
+                  But before we make the asynchronous version, we need to learn
+                  one more simple concept.
+                </p>
+                <p>
+                  For our purposes a <code>Thunk</code> is function whose
+                  purpose is to invoke a callback.
+                </p>
+                <p>
+                  i.e. It adds a transformation of
+                  <code>(arg, callback) -&gt; void</code> to
+                  <code>arg -&gt; (callback -&gt; void) -&gt; void</code>
+                </p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">read_fs</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">file</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">thunk</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">callback</span><span class="p">)</span>
     <span class="n">fs</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
   <span class="kr">end</span>
   <span class="kr">return</span> <span class="n">thunk</span>
 <span class="kr">end</span>
 </code></pre>
-            </div>
+                </div>
 
-            <hr />
-            <p>This too, is a process that can be automated:</p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="kd">local</span> <span class="n">wrap</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">func</span><span class="p">)</span>
+                <hr />
+                <p>This too, is a process that can be automated:</p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">wrap</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">func</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">factory</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(...)</span>
     <span class="kd">local</span> <span class="n">params</span> <span class="o">=</span> <span class="p">{...}</span>
     <span class="kd">local</span> <span class="n">thunk</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">step</span><span class="p">)</span>
@@ -356,26 +374,26 @@
 
 <span class="kd">local</span> <span class="n">thunk</span> <span class="o">=</span> <span class="n">wrap</span><span class="p">(</span><span class="n">fs</span><span class="p">.</span><span class="n">read</span><span class="p">)</span>
 </code></pre>
-            </div>
+                </div>
 
-            <p>So why do we need this?</p>
-            <h2 id="async-await">Async Await</h2>
-            <p>The answer is simple! We will use thunks for our RHS!</p>
-            <hr />
-            <p>
-              With that said, we will still need one more magic trick, and that
-              is to make a <code>step</code> function.
-            </p>
-            <p>
-              The sole job of the <code>step</code> funciton is to take the
-              place of the callback to all the thunks.
-            </p>
-            <p>
-              In essence, on every callback, we take 1 step forward in the
-              coroutine.
-            </p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="kd">local</span> <span class="n">pong</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+                <p>So why do we need this?</p>
+                <h2 id="async-await">Async Await</h2>
+                <p>The answer is simple! We will use thunks for our RHS!</p>
+                <hr />
+                <p>
+                  With that said, we will still need one more magic trick, and
+                  that is to make a <code>step</code> function.
+                </p>
+                <p>
+                  The sole job of the <code>step</code> funciton is to take the
+                  place of the callback to all the thunks.
+                </p>
+                <p>
+                  In essence, on every callback, we take 1 step forward in the
+                  coroutine.
+                </p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">pong</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
   <span class="nb">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">func</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;function&quot;</span><span class="p">,</span> <span class="s2">&quot;type error :: expected func&quot;</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">thread</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">step</span> <span class="o">=</span> <span class="kc">nil</span>
@@ -392,15 +410,15 @@
   <span class="n">step</span><span class="p">()</span>
 <span class="kr">end</span>
 </code></pre>
-            </div>
+                </div>
 
-            <p>
-              Notice that we also make pong call a callback once it is done.
-            </p>
-            <hr />
-            <p>We can see it in action here:</p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="kd">local</span> <span class="n">echo</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(...)</span>
+                <p>
+                  Notice that we also make pong call a callback once it is done.
+                </p>
+                <hr />
+                <p>We can see it in action here:</p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">echo</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(...)</span>
   <span class="kd">local</span> <span class="n">args</span> <span class="o">=</span> <span class="p">{...}</span>
   <span class="kd">local</span> <span class="n">thunk</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">step</span><span class="p">)</span>
     <span class="n">step</span><span class="p">(</span><span class="n">unpack</span><span class="p">(</span><span class="n">args</span><span class="p">))</span>
@@ -417,30 +435,31 @@
 
 <span class="n">pong</span><span class="p">(</span><span class="n">thread</span><span class="p">)</span>
 </code></pre>
-            </div>
+                </div>
 
-            <p>
-              We can expect this to print <code>1 2 3</code> and
-              <code>4 5 6</code>
-            </p>
-            <p>
-              Note, we are using a synchronous <code>echo</code> for
-              illustration purposes. It doesn’t matter when the
-              <code>callback</code> is invoked. The whole mechanism is agnostic
-              to timing.
-            </p>
-            <p>
-              You can think of async as the more generalized version of sync.
-            </p>
-            <p>You can run an asynchronous version in the last section.</p>
-            <h2 id="await-all">Await All</h2>
-            <p>
-              One more benefit of thunks, is that we can use them to inject
-              arbitrary computation.
-            </p>
-            <p>Such as joining together many thunks.</p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="kd">local</span> <span class="n">join</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">thunks</span><span class="p">)</span>
+                <p>
+                  We can expect this to print <code>1 2 3</code> and
+                  <code>4 5 6</code>
+                </p>
+                <p>
+                  Note, we are using a synchronous <code>echo</code> for
+                  illustration purposes. It doesn’t matter when the
+                  <code>callback</code> is invoked. The whole mechanism is
+                  agnostic to timing.
+                </p>
+                <p>
+                  You can think of async as the more generalized version of
+                  sync.
+                </p>
+                <p>You can run an asynchronous version in the last section.</p>
+                <h2 id="await-all">Await All</h2>
+                <p>
+                  One more benefit of thunks, is that we can use them to inject
+                  arbitrary computation.
+                </p>
+                <p>Such as joining together many thunks.</p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">join</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">thunks</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">len</span> <span class="o">=</span> <span class="n">table</span><span class="p">.</span><span class="n">getn</span><span class="p">(</span><span class="n">thunks</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">done</span> <span class="o">=</span> <span class="mi">0</span>
   <span class="kd">local</span> <span class="n">acc</span> <span class="o">=</span> <span class="p">{}</span>
@@ -463,24 +482,24 @@
   <span class="kr">return</span> <span class="n">thunk</span>
 <span class="kr">end</span>
 </code></pre>
-            </div>
+                </div>
 
-            <p>
-              This way we can perform <code>await_all</code> on many thunks as
-              if they are a single one.
-            </p>
-            <h2 id="more-sugar">More Sugar</h2>
-            <p>
-              All this explicit handling of coroutines are abit ugly. The good
-              thing is that we can completely hide the implementation detail to
-              the point where we don’t even need to require the
-              <code>coroutine</code> namespace!
-            </p>
-            <p>
-              Simply wrap the coroutine interface with some friendly helpers
-            </p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="kd">local</span> <span class="n">pong</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+                <p>
+                  This way we can perform <code>await_all</code> on many thunks
+                  as if they are a single one.
+                </p>
+                <h2 id="more-sugar">More Sugar</h2>
+                <p>
+                  All this explicit handling of coroutines are abit ugly. The
+                  good thing is that we can completely hide the implementation
+                  detail to the point where we don’t even need to require the
+                  <code>coroutine</code> namespace!
+                </p>
+                <p>
+                  Simply wrap the coroutine interface with some friendly helpers
+                </p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">pong</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">thread</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
   <span class="p">...</span>
 <span class="kr">end</span>
@@ -493,90 +512,93 @@
   <span class="kr">return</span> <span class="n">co</span><span class="p">.</span><span class="n">yield</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">defer</span><span class="p">))</span>
 <span class="kr">end</span>
 </code></pre>
-            </div>
+                </div>
 
-            <h2 id="composable">Composable</h2>
-            <p>At this point we are almost there, just one more step!</p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="kd">local</span> <span class="n">sync</span> <span class="o">=</span> <span class="n">wrap</span><span class="p">(</span><span class="n">pong</span><span class="p">)</span>
+                <h2 id="composable">Composable</h2>
+                <p>At this point we are almost there, just one more step!</p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">sync</span> <span class="o">=</span> <span class="n">wrap</span><span class="p">(</span><span class="n">pong</span><span class="p">)</span>
 </code></pre>
-            </div>
+                </div>
 
-            <p>
-              We <code>wrap</code> <code>pong</code> into a thunk factory, so
-              that calling it is no different than yielding other thunks. This
-              is how we can compose together our <code>async</code>
-              <code>await</code>.
-            </p>
-            <p>It’s thunks all the way down.</p>
-            <h2 id="tips-and-tricks">Tips and Tricks</h2>
-            <p>
-              In Neovim, we have something called <code>textlock</code>, which
-              prevents many APIs from being called unless you are in the main
-              event loop.
-            </p>
-            <p>
-              This will prevent you from essentially modifying any Neovim states
-              once you have invoked a <code>vim.loop</code> funciton, which run
-              in a seperate loop.
-            </p>
-            <p>Here is how you break back to the main loop:</p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="kd">local</span> <span class="n">main_loop</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">f</span><span class="p">)</span>
+                <p>
+                  We <code>wrap</code> <code>pong</code> into a thunk factory,
+                  so that calling it is no different than yielding other thunks.
+                  This is how we can compose together our <code>async</code>
+                  <code>await</code>.
+                </p>
+                <p>It’s thunks all the way down.</p>
+                <h2 id="tips-and-tricks">Tips and Tricks</h2>
+                <p>
+                  In Neovim, we have something called <code>textlock</code>,
+                  which prevents many APIs from being called unless you are in
+                  the main event loop.
+                </p>
+                <p>
+                  This will prevent you from essentially modifying any Neovim
+                  states once you have invoked a <code>vim.loop</code> funciton,
+                  which run in a seperate loop.
+                </p>
+                <p>Here is how you break back to the main loop:</p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">main_loop</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">f</span><span class="p">)</span>
   <span class="n">vim</span><span class="p">.</span><span class="n">schedule</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <span class="kr">end</span>
 </code></pre>
-            </div>
+                </div>
 
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="n">a</span><span class="p">.</span><span class="n">sync</span><span class="p">(</span><span class="kr">function</span> <span class="p">()</span>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="n">a</span><span class="p">.</span><span class="n">sync</span><span class="p">(</span><span class="kr">function</span> <span class="p">()</span>
   <span class="c1">-- do something in other loop</span>
   <span class="n">a</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="n">main_loop</span><span class="p">)</span>
   <span class="c1">-- you are back!</span>
 <span class="kr">end</span><span class="p">)()</span>
 </code></pre>
-            </div>
+                </div>
 
-            <h2 id="plugin">Plugin!</h2>
-            <p>
-              I have bundle up this tutorial as a vim plugin, you can install it
-              the usual way.
-            </p>
-            <p>
-              <code
-                >Plug &#x27;ms-jpq/lua-async-await&#x27;, {&#x27;branch&#x27;:
-                &#x27;neo&#x27;}</code
-              >
-            </p>
-            <p>and then call the test functions like so:</p>
-            <p><code>:LuaAsyncExample</code></p>
-            <p><code>:LuaSyncExample</code></p>
-            <p><code>:LuaTextlockFail</code></p>
-            <p><code>:LuaTextLockSucc</code></p>
-          </article>
-        </section>
+                <h2 id="plugin">Plugin!</h2>
+                <p>
+                  I have bundle up this tutorial as a vim plugin, you can
+                  install it the usual way.
+                </p>
+                <p>
+                  <code
+                    >Plug &#x27;ms-jpq/lua-async-await&#x27;,
+                    {&#x27;branch&#x27;: &#x27;neo&#x27;}</code
+                  >
+                </p>
+                <p>and then call the test functions like so:</p>
+                <p><code>:LuaAsyncExample</code></p>
+                <p><code>:LuaSyncExample</code></p>
+                <p><code>:LuaTextlockFail</code></p>
+                <p><code>:LuaTextLockSucc</code></p>
+              </article>
+            </section>
 
-        <section class="grid grid-flow-col justify-end items-center gap-x-4">
-          <div>
-            <i class="fas fa-baby text-left"></i>
-            <time datetime="2020-05-03T23:29:11+0000"></time>
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <div>
+                <i class="fas fa-baby text-left"></i>
+                <time datetime="2020-05-03T23:29:11+0000"></time>
+              </div>
+              <div>
+                <i class="fas fa-user-edit text-left"></i>
+                <time datetime="2022-11-20T13:49:49+0000"></time>
+              </div>
+            </section>
           </div>
-          <div>
-            <i class="fas fa-user-edit text-left"></i>
-            <time datetime="2022-11-20T13:49:49+0000"></time>
-          </div>
-        </section>
+        </main>
       </div>
-    </main>
-
-    <footer class="grid justify-items-center items-center">
-      <div class="markdown">
-        <a href="https://github.com/ms-jpq">
-          <span>©</span>
-          2022
-          <span>ms-jpq</span>
-        </a>
-      </div>
-    </footer>
+      <footer class="grid justify-items-center items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2022
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

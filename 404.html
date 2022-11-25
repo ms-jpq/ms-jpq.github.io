@@ -10,121 +10,136 @@
     <script src="/layout.js" type="module"></script>
   </head>
 
-  <body
-    class="scroll-smooth grid gap-4 w-screen bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
-  >
-    <header class="grid grid-flow-col justify-between gap-x-2 px-8 pt-4">
-      <button
-        class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden"
-      >
-        <i class="fas fa-bars"></i>
-        Menu
-      </button>
-
-      <div class="prose text-right overflow-ellipsis">
-        <h3 class="uppercase">
-          <a class="invis-link" href="/index.html"> Creative Portfolio </a>
-        </h3>
-      </div>
-    </header>
-    <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-      <section class="grid justify-items-center" id="headshot">
-        <img
-          class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-          height="1164"
-          src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-          srcset="
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-          "
-          width="1164"
-        />
-      </section>
-
-      <section id="about-me">
-        <div class="markdown mx-2">
-          <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
-          <p>I also really like dogs.</p>
-          <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+  <body class="m-0 p-0">
+    <input
+      aria-hidden="true"
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+    />
+    <div
+      class="scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
+    >
+      <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
+        <label for="layout-checkbox">
+          <button
+            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden pointer-events-none"
+          >
+            <i class="fas fa-bars"></i>
+            Menu
+          </button>
+        </label>
+        <div class="prose text-right overflow-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
         </div>
-      </section>
+      </header>
+      <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
+            height="1164"
+            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
+            srcset="
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
+            "
+            width="1164"
+          />
+        </section>
 
-      <section>
-        <nav>
-          <ul>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a class="no-underline hover:text-primary-400" href="/index.html">
-                home
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/about_me.html"
-              >
-                about
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/contact_me.html"
-              >
-                get in touch
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </section>
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
 
-      <section class="flex flex-wrap">
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="mailto:github@bigly.dog"
-        >
-          <i class="far fa-envelope"></i>
-        </a>
+        <section>
+          <nav>
+            <ul>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/index.html"
+                >
+                  home
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/about_me.html"
+                >
+                  about
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
 
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://github.com/ms-jpq"
-        >
-          <i class="fab fa-github"></i>
-        </a>
-
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://stackexchange.com/users/15744711"
-        >
-          <i class="fab fa-stack-overflow"></i>
-        </a>
-      </section>
-    </aside>
-    <main class="justify-items-center items-center">
-      <div class="prose text-center">
-        <h1>404</h1>
-        <h3>The page you&#x27;re looking for doesn&#x27;t exist</h3>
-        <h2>
-          <a href="/index.html">
-            <i class="fas fa-dog text-primary-400"></i>
-            take me home.
-            <i class="fas fa-dog text-primary-400"></i>
+        <section class="flex flex-wrap">
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
           </a>
-        </h2>
-      </div>
-    </main>
 
-    <footer class="grid justify-items-center items-center">
-      <div class="markdown">
-        <a href="https://github.com/ms-jpq">
-          <span>©</span>
-          2022
-          <span>ms-jpq</span>
-        </a>
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </section>
+      </aside>
+      <div class="w-full px-8">
+        <main
+          class="grid grid-flow-row grid-cols-1 justify-items-center items-center"
+        >
+          <div class="prose text-center">
+            <h1>404</h1>
+            <h3>The page you&#x27;re looking for doesn&#x27;t exist</h3>
+            <h2>
+              <a href="/index.html">
+                <i class="fas fa-dog text-primary-400"></i>
+                take me home.
+                <i class="fas fa-dog text-primary-400"></i>
+              </a>
+            </h2>
+          </div>
+        </main>
       </div>
-    </footer>
+      <footer class="grid justify-items-center items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2022
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

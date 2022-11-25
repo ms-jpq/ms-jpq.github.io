@@ -13,233 +13,255 @@
     <script src="/layout.js" type="module"></script>
   </head>
 
-  <body
-    class="scroll-smooth grid gap-4 w-screen bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
-  >
-    <header class="grid grid-flow-col justify-between gap-x-2 px-8 pt-4">
-      <button
-        class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden"
-      >
-        <i class="fas fa-bars"></i>
-        Menu
-      </button>
-
-      <div class="prose text-right overflow-ellipsis">
-        <h3 class="uppercase">
-          <a class="invis-link" href="/index.html"> Creative Portfolio </a>
-        </h3>
-      </div>
-    </header>
-    <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-      <section class="grid justify-items-center" id="headshot">
-        <img
-          class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-          height="1164"
-          src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-          srcset="
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-          "
-          width="1164"
-        />
-      </section>
-
-      <section id="about-me">
-        <div class="markdown mx-2">
-          <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
-          <p>I also really like dogs.</p>
-          <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
-        </div>
-      </section>
-
-      <section>
-        <nav>
-          <ul>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a class="no-underline hover:text-primary-400" href="/index.html">
-                home
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/about_me.html"
-              >
-                about
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/contact_me.html"
-              >
-                get in touch
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </section>
-
-      <section class="flex flex-wrap">
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="mailto:github@bigly.dog"
-        >
-          <i class="far fa-envelope"></i>
-        </a>
-
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://github.com/ms-jpq"
-        >
-          <i class="fab fa-github"></i>
-        </a>
-
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://stackexchange.com/users/15744711"
-        >
-          <i class="fab fa-stack-overflow"></i>
-        </a>
-      </section>
-    </aside>
-    <main class="justify-items-center">
-      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
-        <section class="grid grid-flow-col justify-end items-center gap-x-4">
-          <span class="github-stars">
-            <i class="fas fa-star"></i>
-            51
-          </span>
-
-          <span class="github-forks">
-            <i class="fas fa-code-branch"></i>
-            6
-          </span>
-
-          <a
-            class="invis-link"
-            href="https://github.com/ms-jpq/markdown-live-preview"
+  <body class="m-0 p-0">
+    <input
+      aria-hidden="true"
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+    />
+    <div
+      class="scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
+    >
+      <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
+        <label for="layout-checkbox">
+          <button
+            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden pointer-events-none"
           >
-            <button
-              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
-            >
-              View on Github
-              <i class="fab fa-github"></i>
-            </button>
-          </a>
+            <i class="fas fa-bars"></i>
+            Menu
+          </button>
+        </label>
+        <div class="prose text-right overflow-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
+        </div>
+      </header>
+      <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
+            height="1164"
+            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
+            srcset="
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
+            "
+            width="1164"
+          />
         </section>
 
-        <section class="self-center">
-          <article class="markdown">
-            <h1 id="markdown-live-preview">
-              <a href="https://ms-jpq.github.io/markdown-live-preview"
-                >Markdown Live Preview</a
-              >
-            </h1>
-            <h2 id="features">Features</h2>
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
+
+        <section>
+          <nav>
             <ul>
-              <li>
-                <p>
-                  <strong>Live Preview:</strong> Updates preview on file save
-                </p>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/index.html"
+                >
+                  home
+                </a>
               </li>
-              <li>
-                <p><strong>Auto Follow:</strong> Focus on edited element</p>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/about_me.html"
+                >
+                  about
+                </a>
               </li>
-              <li>
-                <p>
-                  <strong>Syntax Highlight:</strong> Highlighted using
-                  <a href="https://github.com/pygments/pygments">Pygments</a>
-                </p>
-              </li>
-              <li>
-                <p><strong>Github flavoured:</strong> Looks familiar</p>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
               </li>
             </ul>
-            <h2 id="preview">Preview</h2>
-            <p>The animation is only choppy because it’s a compressed gif.</p>
-            <p>
-              <img
-                alt="preview.gif"
-                height="524"
-                src="/92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9.webp"
-                srcset="
-                  /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--200x164.webp 200w,
-                  /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--400x328.webp 400w,
-                  /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--600x491.webp 600w,
-                  /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--640x524.webp 640w
-                "
-                width="640"
-              />
-            </p>
-            <h2 id="usage">Usage</h2>
-            <div class="codehilite friendly">
-              <pre><span ></span><code >mlp <span class="p">|</span>name of markdown<span class="p">|</span>
-</code></pre>
-            </div>
+          </nav>
+        </section>
 
-            <table>
-              <thead>
-                <tr>
-                  <th>Flags</th>
-                  <th>Meaning</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><code>-p, --port PORT=8080</code></td>
-                  <td>Port to use</td>
-                </tr>
-                <tr>
-                  <td><code>-o, --open</code></td>
-                  <td>No localhost restriction</td>
-                </tr>
-                <tr>
-                  <td><code>--nf, --no-follow</code></td>
-                  <td>Do not follow edits</td>
-                </tr>
-                <tr>
-                  <td><code>--nf, --no-browser</code></td>
-                  <td>Do not open browser</td>
-                </tr>
-              </tbody>
-            </table>
-            <h2 id="install">
-              <a href="https://pypi.org/project/markdown-live-preview"
-                >Install</a
+        <section class="flex flex-wrap">
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
+
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </section>
+      </aside>
+      <div class="w-full px-8">
+        <main class="grid grid-flow-row grid-cols-1 justify-items-center">
+          <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <span class="github-stars">
+                <i class="fas fa-star"></i>
+                51
+              </span>
+
+              <span class="github-forks">
+                <i class="fas fa-code-branch"></i>
+                6
+              </span>
+
+              <a
+                class="invis-link"
+                href="https://github.com/ms-jpq/markdown-live-preview"
               >
-            </h2>
-            <div class="codehilite friendly">
-              <pre><span ></span><code >pip install -U markdown_live_preview
+                <button
+                  class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
+                >
+                  View on Github
+                  <i class="fab fa-github"></i>
+                </button>
+              </a>
+            </section>
+
+            <section class="self-center">
+              <article class="markdown">
+                <h1 id="markdown-live-preview">
+                  <a href="https://ms-jpq.github.io/markdown-live-preview"
+                    >Markdown Live Preview</a
+                  >
+                </h1>
+                <h2 id="features">Features</h2>
+                <ul>
+                  <li>
+                    <p>
+                      <strong>Live Preview:</strong> Updates preview on file
+                      save
+                    </p>
+                  </li>
+                  <li>
+                    <p><strong>Auto Follow:</strong> Focus on edited element</p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>Syntax Highlight:</strong> Highlighted using
+                      <a href="https://github.com/pygments/pygments"
+                        >Pygments</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p><strong>Github flavoured:</strong> Looks familiar</p>
+                  </li>
+                </ul>
+                <h2 id="preview">Preview</h2>
+                <p>
+                  The animation is only choppy because it’s a compressed gif.
+                </p>
+                <p>
+                  <img
+                    alt="preview.gif"
+                    height="524"
+                    src="/92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9.webp"
+                    srcset="
+                      /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--200x164.webp 200w,
+                      /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--400x328.webp 400w,
+                      /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--600x491.webp 600w,
+                      /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--640x524.webp 640w
+                    "
+                    width="640"
+                  />
+                </p>
+                <h2 id="usage">Usage</h2>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code >mlp <span class="p">|</span>name of markdown<span class="p">|</span>
 </code></pre>
-            </div>
-          </article>
-        </section>
+                </div>
 
-        <section class="grid grid-flow-col justify-end items-center gap-x-4">
-          <div>
-            <i class="fas fa-baby text-left"></i>
-            <time datetime="2020-06-10T00:19:44+0000"></time>
-          </div>
-          <div>
-            <i class="fas fa-user-edit text-left"></i>
-            <time datetime="2022-11-21T14:23:35+0000"></time>
-          </div>
-        </section>
-      </div>
-    </main>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Flags</th>
+                      <th>Meaning</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>-p, --port PORT=8080</code></td>
+                      <td>Port to use</td>
+                    </tr>
+                    <tr>
+                      <td><code>-o, --open</code></td>
+                      <td>No localhost restriction</td>
+                    </tr>
+                    <tr>
+                      <td><code>--nf, --no-follow</code></td>
+                      <td>Do not follow edits</td>
+                    </tr>
+                    <tr>
+                      <td><code>--nf, --no-browser</code></td>
+                      <td>Do not open browser</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h2 id="install">
+                  <a href="https://pypi.org/project/markdown-live-preview"
+                    >Install</a
+                  >
+                </h2>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code >pip install -U markdown_live_preview
+</code></pre>
+                </div>
+              </article>
+            </section>
 
-    <footer class="grid justify-items-center items-center">
-      <div class="markdown">
-        <a href="https://github.com/ms-jpq">
-          <span>©</span>
-          2022
-          <span>ms-jpq</span>
-        </a>
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <div>
+                <i class="fas fa-baby text-left"></i>
+                <time datetime="2020-06-10T00:19:44+0000"></time>
+              </div>
+              <div>
+                <i class="fas fa-user-edit text-left"></i>
+                <time datetime="2022-11-21T14:23:35+0000"></time>
+              </div>
+            </section>
+          </div>
+        </main>
       </div>
-    </footer>
+      <footer class="grid justify-items-center items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2022
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

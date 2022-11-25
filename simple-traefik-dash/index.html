@@ -13,173 +13,191 @@
     <script src="/layout.js" type="module"></script>
   </head>
 
-  <body
-    class="scroll-smooth grid gap-4 w-screen bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
-  >
-    <header class="grid grid-flow-col justify-between gap-x-2 px-8 pt-4">
-      <button
-        class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden"
-      >
-        <i class="fas fa-bars"></i>
-        Menu
-      </button>
-
-      <div class="prose text-right overflow-ellipsis">
-        <h3 class="uppercase">
-          <a class="invis-link" href="/index.html"> Creative Portfolio </a>
-        </h3>
-      </div>
-    </header>
-    <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-      <section class="grid justify-items-center" id="headshot">
-        <img
-          class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-          height="1164"
-          src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-          srcset="
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-          "
-          width="1164"
-        />
-      </section>
-
-      <section id="about-me">
-        <div class="markdown mx-2">
-          <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
-          <p>I also really like dogs.</p>
-          <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
-        </div>
-      </section>
-
-      <section>
-        <nav>
-          <ul>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a class="no-underline hover:text-primary-400" href="/index.html">
-                home
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/about_me.html"
-              >
-                about
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/contact_me.html"
-              >
-                get in touch
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </section>
-
-      <section class="flex flex-wrap">
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="mailto:github@bigly.dog"
-        >
-          <i class="far fa-envelope"></i>
-        </a>
-
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://github.com/ms-jpq"
-        >
-          <i class="fab fa-github"></i>
-        </a>
-
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://stackexchange.com/users/15744711"
-        >
-          <i class="fab fa-stack-overflow"></i>
-        </a>
-      </section>
-    </aside>
-    <main class="justify-items-center">
-      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
-        <section class="grid grid-flow-col justify-end items-center gap-x-4">
-          <span class="github-stars">
-            <i class="fas fa-star"></i>
-            33
-          </span>
-
-          <span class="github-forks">
-            <i class="fas fa-code-branch"></i>
-            2
-          </span>
-
-          <a
-            class="invis-link"
-            href="https://github.com/ms-jpq/simple-traefik-dash"
+  <body class="m-0 p-0">
+    <input
+      aria-hidden="true"
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+    />
+    <div
+      class="scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
+    >
+      <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
+        <label for="layout-checkbox">
+          <button
+            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden pointer-events-none"
           >
-            <button
-              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
-            >
-              View on Github
-              <i class="fab fa-github"></i>
-            </button>
-          </a>
+            <i class="fas fa-bars"></i>
+            Menu
+          </button>
+        </label>
+        <div class="prose text-right overflow-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
+        </div>
+      </header>
+      <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
+            height="1164"
+            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
+            srcset="
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
+            "
+            width="1164"
+          />
         </section>
 
-        <section class="self-center">
-          <article class="markdown">
-            <h1 id="simple-traefik-dash">
-              <a href="https://ms-jpq.github.io/simple-traefik-dash/"
-                >Simple Traefik Dash</a
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
+
+        <section>
+          <nav>
+            <ul>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/index.html"
+                >
+                  home
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/about_me.html"
+                >
+                  about
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="flex flex-wrap">
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
+
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </section>
+      </aside>
+      <div class="w-full px-8">
+        <main class="grid grid-flow-row grid-cols-1 justify-items-center">
+          <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <span class="github-stars">
+                <i class="fas fa-star"></i>
+                33
+              </span>
+
+              <span class="github-forks">
+                <i class="fas fa-code-branch"></i>
+                2
+              </span>
+
+              <a
+                class="invis-link"
+                href="https://github.com/ms-jpq/simple-traefik-dash"
               >
-            </h1>
-            <p>
-              <a href="https://hub.docker.com/r/msjpq/simple-traefik-dash/"
-                ><img
-                  alt="Docker Pulls"
-                  src="/32c6d4cdbc0df6c24bfac3aedd2ded25880ae0040878859bdc51e9b898ef3112.svg"
-              /></a>
-            </p>
-            <p>
-              <strong>Zero conf</strong> service dashboard for
-              <a href="https://traefik.io/">Traefik v2</a> reverse proxy
-            </p>
-            <p>
-              Parses Traefik’s
-              <a href="https://docs.traefik.io/routing/overview/">Routers</a>
-              and generates all deterministic routes
-            </p>
-            <p><code>Tested for Docker, Docker Swarm, and Kubernetes!</code></p>
-            <h2 id="screenshot">Screenshot</h2>
-            <p>
-              <strong
-                >You can totally change this background, don’t worry</strong
-              >
-            </p>
-            <p>
-              <img
-                alt="promo img"
-                height="1004"
-                src="/3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2.webp"
-                srcset="
-                  /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--1000x786.webp 1000w,
-                  /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--200x157.webp   200w,
-                  /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--400x314.webp   400w,
-                  /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--600x471.webp   600w,
-                  /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--800x628.webp   800w
-                "
-                width="1278"
-              />
-            </p>
-            <h2 id="usage">Usage</h2>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="c1"># SIMPLE TRAEFIK DASH #</span>
+                <button
+                  class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
+                >
+                  View on Github
+                  <i class="fab fa-github"></i>
+                </button>
+              </a>
+            </section>
+
+            <section class="self-center">
+              <article class="markdown">
+                <h1 id="simple-traefik-dash">
+                  <a href="https://ms-jpq.github.io/simple-traefik-dash/"
+                    >Simple Traefik Dash</a
+                  >
+                </h1>
+                <p>
+                  <a href="https://hub.docker.com/r/msjpq/simple-traefik-dash/"
+                    ><img
+                      alt="Docker Pulls"
+                      src="/32c6d4cdbc0df6c24bfac3aedd2ded25880ae0040878859bdc51e9b898ef3112.svg"
+                  /></a>
+                </p>
+                <p>
+                  <strong>Zero conf</strong> service dashboard for
+                  <a href="https://traefik.io/">Traefik v2</a> reverse proxy
+                </p>
+                <p>
+                  Parses Traefik’s
+                  <a href="https://docs.traefik.io/routing/overview/"
+                    >Routers</a
+                  >
+                  and generates all deterministic routes
+                </p>
+                <p>
+                  <code>Tested for Docker, Docker Swarm, and Kubernetes!</code>
+                </p>
+                <h2 id="screenshot">Screenshot</h2>
+                <p>
+                  <strong
+                    >You can totally change this background, don’t worry</strong
+                  >
+                </p>
+                <p>
+                  <img
+                    alt="promo img"
+                    height="1004"
+                    src="/3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2.webp"
+                    srcset="
+                      /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--1000x786.webp 1000w,
+                      /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--200x157.webp   200w,
+                      /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--400x314.webp   400w,
+                      /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--600x471.webp   600w,
+                      /3099cc183d332b1d964e6572269660c3802387e05448ff3058c932bf42c778e2--800x628.webp   800w
+                    "
+                    width="1278"
+                  />
+                </p>
+                <h2 id="usage">Usage</h2>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="c1"># SIMPLE TRAEFIK DASH #</span>
 <span class="n">simple</span><span class="o">-</span><span class="n">traefik</span><span class="o">-</span><span class="n">dash</span><span class="p">:</span>
   <span class="n">image</span><span class="p">:</span> <span class="n">msjpq</span><span class="o">/</span><span class="n">simple</span><span class="o">-</span><span class="n">traefik</span><span class="o">-</span><span class="n">dash</span>
   <span class="n">labels</span><span class="p">:</span>
@@ -199,66 +217,70 @@
     <span class="o">-</span> <span class="o">./</span><span class="n">more</span><span class="o">.</span><span class="n">csv</span><span class="p">:</span><span class="o">/</span><span class="n">std</span><span class="o">/</span><span class="n">more</span><span class="o">-</span><span class="n">routes</span><span class="o">/</span><span class="n">more</span><span class="o">.</span><span class="n">csv</span> <span class="c1"># Optional - CSV Columns: name, uri</span>
     <span class="o">-</span> <span class="o">./</span><span class="n">ignore</span><span class="o">.</span><span class="n">csv</span><span class="p">:</span><span class="o">/</span><span class="n">std</span><span class="o">/</span><span class="n">ignore</span><span class="o">-</span><span class="n">routes</span><span class="o">/</span><span class="n">ignore</span><span class="o">.</span><span class="n">csv</span> <span class="c1"># Optional - CSV Column: name</span>
 </code></pre>
-            </div>
+                </div>
 
-            <p>You can test your Routers rules like so:</p>
-            <p>
-              <code
-                >docker run --rm msjpq/simple-traefik-dash
-                &quot;&lt;RULE&gt;&quot;</code
-              >
-            </p>
-            <p>i.e.</p>
-            <p>
-              <code
-                >docker run --rm msjpq/simple-traefik-dash
-                &quot;Host(&#x27;qbz&#x27;, &#x27;kfc&#x27;) &amp;&amp;
-                (PathPrefix(&#x27;chicken&#x27;) || PathPrefix( &#x27;95&#x27;
-                )) || Host(&#x27;dog.org&#x27;, &#x27;otters.moo&#x27;)
-                &amp;&amp; PathPrefix(&#x27;cat&#x27;)&quot;</code
-              >
-            </p>
-            <h2 id="customization">Customization</h2>
-            <p>
-              You can customize all you want! <code>js</code>, <code>css</code>,
-              <code>images</code>, everything!
-            </p>
-            <p>
-              Simply override the files under <code>/std/views</code>, all the
-              static content will be served
-            </p>
-            <h2 id="sister">Sister</h2>
-            <p>
-              Check out my sister:
-              <a href="https://ms-jpq.github.io/simple-traefik-identity/"
-                >Simple Traefik Identity</a
-              >
-            </p>
-            <p>Simple &amp; Configurable – SSO, for Traefik.</p>
-          </article>
-        </section>
+                <p>You can test your Routers rules like so:</p>
+                <p>
+                  <code
+                    >docker run --rm msjpq/simple-traefik-dash
+                    &quot;&lt;RULE&gt;&quot;</code
+                  >
+                </p>
+                <p>i.e.</p>
+                <p>
+                  <code
+                    >docker run --rm msjpq/simple-traefik-dash
+                    &quot;Host(&#x27;qbz&#x27;, &#x27;kfc&#x27;) &amp;&amp;
+                    (PathPrefix(&#x27;chicken&#x27;) || PathPrefix(
+                    &#x27;95&#x27; )) || Host(&#x27;dog.org&#x27;,
+                    &#x27;otters.moo&#x27;) &amp;&amp;
+                    PathPrefix(&#x27;cat&#x27;)&quot;</code
+                  >
+                </p>
+                <h2 id="customization">Customization</h2>
+                <p>
+                  You can customize all you want! <code>js</code>,
+                  <code>css</code>, <code>images</code>, everything!
+                </p>
+                <p>
+                  Simply override the files under <code>/std/views</code>, all
+                  the static content will be served
+                </p>
+                <h2 id="sister">Sister</h2>
+                <p>
+                  Check out my sister:
+                  <a href="https://ms-jpq.github.io/simple-traefik-identity/"
+                    >Simple Traefik Identity</a
+                  >
+                </p>
+                <p>Simple &amp; Configurable – SSO, for Traefik.</p>
+              </article>
+            </section>
 
-        <section class="grid grid-flow-col justify-end items-center gap-x-4">
-          <div>
-            <i class="fas fa-baby text-left"></i>
-            <time datetime="2019-11-03T01:08:42+0000"></time>
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <div>
+                <i class="fas fa-baby text-left"></i>
+                <time datetime="2019-11-03T01:08:42+0000"></time>
+              </div>
+              <div>
+                <i class="fas fa-user-edit text-left"></i>
+                <time datetime="2022-11-23T17:24:27+0000"></time>
+              </div>
+            </section>
           </div>
-          <div>
-            <i class="fas fa-user-edit text-left"></i>
-            <time datetime="2022-11-23T17:24:27+0000"></time>
-          </div>
-        </section>
+        </main>
       </div>
-    </main>
-
-    <footer class="grid justify-items-center items-center">
-      <div class="markdown">
-        <a href="https://github.com/ms-jpq">
-          <span>©</span>
-          2022
-          <span>ms-jpq</span>
-        </a>
-      </div>
-    </footer>
+      <footer class="grid justify-items-center items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2022
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

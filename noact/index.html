@@ -10,229 +10,244 @@
     <script src="/layout.js" type="module"></script>
   </head>
 
-  <body
-    class="scroll-smooth grid gap-4 w-screen bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
-  >
-    <header class="grid grid-flow-col justify-between gap-x-2 px-8 pt-4">
-      <button
-        class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden"
-      >
-        <i class="fas fa-bars"></i>
-        Menu
-      </button>
-
-      <div class="prose text-right overflow-ellipsis">
-        <h3 class="uppercase">
-          <a class="invis-link" href="/index.html"> Creative Portfolio </a>
-        </h3>
-      </div>
-    </header>
-    <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-      <section class="grid justify-items-center" id="headshot">
-        <img
-          class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-          height="1164"
-          src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-          srcset="
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-          "
-          width="1164"
-        />
-      </section>
-
-      <section id="about-me">
-        <div class="markdown mx-2">
-          <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
-          <p>I also really like dogs.</p>
-          <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+  <body class="m-0 p-0">
+    <input
+      aria-hidden="true"
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+    />
+    <div
+      class="scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
+    >
+      <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
+        <label for="layout-checkbox">
+          <button
+            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden pointer-events-none"
+          >
+            <i class="fas fa-bars"></i>
+            Menu
+          </button>
+        </label>
+        <div class="prose text-right overflow-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
         </div>
-      </section>
-
-      <section>
-        <nav>
-          <ul>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a class="no-underline hover:text-primary-400" href="/index.html">
-                home
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/about_me.html"
-              >
-                about
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/contact_me.html"
-              >
-                get in touch
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </section>
-
-      <section class="flex flex-wrap">
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="mailto:github@bigly.dog"
-        >
-          <i class="far fa-envelope"></i>
-        </a>
-
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://github.com/ms-jpq"
-        >
-          <i class="fab fa-github"></i>
-        </a>
-
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://stackexchange.com/users/15744711"
-        >
-          <i class="fab fa-stack-overflow"></i>
-        </a>
-      </section>
-    </aside>
-    <main class="justify-items-center">
-      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
-        <section class="grid grid-flow-col justify-end items-center gap-x-4">
-          <span class="github-stars">
-            <i class="fas fa-star"></i>
-            308
-          </span>
-
-          <span class="github-forks">
-            <i class="fas fa-code-branch"></i>
-            12
-          </span>
-
-          <a class="invis-link" href="https://github.com/ms-jpq/noact">
-            <button
-              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
-            >
-              View on Github
-              <i class="fab fa-github"></i>
-            </button>
-          </a>
+      </header>
+      <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
+            height="1164"
+            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
+            srcset="
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
+            "
+            width="1164"
+          />
         </section>
 
-        <section class="self-center">
-          <article class="markdown">
-            <h1 id="renoact">
-              <a href="https://ms-jpq.github.io/noact/">~~Re~~Noact</a>
-            </h1>
-            <p>
-              Noact is a minimal
-              <strong><em>self-rendering</em></strong> Virtual DOM library.
-            </p>
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
+
+        <section>
+          <nav>
             <ul>
-              <li>
-                <strong>Declarative:</strong> Pretty much like React, without
-                the JSX compilation of course, hence the name.
-              </li>
-              <li>
-                <strong>Type safe:</strong> Noact is completely typesafe, which
-                means you get
+              <li class="capitalize active:font-bold active:text-primary-400">
                 <a
-                  href="https://github.com/ms-jpq/Noact/blob/noact/_assets/auto_complete.gif"
-                  >static type checking</a
+                  class="no-underline hover:text-primary-400"
+                  href="/index.html"
                 >
-                for free!
+                  home
+                </a>
               </li>
-              <li>
-                <strong>Simple:</strong>
+              <li class="capitalize active:font-bold active:text-primary-400">
                 <a
-                  href="https://github.com/ms-jpq/Noact/blob/noact/src/noact.ts"
-                  >Only 60 lines</a
+                  class="no-underline hover:text-primary-400"
+                  href="/about_me.html"
                 >
-                of type declarations &amp; rendering code. (and 10ish lines of
-                code-gen code)
+                  about
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
               </li>
             </ul>
-            <h2 id="example-app">
-              <a href="https://ms-jpq.github.io/noact-page/">Example App</a>
-            </h2>
-            <h2 id="how-it-feels-to-write-noact">
-              How it feels to write Noact
-            </h2>
-            <p>
-              <img
-                alt="demo.gif"
-                height="522"
-                src="/c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced.webp"
-                srcset="
-                  /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--200x120.webp 200w,
-                  /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--400x239.webp 400w,
-                  /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--600x359.webp 600w,
-                  /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--800x479.webp 800w,
-                  /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--872x522.webp 872w
-                "
-                width="872"
-              />
-            </p>
-            <p><strong>- Explosions -</strong></p>
-            <p>Even has support for <strong>style auto complete</strong></p>
-            <p>
-              <img
-                alt="typedemo.png"
-                height="246"
-                src="/83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17.webp"
-                srcset="
-                  /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--200x73.webp  200w,
-                  /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--400x146.webp 400w,
-                  /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--600x218.webp 600w,
-                  /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--676x246.webp 676w
-                "
-                width="676"
-              />
-            </p>
-            <h2 id="usage">Usage</h2>
-            <p>
-              Noact is inspired by the syntax of the
-              <a href="https://package.elm-lang.org/packages/elm/html/latest/"
-                >elm HTML engine</a
-              >
-            </p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="k">import</span> <span class="p">{</span> <span class="nx">button</span><span class="p">,</span> <span class="nx">div</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;./NoactElements&quot;</span>
+          </nav>
+        </section>
+
+        <section class="flex flex-wrap">
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
+
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </section>
+      </aside>
+      <div class="w-full px-8">
+        <main class="grid grid-flow-row grid-cols-1 justify-items-center">
+          <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <span class="github-stars">
+                <i class="fas fa-star"></i>
+                308
+              </span>
+
+              <span class="github-forks">
+                <i class="fas fa-code-branch"></i>
+                12
+              </span>
+
+              <a class="invis-link" href="https://github.com/ms-jpq/noact">
+                <button
+                  class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
+                >
+                  View on Github
+                  <i class="fab fa-github"></i>
+                </button>
+              </a>
+            </section>
+
+            <section class="self-center">
+              <article class="markdown">
+                <h1 id="renoact">
+                  <a href="https://ms-jpq.github.io/noact/">~~Re~~Noact</a>
+                </h1>
+                <p>
+                  Noact is a minimal
+                  <strong><em>self-rendering</em></strong> Virtual DOM library.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Declarative:</strong> Pretty much like React,
+                    without the JSX compilation of course, hence the name.
+                  </li>
+                  <li>
+                    <strong>Type safe:</strong> Noact is completely typesafe,
+                    which means you get
+                    <a
+                      href="https://github.com/ms-jpq/Noact/blob/noact/_assets/auto_complete.gif"
+                      >static type checking</a
+                    >
+                    for free!
+                  </li>
+                  <li>
+                    <strong>Simple:</strong>
+                    <a
+                      href="https://github.com/ms-jpq/Noact/blob/noact/src/noact.ts"
+                      >Only 60 lines</a
+                    >
+                    of type declarations &amp; rendering code. (and 10ish lines
+                    of code-gen code)
+                  </li>
+                </ul>
+                <h2 id="example-app">
+                  <a href="https://ms-jpq.github.io/noact-page/">Example App</a>
+                </h2>
+                <h2 id="how-it-feels-to-write-noact">
+                  How it feels to write Noact
+                </h2>
+                <p>
+                  <img
+                    alt="demo.gif"
+                    height="522"
+                    src="/c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced.webp"
+                    srcset="
+                      /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--200x120.webp 200w,
+                      /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--400x239.webp 400w,
+                      /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--600x359.webp 600w,
+                      /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--800x479.webp 800w,
+                      /c3833a541498f4a0506f7bdd9a3ca3ca678ccb0471c56034f95212b9c444aced--872x522.webp 872w
+                    "
+                    width="872"
+                  />
+                </p>
+                <p><strong>- Explosions -</strong></p>
+                <p>Even has support for <strong>style auto complete</strong></p>
+                <p>
+                  <img
+                    alt="typedemo.png"
+                    height="246"
+                    src="/83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17.webp"
+                    srcset="
+                      /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--200x73.webp  200w,
+                      /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--400x146.webp 400w,
+                      /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--600x218.webp 600w,
+                      /83b68ded26ea5e0185f348ec058d5b202e172e7f35b56ecb44821cd59d8b5e17--676x246.webp 676w
+                    "
+                    width="676"
+                  />
+                </p>
+                <h2 id="usage">Usage</h2>
+                <p>
+                  Noact is inspired by the syntax of the
+                  <a
+                    href="https://package.elm-lang.org/packages/elm/html/latest/"
+                    >elm HTML engine</a
+                  >
+                </p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="k">import</span> <span class="p">{</span> <span class="nx">button</span><span class="p">,</span> <span class="nx">div</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;./NoactElements&quot;</span>
 <span class="kd">const</span> <span class="nx">component1</span> <span class="o">=</span> <span class="nx">div</span><span class="p">({},</span>
     <span class="nx">button</span><span class="p">({</span> <span class="nx">onclick</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;:D&quot;</span><span class="p">),</span> <span class="nx">txt</span><span class="o">:</span> <span class="s2">&quot;+&quot;</span> <span class="p">}),</span>
     <span class="nx">div</span><span class="p">({</span> <span class="nx">txt</span><span class="o">:</span> <span class="s2">&quot;♥&quot;</span> <span class="p">}),</span>
     <span class="nx">button</span><span class="p">({</span> <span class="nx">onclick</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;D:&quot;</span><span class="p">),</span> <span class="nx">txt</span><span class="o">:</span> <span class="s2">&quot;-&quot;</span> <span class="p">})</span>
 <span class="p">)</span>
 </code></pre>
-            </div>
+                </div>
 
-            <p>
-              <code>component1</code> is a memoized
-              <code>() =&gt; HTMLElement</code> function,
-              <code>component1()</code> will give you back
-            </p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                <p>
+                  <code>component1</code> is a memoized
+                  <code>() =&gt; HTMLElement</code> function,
+                  <code>component1()</code> will give you back
+                </p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>♥<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>-<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre>
-            </div>
+                </div>
 
-            <p>
-              You can use <code>component1</code> as it is, or compose it in a
-              Virtual DOM configuration
-            </p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="k">import</span> <span class="p">{</span> <span class="nx">createMountPoint</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;./Noact&quot;</span>
+                <p>
+                  You can use <code>component1</code> as it is, or compose it in
+                  a Virtual DOM configuration
+                </p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="k">import</span> <span class="p">{</span> <span class="nx">createMountPoint</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;./Noact&quot;</span>
 <span class="kd">const</span> <span class="nx">mount</span> <span class="o">=</span> <span class="nx">createMountPoint</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="sb">`#root`</span><span class="p">))</span>
 <span class="kd">const</span> <span class="nx">remount</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">mount</span><span class="p">(</span>
     <span class="nx">component1</span><span class="p">,</span>
@@ -240,48 +255,51 @@
 <span class="p">)</span>
 <span class="nx">setInterval</span><span class="p">(</span><span class="nx">remount</span><span class="p">,</span> <span class="mf">1000</span><span class="p">)</span>
 </code></pre>
-            </div>
+                </div>
 
-            <p>
-              Here the root element will be populated with both
-              <code>component1</code> and <code>span</code>. Every 1000ms,
-              <code>#root &gt; span</code> and only
-              <code>#root &gt; span</code> will be updated.
-            </p>
-            <p>
-              In essence, <code>component1</code> is both the rendering
-              function, and the virtual DOM.
-            </p>
-            <h2 id="license">License</h2>
-            <p>
-              <a href="https://github.com/ms-jpq/Noact/blob/noact/LICENSE"
-                >MIT License</a
-              >
-            </p>
-          </article>
-        </section>
+                <p>
+                  Here the root element will be populated with both
+                  <code>component1</code> and <code>span</code>. Every 1000ms,
+                  <code>#root &gt; span</code> and only
+                  <code>#root &gt; span</code> will be updated.
+                </p>
+                <p>
+                  In essence, <code>component1</code> is both the rendering
+                  function, and the virtual DOM.
+                </p>
+                <h2 id="license">License</h2>
+                <p>
+                  <a href="https://github.com/ms-jpq/Noact/blob/noact/LICENSE"
+                    >MIT License</a
+                  >
+                </p>
+              </article>
+            </section>
 
-        <section class="grid grid-flow-col justify-end items-center gap-x-4">
-          <div>
-            <i class="fas fa-baby text-left"></i>
-            <time datetime="2019-05-13T20:58:04+0000"></time>
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <div>
+                <i class="fas fa-baby text-left"></i>
+                <time datetime="2019-05-13T20:58:04+0000"></time>
+              </div>
+              <div>
+                <i class="fas fa-user-edit text-left"></i>
+                <time datetime="2022-11-20T14:39:19+0000"></time>
+              </div>
+            </section>
           </div>
-          <div>
-            <i class="fas fa-user-edit text-left"></i>
-            <time datetime="2022-11-20T14:39:19+0000"></time>
-          </div>
-        </section>
+        </main>
       </div>
-    </main>
-
-    <footer class="grid justify-items-center items-center">
-      <div class="markdown">
-        <a href="https://github.com/ms-jpq">
-          <span>©</span>
-          2022
-          <span>ms-jpq</span>
-        </a>
-      </div>
-    </footer>
+      <footer class="grid justify-items-center items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2022
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

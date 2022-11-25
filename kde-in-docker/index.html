@@ -10,418 +10,451 @@
     <script src="/layout.js" type="module"></script>
   </head>
 
-  <body
-    class="scroll-smooth grid gap-4 w-screen bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
-  >
-    <header class="grid grid-flow-col justify-between gap-x-2 px-8 pt-4">
-      <button
-        class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden"
-      >
-        <i class="fas fa-bars"></i>
-        Menu
-      </button>
-
-      <div class="prose text-right overflow-ellipsis">
-        <h3 class="uppercase">
-          <a class="invis-link" href="/index.html"> Creative Portfolio </a>
-        </h3>
-      </div>
-    </header>
-    <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-      <section class="grid justify-items-center" id="headshot">
-        <img
-          class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-          height="1164"
-          src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-          srcset="
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-          "
-          width="1164"
-        />
-      </section>
-
-      <section id="about-me">
-        <div class="markdown mx-2">
-          <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
-          <p>I also really like dogs.</p>
-          <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+  <body class="m-0 p-0">
+    <input
+      aria-hidden="true"
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+    />
+    <div
+      class="scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
+    >
+      <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
+        <label for="layout-checkbox">
+          <button
+            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden pointer-events-none"
+          >
+            <i class="fas fa-bars"></i>
+            Menu
+          </button>
+        </label>
+        <div class="prose text-right overflow-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
         </div>
-      </section>
+      </header>
+      <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
+            height="1164"
+            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
+            srcset="
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
+            "
+            width="1164"
+          />
+        </section>
 
-      <section>
-        <nav>
-          <ul>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a class="no-underline hover:text-primary-400" href="/index.html">
-                home
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/about_me.html"
-              >
-                about
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/contact_me.html"
-              >
-                get in touch
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </section>
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
 
-      <section class="flex flex-wrap">
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="mailto:github@bigly.dog"
-        >
-          <i class="far fa-envelope"></i>
-        </a>
+        <section>
+          <nav>
+            <ul>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/index.html"
+                >
+                  home
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/about_me.html"
+                >
+                  about
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
 
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://github.com/ms-jpq"
-        >
-          <i class="fab fa-github"></i>
-        </a>
+        <section class="flex flex-wrap">
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
 
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://stackexchange.com/users/15744711"
-        >
-          <i class="fab fa-stack-overflow"></i>
-        </a>
-      </section>
-    </aside>
-    <main class="justify-items-center">
-      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
-        <section class="grid grid-flow-col justify-end items-center gap-x-4">
-          <span class="github-stars">
-            <i class="fas fa-star"></i>
-            89
-          </span>
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
 
-          <span class="github-forks">
-            <i class="fas fa-code-branch"></i>
-            13
-          </span>
-
-          <a class="invis-link" href="https://github.com/ms-jpq/kde-in-docker">
-            <button
-              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
-            >
-              View on Github
-              <i class="fab fa-github"></i>
-            </button>
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
           </a>
         </section>
+      </aside>
+      <div class="w-full px-8">
+        <main class="grid grid-flow-row grid-cols-1 justify-items-center">
+          <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <span class="github-stars">
+                <i class="fas fa-star"></i>
+                89
+              </span>
 
-        <section class="self-center">
-          <article class="markdown">
-            <h1 id="kid-kde-in-docker">
-              <a href="https://ms-jpq.github.io/kde-in-docker/"
-                >KID - KDE in Docker</a
-              >
-            </h1>
-            <p>Docker + VNC + noVNC web UI</p>
-            <p><strong>WHY?</strong></p>
-            <p><strong>So you can run KDE inside a browser</strong></p>
-            <h2 id="usage">Usage</h2>
-            <h3 id="common-environmental-variables">
-              Common Environmental Variables
-            </h3>
-            <h4 id="rootless">Rootless</h4>
-            <p>These images by default runs as root.</p>
-            <p>To change that, set these two variables to a non Zero value.</p>
-            <ul>
-              <li><code>-e PGID=0</code></li>
-              <li><code>-e PUID=0</code></li>
-            </ul>
-            <h4 id="vnc">VNC</h4>
-            <ul>
-              <li><code>-e SCR_WIDTH=1600</code></li>
-              <li><code>-e SCR_HEIGHT=900</code></li>
-            </ul>
-            <h4 id="novnc-ui">noVNC UI</h4>
-            <ul>
-              <li><code>-e PATH_PREFIX=/</code></li>
-              <li>
-                <code>-e VNC_RESIZE=scale|remote|off</code> remote = rescale
-                remote desktop, scale = stretch remote desktop
-              </li>
-              <li><code>-e RECON_DELAY=250</code> reconnection delay (ms)</li>
-              <li><code>-e PAGE_TITLE=🐳</code></li>
-            </ul>
-            <h4 id="misc">Misc</h4>
-            <p>This is your password even under non-root user</p>
-            <ul>
-              <li><code>-e ROOT_PASSWORD=password</code></li>
-            </ul>
-            <h3 id="common-ports">Common Ports</h3>
-            <ul>
-              <li>
-                <p><code>-p 80:8080</code> noVNC web UI</p>
-              </li>
-              <li>
-                <p><code>-p 5900:5900</code> VNC</p>
-              </li>
-            </ul>
-            <h3 id="common-volumes">Common Volumes</h3>
-            <ul>
-              <li><code>-v ./appconfig:/config</code></li>
-            </ul>
-            <h3 id="special-thanks">Special Thanks</h3>
-            <p>
-              <a href="https://github.com/McGriddle">McGriddle</a> for helping
-              with rootless!
-            </p>
-            <h2 id="images">Images</h2>
-            <h3 id="firefox">
-              <a href="https://hub.docker.com/r/msjpq/firefox-vnc/">Firefox</a>
-            </h3>
-            <p>
-              <a href="https://hub.docker.com/r/msjpq/firefox-vnc/"
-                ><img
-                  alt="Docker Pulls"
-                  src="/6ec96a62da06997304704ef98ee68beb4e3b0fa989d2d0de28c8458904fc3570.svg"
-              /></a>
-            </p>
-            <p>🦊</p>
-            <p>
-              <strong>RUN</strong> -
-              <code
-                >docker run -p 8080:8080 -p 5900:5900 msjpq/firefox-vnc</code
-              >
-            </p>
-            <p>
-              <img
-                alt="firefox preview.png"
-                height="903"
-                src="/e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd.webp"
-                srcset="
-                  /e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd--1000x563.webp 1000w,
-                  /e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd--200x113.webp   200w,
-                  /e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd--400x225.webp   400w,
-                  /e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd--600x338.webp   600w,
-                  /e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd--800x451.webp   800w
-                "
-                width="1603"
-              />
-            </p>
-            <hr />
-            <h3 id="adobe-acrobat">
-              <a href="https://hub.docker.com/r/msjpq/adobe-acrobat-vnc/"
-                >Adobe Acrobat</a
-              >
-            </h3>
-            <p>
-              <a href="https://hub.docker.com/r/msjpq/adobe-acrobat-vnc/"
-                ><img
-                  alt="Docker Pulls"
-                  src="/924b8d8a134062f5e06d9bcb1150646b35c0252569eb0b057d49f4c97350b403.svg"
-              /></a>
-            </p>
-            <p>Adobe PDF Reader <code>9.5.5</code></p>
-            <p>(first launch slow)</p>
-            <p>
-              <strong>RUN</strong> -
-              <code
-                >docker run -p 8080:8080 -p 5900:5900
-                msjpq/adobe-acrobat-vnc</code
-              >
-            </p>
-            <p>
-              <img
-                alt="acrobat preview.png"
-                height="903"
-                src="/ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1.webp"
-                srcset="
-                  /ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1--1000x563.webp 1000w,
-                  /ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1--200x113.webp   200w,
-                  /ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1--400x225.webp   400w,
-                  /ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1--600x338.webp   600w,
-                  /ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1--800x450.webp   800w
-                "
-                width="1604"
-              />
-            </p>
-            <hr />
-            <h3 id="motrix">
-              <a href="https://hub.docker.com/r/msjpq/motrix-vnc/">Motrix</a>
-            </h3>
-            <p>
-              <a href="https://hub.docker.com/r/msjpq/motrix-vnc/"
-                ><img
-                  alt="Docker Pulls"
-                  src="/fc3fbfadb39b45c22d38cd3c8a8ea8c869311fc59769c3edf8549364f57f6f1a.svg"
-              /></a>
-            </p>
-            <p>
-              Really cool download client.
-              <a href="https://motrix.app/">https://motrix.app/</a>
-            </p>
-            <p>
-              <strong><code>thunder://</code></strong> !! 迅雷
-            </p>
-            <p>
-              <strong>RUN</strong> -
-              <code>docker run -p 8080:8080 -p 5900:5900 msjpq/motrix-vnc</code>
-            </p>
-            <p>
-              <img
-                alt="motrix preview.png"
-                height="893"
-                src="/7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a.webp"
-                srcset="
-                  /7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a--1000x559.webp 1000w,
-                  /7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a--200x112.webp   200w,
-                  /7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a--400x224.webp   400w,
-                  /7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a--600x336.webp   600w,
-                  /7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a--800x447.webp   800w
-                "
-                width="1597"
-              />
-            </p>
-            <hr />
-            <h3 id="baseubuntu-bionic">
-              <a href="https://hub.docker.com/r/msjpq/kde-vnc/"
-                >Base:Ubuntu-Bionic</a
-              >
-            </h3>
-            <p>
-              <a href="https://hub.docker.com/r/msjpq/kde-vnc/"
-                ><img
-                  alt="Docker Pulls"
-                  src="/66cffbc321a4ec51079eb446753d88d8a027796dc83e30323d150f1f2ada60c9.svg"
-              /></a>
-            </p>
-            <p>KDE on 18.04 lts. <code>620MB</code></p>
-            <p>
-              <strong>RUN</strong> -
-              <code
-                >docker run -p 8080:8080 -p 5900:5900 msjpq/kde-vnc:bionic</code
-              >
-            </p>
-            <p>
-              <img
-                alt="bionic preview.png"
-                height="984"
-                src="/4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1.webp"
-                srcset="
-                  /4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1--1000x564.webp 1000w,
-                  /4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1--200x113.webp   200w,
-                  /4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1--400x226.webp   400w,
-                  /4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1--600x338.webp   600w,
-                  /4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1--800x451.webp   800w
-                "
-                width="1745"
-              />
-            </p>
-            <hr />
-            <h3 id="baseubuntu-focal">
-              <a href="https://hub.docker.com/r/msjpq/kde-vnc/"
-                >Base:Ubuntu-Focal</a
-              >
-            </h3>
-            <p>
-              <a href="https://hub.docker.com/r/msjpq/kde-vnc/"
-                ><img
-                  alt="Docker Pulls"
-                  src="/66cffbc321a4ec51079eb446753d88d8a027796dc83e30323d150f1f2ada60c9.svg"
-              /></a>
-            </p>
-            <p>KDE on 20.04 lts. <code>730MB</code></p>
-            <p>
-              <strong>RUN</strong> -
-              <code
-                >docker run -p 8080:8080 -p 5900:5900 msjpq/kde-vnc:focal</code
-              >
-            </p>
-            <p>
-              <img
-                alt="focal preview.png"
-                height="898"
-                src="/8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279.webp"
-                srcset="
-                  /8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279--1000x562.webp 1000w,
-                  /8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279--200x112.webp   200w,
-                  /8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279--400x225.webp   400w,
-                  /8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279--600x337.webp   600w,
-                  /8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279--800x450.webp   800w
-                "
-                width="1598"
-              />
-            </p>
-            <hr />
-            <h3 id="basewine-bionic">
-              <a href="https://hub.docker.com/r/msjpq/wine-vnc/"
-                >Base:Wine-Bionic</a
-              >
-            </h3>
-            <p>
-              <a href="https://hub.docker.com/r/msjpq/wine-vnc/"
-                ><img
-                  alt="Docker Pulls"
-                  src="/a47c556641a72bd8a28b2955c079a7ed6777ec25f5851df737320e8d2891283e.svg"
-              /></a>
-            </p>
-            <p>WINE 5.3 with dependencies. <code>1.3GB</code></p>
-            <p>
-              <strong>RUN</strong> -
-              <code
-                >docker run -p 8080:8080 -p 5900:5900
-                msjpq/wine-vnc:bionic</code
-              >
-            </p>
-            <p>
-              <img
-                alt="wine preview.png"
-                height="903"
-                src="/dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a.webp"
-                srcset="
-                  /dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a--1000x564.webp 1000w,
-                  /dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a--200x113.webp   200w,
-                  /dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a--400x225.webp   400w,
-                  /dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a--600x338.webp   600w,
-                  /dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a--800x451.webp   800w
-                "
-                width="1602"
-              />
-            </p>
-          </article>
-        </section>
+              <span class="github-forks">
+                <i class="fas fa-code-branch"></i>
+                13
+              </span>
 
-        <section class="grid grid-flow-col justify-end items-center gap-x-4">
-          <div>
-            <i class="fas fa-baby text-left"></i>
-            <time datetime="2020-02-18T20:48:16+0000"></time>
+              <a
+                class="invis-link"
+                href="https://github.com/ms-jpq/kde-in-docker"
+              >
+                <button
+                  class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
+                >
+                  View on Github
+                  <i class="fab fa-github"></i>
+                </button>
+              </a>
+            </section>
+
+            <section class="self-center">
+              <article class="markdown">
+                <h1 id="kid-kde-in-docker">
+                  <a href="https://ms-jpq.github.io/kde-in-docker/"
+                    >KID - KDE in Docker</a
+                  >
+                </h1>
+                <p>Docker + VNC + noVNC web UI</p>
+                <p><strong>WHY?</strong></p>
+                <p><strong>So you can run KDE inside a browser</strong></p>
+                <h2 id="usage">Usage</h2>
+                <h3 id="common-environmental-variables">
+                  Common Environmental Variables
+                </h3>
+                <h4 id="rootless">Rootless</h4>
+                <p>These images by default runs as root.</p>
+                <p>
+                  To change that, set these two variables to a non Zero value.
+                </p>
+                <ul>
+                  <li><code>-e PGID=0</code></li>
+                  <li><code>-e PUID=0</code></li>
+                </ul>
+                <h4 id="vnc">VNC</h4>
+                <ul>
+                  <li><code>-e SCR_WIDTH=1600</code></li>
+                  <li><code>-e SCR_HEIGHT=900</code></li>
+                </ul>
+                <h4 id="novnc-ui">noVNC UI</h4>
+                <ul>
+                  <li><code>-e PATH_PREFIX=/</code></li>
+                  <li>
+                    <code>-e VNC_RESIZE=scale|remote|off</code> remote = rescale
+                    remote desktop, scale = stretch remote desktop
+                  </li>
+                  <li>
+                    <code>-e RECON_DELAY=250</code> reconnection delay (ms)
+                  </li>
+                  <li><code>-e PAGE_TITLE=🐳</code></li>
+                </ul>
+                <h4 id="misc">Misc</h4>
+                <p>This is your password even under non-root user</p>
+                <ul>
+                  <li><code>-e ROOT_PASSWORD=password</code></li>
+                </ul>
+                <h3 id="common-ports">Common Ports</h3>
+                <ul>
+                  <li>
+                    <p><code>-p 80:8080</code> noVNC web UI</p>
+                  </li>
+                  <li>
+                    <p><code>-p 5900:5900</code> VNC</p>
+                  </li>
+                </ul>
+                <h3 id="common-volumes">Common Volumes</h3>
+                <ul>
+                  <li><code>-v ./appconfig:/config</code></li>
+                </ul>
+                <h3 id="special-thanks">Special Thanks</h3>
+                <p>
+                  <a href="https://github.com/McGriddle">McGriddle</a> for
+                  helping with rootless!
+                </p>
+                <h2 id="images">Images</h2>
+                <h3 id="firefox">
+                  <a href="https://hub.docker.com/r/msjpq/firefox-vnc/"
+                    >Firefox</a
+                  >
+                </h3>
+                <p>
+                  <a href="https://hub.docker.com/r/msjpq/firefox-vnc/"
+                    ><img
+                      alt="Docker Pulls"
+                      src="/6ec96a62da06997304704ef98ee68beb4e3b0fa989d2d0de28c8458904fc3570.svg"
+                  /></a>
+                </p>
+                <p>🦊</p>
+                <p>
+                  <strong>RUN</strong> -
+                  <code
+                    >docker run -p 8080:8080 -p 5900:5900
+                    msjpq/firefox-vnc</code
+                  >
+                </p>
+                <p>
+                  <img
+                    alt="firefox preview.png"
+                    height="903"
+                    src="/e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd.webp"
+                    srcset="
+                      /e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd--1000x563.webp 1000w,
+                      /e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd--200x113.webp   200w,
+                      /e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd--400x225.webp   400w,
+                      /e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd--600x338.webp   600w,
+                      /e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd--800x451.webp   800w
+                    "
+                    width="1603"
+                  />
+                </p>
+                <hr />
+                <h3 id="adobe-acrobat">
+                  <a href="https://hub.docker.com/r/msjpq/adobe-acrobat-vnc/"
+                    >Adobe Acrobat</a
+                  >
+                </h3>
+                <p>
+                  <a href="https://hub.docker.com/r/msjpq/adobe-acrobat-vnc/"
+                    ><img
+                      alt="Docker Pulls"
+                      src="/924b8d8a134062f5e06d9bcb1150646b35c0252569eb0b057d49f4c97350b403.svg"
+                  /></a>
+                </p>
+                <p>Adobe PDF Reader <code>9.5.5</code></p>
+                <p>(first launch slow)</p>
+                <p>
+                  <strong>RUN</strong> -
+                  <code
+                    >docker run -p 8080:8080 -p 5900:5900
+                    msjpq/adobe-acrobat-vnc</code
+                  >
+                </p>
+                <p>
+                  <img
+                    alt="acrobat preview.png"
+                    height="903"
+                    src="/ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1.webp"
+                    srcset="
+                      /ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1--1000x563.webp 1000w,
+                      /ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1--200x113.webp   200w,
+                      /ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1--400x225.webp   400w,
+                      /ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1--600x338.webp   600w,
+                      /ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1--800x450.webp   800w
+                    "
+                    width="1604"
+                  />
+                </p>
+                <hr />
+                <h3 id="motrix">
+                  <a href="https://hub.docker.com/r/msjpq/motrix-vnc/"
+                    >Motrix</a
+                  >
+                </h3>
+                <p>
+                  <a href="https://hub.docker.com/r/msjpq/motrix-vnc/"
+                    ><img
+                      alt="Docker Pulls"
+                      src="/fc3fbfadb39b45c22d38cd3c8a8ea8c869311fc59769c3edf8549364f57f6f1a.svg"
+                  /></a>
+                </p>
+                <p>
+                  Really cool download client.
+                  <a href="https://motrix.app/">https://motrix.app/</a>
+                </p>
+                <p>
+                  <strong><code>thunder://</code></strong> !! 迅雷
+                </p>
+                <p>
+                  <strong>RUN</strong> -
+                  <code
+                    >docker run -p 8080:8080 -p 5900:5900 msjpq/motrix-vnc</code
+                  >
+                </p>
+                <p>
+                  <img
+                    alt="motrix preview.png"
+                    height="893"
+                    src="/7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a.webp"
+                    srcset="
+                      /7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a--1000x559.webp 1000w,
+                      /7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a--200x112.webp   200w,
+                      /7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a--400x224.webp   400w,
+                      /7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a--600x336.webp   600w,
+                      /7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a--800x447.webp   800w
+                    "
+                    width="1597"
+                  />
+                </p>
+                <hr />
+                <h3 id="baseubuntu-bionic">
+                  <a href="https://hub.docker.com/r/msjpq/kde-vnc/"
+                    >Base:Ubuntu-Bionic</a
+                  >
+                </h3>
+                <p>
+                  <a href="https://hub.docker.com/r/msjpq/kde-vnc/"
+                    ><img
+                      alt="Docker Pulls"
+                      src="/66cffbc321a4ec51079eb446753d88d8a027796dc83e30323d150f1f2ada60c9.svg"
+                  /></a>
+                </p>
+                <p>KDE on 18.04 lts. <code>620MB</code></p>
+                <p>
+                  <strong>RUN</strong> -
+                  <code
+                    >docker run -p 8080:8080 -p 5900:5900
+                    msjpq/kde-vnc:bionic</code
+                  >
+                </p>
+                <p>
+                  <img
+                    alt="bionic preview.png"
+                    height="984"
+                    src="/4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1.webp"
+                    srcset="
+                      /4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1--1000x564.webp 1000w,
+                      /4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1--200x113.webp   200w,
+                      /4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1--400x226.webp   400w,
+                      /4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1--600x338.webp   600w,
+                      /4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1--800x451.webp   800w
+                    "
+                    width="1745"
+                  />
+                </p>
+                <hr />
+                <h3 id="baseubuntu-focal">
+                  <a href="https://hub.docker.com/r/msjpq/kde-vnc/"
+                    >Base:Ubuntu-Focal</a
+                  >
+                </h3>
+                <p>
+                  <a href="https://hub.docker.com/r/msjpq/kde-vnc/"
+                    ><img
+                      alt="Docker Pulls"
+                      src="/66cffbc321a4ec51079eb446753d88d8a027796dc83e30323d150f1f2ada60c9.svg"
+                  /></a>
+                </p>
+                <p>KDE on 20.04 lts. <code>730MB</code></p>
+                <p>
+                  <strong>RUN</strong> -
+                  <code
+                    >docker run -p 8080:8080 -p 5900:5900
+                    msjpq/kde-vnc:focal</code
+                  >
+                </p>
+                <p>
+                  <img
+                    alt="focal preview.png"
+                    height="898"
+                    src="/8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279.webp"
+                    srcset="
+                      /8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279--1000x562.webp 1000w,
+                      /8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279--200x112.webp   200w,
+                      /8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279--400x225.webp   400w,
+                      /8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279--600x337.webp   600w,
+                      /8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279--800x450.webp   800w
+                    "
+                    width="1598"
+                  />
+                </p>
+                <hr />
+                <h3 id="basewine-bionic">
+                  <a href="https://hub.docker.com/r/msjpq/wine-vnc/"
+                    >Base:Wine-Bionic</a
+                  >
+                </h3>
+                <p>
+                  <a href="https://hub.docker.com/r/msjpq/wine-vnc/"
+                    ><img
+                      alt="Docker Pulls"
+                      src="/a47c556641a72bd8a28b2955c079a7ed6777ec25f5851df737320e8d2891283e.svg"
+                  /></a>
+                </p>
+                <p>WINE 5.3 with dependencies. <code>1.3GB</code></p>
+                <p>
+                  <strong>RUN</strong> -
+                  <code
+                    >docker run -p 8080:8080 -p 5900:5900
+                    msjpq/wine-vnc:bionic</code
+                  >
+                </p>
+                <p>
+                  <img
+                    alt="wine preview.png"
+                    height="903"
+                    src="/dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a.webp"
+                    srcset="
+                      /dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a--1000x564.webp 1000w,
+                      /dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a--200x113.webp   200w,
+                      /dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a--400x225.webp   400w,
+                      /dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a--600x338.webp   600w,
+                      /dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a--800x451.webp   800w
+                    "
+                    width="1602"
+                  />
+                </p>
+              </article>
+            </section>
+
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <div>
+                <i class="fas fa-baby text-left"></i>
+                <time datetime="2020-02-18T20:48:16+0000"></time>
+              </div>
+              <div>
+                <i class="fas fa-user-edit text-left"></i>
+                <time datetime="2022-11-24T06:21:06+0000"></time>
+              </div>
+            </section>
           </div>
-          <div>
-            <i class="fas fa-user-edit text-left"></i>
-            <time datetime="2022-11-24T06:21:06+0000"></time>
-          </div>
-        </section>
+        </main>
       </div>
-    </main>
-
-    <footer class="grid justify-items-center items-center">
-      <div class="markdown">
-        <a href="https://github.com/ms-jpq">
-          <span>©</span>
-          2022
-          <span>ms-jpq</span>
-        </a>
-      </div>
-    </footer>
+      <footer class="grid justify-items-center items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2022
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

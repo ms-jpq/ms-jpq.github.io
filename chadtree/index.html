@@ -13,553 +13,580 @@
     <script src="/layout.js" type="module"></script>
   </head>
 
-  <body
-    class="scroll-smooth grid gap-4 w-screen bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
-  >
-    <header class="grid grid-flow-col justify-between gap-x-2 px-8 pt-4">
-      <button
-        class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden"
-      >
-        <i class="fas fa-bars"></i>
-        Menu
-      </button>
-
-      <div class="prose text-right overflow-ellipsis">
-        <h3 class="uppercase">
-          <a class="invis-link" href="/index.html"> Creative Portfolio </a>
-        </h3>
-      </div>
-    </header>
-    <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-      <section class="grid justify-items-center" id="headshot">
-        <img
-          class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-          height="1164"
-          src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-          srcset="
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-          "
-          width="1164"
-        />
-      </section>
-
-      <section id="about-me">
-        <div class="markdown mx-2">
-          <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
-          <p>I also really like dogs.</p>
-          <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+  <body class="m-0 p-0">
+    <input
+      aria-hidden="true"
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+    />
+    <div
+      class="scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
+    >
+      <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
+        <label for="layout-checkbox">
+          <button
+            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden pointer-events-none"
+          >
+            <i class="fas fa-bars"></i>
+            Menu
+          </button>
+        </label>
+        <div class="prose text-right overflow-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
         </div>
-      </section>
+      </header>
+      <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
+            height="1164"
+            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
+            srcset="
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
+            "
+            width="1164"
+          />
+        </section>
 
-      <section>
-        <nav>
-          <ul>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a class="no-underline hover:text-primary-400" href="/index.html">
-                home
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/about_me.html"
-              >
-                about
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/contact_me.html"
-              >
-                get in touch
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </section>
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
 
-      <section class="flex flex-wrap">
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="mailto:github@bigly.dog"
-        >
-          <i class="far fa-envelope"></i>
-        </a>
+        <section>
+          <nav>
+            <ul>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/index.html"
+                >
+                  home
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/about_me.html"
+                >
+                  about
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
 
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://github.com/ms-jpq"
-        >
-          <i class="fab fa-github"></i>
-        </a>
+        <section class="flex flex-wrap">
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
 
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://stackexchange.com/users/15744711"
-        >
-          <i class="fab fa-stack-overflow"></i>
-        </a>
-      </section>
-    </aside>
-    <main class="justify-items-center">
-      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
-        <section class="grid grid-flow-col justify-end items-center gap-x-4">
-          <span class="github-stars">
-            <i class="fas fa-star"></i>
-            1415
-          </span>
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
 
-          <span class="github-forks">
-            <i class="fas fa-code-branch"></i>
-            51
-          </span>
-
-          <a class="invis-link" href="https://github.com/ms-jpq/chadtree">
-            <button
-              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
-            >
-              View on Github
-              <i class="fab fa-github"></i>
-            </button>
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
           </a>
         </section>
+      </aside>
+      <div class="w-full px-8">
+        <main class="grid grid-flow-row grid-cols-1 justify-items-center">
+          <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <span class="github-stars">
+                <i class="fas fa-star"></i>
+                1415
+              </span>
 
-        <section class="self-center">
-          <article class="markdown">
-            <h1 id="chadtree">
-              <a href="https://ms-jpq.github.io/chadtree">CHADTree</a>
-            </h1>
-            <p>File Manager for Neovim, Better than NERDTree.</p>
-            <h2 id="features-illustrated">Features Illustrated</h2>
-            <p>
-              <strong
-                >See full list of screen captures
-                <a
-                  href="https://github.com/ms-jpq/chadtree/tree/chad/docs/FEATURES.md"
-                  >here</a
-                ></strong
-              >
-            </p>
-            <h3 id="i-like-speed">I like speed</h3>
-            <ul>
-              <li>
-                <p><strong>Parallel</strong> Filesystem Scan</p>
-              </li>
-              <li>
+              <span class="github-forks">
+                <i class="fas fa-code-branch"></i>
+                51
+              </span>
+
+              <a class="invis-link" href="https://github.com/ms-jpq/chadtree">
+                <button
+                  class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
+                >
+                  View on Github
+                  <i class="fab fa-github"></i>
+                </button>
+              </a>
+            </section>
+
+            <section class="self-center">
+              <article class="markdown">
+                <h1 id="chadtree">
+                  <a href="https://ms-jpq.github.io/chadtree">CHADTree</a>
+                </h1>
+                <p>File Manager for Neovim, Better than NERDTree.</p>
+                <h2 id="features-illustrated">Features Illustrated</h2>
                 <p>
                   <strong
-                    ><a href="https://reactjs.org/docs/reconciliation.html"
-                      >React Like</a
+                    >See full list of screen captures
+                    <a
+                      href="https://github.com/ms-jpq/chadtree/tree/chad/docs/FEATURES.md"
+                      >here</a
                     ></strong
                   >
-                  Reconciling Difference Minimizing Rendering engine
                 </p>
-              </li>
-              <li>
-                <p><strong>Never</strong> blocks</p>
-              </li>
-            </ul>
-            <p>
-              <em
-                >You can read more about my
-                <a
-                  href="https://github.com/ms-jpq/chadtree/tree/chad/docs/ARCHITECTURE.md"
-                  >performance optimization</a
-                >
-                here.</em
-              >
-            </p>
-            <h3 id="i-like-power">I like power</h3>
-            <ul>
-              <li>
-                <p>Visual mode selections</p>
-              </li>
-              <li>
-                <p>Create, Copy, Paste, Delete, Rename, gotta do them all</p>
-              </li>
-              <li>
-                <p>Quickfix integration</p>
-              </li>
-              <li>
+                <h3 id="i-like-speed">I like speed</h3>
+                <ul>
+                  <li>
+                    <p><strong>Parallel</strong> Filesystem Scan</p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong
+                        ><a href="https://reactjs.org/docs/reconciliation.html"
+                          >React Like</a
+                        ></strong
+                      >
+                      Reconciling Difference Minimizing Rendering engine
+                    </p>
+                  </li>
+                  <li>
+                    <p><strong>Never</strong> blocks</p>
+                  </li>
+                </ul>
                 <p>
-                  <a
-                    href="https://raw.githubusercontent.com/ms-jpq/chadtree/chad/docs/img/bookmarks.png"
-                    >Bookmarks</a
+                  <em
+                    >You can read more about my
+                    <a
+                      href="https://github.com/ms-jpq/chadtree/tree/chad/docs/ARCHITECTURE.md"
+                      >performance optimization</a
+                    >
+                    here.</em
                   >
                 </p>
-              </li>
-            </ul>
-            <p>
-              <img
-                alt="visual_select.gif"
-                height="712"
-                src="/07dc37062d10579bcbb7a9aea17ba4c54a3218cfa704f50d0f057d7f3487fc3d.webp"
-                srcset="
-                  /07dc37062d10579bcbb7a9aea17ba4c54a3218cfa704f50d0f057d7f3487fc3d--200x152.webp 200w,
-                  /07dc37062d10579bcbb7a9aea17ba4c54a3218cfa704f50d0f057d7f3487fc3d--400x305.webp 400w,
-                  /07dc37062d10579bcbb7a9aea17ba4c54a3218cfa704f50d0f057d7f3487fc3d--600x457.webp 600w,
-                  /07dc37062d10579bcbb7a9aea17ba4c54a3218cfa704f50d0f057d7f3487fc3d--800x610.webp 800w,
-                  /07dc37062d10579bcbb7a9aea17ba4c54a3218cfa704f50d0f057d7f3487fc3d--934x712.webp 934w
-                "
-                width="934"
-              />
-            </p>
-            <h3 id="i-like-21st-century">I like 21st century</h3>
-            <ul>
-              <li>
-                <p>Filtering by glob</p>
-              </li>
-              <li>
-                <p>Follow mode</p>
-              </li>
-              <li>
+                <h3 id="i-like-power">I like power</h3>
+                <ul>
+                  <li>
+                    <p>Visual mode selections</p>
+                  </li>
+                  <li>
+                    <p>
+                      Create, Copy, Paste, Delete, Rename, gotta do them all
+                    </p>
+                  </li>
+                  <li>
+                    <p>Quickfix integration</p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="https://raw.githubusercontent.com/ms-jpq/chadtree/chad/docs/img/bookmarks.png"
+                        >Bookmarks</a
+                      >
+                    </p>
+                  </li>
+                </ul>
                 <p>
-                  Session support (save open folders to disk, pick up where you
-                  left off)
+                  <img
+                    alt="visual_select.gif"
+                    height="712"
+                    src="/07dc37062d10579bcbb7a9aea17ba4c54a3218cfa704f50d0f057d7f3487fc3d.webp"
+                    srcset="
+                      /07dc37062d10579bcbb7a9aea17ba4c54a3218cfa704f50d0f057d7f3487fc3d--200x152.webp 200w,
+                      /07dc37062d10579bcbb7a9aea17ba4c54a3218cfa704f50d0f057d7f3487fc3d--400x305.webp 400w,
+                      /07dc37062d10579bcbb7a9aea17ba4c54a3218cfa704f50d0f057d7f3487fc3d--600x457.webp 600w,
+                      /07dc37062d10579bcbb7a9aea17ba4c54a3218cfa704f50d0f057d7f3487fc3d--800x610.webp 800w,
+                      /07dc37062d10579bcbb7a9aea17ba4c54a3218cfa704f50d0f057d7f3487fc3d--934x712.webp 934w
+                    "
+                    width="934"
+                  />
                 </p>
-              </li>
-              <li>
+                <h3 id="i-like-21st-century">I like 21st century</h3>
+                <ul>
+                  <li>
+                    <p>Filtering by glob</p>
+                  </li>
+                  <li>
+                    <p>Follow mode</p>
+                  </li>
+                  <li>
+                    <p>
+                      Session support (save open folders to disk, pick up where
+                      you left off)
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Trash support (requires
+                      <a href="https://formulae.brew.sh/formula/trash"
+                        ><code>trash</code></a
+                      >
+                      or
+                      <a href="https://github.com/andreafrancia/trash-cli"
+                        ><code>trash-cli</code></a
+                      >)
+                    </p>
+                  </li>
+                  <li>
+                    <p><code>ls -l</code> statistics</p>
+                  </li>
+                  <li>
+                    <p>Correct! handling of symlinks</p>
+                  </li>
+                </ul>
                 <p>
-                  Trash support (requires
-                  <a href="https://formulae.brew.sh/formula/trash"
-                    ><code>trash</code></a
-                  >
-                  or
-                  <a href="https://github.com/andreafrancia/trash-cli"
-                    ><code>trash-cli</code></a
-                  >)
+                  <img
+                    alt="filtering.gif"
+                    height="458"
+                    src="/be75063e692b8c8b6e88b7c6d528b7f632721038bb00aed3b762ea87136f8e82.webp"
+                    srcset="
+                      /be75063e692b8c8b6e88b7c6d528b7f632721038bb00aed3b762ea87136f8e82--200x153.webp 200w,
+                      /be75063e692b8c8b6e88b7c6d528b7f632721038bb00aed3b762ea87136f8e82--400x305.webp 400w,
+                      /be75063e692b8c8b6e88b7c6d528b7f632721038bb00aed3b762ea87136f8e82--600x458.webp 600w,
+                      /be75063e692b8c8b6e88b7c6d528b7f632721038bb00aed3b762ea87136f8e82.webp          600w
+                    "
+                    width="600"
+                  />
                 </p>
-              </li>
-              <li>
-                <p><code>ls -l</code> statistics</p>
-              </li>
-              <li>
-                <p>Correct! handling of symlinks</p>
-              </li>
-            </ul>
-            <p>
-              <img
-                alt="filtering.gif"
-                height="458"
-                src="/be75063e692b8c8b6e88b7c6d528b7f632721038bb00aed3b762ea87136f8e82.webp"
-                srcset="
-                  /be75063e692b8c8b6e88b7c6d528b7f632721038bb00aed3b762ea87136f8e82--200x153.webp 200w,
-                  /be75063e692b8c8b6e88b7c6d528b7f632721038bb00aed3b762ea87136f8e82--400x305.webp 400w,
-                  /be75063e692b8c8b6e88b7c6d528b7f632721038bb00aed3b762ea87136f8e82--600x458.webp 600w,
-                  /be75063e692b8c8b6e88b7c6d528b7f632721038bb00aed3b762ea87136f8e82.webp          600w
-                "
-                width="600"
-              />
-            </p>
-            <h3 id="i-like-version-control">I like version control</h3>
-            <ul>
-              <li>
+                <h3 id="i-like-version-control">I like version control</h3>
+                <ul>
+                  <li>
+                    <p>
+                      Asynchronous parse git status (untracked, modified,
+                      staged)
+                    </p>
+                  </li>
+                  <li>
+                    <p>Full support for git submodules</p>
+                  </li>
+                </ul>
                 <p>
-                  Asynchronous parse git status (untracked, modified, staged)
+                  <img
+                    alt="git.gif"
+                    height="712"
+                    src="/d66d8e0f19f39abcd5d1f9575ab4043abe33ef8d6820c018d00c8f9f24f67ce5.webp"
+                    srcset="
+                      /d66d8e0f19f39abcd5d1f9575ab4043abe33ef8d6820c018d00c8f9f24f67ce5--200x152.webp 200w,
+                      /d66d8e0f19f39abcd5d1f9575ab4043abe33ef8d6820c018d00c8f9f24f67ce5--400x305.webp 400w,
+                      /d66d8e0f19f39abcd5d1f9575ab4043abe33ef8d6820c018d00c8f9f24f67ce5--600x457.webp 600w,
+                      /d66d8e0f19f39abcd5d1f9575ab4043abe33ef8d6820c018d00c8f9f24f67ce5--800x610.webp 800w,
+                      /d66d8e0f19f39abcd5d1f9575ab4043abe33ef8d6820c018d00c8f9f24f67ce5--934x712.webp 934w
+                    "
+                    width="934"
+                  />
                 </p>
-              </li>
-              <li>
-                <p>Full support for git submodules</p>
-              </li>
-            </ul>
-            <p>
-              <img
-                alt="git.gif"
-                height="712"
-                src="/d66d8e0f19f39abcd5d1f9575ab4043abe33ef8d6820c018d00c8f9f24f67ce5.webp"
-                srcset="
-                  /d66d8e0f19f39abcd5d1f9575ab4043abe33ef8d6820c018d00c8f9f24f67ce5--200x152.webp 200w,
-                  /d66d8e0f19f39abcd5d1f9575ab4043abe33ef8d6820c018d00c8f9f24f67ce5--400x305.webp 400w,
-                  /d66d8e0f19f39abcd5d1f9575ab4043abe33ef8d6820c018d00c8f9f24f67ce5--600x457.webp 600w,
-                  /d66d8e0f19f39abcd5d1f9575ab4043abe33ef8d6820c018d00c8f9f24f67ce5--800x610.webp 800w,
-                  /d66d8e0f19f39abcd5d1f9575ab4043abe33ef8d6820c018d00c8f9f24f67ce5--934x712.webp 934w
-                "
-                width="934"
-              />
-            </p>
-            <h3 id="i-like-colours">I like colours</h3>
-            <ul>
-              <li>
+                <h3 id="i-like-colours">I like colours</h3>
+                <ul>
+                  <li>
+                    <p>
+                      Full <code>$LS_COLOR</code> support! (shows same colours
+                      as unix <code>ls</code> &amp; <code>tree</code> commands)
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/github/linguist"
+                        >Github coloured</a
+                      >
+                      icons (over 600 colours!)
+                    </p>
+                  </li>
+                  <li>
+                    <p>Three different sets of icons out of the box</p>
+                  </li>
+                  <li>
+                    <p>
+                      Four built-in themes - nord, solarized, trapdoor,
+                      vim-syntax
+                    </p>
+                  </li>
+                </ul>
                 <p>
-                  Full <code>$LS_COLOR</code> support! (shows same colours as
-                  unix <code>ls</code> &amp; <code>tree</code> commands)
+                  <img
+                    alt="ls_colours.png"
+                    height="555"
+                    src="/ba06e355e91926cc5ca6c2faee99a4d2ed433cc65f6f6b08c70df85e32abd19d.webp"
+                    srcset="
+                      /ba06e355e91926cc5ca6c2faee99a4d2ed433cc65f6f6b08c70df85e32abd19d--200x161.webp 200w,
+                      /ba06e355e91926cc5ca6c2faee99a4d2ed433cc65f6f6b08c70df85e32abd19d--400x322.webp 400w,
+                      /ba06e355e91926cc5ca6c2faee99a4d2ed433cc65f6f6b08c70df85e32abd19d--600x483.webp 600w,
+                      /ba06e355e91926cc5ca6c2faee99a4d2ed433cc65f6f6b08c70df85e32abd19d--690x555.webp 690w
+                    "
+                    width="690"
+                  />
                 </p>
-              </li>
-              <li>
                 <p>
-                  <a href="https://github.com/github/linguist"
-                    >Github coloured</a
-                  >
-                  icons (over 600 colours!)
+                  <img
+                    alt="github_colours.png"
+                    height="260"
+                    src="/623ee2a9f5f1ffdb2564d48c971a0684e0c58b0aa0b4bd075f68ea192b6bff1e.webp"
+                    srcset="
+                      /623ee2a9f5f1ffdb2564d48c971a0684e0c58b0aa0b4bd075f68ea192b6bff1e--186x200.webp 186w,
+                      /623ee2a9f5f1ffdb2564d48c971a0684e0c58b0aa0b4bd075f68ea192b6bff1e--242x260.webp 242w
+                    "
+                    width="242"
+                  />
                 </p>
-              </li>
-              <li>
-                <p>Three different sets of icons out of the box</p>
-              </li>
-              <li>
+                <h3 id="i-like-refinement">I like refinement</h3>
+                <ul>
+                  <li>
+                    <p>
+                      Maintain cursor position on relevant files even when
+                      during movements.
+                    </p>
+                  </li>
+                  <li>
+                    <p>Maintain selection when copying, moving files</p>
+                  </li>
+                  <li>
+                    <p>
+                      Mimetype warning (so you don’t accidentally open an image)
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Validating config parser
+                      <strong
+                        >(notice, I added an extra
+                        <code>&quot;dog&quot;</code> param)</strong
+                      >
+                    </p>
+                  </li>
+                </ul>
                 <p>
-                  Four built-in themes - nord, solarized, trapdoor, vim-syntax
+                  <img
+                    alt="mime warn.png"
+                    height="158"
+                    src="/66fe0c1c2a64a0373737ecb0dbb73d82476e0f86e4b69a4aabf921a45182b2c0.webp"
+                    srcset="
+                      /66fe0c1c2a64a0373737ecb0dbb73d82476e0f86e4b69a4aabf921a45182b2c0--200x50.webp  200w,
+                      /66fe0c1c2a64a0373737ecb0dbb73d82476e0f86e4b69a4aabf921a45182b2c0--400x101.webp 400w,
+                      /66fe0c1c2a64a0373737ecb0dbb73d82476e0f86e4b69a4aabf921a45182b2c0--600x151.webp 600w,
+                      /66fe0c1c2a64a0373737ecb0dbb73d82476e0f86e4b69a4aabf921a45182b2c0--628x158.webp 628w
+                    "
+                    width="628"
+                  />
                 </p>
-              </li>
-            </ul>
-            <p>
-              <img
-                alt="ls_colours.png"
-                height="555"
-                src="/ba06e355e91926cc5ca6c2faee99a4d2ed433cc65f6f6b08c70df85e32abd19d.webp"
-                srcset="
-                  /ba06e355e91926cc5ca6c2faee99a4d2ed433cc65f6f6b08c70df85e32abd19d--200x161.webp 200w,
-                  /ba06e355e91926cc5ca6c2faee99a4d2ed433cc65f6f6b08c70df85e32abd19d--400x322.webp 400w,
-                  /ba06e355e91926cc5ca6c2faee99a4d2ed433cc65f6f6b08c70df85e32abd19d--600x483.webp 600w,
-                  /ba06e355e91926cc5ca6c2faee99a4d2ed433cc65f6f6b08c70df85e32abd19d--690x555.webp 690w
-                "
-                width="690"
-              />
-            </p>
-            <p>
-              <img
-                alt="github_colours.png"
-                height="260"
-                src="/623ee2a9f5f1ffdb2564d48c971a0684e0c58b0aa0b4bd075f68ea192b6bff1e.webp"
-                srcset="
-                  /623ee2a9f5f1ffdb2564d48c971a0684e0c58b0aa0b4bd075f68ea192b6bff1e--186x200.webp 186w,
-                  /623ee2a9f5f1ffdb2564d48c971a0684e0c58b0aa0b4bd075f68ea192b6bff1e--242x260.webp 242w
-                "
-                width="242"
-              />
-            </p>
-            <h3 id="i-like-refinement">I like refinement</h3>
-            <ul>
-              <li>
                 <p>
-                  Maintain cursor position on relevant files even when during
-                  movements.
+                  <img
+                    alt="schema error.png"
+                    height="202"
+                    src="/1bb3ec339530adc5fb60bca7e5811ea3c1f3835372830b7f3dfb2f6955903610.webp"
+                    srcset="
+                      /1bb3ec339530adc5fb60bca7e5811ea3c1f3835372830b7f3dfb2f6955903610--200x45.webp  200w,
+                      /1bb3ec339530adc5fb60bca7e5811ea3c1f3835372830b7f3dfb2f6955903610--400x91.webp  400w,
+                      /1bb3ec339530adc5fb60bca7e5811ea3c1f3835372830b7f3dfb2f6955903610--600x136.webp 600w,
+                      /1bb3ec339530adc5fb60bca7e5811ea3c1f3835372830b7f3dfb2f6955903610--800x182.webp 800w,
+                      /1bb3ec339530adc5fb60bca7e5811ea3c1f3835372830b7f3dfb2f6955903610--889x202.webp 889w
+                    "
+                    width="889"
+                  />
                 </p>
-              </li>
-              <li>
-                <p>Maintain selection when copying, moving files</p>
-              </li>
-              <li>
+                <h3 id="i-like-documentation">I like documentation</h3>
+                <ul>
+                  <li>
+                    <p>Build-in help command in a floating window!</p>
+                  </li>
+                  <li>
+                    <p>
+                      Over 1000 lines of meticulous docs covering every option /
+                      function!
+                    </p>
+                  </li>
+                </ul>
                 <p>
-                  Mimetype warning (so you don’t accidentally open an image)
-                </p>
-              </li>
-              <li>
-                <p>
-                  Validating config parser
                   <strong
-                    >(notice, I added an extra
-                    <code>&quot;dog&quot;</code> param)</strong
+                    >Use <code>:CHADhelp</code> to view
+                    <a href="https://github.com/ms-jpq/chadtree/tree/chad/docs"
+                      >documentation</a
+                    ></strong
                   >
                 </p>
-              </li>
-            </ul>
-            <p>
-              <img
-                alt="mime warn.png"
-                height="158"
-                src="/66fe0c1c2a64a0373737ecb0dbb73d82476e0f86e4b69a4aabf921a45182b2c0.webp"
-                srcset="
-                  /66fe0c1c2a64a0373737ecb0dbb73d82476e0f86e4b69a4aabf921a45182b2c0--200x50.webp  200w,
-                  /66fe0c1c2a64a0373737ecb0dbb73d82476e0f86e4b69a4aabf921a45182b2c0--400x101.webp 400w,
-                  /66fe0c1c2a64a0373737ecb0dbb73d82476e0f86e4b69a4aabf921a45182b2c0--600x151.webp 600w,
-                  /66fe0c1c2a64a0373737ecb0dbb73d82476e0f86e4b69a4aabf921a45182b2c0--628x158.webp 628w
-                "
-                width="628"
-              />
-            </p>
-            <p>
-              <img
-                alt="schema error.png"
-                height="202"
-                src="/1bb3ec339530adc5fb60bca7e5811ea3c1f3835372830b7f3dfb2f6955903610.webp"
-                srcset="
-                  /1bb3ec339530adc5fb60bca7e5811ea3c1f3835372830b7f3dfb2f6955903610--200x45.webp  200w,
-                  /1bb3ec339530adc5fb60bca7e5811ea3c1f3835372830b7f3dfb2f6955903610--400x91.webp  400w,
-                  /1bb3ec339530adc5fb60bca7e5811ea3c1f3835372830b7f3dfb2f6955903610--600x136.webp 600w,
-                  /1bb3ec339530adc5fb60bca7e5811ea3c1f3835372830b7f3dfb2f6955903610--800x182.webp 800w,
-                  /1bb3ec339530adc5fb60bca7e5811ea3c1f3835372830b7f3dfb2f6955903610--889x202.webp 889w
-                "
-                width="889"
-              />
-            </p>
-            <h3 id="i-like-documentation">I like documentation</h3>
-            <ul>
-              <li>
-                <p>Build-in help command in a floating window!</p>
-              </li>
-              <li>
                 <p>
-                  Over 1000 lines of meticulous docs covering every option /
-                  function!
+                  <strong
+                    >Use <code>:CHADhelp --web</code> to open documentation in
+                    your browser!</strong
+                  >
+                  (If you have one installed)
                 </p>
-              </li>
-            </ul>
-            <p>
-              <strong
-                >Use <code>:CHADhelp</code> to view
-                <a href="https://github.com/ms-jpq/chadtree/tree/chad/docs"
-                  >documentation</a
-                ></strong
-              >
-            </p>
-            <p>
-              <strong
-                >Use <code>:CHADhelp --web</code> to open documentation in your
-                browser!</strong
-              >
-              (If you have one installed)
-            </p>
-            <h2 id="install">Install</h2>
-            <p>
-              <strong>Minimum version</strong>: <code>python</code>: 3.8.2,
-              <code>nvim</code>: <code>0.4.3</code>, make sure to have
-              <code>virtualenv</code> installed (e.g.:
-              <code>sudo apt install --yes -- python3-venv</code>)
-            </p>
-            <p>
-              Install the usual way, ie.
-              <a href="https://github.com/junegunn/vim-plug">VimPlug</a>,
-              <a href="https://github.com/VundleVim/Vundle.vim">Vundle</a>, etc
-            </p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code >Plug <span class="s1">&#x27;ms-jpq/chadtree&#x27;</span><span class="p">,</span> {<span class="s1">&#x27;branch&#x27;</span>: <span class="s1">&#x27;chad&#x27;</span><span class="p">,</span> <span class="s1">&#x27;do&#x27;</span>: <span class="s1">&#x27;python3 -m chadtree deps&#x27;</span>}
+                <h2 id="install">Install</h2>
+                <p>
+                  <strong>Minimum version</strong>: <code>python</code>: 3.8.2,
+                  <code>nvim</code>: <code>0.4.3</code>, make sure to have
+                  <code>virtualenv</code> installed (e.g.:
+                  <code>sudo apt install --yes -- python3-venv</code>)
+                </p>
+                <p>
+                  Install the usual way, ie.
+                  <a href="https://github.com/junegunn/vim-plug">VimPlug</a>,
+                  <a href="https://github.com/VundleVim/Vundle.vim">Vundle</a>,
+                  etc
+                </p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code >Plug <span class="s1">&#x27;ms-jpq/chadtree&#x27;</span><span class="p">,</span> {<span class="s1">&#x27;branch&#x27;</span>: <span class="s1">&#x27;chad&#x27;</span><span class="p">,</span> <span class="s1">&#x27;do&#x27;</span>: <span class="s1">&#x27;python3 -m chadtree deps&#x27;</span>}
 </code></pre>
-            </div>
+                </div>
 
-            <p>
-              You will have to run <code>:CHADdeps</code> when installing /
-              updating. This will install CHADTree’s dependencies locally inside
-              <code>chadtree/.vars/runtime</code>.
-            </p>
-            <p>
-              doing <code>rm -rf chadtree/</code> will cleanly remove everything
-              CHADTree uses on your computer.
-            </p>
-            <h2 id="usage">Usage</h2>
-            <p>
-              To toggle CHADTree run command <code>:CHADopen</code>. Set it to a
-              hotkey for convenience.
-            </p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code >nnoremap &lt;leader&gt;v &lt;cmd&gt;CHADopen&lt;cr&gt;
+                <p>
+                  You will have to run <code>:CHADdeps</code> when installing /
+                  updating. This will install CHADTree’s dependencies locally
+                  inside <code>chadtree/.vars/runtime</code>.
+                </p>
+                <p>
+                  doing <code>rm -rf chadtree/</code> will cleanly remove
+                  everything CHADTree uses on your computer.
+                </p>
+                <h2 id="usage">Usage</h2>
+                <p>
+                  To toggle CHADTree run command <code>:CHADopen</code>. Set it
+                  to a hotkey for convenience.
+                </p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code >nnoremap &lt;leader&gt;v &lt;cmd&gt;CHADopen&lt;cr&gt;
 </code></pre>
-            </div>
+                </div>
 
-            <p>To see a list of hot keys:</p>
-            <p>
-              Either use <code>:CHADhelp keybind</code> or open in browser using
-              <a
-                href="https://github.com/ms-jpq/chadtree/tree/chad/docs/KEYBIND.md"
-                ><code>:CHADhelp keybind --web</code></a
-              >
-            </p>
-            <h3 id="recommendations">Recommendations</h3>
-            <p>Add a hotkey to clear quickfix list:</p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code >nnoremap &lt;leader&gt;l &lt;cmd&gt;call setqflist([])&lt;cr&gt;
+                <p>To see a list of hot keys:</p>
+                <p>
+                  Either use <code>:CHADhelp keybind</code> or open in browser
+                  using
+                  <a
+                    href="https://github.com/ms-jpq/chadtree/tree/chad/docs/KEYBIND.md"
+                    ><code>:CHADhelp keybind --web</code></a
+                  >
+                </p>
+                <h3 id="recommendations">Recommendations</h3>
+                <p>Add a hotkey to clear quickfix list:</p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code >nnoremap &lt;leader&gt;l &lt;cmd&gt;call setqflist([])&lt;cr&gt;
 </code></pre>
-            </div>
+                </div>
 
-            <h2 id="if-you-like-this">If you like this…</h2>
-            <p>Also check out</p>
-            <ul>
-              <li>
+                <h2 id="if-you-like-this">If you like this…</h2>
+                <p>Also check out</p>
+                <ul>
+                  <li>
+                    <p>
+                      <a href="https://github.com/ms-jpq/sad"
+                        ><code>sad</code></a
+                      >, its a modern <code>sed</code> that does previews with
+                      syntax highlighting, and lets you pick and choose which
+                      chunks to edit.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/ms-jpq/coq_nvim"
+                        ><code>coq.nvim</code></a
+                      >, it’s a FAST AS FUCK completion client with shit tons of
+                      features.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="https://github.com/ms-jpq/isomorphic-copy"
+                        >isomorphic-copy</a
+                      >, it’s a cross platform clipboard that is daemonless, and
+                      does not require third party support.
+                    </p>
+                  </li>
+                </ul>
+                <h2 id="special-thanks">Special Thanks</h2>
                 <p>
-                  <a href="https://github.com/ms-jpq/sad"><code>sad</code></a
-                  >, its a modern <code>sed</code> that does previews with
-                  syntax highlighting, and lets you pick and choose which chunks
-                  to edit.
+                  CHADTree does not define it’s own colours beyond some minimal
+                  defaults, all themes are imported from other open source
+                  projects.
                 </p>
-              </li>
-              <li>
-                <p>
-                  <a href="https://github.com/ms-jpq/coq_nvim"
-                    ><code>coq.nvim</code></a
-                  >, it’s a FAST AS FUCK completion client with shit tons of
-                  features.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <a href="https://github.com/ms-jpq/isomorphic-copy"
-                    >isomorphic-copy</a
-                  >, it’s a cross platform clipboard that is daemonless, and
-                  does not require third party support.
-                </p>
-              </li>
-            </ul>
-            <h2 id="special-thanks">Special Thanks</h2>
-            <p>
-              CHADTree does not define it’s own colours beyond some minimal
-              defaults, all themes are imported from other open source projects.
-            </p>
-            <blockquote>
-              <p>
-                The base icons are imported from the
-                <a href="https://github.com/ryanoasis/vim-devicons"
-                  >vim-devicon</a
-                >
-              </p>
-              <p>
-                All emoji icons are imported from the
-                <a href="https://github.com/adelarsq/vim-emoji-icon-theme"
-                  >vim-emoji-icon-theme</a
-                >
-              </p>
-              <p>
-                Some themes are imported from
-                <a href="https://github.com/seebi/dircolors-solarized"
-                  >dircolors-solarized</a
-                >
-              </p>
-              <p>
-                Some themes are imported from
-                <a href="https://github.com/arcticicestudio/nord-dircolors"
-                  >nord-dircolors</a
-                >
-              </p>
-              <p>
-                Some themes are imported from
-                <a href="https://github.com/trapd00r/LS_COLORS">LS_COLORS</a>
-              </p>
-              <p>
-                Some themes are imported from
-                <a
-                  href="https://github.com/tiagofumo/vim-nerdtree-syntax-highlight"
-                  >vim-nerdtree-syntax-highlight</a
-                >
-              </p>
-            </blockquote>
-          </article>
-        </section>
+                <blockquote>
+                  <p>
+                    The base icons are imported from the
+                    <a href="https://github.com/ryanoasis/vim-devicons"
+                      >vim-devicon</a
+                    >
+                  </p>
+                  <p>
+                    All emoji icons are imported from the
+                    <a href="https://github.com/adelarsq/vim-emoji-icon-theme"
+                      >vim-emoji-icon-theme</a
+                    >
+                  </p>
+                  <p>
+                    Some themes are imported from
+                    <a href="https://github.com/seebi/dircolors-solarized"
+                      >dircolors-solarized</a
+                    >
+                  </p>
+                  <p>
+                    Some themes are imported from
+                    <a href="https://github.com/arcticicestudio/nord-dircolors"
+                      >nord-dircolors</a
+                    >
+                  </p>
+                  <p>
+                    Some themes are imported from
+                    <a href="https://github.com/trapd00r/LS_COLORS"
+                      >LS_COLORS</a
+                    >
+                  </p>
+                  <p>
+                    Some themes are imported from
+                    <a
+                      href="https://github.com/tiagofumo/vim-nerdtree-syntax-highlight"
+                      >vim-nerdtree-syntax-highlight</a
+                    >
+                  </p>
+                </blockquote>
+              </article>
+            </section>
 
-        <section class="grid grid-flow-col justify-end items-center gap-x-4">
-          <div>
-            <i class="fas fa-baby text-left"></i>
-            <time datetime="2020-07-08T08:29:41+0000"></time>
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <div>
+                <i class="fas fa-baby text-left"></i>
+                <time datetime="2020-07-08T08:29:41+0000"></time>
+              </div>
+              <div>
+                <i class="fas fa-user-edit text-left"></i>
+                <time datetime="2022-11-25T15:04:44+0000"></time>
+              </div>
+            </section>
           </div>
-          <div>
-            <i class="fas fa-user-edit text-left"></i>
-            <time datetime="2022-11-25T15:04:44+0000"></time>
-          </div>
-        </section>
+        </main>
       </div>
-    </main>
-
-    <footer class="grid justify-items-center items-center">
-      <div class="markdown">
-        <a href="https://github.com/ms-jpq">
-          <span>©</span>
-          2022
-          <span>ms-jpq</span>
-        </a>
-      </div>
-    </footer>
+      <footer class="grid justify-items-center items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2022
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

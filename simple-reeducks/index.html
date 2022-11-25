@@ -10,149 +10,163 @@
     <script src="/layout.js" type="module"></script>
   </head>
 
-  <body
-    class="scroll-smooth grid gap-4 w-screen bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
-  >
-    <header class="grid grid-flow-col justify-between gap-x-2 px-8 pt-4">
-      <button
-        class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden"
-      >
-        <i class="fas fa-bars"></i>
-        Menu
-      </button>
-
-      <div class="prose text-right overflow-ellipsis">
-        <h3 class="uppercase">
-          <a class="invis-link" href="/index.html"> Creative Portfolio </a>
-        </h3>
-      </div>
-    </header>
-    <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-      <section class="grid justify-items-center" id="headshot">
-        <img
-          class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-          height="1164"
-          src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-          srcset="
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-            /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-          "
-          width="1164"
-        />
-      </section>
-
-      <section id="about-me">
-        <div class="markdown mx-2">
-          <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
-          <p>I also really like dogs.</p>
-          <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
-        </div>
-      </section>
-
-      <section>
-        <nav>
-          <ul>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a class="no-underline hover:text-primary-400" href="/index.html">
-                home
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/about_me.html"
-              >
-                about
-              </a>
-            </li>
-            <li class="capitalize active:font-bold active:text-primary-400">
-              <a
-                class="no-underline hover:text-primary-400"
-                href="/contact_me.html"
-              >
-                get in touch
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </section>
-
-      <section class="flex flex-wrap">
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="mailto:github@bigly.dog"
-        >
-          <i class="far fa-envelope"></i>
-        </a>
-
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://github.com/ms-jpq"
-        >
-          <i class="fab fa-github"></i>
-        </a>
-
-        <a
-          class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-4 m-4 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
-          href="https://stackexchange.com/users/15744711"
-        >
-          <i class="fab fa-stack-overflow"></i>
-        </a>
-      </section>
-    </aside>
-    <main class="justify-items-center">
-      <div class="grid grid-flow-row grid-cols-1 gap-y-8">
-        <section class="grid grid-flow-col justify-end items-center gap-x-4">
-          <span class="github-stars">
-            <i class="fas fa-star"></i>
-            4
-          </span>
-
-          <span class="github-forks hidden">
-            <i class="fas fa-code-branch"></i>
-            0
-          </span>
-
-          <a
-            class="invis-link"
-            href="https://github.com/ms-jpq/simple-reeducks"
+  <body class="m-0 p-0">
+    <input
+      aria-hidden="true"
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+    />
+    <div
+      class="scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
+    >
+      <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
+        <label for="layout-checkbox">
+          <button
+            class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 font-medium inline-block sm:hidden pointer-events-none"
           >
-            <button
-              class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
-            >
-              View on Github
-              <i class="fab fa-github"></i>
-            </button>
-          </a>
+            <i class="fas fa-bars"></i>
+            Menu
+          </button>
+        </label>
+        <div class="prose text-right overflow-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
+        </div>
+      </header>
+      <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
+            height="1164"
+            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
+            srcset="
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
+            "
+            width="1164"
+          />
         </section>
 
-        <section class="self-center">
-          <article class="markdown">
-            <h1 id="simple-reeducks">
-              <a href="https://ms-jpq.github.io/simple-reeducks/"
-                >Simple Reeducks 🦆🦆</a
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
+
+        <section>
+          <nav>
+            <ul>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/index.html"
+                >
+                  home
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/about_me.html"
+                >
+                  about
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="flex flex-wrap">
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
+
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </section>
+      </aside>
+      <div class="w-full px-8">
+        <main class="grid grid-flow-row grid-cols-1 justify-items-center">
+          <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <span class="github-stars">
+                <i class="fas fa-star"></i>
+                4
+              </span>
+
+              <span class="github-forks hidden">
+                <i class="fas fa-code-branch"></i>
+                0
+              </span>
+
+              <a
+                class="invis-link"
+                href="https://github.com/ms-jpq/simple-reeducks"
               >
-            </h1>
-            <h2 id="an-unceremonious-minimalist-and-idiomatic-redux-port">
-              An unceremonious, minimalist, and idiomatic Redux port
-            </h2>
-            <p>
-              Reeducks 🦆🦆 is
-              <em
-                ><a
-                  href="https://github.com/crymetothemoon/simple-reeducks/blob/master/core/simple-redux.swift"
-                  >stupidly simple</a
-                ></em
-              >: It uses 3 things – Functions, Closures, and Queues.
-            </p>
-            <p>It’s also classless ☭☭☭</p>
-            <h2 id="trivial-example">Trivial Example</h2>
-            <p>Run <code>./demo.sh</code>: contains the following code</p>
-            <div class="codehilite friendly">
-              <pre><span ></span><code ><span class="kd">struct</span> <span class="nc">State</span> <span class="p">{</span>
+                <button
+                  class="self-center cursor-pointer px-2 py-1 text-justify bg-transparent border-solid border-2 text-primary-400 border-primary-400 hover:text-secondary-100 hover:bg-primary-400 border-dashed"
+                >
+                  View on Github
+                  <i class="fab fa-github"></i>
+                </button>
+              </a>
+            </section>
+
+            <section class="self-center">
+              <article class="markdown">
+                <h1 id="simple-reeducks">
+                  <a href="https://ms-jpq.github.io/simple-reeducks/"
+                    >Simple Reeducks 🦆🦆</a
+                  >
+                </h1>
+                <h2 id="an-unceremonious-minimalist-and-idiomatic-redux-port">
+                  An unceremonious, minimalist, and idiomatic Redux port
+                </h2>
+                <p>
+                  Reeducks 🦆🦆 is
+                  <em
+                    ><a
+                      href="https://github.com/crymetothemoon/simple-reeducks/blob/master/core/simple-redux.swift"
+                      >stupidly simple</a
+                    ></em
+                  >: It uses 3 things – Functions, Closures, and Queues.
+                </p>
+                <p>It’s also classless ☭☭☭</p>
+                <h2 id="trivial-example">Trivial Example</h2>
+                <p>Run <code>./demo.sh</code>: contains the following code</p>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="kd">struct</span> <span class="nc">State</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nv">counter</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">}</span>
 
 
@@ -190,83 +204,89 @@
 <span class="kc">_</span> <span class="p">=</span> <span class="n">store</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(.</span><span class="n">main</span><span class="p">)</span> <span class="p">{</span> <span class="n">state</span> <span class="k">in</span>
   <span class="bp">print</span><span class="p">(</span><span class="s">&quot;New State : </span><span class="si">\(</span><span class="n">state</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)}</span>
 </code></pre>
-            </div>
+                </div>
 
-            <h2 id="why-not-reswift">
-              Why not <a href="https://github.com/ReSwift/ReSwift">ReSwift</a>?
-            </h2>
-            <ol>
-              <li>
+                <h2 id="why-not-reswift">
+                  Why not
+                  <a href="https://github.com/ReSwift/ReSwift">ReSwift</a>?
+                </h2>
+                <ol>
+                  <li>
+                    <p>
+                      Complexity &amp; Ceremony:
+                      <strong>Redux is stupidly simple</strong>, ReSwift adds
+                      <a
+                        href="https://github.com/ReSwift/ReSwift/tree/master/ReSwift/CoreTypes"
+                        >unnecessary ceremony</a
+                      >, with protocols and open classes.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Concurrency: ReSwift
+                      <a
+                        href="https://github.com/ReSwift/ReSwift/blob/master/ReSwift/CoreTypes/Store.swift"
+                        >Raises a <code>FatalError</code></a
+                      >
+                      for concurrent modification. This should never happen when
+                      <code>Grand Central Dispatch</code> exists.
+                    </p>
+                  </li>
+                </ol>
+                <h2 id="honest-opinion-should-you-use-redux-with-swift-apps">
+                  Honest Opinion: Should you use Redux with Swift Apps?
+                </h2>
+                <p>Answer: Maybe?</p>
                 <p>
-                  Complexity &amp; Ceremony:
-                  <strong>Redux is stupidly simple</strong>, ReSwift adds
-                  <a
-                    href="https://github.com/ReSwift/ReSwift/tree/master/ReSwift/CoreTypes"
-                    >unnecessary ceremony</a
-                  >, with protocols and open classes.
+                  I wrote about 10,000 lines of iOS / MacOS code with
+                  <strong>Reeducks 🦆🦆</strong>, and although Unidirectional
+                  Dataflow is very neat, it takes quite a bit of ceremony and
+                  discipline to keep the <code>Views</code> and
+                  <code>ViewControllers</code> stateless, especially with
+                  <code>TableViews</code> that uses
+                  <code>NSFetchedResultsController</code>.
                 </p>
-              </li>
-              <li>
                 <p>
-                  Concurrency: ReSwift
-                  <a
-                    href="https://github.com/ReSwift/ReSwift/blob/master/ReSwift/CoreTypes/Store.swift"
-                    >Raises a <code>FatalError</code></a
+                  Honestly I’d say its probably not worth it until the more
+                  declarative
+                  <a href="https://developer.apple.com/xcode/swiftui/"
+                    >SwiftUI</a
                   >
-                  for concurrent modification. This should never happen when
-                  <code>Grand Central Dispatch</code> exists.
+                  becomes the thing, and I will give
+                  <strong>Reeducks 🦆🦆</strong> another shot.
                 </p>
-              </li>
-            </ol>
-            <h2 id="honest-opinion-should-you-use-redux-with-swift-apps">
-              Honest Opinion: Should you use Redux with Swift Apps?
-            </h2>
-            <p>Answer: Maybe?</p>
-            <p>
-              I wrote about 10,000 lines of iOS / MacOS code with
-              <strong>Reeducks 🦆🦆</strong>, and although Unidirectional
-              Dataflow is very neat, it takes quite a bit of ceremony and
-              discipline to keep the <code>Views</code> and
-              <code>ViewControllers</code> stateless, especially with
-              <code>TableViews</code> that uses
-              <code>NSFetchedResultsController</code>.
-            </p>
-            <p>
-              Honestly I’d say its probably not worth it until the more
-              declarative
-              <a href="https://developer.apple.com/xcode/swiftui/">SwiftUI</a>
-              becomes the thing, and I will give
-              <strong>Reeducks 🦆🦆</strong> another shot.
-            </p>
-            <p>
-              Swift’s pattern match syntax also quite verbose compared to say
-              <code>F#</code>, which has its own Unidirectional framework, and
-              can be used to build both iOS and MacOS apps.
-            </p>
-          </article>
-        </section>
+                <p>
+                  Swift’s pattern match syntax also quite verbose compared to
+                  say <code>F#</code>, which has its own Unidirectional
+                  framework, and can be used to build both iOS and MacOS apps.
+                </p>
+              </article>
+            </section>
 
-        <section class="grid grid-flow-col justify-end items-center gap-x-4">
-          <div>
-            <i class="fas fa-baby text-left"></i>
-            <time datetime="2019-05-13T21:13:12+0000"></time>
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <div>
+                <i class="fas fa-baby text-left"></i>
+                <time datetime="2019-05-13T21:13:12+0000"></time>
+              </div>
+              <div>
+                <i class="fas fa-user-edit text-left"></i>
+                <time datetime="2022-11-03T01:12:51+0000"></time>
+              </div>
+            </section>
           </div>
-          <div>
-            <i class="fas fa-user-edit text-left"></i>
-            <time datetime="2022-11-03T01:12:51+0000"></time>
-          </div>
-        </section>
+        </main>
       </div>
-    </main>
-
-    <footer class="grid justify-items-center items-center">
-      <div class="markdown">
-        <a href="https://github.com/ms-jpq">
-          <span>©</span>
-          2022
-          <span>ms-jpq</span>
-        </a>
-      </div>
-    </footer>
+      <footer class="grid justify-items-center items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2022
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
