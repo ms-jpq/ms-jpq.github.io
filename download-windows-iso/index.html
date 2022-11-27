@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      content="Python script to download official windows iso"
+      name="description"
+    />
+    <title>Creative Portfolio</title>
+    <link href="/pages_repo.css" rel="stylesheet" />
+
+    <script src="/layout.js" type="module"></script>
+  </head>
+
+  <body class="m-0 p-0 w-screen min-h-screen flex">
+    <input
+      aria-hidden="true"
+      class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
+    />
+    <div
+      class="w-full grow scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
+    >
+      <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
+        <label
+          class="big-button font-medium inline-block sm:hidden"
+          for="layout-checkbox"
+        >
+          <i class="fas fa-bars"></i>
+          Menu
+        </label>
+        <div class="prose text-right overflow-ellipsis">
+          <h3 class="uppercase">
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+          </h3>
+        </div>
+      </header>
+
+      <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
+        <section class="grid justify-items-center" id="headshot">
+          <img
+            class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
+            height="1164"
+            loading="lazy"
+            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
+            srcset="
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
+              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
+            "
+            width="1164"
+          />
+        </section>
+
+        <section id="about-me">
+          <div class="markdown mx-2">
+            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>I also really like dogs.</p>
+            <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
+          </div>
+        </section>
+
+        <section>
+          <nav>
+            <ul>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/index.html"
+                >
+                  home
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/about_me.html"
+                >
+                  about
+                </a>
+              </li>
+              <li class="capitalize active:font-bold active:text-primary-400">
+                <a
+                  class="no-underline hover:text-primary-400"
+                  href="/contact_me.html"
+                >
+                  get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="flex flex-wrap px-2">
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="mailto:github@bigly.dog"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
+
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://github.com/ms-jpq"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            href="https://stackexchange.com/users/15744711"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </section>
+      </aside>
+
+      <div class="w-full px-8">
+        <main class="grid grid-flow-row grid-cols-1 justify-items-center">
+          <div class="grid grid-flow-row grid-cols-1 gap-y-8">
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <span class="github-stars">
+                <i class="fas fa-star"></i>
+                9
+              </span>
+
+              <span class="github-forks">
+                <i class="fas fa-code-branch"></i>
+                1
+              </span>
+
+              <a
+                class="big-button invis-link border-dashed"
+                href="https://github.com/ms-jpq/download-windows-iso"
+              >
+                View on Github
+                <i class="fab fa-github"></i>
+              </a>
+            </section>
+
+            <section class="self-center">
+              <article class="markdown">
+                <h1 id="download-windows-iso">Download Windows ISO</h1>
+                <p>
+                  Python script to download Windows from Microsoft’s website
+                </p>
+                <h2 id="requirements">Requirements</h2>
+                <ol>
+                  <li>
+                    <p>Have <code>docker</code></p>
+                  </li>
+                  <li>
+                    <p>Have <code>bash</code></p>
+                  </li>
+                  <li>
+                    <p>Have <code>wget</code></p>
+                  </li>
+                </ol>
+                <h2 id="usage">Usage</h2>
+                <h3 id="step-1">Step 1</h3>
+                <div class="codehilite friendly">
+                  <pre><span ></span><code ><span class="c1"># Default to `English International`</span>
+<span class="o">./</span><span class="n">download</span><span class="o">.</span><span class="n">sh</span> <span class="p">[</span><span class="o">-</span><span class="n">l</span> <span class="n">LANGUAGE</span><span class="p">]</span>
+</code></pre>
+                </div>
+
+                <h3 id="step-2">Step 2</h3>
+                <p>Check <code>./tmp/*</code></p>
+              </article>
+            </section>
+
+            <section
+              class="grid grid-flow-col justify-end items-center gap-x-4"
+            >
+              <div>
+                <i class="fas fa-baby text-left"></i>
+                <time datetime="2021-03-08T04:02:01+0000"></time>
+              </div>
+              <div>
+                <i class="fas fa-user-edit text-left"></i>
+                <time datetime="2022-03-26T14:58:26+0000"></time>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <footer class="grid justify-items-center items-center">
+        <div class="markdown">
+          <a href="https://github.com/ms-jpq">
+            <span>©</span>
+            2022
+            <span>ms-jpq</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
