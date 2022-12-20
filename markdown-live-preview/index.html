@@ -1,64 +1,58 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
-      content="markdown live preview | works with any editor"
       name="description"
+      content="markdown live preview | works with any editor"
     />
     <title>Creative Portfolio</title>
-    <link href="/pages_repo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/pages_repo.css" />
 
-    <script src="/layout.js" type="module"></script>
+    <script type="module" src="/layout.js"></script>
   </head>
 
   <body class="m-0 p-0 w-screen min-h-screen flex">
     <input
-      aria-hidden="true"
-      class="hidden"
-      id="layout-checkbox"
       type="checkbox"
+      id="layout-checkbox"
+      class="hidden"
+      aria-hidden="true"
     />
     <div
       class="w-full grow scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
     >
       <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
         <label
-          class="big-button font-medium inline-block sm:hidden"
           for="layout-checkbox"
+          class="big-button font-medium inline-block sm:hidden"
         >
           <i class="fas fa-bars"></i>
           Menu
         </label>
         <div class="prose text-right overflow-ellipsis">
           <h3 class="uppercase">
-            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+            <a href="/index.html" class="invis-link"> Creative Portfolio </a>
           </h3>
         </div>
       </header>
 
       <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-        <section class="grid justify-items-center" id="headshot">
+        <section id="headshot" class="grid justify-items-center">
           <img
             class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-            height="1164"
-            loading="lazy"
-            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-            srcset="
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-            "
-            width="1164"
+            src="face.png"
           />
         </section>
 
         <section id="about-me">
           <div class="markdown mx-2">
-            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
             <p>I also really like dogs.</p>
             <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
           </div>
@@ -127,7 +121,7 @@
             >
               <span class="github-stars">
                 <i class="fas fa-star"></i>
-                51
+                52
               </span>
 
               <span class="github-forks">
@@ -136,8 +130,8 @@
               </span>
 
               <a
-                class="big-button invis-link border-dashed"
                 href="https://github.com/ms-jpq/markdown-live-preview"
+                class="big-button invis-link border-dashed"
               >
                 View on Github
                 <i class="fab fa-github"></i>
@@ -176,26 +170,18 @@
                 </ul>
                 <h2 id="preview">Preview</h2>
                 <p>
-                  The animation is only choppy because it’s a compressed gif.
+                  The animation is only choppy because it&rsquo;s a compressed
+                  gif.
                 </p>
                 <p>
                   <img
                     alt="preview.gif"
-                    height="524"
-                    loading="lazy"
-                    src="/92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9.webp"
-                    srcset="
-                      /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--200x164.webp 200w,
-                      /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--400x328.webp 400w,
-                      /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--600x491.webp 600w,
-                      /92682b754e600ee02aeabf116f418a551be16274b2f1a437729358f6a27e87a9--640x524.webp 640w
-                    "
-                    width="640"
+                    src="https://github.com/ms-jpq/markdown-live-preview/raw/md/preview/smol.gif"
                   />
                 </p>
                 <h2 id="usage">Usage</h2>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >mlp <span class="p">|</span>name of markdown<span class="p">|</span>
+                  <pre><span></span><code>mlp <span class="p">|</span>name of markdown<span class="p">|</span>
 </code></pre>
                 </div>
 
@@ -231,7 +217,7 @@
                   >
                 </h2>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >pip install -U markdown_live_preview
+                  <pre><span></span><code>pip install -U markdown_live_preview
 </code></pre>
                 </div>
               </article>
@@ -246,7 +232,7 @@
               </div>
               <div>
                 <i class="fas fa-user-edit text-left"></i>
-                <time datetime="2022-11-21T14:23:35+0000"></time>
+                <time datetime="2022-12-05T10:31:04+0000"></time>
               </div>
             </section>
           </div>

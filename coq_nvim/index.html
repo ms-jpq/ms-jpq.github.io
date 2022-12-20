@@ -1,64 +1,58 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
-      content="Fast as FUCK nvim completion. SQLite, concurrent scheduler, hundreds of hours of optimization."
       name="description"
+      content="Fast as FUCK nvim completion. SQLite, concurrent scheduler, hundreds of hours of optimization."
     />
     <title>Creative Portfolio</title>
-    <link href="/pages_repo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/pages_repo.css" />
 
-    <script src="/layout.js" type="module"></script>
+    <script type="module" src="/layout.js"></script>
   </head>
 
   <body class="m-0 p-0 w-screen min-h-screen flex">
     <input
-      aria-hidden="true"
-      class="hidden"
-      id="layout-checkbox"
       type="checkbox"
+      id="layout-checkbox"
+      class="hidden"
+      aria-hidden="true"
     />
     <div
       class="w-full grow scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
     >
       <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
         <label
-          class="big-button font-medium inline-block sm:hidden"
           for="layout-checkbox"
+          class="big-button font-medium inline-block sm:hidden"
         >
           <i class="fas fa-bars"></i>
           Menu
         </label>
         <div class="prose text-right overflow-ellipsis">
           <h3 class="uppercase">
-            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+            <a href="/index.html" class="invis-link"> Creative Portfolio </a>
           </h3>
         </div>
       </header>
 
       <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-        <section class="grid justify-items-center" id="headshot">
+        <section id="headshot" class="grid justify-items-center">
           <img
             class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-            height="1164"
-            loading="lazy"
-            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-            srcset="
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-            "
-            width="1164"
+            src="face.png"
           />
         </section>
 
         <section id="about-me">
           <div class="markdown mx-2">
-            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
             <p>I also really like dogs.</p>
             <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
           </div>
@@ -127,17 +121,17 @@
             >
               <span class="github-stars">
                 <i class="fas fa-star"></i>
-                2762
+                2805
               </span>
 
               <span class="github-forks">
                 <i class="fas fa-code-branch"></i>
-                83
+                84
               </span>
 
               <a
-                class="big-button invis-link border-dashed"
                 href="https://github.com/ms-jpq/coq_nvim"
+                class="big-button invis-link border-dashed"
               >
                 View on Github
                 <i class="fab fa-github"></i>
@@ -212,7 +206,8 @@
                     <p>
                       Look at the gifs! The bottom few are the
                       <strong
-                        >fastest when I didn’t slow down on purpose</strong
+                        >fastest when I didn&rsquo;t slow down on
+                        purpose</strong
                       >
                       to show features.
                     </p>
@@ -248,17 +243,7 @@
                 <p>
                   <img
                     alt="fuzz_search.img"
-                    height="546"
-                    loading="lazy"
-                    src="/c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1.webp"
-                    srcset="
-                      /c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1--200x109.webp  200w,
-                      /c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1--400x218.webp  400w,
-                      /c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1--600x328.webp  600w,
-                      /c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1--800x437.webp  800w,
-                      /c0264da2a5e2b388fb4f4a3254873845297631701cf04bea4de4d3b1dda7d6e1.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/fuzzy.gif"
                   />
                 </p>
                 <h3 id="preview">Preview</h3>
@@ -292,17 +277,7 @@
                 <p>
                   <img
                     alt="doc_popup.img"
-                    height="546"
-                    loading="lazy"
-                    src="/d05de29cf0037f7659b2a70852a9f32ff7ac8b6996ef8e17ab0e551dee60afde.webp"
-                    srcset="
-                      /d05de29cf0037f7659b2a70852a9f32ff7ac8b6996ef8e17ab0e551dee60afde--200x109.webp  200w,
-                      /d05de29cf0037f7659b2a70852a9f32ff7ac8b6996ef8e17ab0e551dee60afde--400x218.webp  400w,
-                      /d05de29cf0037f7659b2a70852a9f32ff7ac8b6996ef8e17ab0e551dee60afde--600x328.webp  600w,
-                      /d05de29cf0037f7659b2a70852a9f32ff7ac8b6996ef8e17ab0e551dee60afde--800x437.webp  800w,
-                      /d05de29cf0037f7659b2a70852a9f32ff7ac8b6996ef8e17ab0e551dee60afde.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/preview.gif"
                   />
                 </p>
                 <h3 id="lsp">LSP</h3>
@@ -326,17 +301,7 @@
                 <p>
                   <img
                     alt="lsp_imports.img"
-                    height="546"
-                    loading="lazy"
-                    src="/de9951e0fc550e040418410154d4e10bdeffae9ad8252ae6741ff1dcb38fe54a.webp"
-                    srcset="
-                      /de9951e0fc550e040418410154d4e10bdeffae9ad8252ae6741ff1dcb38fe54a--200x109.webp  200w,
-                      /de9951e0fc550e040418410154d4e10bdeffae9ad8252ae6741ff1dcb38fe54a--400x218.webp  400w,
-                      /de9951e0fc550e040418410154d4e10bdeffae9ad8252ae6741ff1dcb38fe54a--600x328.webp  600w,
-                      /de9951e0fc550e040418410154d4e10bdeffae9ad8252ae6741ff1dcb38fe54a--800x437.webp  800w,
-                      /de9951e0fc550e040418410154d4e10bdeffae9ad8252ae6741ff1dcb38fe54a.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/lsp_import.gif"
                   />
                 </p>
                 <ul>
@@ -345,17 +310,7 @@
                 <p>
                   <img
                     alt="lsp_snippets.img"
-                    height="546"
-                    loading="lazy"
-                    src="/fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9.webp"
-                    srcset="
-                      /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--200x109.webp  200w,
-                      /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--400x218.webp  400w,
-                      /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--600x328.webp  600w,
-                      /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9--800x437.webp  800w,
-                      /fcf87565aac29e9d437c5f892b1dc60a6cfe6b7ee1ed27a477226bcaa290a7b9.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/lsp_snippet.gif"
                   />
                 </p>
                 <p>
@@ -370,7 +325,7 @@
                   >
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">lsp</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;lspconfig&quot;</span>
+                  <pre><span></span><code><span class="kd">local</span> <span class="n">lsp</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;lspconfig&quot;</span>
 <span class="kd">local</span> <span class="n">coq</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;coq&quot;</span> <span class="c1">-- add this</span>
 
 <span class="n">lsp</span><span class="p">.</span><span class="o">&lt;</span><span class="n">server</span><span class="o">&gt;</span><span class="p">.</span><span class="n">setup</span><span class="p">(</span><span class="o">&lt;</span><span class="n">stuff</span><span class="p">...</span><span class="o">&gt;</span><span class="p">)</span>                              <span class="c1">-- before</span>
@@ -404,17 +359,7 @@
                 <p>
                   <img
                     alt="snippet_norm.img"
-                    height="546"
-                    loading="lazy"
-                    src="/c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd.webp"
-                    srcset="
-                      /c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd--200x109.webp  200w,
-                      /c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd--400x218.webp  400w,
-                      /c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd--600x328.webp  600w,
-                      /c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd--800x437.webp  800w,
-                      /c2389b9d2ee8e0b324ed335930f2000c32580d171362452f779fa0e1d8dea6bd.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/snip.gif"
                   />
                 </p>
                 <ul>
@@ -423,17 +368,7 @@
                 <p>
                   <img
                     alt="snippet_expand.img"
-                    height="546"
-                    loading="lazy"
-                    src="/053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd.webp"
-                    srcset="
-                      /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--200x109.webp  200w,
-                      /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--400x218.webp  400w,
-                      /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--600x328.webp  600w,
-                      /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd--800x437.webp  800w,
-                      /053c00414ad21fc1724b6c3df2d478278d2bd9733cd351e2f5ac026f56498bdd.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/expand_snippet.gif"
                   />
                 </p>
                 <ul>
@@ -448,17 +383,7 @@
                 <p>
                   <img
                     alt="snip_load.img"
-                    height="535"
-                    loading="lazy"
-                    src="/ede434835ae49d2da90fa45e25432260132d8daa90896ea18eb4293a4a99316b.webp"
-                    srcset="
-                      /ede434835ae49d2da90fa45e25432260132d8daa90896ea18eb4293a4a99316b--200x107.webp  200w,
-                      /ede434835ae49d2da90fa45e25432260132d8daa90896ea18eb4293a4a99316b--400x214.webp  400w,
-                      /ede434835ae49d2da90fa45e25432260132d8daa90896ea18eb4293a4a99316b--600x321.webp  600w,
-                      /ede434835ae49d2da90fa45e25432260132d8daa90896ea18eb4293a4a99316b--800x428.webp  800w,
-                      /ede434835ae49d2da90fa45e25432260132d8daa90896ea18eb4293a4a99316b.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/snip_load.gif"
                   />
                 </p>
                 <p>
@@ -485,17 +410,7 @@
                 <p>
                   <img
                     alt="treesitter.img"
-                    height="535"
-                    loading="lazy"
-                    src="/8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1.webp"
-                    srcset="
-                      /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--200x107.webp  200w,
-                      /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--400x214.webp  400w,
-                      /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--600x321.webp  600w,
-                      /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1--800x428.webp  800w,
-                      /8ed25b335f2626626789e3e8319c6f687cd1c6cfaa2aa64f08fbb575aeefd0a1.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/treesitter.gif"
                   />
                 </p>
                 <p>
@@ -506,7 +421,8 @@
                 </p>
                 <p>
                   The promise is that Treesitter will have real time parsing on
-                  every keystroke, but it’s actually too slow on big files.
+                  every keystroke, but it&rsquo;s actually too slow on big
+                  files.
                 </p>
                 <p>
                   The Treesitter source only parses a limited number of lines
@@ -531,17 +447,7 @@
                 <p>
                   <img
                     alt="ctags.img"
-                    height="546"
-                    loading="lazy"
-                    src="/ef5dab32f76ccbd9364276e7e3b20c64f2d0891570b5c5dbdce84687b24f0ccf.webp"
-                    srcset="
-                      /ef5dab32f76ccbd9364276e7e3b20c64f2d0891570b5c5dbdce84687b24f0ccf--200x109.webp  200w,
-                      /ef5dab32f76ccbd9364276e7e3b20c64f2d0891570b5c5dbdce84687b24f0ccf--400x218.webp  400w,
-                      /ef5dab32f76ccbd9364276e7e3b20c64f2d0891570b5c5dbdce84687b24f0ccf--600x328.webp  600w,
-                      /ef5dab32f76ccbd9364276e7e3b20c64f2d0891570b5c5dbdce84687b24f0ccf--800x437.webp  800w,
-                      /ef5dab32f76ccbd9364276e7e3b20c64f2d0891570b5c5dbdce84687b24f0ccf.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/tags.gif"
                   />
                 </p>
                 <p>
@@ -551,7 +457,7 @@
                   >
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="c1"># MacOS</span>
+                  <pre><span></span><code><span class="c1"># MacOS</span>
 brew uninstall ctags           <span class="c1"># bad</span>
 brew install   universal-ctags <span class="c1"># good</span>
 
@@ -579,17 +485,7 @@ apt install universal-ctags    <span class="c1"># good</span>
                 <p>
                   <img
                     alt="paths.img"
-                    height="546"
-                    loading="lazy"
-                    src="/fe92deede85f78c6a958d7bb49cb9ada774f9dfa66efcc73bfea92f3b3a9fea3.webp"
-                    srcset="
-                      /fe92deede85f78c6a958d7bb49cb9ada774f9dfa66efcc73bfea92f3b3a9fea3--200x109.webp  200w,
-                      /fe92deede85f78c6a958d7bb49cb9ada774f9dfa66efcc73bfea92f3b3a9fea3--400x218.webp  400w,
-                      /fe92deede85f78c6a958d7bb49cb9ada774f9dfa66efcc73bfea92f3b3a9fea3--600x328.webp  600w,
-                      /fe92deede85f78c6a958d7bb49cb9ada774f9dfa66efcc73bfea92f3b3a9fea3--800x437.webp  800w,
-                      /fe92deede85f78c6a958d7bb49cb9ada774f9dfa66efcc73bfea92f3b3a9fea3.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/paths.gif"
                   />
                 </p>
                 <h3 id="buffers">Buffers</h3>
@@ -606,34 +502,14 @@ apt install universal-ctags    <span class="c1"># good</span>
                 <p>
                   <img
                     alt="buffers.img"
-                    height="546"
-                    loading="lazy"
-                    src="/f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1.webp"
-                    srcset="
-                      /f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1--200x109.webp  200w,
-                      /f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1--400x218.webp  400w,
-                      /f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1--600x328.webp  600w,
-                      /f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1--800x437.webp  800w,
-                      /f2eb0f607c1c35e174f13c56af7e3e286a4b7dffafcfa10a9d0f064bfe1533a1.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/buffers.gif"
                   />
                 </p>
                 <h3 id="tmux">Tmux</h3>
                 <p>
                   <img
                     alt="tmux.img"
-                    height="546"
-                    loading="lazy"
-                    src="/073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525.webp"
-                    srcset="
-                      /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--200x109.webp  200w,
-                      /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--400x218.webp  400w,
-                      /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--600x328.webp  600w,
-                      /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525--800x437.webp  800w,
-                      /073fd6d547bbc190c6c5be728899254c7dd0dd4a85ede0141966843a1bb37525.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/tmux.gif"
                   />
                 </p>
                 <h3 id="tabnine">Tabnine</h3>
@@ -648,17 +524,7 @@ apt install universal-ctags    <span class="c1"># good</span>
                 <p>
                   <img
                     alt="tabnine.img"
-                    height="546"
-                    loading="lazy"
-                    src="/0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b.webp"
-                    srcset="
-                      /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--200x109.webp  200w,
-                      /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--400x218.webp  400w,
-                      /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--600x328.webp  600w,
-                      /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b--800x437.webp  800w,
-                      /0c282bb6742a2a423eab2c2b43d9bf982963e9e3054564d5f171e1aeb35ea18b.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/tabnine.gif"
                   />
                 </p>
                 <p>
@@ -709,17 +575,7 @@ apt install universal-ctags    <span class="c1"># good</span>
                 <p>
                   <img
                     alt="repl.img"
-                    height="531"
-                    loading="lazy"
-                    src="/83c3468c17d14ac2e34f8b4ea8db2373e597f74d98d6525c49780ca79cc5e2df.webp"
-                    srcset="
-                      /83c3468c17d14ac2e34f8b4ea8db2373e597f74d98d6525c49780ca79cc5e2df--200x106.webp  200w,
-                      /83c3468c17d14ac2e34f8b4ea8db2373e597f74d98d6525c49780ca79cc5e2df--400x212.webp  400w,
-                      /83c3468c17d14ac2e34f8b4ea8db2373e597f74d98d6525c49780ca79cc5e2df--600x319.webp  600w,
-                      /83c3468c17d14ac2e34f8b4ea8db2373e597f74d98d6525c49780ca79cc5e2df--800x425.webp  800w,
-                      /83c3468c17d14ac2e34f8b4ea8db2373e597f74d98d6525c49780ca79cc5e2df.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/repl.gif"
                   />
                 </p>
                 <p>Shown above: shell repl.</p>
@@ -788,17 +644,7 @@ apt install universal-ctags    <span class="c1"># good</span>
                 <p>
                   <img
                     alt="statistics.img"
-                    height="570"
-                    loading="lazy"
-                    src="/c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650.webp"
-                    srcset="
-                      /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--200x114.webp  200w,
-                      /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--400x228.webp  400w,
-                      /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--600x342.webp  600w,
-                      /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650--800x456.webp  800w,
-                      /c14c68d9a601e01985bb4bc276c479950173d0ef96da2b8b9e10d3892140b650.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/stats.gif"
                   />
                 </p>
                 <h3 id="validating-config-parser">Validating config parser</h3>
@@ -812,15 +658,7 @@ apt install universal-ctags    <span class="c1"># good</span>
                 <p>
                   <img
                     alt="conf_demo.img"
-                    height="276"
-                    loading="lazy"
-                    src="/18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07.webp"
-                    srcset="
-                      /18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07--200x114.webp 200w,
-                      /18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07--400x229.webp 400w,
-                      /18a71dcfd2a9086f978932dd583e8a5102a47204f46a28df7a708dc3d544da07--483x276.webp 483w
-                    "
-                    width="483"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/conf.png"
                   />
                 </p>
                 <h3 id="pretty">Pretty</h3>
@@ -835,25 +673,14 @@ apt install universal-ctags    <span class="c1"># good</span>
                 <p>
                   <img
                     alt="pretty.gif"
-                    height="535"
-                    loading="lazy"
-                    src="/5419fabd951c1caf31874b4ce1f84e8c72f9e0ea39999e5b6b152951b0c26b2a.webp"
-                    srcset="
-                      /5419fabd951c1caf31874b4ce1f84e8c72f9e0ea39999e5b6b152951b0c26b2a--200x107.webp  200w,
-                      /5419fabd951c1caf31874b4ce1f84e8c72f9e0ea39999e5b6b152951b0c26b2a--400x214.webp  400w,
-                      /5419fabd951c1caf31874b4ce1f84e8c72f9e0ea39999e5b6b152951b0c26b2a--600x321.webp  600w,
-                      /5419fabd951c1caf31874b4ce1f84e8c72f9e0ea39999e5b6b152951b0c26b2a--800x428.webp  800w,
-                      /5419fabd951c1caf31874b4ce1f84e8c72f9e0ea39999e5b6b152951b0c26b2a.webp          1000w
-                    "
-                    width="1000"
+                    src="https://raw.githubusercontent.com/ms-jpq/coq.artifacts/artifacts/preview/pretty.gif"
                   />
                 </p>
-                <p><strong>If you can’t see icons properly</strong>:</p>
+                <p><strong>If you can&rsquo;t see icons properly</strong>:</p>
                 <p>
                   Either set
                   <code
-                    >let g:coq_settings = { &#x27;display.icons.mode&#x27;:
-                    &#x27;none&#x27; }</code
+                    >let g:coq_settings = { 'display.icons.mode': 'none' }</code
                   >
                   to disable icons, or
                   <a href="https://www.nerdfonts.com/#home"
@@ -863,7 +690,7 @@ apt install universal-ctags    <span class="c1"># good</span>
                 <h2 id="install">Install</h2>
                 <p>Needs python virtual env</p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >apt install --yes -- python3-venv
+                  <pre><span></span><code>apt install --yes -- python3-venv
 </code></pre>
                 </div>
 
@@ -873,15 +700,15 @@ apt install universal-ctags    <span class="c1"># good</span>
                 </p>
                 <p>Install the usual way, ie. VimPlug, Vundle, etc</p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >&quot; main one
-Plug &#x27;ms-jpq/coq_nvim&#x27;, {&#x27;branch&#x27;: &#x27;coq&#x27;}
+                  <pre><span></span><code>&quot; main one
+Plug &#39;ms-jpq/coq_nvim&#39;, {&#39;branch&#39;: &#39;coq&#39;}
 &quot; 9000+ Snippets
-Plug &#x27;ms-jpq/coq.artifacts&#x27;, {&#x27;branch&#x27;: &#x27;artifacts&#x27;}
+Plug &#39;ms-jpq/coq.artifacts&#39;, {&#39;branch&#39;: &#39;artifacts&#39;}
 
 &quot; lua &amp; third party sources -- See https://github.com/ms-jpq/coq.thirdparty
 &quot; Need to **configure separately**
 
-Plug &#x27;ms-jpq/coq.thirdparty&#x27;, {&#x27;branch&#x27;: &#x27;3p&#x27;}
+Plug &#39;ms-jpq/coq.thirdparty&#39;, {&#39;branch&#39;: &#39;3p&#39;}
 &quot; - shell repl
 &quot; - nvim lua api
 &quot; - scientific calculator
@@ -893,7 +720,7 @@ Plug &#x27;ms-jpq/coq.thirdparty&#x27;, {&#x27;branch&#x27;: &#x27;3p&#x27;}
                 <h2 id="documentation">Documentation</h2>
                 <p>To start <code>coq</code></p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >&quot; the [-s, --shut-up] flag will remove the greeting message
+                  <pre><span></span><code>&quot; the [-s, --shut-up] flag will remove the greeting message
 :COQnow [--shut-up]
 </code></pre>
                 </div>
@@ -910,7 +737,7 @@ Plug &#x27;ms-jpq/coq.thirdparty&#x27;, {&#x27;branch&#x27;: &#x27;3p&#x27;}
                   >
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="err">:</span><span class="n">COQhelp</span><span class="w"> </span><span class="o">[</span><span class="n">--web</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">topic</span><span class="o">]</span><span class="w"></span>
+                  <pre><span></span><code><span class="err">:</span><span class="n">COQhelp</span><span class="w"> </span><span class="o">[</span><span class="n">--web</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">topic</span><span class="o">]</span><span class="w"></span>
 </code></pre>
                 </div>
 
@@ -1100,8 +927,8 @@ Plug &#x27;ms-jpq/coq.thirdparty&#x27;, {&#x27;branch&#x27;: &#x27;3p&#x27;}
                 </p>
                 <p>
                   <code
-                    >let g:coq_settings = { &#x27;display.pum.fast_close&#x27;:
-                    v:false }</code
+                    >let g:coq_settings = { 'display.pum.fast_close': v:false
+                    }</code
                   >
                 </p>
                 <p>
@@ -1111,19 +938,12 @@ Plug &#x27;ms-jpq/coq.thirdparty&#x27;, {&#x27;branch&#x27;: &#x27;3p&#x27;}
                 </p>
                 <h4 id="autostart-coq">Autostart COQ</h4>
                 <p>
-                  <code
-                    >let g:coq_settings = { &#x27;auto_start&#x27;: v:true
-                    }</code
-                  >
-                  or
-                  <code
-                    >let g:coq_settings = { &#x27;auto_start&#x27;:
-                    &#x27;shut-up&#x27; }</code
-                  >
+                  <code>let g:coq_settings = { 'auto_start': v:true }</code> or
+                  <code>let g:coq_settings = { 'auto_start': 'shut-up' }</code>
                 </p>
                 <p>
                   This must be set <strong>BEFORE</strong>
-                  <code>require(&quot;coq&quot;)</code>
+                  <code>require("coq")</code>
                 </p>
                 <h4 id="lsp-too-slow-to-show-up-on-keystroke">
                   LSP too slow to show up on keystroke.
@@ -1200,31 +1020,31 @@ Plug &#x27;ms-jpq/coq.thirdparty&#x27;, {&#x27;branch&#x27;: &#x27;3p&#x27;}
                     python&gt;</code
                   >
                 </p>
-                <h2 id="if-you-like-this">If you like this…</h2>
+                <h2 id="if-you-like-this">If you like this&hellip;</h2>
                 <p>Also check out</p>
                 <ul>
                   <li>
                     <p>
                       <a href="https://github.com/ms-jpq/sad"
                         ><code>sad</code></a
-                      >, it’s a modern <code>sed</code> that does previews with
-                      syntax highlighting, and lets you pick and choose which
-                      chunks to edit.
+                      >, it&rsquo;s a modern <code>sed</code> that does previews
+                      with syntax highlighting, and lets you pick and choose
+                      which chunks to edit.
                     </p>
                   </li>
                   <li>
                     <p>
                       <a href="https://github.com/ms-jpq/chadtree"
                         ><code>CHADTree</code></a
-                      >, it’s a FULLY featured file manager.
+                      >, it&rsquo;s a FULLY featured file manager.
                     </p>
                   </li>
                   <li>
                     <p>
                       <a href="https://github.com/ms-jpq/isomorphic-copy"
                         >isomorphic-copy</a
-                      >, it’s a cross platform clipboard that is daemonless, and
-                      does not require third party support.
+                      >, it&rsquo;s a cross platform clipboard that is
+                      daemonless, and does not require third party support.
                     </p>
                   </li>
                 </ul>
@@ -1345,7 +1165,7 @@ Plug &#x27;ms-jpq/coq.thirdparty&#x27;, {&#x27;branch&#x27;: &#x27;3p&#x27;}
               </div>
               <div>
                 <i class="fas fa-user-edit text-left"></i>
-                <time datetime="2022-11-26T15:41:28+0000"></time>
+                <time datetime="2022-12-18T21:50:19+0000"></time>
               </div>
             </section>
           </div>

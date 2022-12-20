@@ -1,61 +1,55 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Manage Windows in Docker (easy)" name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Manage Windows in Docker (easy)" />
     <title>Creative Portfolio</title>
-    <link href="/pages_repo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/pages_repo.css" />
 
-    <script src="/layout.js" type="module"></script>
+    <script type="module" src="/layout.js"></script>
   </head>
 
   <body class="m-0 p-0 w-screen min-h-screen flex">
     <input
-      aria-hidden="true"
-      class="hidden"
-      id="layout-checkbox"
       type="checkbox"
+      id="layout-checkbox"
+      class="hidden"
+      aria-hidden="true"
     />
     <div
       class="w-full grow scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
     >
       <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
         <label
-          class="big-button font-medium inline-block sm:hidden"
           for="layout-checkbox"
+          class="big-button font-medium inline-block sm:hidden"
         >
           <i class="fas fa-bars"></i>
           Menu
         </label>
         <div class="prose text-right overflow-ellipsis">
           <h3 class="uppercase">
-            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+            <a href="/index.html" class="invis-link"> Creative Portfolio </a>
           </h3>
         </div>
       </header>
 
       <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-        <section class="grid justify-items-center" id="headshot">
+        <section id="headshot" class="grid justify-items-center">
           <img
             class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-            height="1164"
-            loading="lazy"
-            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-            srcset="
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-            "
-            width="1164"
+            src="face.png"
           />
         </section>
 
         <section id="about-me">
           <div class="markdown mx-2">
-            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
             <p>I also really like dogs.</p>
             <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
           </div>
@@ -124,17 +118,17 @@
             >
               <span class="github-stars">
                 <i class="fas fa-star"></i>
-                34
+                35
               </span>
 
               <span class="github-forks">
                 <i class="fas fa-code-branch"></i>
-                4
+                5
               </span>
 
               <a
-                class="big-button invis-link border-dashed"
                 href="https://github.com/ms-jpq/windows-in-docker"
+                class="big-button invis-link border-dashed"
               >
                 View on Github
                 <i class="fab fa-github"></i>
@@ -152,7 +146,7 @@
                   <a href="https://hub.docker.com/r/msjpq/windows-in-docker/"
                     ><img
                       alt="Docker Pulls"
-                      src="/f78a5a045f2dddf9cabb2b8a73751c9e89a8c6adbc5e54c757a8d6d291c263c0.svg"
+                      src="https://img.shields.io/docker/pulls/msjpq/windows-in-docker.svg"
                   /></a>
                 </p>
                 <p>
@@ -161,9 +155,10 @@
                   PITA.
                 </p>
                 <p>
-                  Technically this is more of a “manage Windows in Docker” type
-                  of project, you can shutdown <code>dockerd</code> and all of
-                  your VMs won’t be effected.
+                  Technically this is more of a &ldquo;manage Windows in
+                  Docker&rdquo; type of project, you can shutdown
+                  <code>dockerd</code> and all of your VMs won&rsquo;t be
+                  effected.
                 </p>
                 <h2 id="what-it-does">What It Does</h2>
                 <h3 id="download-virtio-windows-drivers">
@@ -182,17 +177,7 @@
                 <p>
                   <img
                     alt="virt man"
-                    height="2114"
-                    loading="lazy"
-                    src="/5f40ff50c9017fd0a3fc0d9867fea704b66c2fb656d4540243533eadeb918369.webp"
-                    srcset="
-                      /5f40ff50c9017fd0a3fc0d9867fea704b66c2fb656d4540243533eadeb918369--1000x656.webp 1000w,
-                      /5f40ff50c9017fd0a3fc0d9867fea704b66c2fb656d4540243533eadeb918369--200x131.webp   200w,
-                      /5f40ff50c9017fd0a3fc0d9867fea704b66c2fb656d4540243533eadeb918369--400x262.webp   400w,
-                      /5f40ff50c9017fd0a3fc0d9867fea704b66c2fb656d4540243533eadeb918369--600x394.webp   600w,
-                      /5f40ff50c9017fd0a3fc0d9867fea704b66c2fb656d4540243533eadeb918369--800x525.webp   800w
-                    "
-                    width="3222"
+                    src="https://raw.githubusercontent.com/ms-jpq/windows-in-docker/main/screenshots/virtman.png"
                   />
                 </p>
                 <h2 id="usage">Usage</h2>
@@ -209,7 +194,7 @@
                   </li>
                 </ol>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="nn">---</span>
+                  <pre><span></span><code><span class="nn">---</span>
 <span class="nt">version</span><span class="p">:</span> <span class="s">&quot;3.9&quot;</span>
 
 <span class="nt">services</span><span class="p">:</span>
@@ -243,12 +228,14 @@
                   </li>
                 </ol>
                 <h2 id="wait-a-minute">Wait A Minute</h2>
-                <p>Libvirt doesn’t run under Docker tho?</p>
+                <p>Libvirt doesn&rsquo;t run under Docker tho?</p>
                 <p>
                   Well, I realized running <code>libvirt</code> under Docker was
                   actually a stupid idea.
                 </p>
-                <p>You can’t say provision a ZFS storage pool for example.</p>
+                <p>
+                  You can&rsquo;t say provision a ZFS storage pool for example.
+                </p>
               </article>
             </section>
 
@@ -261,7 +248,7 @@
               </div>
               <div>
                 <i class="fas fa-user-edit text-left"></i>
-                <time datetime="2022-11-21T17:04:28+0000"></time>
+                <time datetime="2022-12-17T17:56:48+0000"></time>
               </div>
             </section>
           </div>

@@ -1,61 +1,55 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="So you can run KDE inside a browser" name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="So you can run KDE inside a browser" />
     <title>Creative Portfolio</title>
-    <link href="/pages_repo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/pages_repo.css" />
 
-    <script src="/layout.js" type="module"></script>
+    <script type="module" src="/layout.js"></script>
   </head>
 
   <body class="m-0 p-0 w-screen min-h-screen flex">
     <input
-      aria-hidden="true"
-      class="hidden"
-      id="layout-checkbox"
       type="checkbox"
+      id="layout-checkbox"
+      class="hidden"
+      aria-hidden="true"
     />
     <div
       class="w-full grow scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
     >
       <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
         <label
-          class="big-button font-medium inline-block sm:hidden"
           for="layout-checkbox"
+          class="big-button font-medium inline-block sm:hidden"
         >
           <i class="fas fa-bars"></i>
           Menu
         </label>
         <div class="prose text-right overflow-ellipsis">
           <h3 class="uppercase">
-            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+            <a href="/index.html" class="invis-link"> Creative Portfolio </a>
           </h3>
         </div>
       </header>
 
       <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-        <section class="grid justify-items-center" id="headshot">
+        <section id="headshot" class="grid justify-items-center">
           <img
             class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-            height="1164"
-            loading="lazy"
-            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-            srcset="
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-            "
-            width="1164"
+            src="face.png"
           />
         </section>
 
         <section id="about-me">
           <div class="markdown mx-2">
-            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
             <p>I also really like dogs.</p>
             <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
           </div>
@@ -124,7 +118,7 @@
             >
               <span class="github-stars">
                 <i class="fas fa-star"></i>
-                89
+                90
               </span>
 
               <span class="github-forks">
@@ -133,8 +127,8 @@
               </span>
 
               <a
-                class="big-button invis-link border-dashed"
                 href="https://github.com/ms-jpq/kde-in-docker"
+                class="big-button invis-link border-dashed"
               >
                 View on Github
                 <i class="fab fa-github"></i>
@@ -214,7 +208,7 @@
                   <a href="https://hub.docker.com/r/msjpq/firefox-vnc/"
                     ><img
                       alt="Docker Pulls"
-                      src="/6ec96a62da06997304704ef98ee68beb4e3b0fa989d2d0de28c8458904fc3570.svg"
+                      src="https://img.shields.io/docker/pulls/msjpq/firefox-vnc.svg"
                   /></a>
                 </p>
                 <p>🦊</p>
@@ -228,17 +222,7 @@
                 <p>
                   <img
                     alt="firefox preview.png"
-                    height="903"
-                    loading="lazy"
-                    src="/e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd.webp"
-                    srcset="
-                      /e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd--1000x563.webp 1000w,
-                      /e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd--200x113.webp   200w,
-                      /e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd--400x225.webp   400w,
-                      /e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd--600x338.webp   600w,
-                      /e8c05d6548e473f08de3e454733599b6210e5edfb48d54750326b74a0abff7fd--800x451.webp   800w
-                    "
-                    width="1603"
+                    src="https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/firefox.png"
                   />
                 </p>
                 <hr />
@@ -251,7 +235,7 @@
                   <a href="https://hub.docker.com/r/msjpq/adobe-acrobat-vnc/"
                     ><img
                       alt="Docker Pulls"
-                      src="/924b8d8a134062f5e06d9bcb1150646b35c0252569eb0b057d49f4c97350b403.svg"
+                      src="https://img.shields.io/docker/pulls/msjpq/adobe-acrobat-vnc.svg"
                   /></a>
                 </p>
                 <p>Adobe PDF Reader <code>9.5.5</code></p>
@@ -266,17 +250,7 @@
                 <p>
                   <img
                     alt="acrobat preview.png"
-                    height="903"
-                    loading="lazy"
-                    src="/ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1.webp"
-                    srcset="
-                      /ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1--1000x563.webp 1000w,
-                      /ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1--200x113.webp   200w,
-                      /ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1--400x225.webp   400w,
-                      /ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1--600x338.webp   600w,
-                      /ff9a6b2ed03198d9e9df4960108d9bfafa9dfee97629cbe329130e85631a81d1--800x450.webp   800w
-                    "
-                    width="1604"
+                    src="https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/acrobat.png"
                   />
                 </p>
                 <hr />
@@ -289,7 +263,7 @@
                   <a href="https://hub.docker.com/r/msjpq/motrix-vnc/"
                     ><img
                       alt="Docker Pulls"
-                      src="/fc3fbfadb39b45c22d38cd3c8a8ea8c869311fc59769c3edf8549364f57f6f1a.svg"
+                      src="https://img.shields.io/docker/pulls/msjpq/motrix-vnc.svg"
                   /></a>
                 </p>
                 <p>
@@ -308,17 +282,7 @@
                 <p>
                   <img
                     alt="motrix preview.png"
-                    height="893"
-                    loading="lazy"
-                    src="/7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a.webp"
-                    srcset="
-                      /7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a--1000x559.webp 1000w,
-                      /7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a--200x112.webp   200w,
-                      /7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a--400x224.webp   400w,
-                      /7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a--600x336.webp   600w,
-                      /7aab45c0b8dd200798e7c6cc0a43e7d9453dc6738d0da8ed6d12a86fe370665a--800x447.webp   800w
-                    "
-                    width="1597"
+                    src="https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/motrix.png"
                   />
                 </p>
                 <hr />
@@ -331,7 +295,7 @@
                   <a href="https://hub.docker.com/r/msjpq/kde-vnc/"
                     ><img
                       alt="Docker Pulls"
-                      src="/66cffbc321a4ec51079eb446753d88d8a027796dc83e30323d150f1f2ada60c9.svg"
+                      src="https://img.shields.io/docker/pulls/msjpq/kde-vnc.svg"
                   /></a>
                 </p>
                 <p>KDE on 18.04 lts. <code>620MB</code></p>
@@ -345,17 +309,7 @@
                 <p>
                   <img
                     alt="bionic preview.png"
-                    height="984"
-                    loading="lazy"
-                    src="/4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1.webp"
-                    srcset="
-                      /4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1--1000x564.webp 1000w,
-                      /4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1--200x113.webp   200w,
-                      /4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1--400x226.webp   400w,
-                      /4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1--600x338.webp   600w,
-                      /4bc02df9bbbd92dd5b21b5f0045c650aba479033c4d3dafa908ff6f9968b93a1--800x451.webp   800w
-                    "
-                    width="1745"
+                    src="https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/bionic.png"
                   />
                 </p>
                 <hr />
@@ -368,7 +322,7 @@
                   <a href="https://hub.docker.com/r/msjpq/kde-vnc/"
                     ><img
                       alt="Docker Pulls"
-                      src="/66cffbc321a4ec51079eb446753d88d8a027796dc83e30323d150f1f2ada60c9.svg"
+                      src="https://img.shields.io/docker/pulls/msjpq/kde-vnc.svg"
                   /></a>
                 </p>
                 <p>KDE on 20.04 lts. <code>730MB</code></p>
@@ -382,17 +336,7 @@
                 <p>
                   <img
                     alt="focal preview.png"
-                    height="898"
-                    loading="lazy"
-                    src="/8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279.webp"
-                    srcset="
-                      /8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279--1000x562.webp 1000w,
-                      /8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279--200x112.webp   200w,
-                      /8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279--400x225.webp   400w,
-                      /8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279--600x337.webp   600w,
-                      /8aa8ff27e79df142d855b75d67cf39175265b6b2e4ee871ba0480cba7b25f279--800x450.webp   800w
-                    "
-                    width="1598"
+                    src="https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/focal.png"
                   />
                 </p>
                 <hr />
@@ -405,7 +349,7 @@
                   <a href="https://hub.docker.com/r/msjpq/wine-vnc/"
                     ><img
                       alt="Docker Pulls"
-                      src="/a47c556641a72bd8a28b2955c079a7ed6777ec25f5851df737320e8d2891283e.svg"
+                      src="https://img.shields.io/docker/pulls/msjpq/wine-vnc.svg"
                   /></a>
                 </p>
                 <p>WINE 5.3 with dependencies. <code>1.3GB</code></p>
@@ -419,17 +363,7 @@
                 <p>
                   <img
                     alt="wine preview.png"
-                    height="903"
-                    loading="lazy"
-                    src="/dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a.webp"
-                    srcset="
-                      /dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a--1000x564.webp 1000w,
-                      /dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a--200x113.webp   200w,
-                      /dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a--400x225.webp   400w,
-                      /dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a--600x338.webp   600w,
-                      /dc3617eaa8d737a80bc8f2705cfcf4aef52c8b07a49fc51935d679fd756eb08a--800x451.webp   800w
-                    "
-                    width="1602"
+                    src="https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/wine.png"
                   />
                 </p>
               </article>
@@ -444,7 +378,7 @@
               </div>
               <div>
                 <i class="fas fa-user-edit text-left"></i>
-                <time datetime="2022-11-24T06:21:06+0000"></time>
+                <time datetime="2022-12-13T22:22:26+0000"></time>
               </div>
             </section>
           </div>

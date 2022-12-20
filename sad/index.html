@@ -1,61 +1,55 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="CLI search and replace | Space Age seD" name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="CLI search and replace | Space Age seD" />
     <title>Creative Portfolio</title>
-    <link href="/pages_repo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/pages_repo.css" />
 
-    <script src="/layout.js" type="module"></script>
+    <script type="module" src="/layout.js"></script>
   </head>
 
   <body class="m-0 p-0 w-screen min-h-screen flex">
     <input
-      aria-hidden="true"
-      class="hidden"
-      id="layout-checkbox"
       type="checkbox"
+      id="layout-checkbox"
+      class="hidden"
+      aria-hidden="true"
     />
     <div
       class="w-full grow scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
     >
       <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
         <label
-          class="big-button font-medium inline-block sm:hidden"
           for="layout-checkbox"
+          class="big-button font-medium inline-block sm:hidden"
         >
           <i class="fas fa-bars"></i>
           Menu
         </label>
         <div class="prose text-right overflow-ellipsis">
           <h3 class="uppercase">
-            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+            <a href="/index.html" class="invis-link"> Creative Portfolio </a>
           </h3>
         </div>
       </header>
 
       <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-        <section class="grid justify-items-center" id="headshot">
+        <section id="headshot" class="grid justify-items-center">
           <img
             class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-            height="1164"
-            loading="lazy"
-            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-            srcset="
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-            "
-            width="1164"
+            src="face.png"
           />
         </section>
 
         <section id="about-me">
           <div class="markdown mx-2">
-            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
             <p>I also really like dogs.</p>
             <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
           </div>
@@ -124,7 +118,7 @@
             >
               <span class="github-stars">
                 <i class="fas fa-star"></i>
-                966
+                983
               </span>
 
               <span class="github-forks">
@@ -133,8 +127,8 @@
               </span>
 
               <a
-                class="big-button invis-link border-dashed"
                 href="https://github.com/ms-jpq/sad"
+                class="big-button invis-link border-dashed"
               >
                 View on Github
                 <i class="fab fa-github"></i>
@@ -173,31 +167,20 @@
                 <p>
                   <img
                     alt="preview1"
-                    height="690"
-                    loading="lazy"
-                    src="/c13915870daa401f6f1dc1de3e2dd537b33fa452eaee2120dae3c4cad2598443.webp"
-                    srcset="
-                      /c13915870daa401f6f1dc1de3e2dd537b33fa452eaee2120dae3c4cad2598443--1000x595.webp 1000w,
-                      /c13915870daa401f6f1dc1de3e2dd537b33fa452eaee2120dae3c4cad2598443--200x119.webp   200w,
-                      /c13915870daa401f6f1dc1de3e2dd537b33fa452eaee2120dae3c4cad2598443--400x238.webp   400w,
-                      /c13915870daa401f6f1dc1de3e2dd537b33fa452eaee2120dae3c4cad2598443--600x357.webp   600w,
-                      /c13915870daa401f6f1dc1de3e2dd537b33fa452eaee2120dae3c4cad2598443--800x476.webp   800w
-                    "
-                    width="1160"
+                    src="https://github.com/ms-jpq/sad/raw/senpai/previews/preview1.gif"
                   />
                 </p>
                 <p>
                   <strong
                     >If you have <code>delta</code> installed, try
-                    <code>--pager &#x27;delta -s&#x27;</code> for side by side
+                    <code>--pager 'delta -s'</code> for side by side
                     view</strong
                   >
                 </p>
                 <h2 id="preview-no-fzf">Preview (no fzf)</h2>
                 <p>
-                  Replace all<code>&#x27;&quot;(\d+)&quot;&#x27;</code> -&gt;
-                  <code>&#x27;🌈$1🌈&#x27;</code> in the
-                  <code>chromium</code> repo.
+                  Replace all<code>'"(\d+)"'</code> -&gt;
+                  <code>'🌈$1🌈'</code> in the <code>chromium</code> repo.
                 </p>
                 <p>
                   use <code>--commit</code> or <code>-k</code> to commit changes
@@ -205,49 +188,39 @@
                 </p>
                 <p>
                   <code>-c</code> is taken because <code>sad</code> has to trick
-                  <code>fzf</code> into thinking it’s <code>bash</code> :)
+                  <code>fzf</code> into thinking it&rsquo;s <code>bash</code> :)
                 </p>
                 <p>
                   <img
                     alt="preview2"
-                    height="690"
-                    loading="lazy"
-                    src="/52cfff116869d74fb995d2efd9e1f7042994039ab815f6feb55051b2854a3bd2.webp"
-                    srcset="
-                      /52cfff116869d74fb995d2efd9e1f7042994039ab815f6feb55051b2854a3bd2--1000x595.webp 1000w,
-                      /52cfff116869d74fb995d2efd9e1f7042994039ab815f6feb55051b2854a3bd2--200x119.webp   200w,
-                      /52cfff116869d74fb995d2efd9e1f7042994039ab815f6feb55051b2854a3bd2--400x238.webp   400w,
-                      /52cfff116869d74fb995d2efd9e1f7042994039ab815f6feb55051b2854a3bd2--600x357.webp   600w,
-                      /52cfff116869d74fb995d2efd9e1f7042994039ab815f6feb55051b2854a3bd2--800x476.webp   800w
-                    "
-                    width="1160"
+                    src="https://github.com/ms-jpq/sad/raw/senpai/previews/preview2.gif"
                   />
                 </p>
                 <h2 id="how-to-use-sad">How to use sad?</h2>
                 <p><strong>with fzf</strong></p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="nb">export</span> <span class="nv">GIT_PAGER</span><span class="o">=</span><span class="s1">&#x27;&lt;highlighter-of-your-choice&gt;&#x27;</span>
+                  <pre><span></span><code><span class="nb">export</span> <span class="nv">GIT_PAGER</span><span class="o">=</span><span class="s1">&#39;&lt;highlighter-of-your-choice&gt;&#39;</span>
 <span class="c1"># ^ can be done in your bash/zsh/rc file.</span>
-find <span class="s2">&quot;</span><span class="nv">$FIND_ARGS</span><span class="s2">&quot;</span> <span class="p">|</span> sad <span class="s1">&#x27;&lt;pattern&gt;&#x27;</span> <span class="s1">&#x27;&lt;replacement&gt;&#x27;</span>
+find <span class="s2">&quot;</span><span class="nv">$FIND_ARGS</span><span class="s2">&quot;</span> <span class="p">|</span> sad <span class="s1">&#39;&lt;pattern&gt;&#39;</span> <span class="s1">&#39;&lt;replacement&gt;&#39;</span>
 </code></pre>
                 </div>
 
                 <p><strong>without fzf</strong></p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >find <span class="s2">&quot;</span><span class="nv">$FIND_ARGS</span><span class="s2">&quot;</span> <span class="p">|</span> sad <span class="s1">&#x27;&lt;pattern&gt;&#x27;</span> <span class="s1">&#x27;&lt;replacement&gt;&#x27;</span> <span class="p">|</span> highlighter-of-your-choice
+                  <pre><span></span><code>find <span class="s2">&quot;</span><span class="nv">$FIND_ARGS</span><span class="s2">&quot;</span> <span class="p">|</span> sad <span class="s1">&#39;&lt;pattern&gt;&#39;</span> <span class="s1">&#39;&lt;replacement&gt;&#39;</span> <span class="p">|</span> highlighter-of-your-choice
 </code></pre>
                 </div>
 
                 <p>or</p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >find <span class="s2">&quot;</span><span class="nv">$FIND_ARGS</span><span class="s2">&quot;</span> <span class="p">|</span> sad <span class="s1">&#x27;&lt;pattern&gt;&#x27;</span> <span class="s1">&#x27;&lt;replacement&gt;&#x27;</span> --pager<span class="o">=</span>&lt;highlighter-of-your-choice&gt;
+                  <pre><span></span><code>find <span class="s2">&quot;</span><span class="nv">$FIND_ARGS</span><span class="s2">&quot;</span> <span class="p">|</span> sad <span class="s1">&#39;&lt;pattern&gt;&#39;</span> <span class="s1">&#39;&lt;replacement&gt;&#39;</span> --pager<span class="o">=</span>&lt;highlighter-of-your-choice&gt;
 </code></pre>
                 </div>
 
                 <p>or</p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="nb">export</span> <span class="nv">GIT_PAGER</span><span class="o">=</span><span class="s1">&#x27;&lt;highlighter-of-your-choice&gt;&#x27;</span>
-find <span class="s2">&quot;</span><span class="nv">$FIND_ARGS</span><span class="s2">&quot;</span> <span class="p">|</span> sad <span class="s1">&#x27;&lt;pattern&gt;&#x27;</span> <span class="s1">&#x27;&lt;replacement&gt;&#x27;</span>
+                  <pre><span></span><code><span class="nb">export</span> <span class="nv">GIT_PAGER</span><span class="o">=</span><span class="s1">&#39;&lt;highlighter-of-your-choice&gt;&#39;</span>
+find <span class="s2">&quot;</span><span class="nv">$FIND_ARGS</span><span class="s2">&quot;</span> <span class="p">|</span> sad <span class="s1">&#39;&lt;pattern&gt;&#39;</span> <span class="s1">&#39;&lt;replacement&gt;&#39;</span>
 </code></pre>
                 </div>
 
@@ -267,12 +240,12 @@ find <span class="s2">&quot;</span><span class="nv">$FIND_ARGS</span><span class
                 <hr />
                 <h2 id="requirements">Requirements</h2>
                 <p>
-                  Technically none of these are “required”, but they make
-                  <code>sad</code> so much happier.
+                  Technically none of these are &ldquo;required&rdquo;, but they
+                  make <code>sad</code> so much happier.
                 </p>
                 <p>
                   If you install the things below, <code>sad</code> will
-                  automatically use them. It’s progressive enhancement!
+                  automatically use them. It&rsquo;s progressive enhancement!
                 </p>
                 <h3 id="commandline-fuzzer">Commandline fuzzer</h3>
                 <p>
@@ -455,15 +428,15 @@ find <span class="s2">&quot;</span><span class="nv">$FIND_ARGS</span><span class
                 <h2 id="get-sad-now">GET SAD NOW!</h2>
                 <p>For scripting, use the following format:</p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="c1"># replace `x86_64-unknown-linux-gnu.deb` with your desired package</span>
-wget <span class="s1">&#x27;https://github.com/ms-jpq/sad/releases/latest/download/x86_64-unknown-linux-gnu.deb&#x27;</span>
+                  <pre><span></span><code><span class="c1"># replace `x86_64-unknown-linux-gnu.deb` with your desired package</span>
+wget <span class="s1">&#39;https://github.com/ms-jpq/sad/releases/latest/download/x86_64-unknown-linux-gnu.deb&#39;</span>
 </code></pre>
                 </div>
 
                 <h3 id="homebrew">Homebrew:</h3>
                 <p><code>brew install ms-jpq/sad/sad</code></p>
                 <h3 id="snap-store">Snap Store:</h3>
-                <p>coming soon…</p>
+                <p>coming soon&hellip;</p>
                 <h3 id="distribution-packages">Distribution packages:</h3>
                 <h5 id="debianubuntu">Debian/Ubuntu:</h5>
                 <p>
@@ -478,7 +451,7 @@ wget <span class="s1">&#x27;https://github.com/ms-jpq/sad/releases/latest/downlo
                   via <code>pacman</code>:
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >pacman -Syu sad
+                  <pre><span></span><code>pacman -Syu sad
 </code></pre>
                 </div>
 
@@ -490,7 +463,8 @@ wget <span class="s1">&#x27;https://github.com/ms-jpq/sad/releases/latest/downlo
                 <h3 id="compile-from-source">Compile from source:</h3>
                 <h5 id="requirements_1">Requirements:</h5>
                 <p>
-                  To compile sad yourself you’ll have to make sure you have<br />
+                  To compile sad yourself you&rsquo;ll have to make sure you
+                  have<br />
                   <a href="https://www.rust-lang.org/">Rust</a> and
                   <code>cargo</code> installed.
                 </p>
@@ -500,7 +474,7 @@ wget <span class="s1">&#x27;https://github.com/ms-jpq/sad/releases/latest/downlo
                   commands:
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >cargo install --locked --all-features <span class="se">\</span>
+                  <pre><span></span><code>cargo install --locked --all-features <span class="se">\</span>
   --git https://github.com/ms-jpq/sad --branch senpai
 </code></pre>
                 </div>
@@ -511,7 +485,7 @@ wget <span class="s1">&#x27;https://github.com/ms-jpq/sad/releases/latest/downlo
                   flag, like so:
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >cargo install --locked --all-features --root<span class="o">=</span><span class="s2">&quot;/usr/bin/&quot;</span> <span class="se">\</span>
+                  <pre><span></span><code>cargo install --locked --all-features --root<span class="o">=</span><span class="s2">&quot;/usr/bin/&quot;</span> <span class="se">\</span>
   --git https://github.com/ms-jpq/sad --branch senpai
 </code></pre>
                 </div>
@@ -527,7 +501,7 @@ wget <span class="s1">&#x27;https://github.com/ms-jpq/sad/releases/latest/downlo
                   <code>sd</code>.
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >command1 <span class="p">|</span> sd <span class="s1">&#x27;&lt;pattern&gt;&#x27;</span> <span class="s1">&#x27;&lt;replacement&gt;&#x27;</span> <span class="p">|</span> command2
+                  <pre><span></span><code>command1 <span class="p">|</span> sd <span class="s1">&#39;&lt;pattern&gt;&#39;</span> <span class="s1">&#39;&lt;replacement&gt;&#39;</span> <span class="p">|</span> command2
 </code></pre>
                 </div>
 
@@ -538,7 +512,7 @@ wget <span class="s1">&#x27;https://github.com/ms-jpq/sad/releases/latest/downlo
                   with <code>--replace</code> also works
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >command1 <span class="p">|</span> rg --passthru --replace <span class="s1">&#x27;&lt;replacement&gt;&#x27;</span> -- <span class="s1">&#x27;&lt;pattern&gt;&#x27;</span> <span class="p">|</span> command2
+                  <pre><span></span><code>command1 <span class="p">|</span> rg --passthru --replace <span class="s1">&#39;&lt;replacement&gt;&#39;</span> -- <span class="s1">&#39;&lt;pattern&gt;&#39;</span> <span class="p">|</span> command2
 </code></pre>
                 </div>
 
@@ -569,7 +543,7 @@ wget <span class="s1">&#x27;https://github.com/ms-jpq/sad/releases/latest/downlo
               </div>
               <div>
                 <i class="fas fa-user-edit text-left"></i>
-                <time datetime="2022-11-26T01:45:28+0000"></time>
+                <time datetime="2022-12-18T01:48:41+0000"></time>
               </div>
             </section>
           </div>

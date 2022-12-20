@@ -1,64 +1,58 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
-      content="Zero Configuration, time machine for MacOS | Docker 🐳"
       name="description"
+      content="Zero Configuration, time machine for MacOS | Docker 🐳"
     />
     <title>Creative Portfolio</title>
-    <link href="/pages_repo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/pages_repo.css" />
 
-    <script src="/layout.js" type="module"></script>
+    <script type="module" src="/layout.js"></script>
   </head>
 
   <body class="m-0 p-0 w-screen min-h-screen flex">
     <input
-      aria-hidden="true"
-      class="hidden"
-      id="layout-checkbox"
       type="checkbox"
+      id="layout-checkbox"
+      class="hidden"
+      aria-hidden="true"
     />
     <div
       class="w-full grow scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
     >
       <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
         <label
-          class="big-button font-medium inline-block sm:hidden"
           for="layout-checkbox"
+          class="big-button font-medium inline-block sm:hidden"
         >
           <i class="fas fa-bars"></i>
           Menu
         </label>
         <div class="prose text-right overflow-ellipsis">
           <h3 class="uppercase">
-            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+            <a href="/index.html" class="invis-link"> Creative Portfolio </a>
           </h3>
         </div>
       </header>
 
       <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-        <section class="grid justify-items-center" id="headshot">
+        <section id="headshot" class="grid justify-items-center">
           <img
             class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-            height="1164"
-            loading="lazy"
-            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-            srcset="
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-            "
-            width="1164"
+            src="face.png"
           />
         </section>
 
         <section id="about-me">
           <div class="markdown mx-2">
-            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
             <p>I also really like dogs.</p>
             <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
           </div>
@@ -127,7 +121,7 @@
             >
               <span class="github-stars">
                 <i class="fas fa-star"></i>
-                53
+                56
               </span>
 
               <span class="github-forks">
@@ -136,8 +130,8 @@
               </span>
 
               <a
-                class="big-button invis-link border-dashed"
                 href="https://github.com/ms-jpq/docker-time-machine"
+                class="big-button invis-link border-dashed"
               >
                 View on Github
                 <i class="fab fa-github"></i>
@@ -158,11 +152,11 @@
                   <a href="https://hub.docker.com/r/msjpq/time-machine/"
                     ><img
                       alt="Docker Pulls"
-                      src="/0f69d2fc5610f1224fb08e500167ef5b26f6ce44cb01349ac188250eef693a42.svg"
+                      src="https://img.shields.io/docker/pulls/msjpq/time-machine.svg"
                   /></a>
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >docker run --net<span class="o">=</span>host -v /my_folder/:/share msjpq/time-machine
+                  <pre><span></span><code>docker run --net<span class="o">=</span>host -v /my_folder/:/share msjpq/time-machine
 </code></pre>
                 </div>
 
@@ -181,7 +175,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><code>SMB_NAME=&#x27;Time Machine&#x27;</code></td>
+                      <td><code>SMB_NAME='Time Machine'</code></td>
                       <td>what you see from 💻</td>
                     </tr>
                     <tr>
@@ -204,7 +198,7 @@
                 </table>
                 <h2 id="docker-compose">Docker Compose</h2>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="nn">---</span>
+                  <pre><span></span><code><span class="nn">---</span>
 <span class="nt">version</span><span class="p">:</span> <span class="s">&quot;3.7&quot;</span>
 
 <span class="nt">services</span><span class="p">:</span>
@@ -223,17 +217,7 @@
                 <p>
                   <img
                     alt="my dog"
-                    height="2448"
-                    loading="lazy"
-                    src="/ebda2bcebcdffd3206e161df0b50d166fb1ea53832dcc76b628b890eebe2684f.webp"
-                    srcset="
-                      /ebda2bcebcdffd3206e161df0b50d166fb1ea53832dcc76b628b890eebe2684f--1000x750.webp 1000w,
-                      /ebda2bcebcdffd3206e161df0b50d166fb1ea53832dcc76b628b890eebe2684f--200x150.webp   200w,
-                      /ebda2bcebcdffd3206e161df0b50d166fb1ea53832dcc76b628b890eebe2684f--400x300.webp   400w,
-                      /ebda2bcebcdffd3206e161df0b50d166fb1ea53832dcc76b628b890eebe2684f--600x450.webp   600w,
-                      /ebda2bcebcdffd3206e161df0b50d166fb1ea53832dcc76b628b890eebe2684f--800x600.webp   800w
-                    "
-                    width="3264"
+                    src="https://raw.githubusercontent.com/ms-jpq/docker-time-machine/tim-apple/preview/dog.JPG"
                   />
                 </p>
               </article>
@@ -248,7 +232,7 @@
               </div>
               <div>
                 <i class="fas fa-user-edit text-left"></i>
-                <time datetime="2022-11-19T00:39:53+0000"></time>
+                <time datetime="2022-12-13T00:53:50+0000"></time>
               </div>
             </section>
           </div>

@@ -1,64 +1,58 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
-      content="Colour your text / terminal to be more gay. 🏳️‍🌈"
       name="description"
+      content="Colour your text / terminal to be more gay. 🏳️‍🌈"
     />
     <title>Creative Portfolio</title>
-    <link href="/pages_repo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/pages_repo.css" />
 
-    <script src="/layout.js" type="module"></script>
+    <script type="module" src="/layout.js"></script>
   </head>
 
   <body class="m-0 p-0 w-screen min-h-screen flex">
     <input
-      aria-hidden="true"
-      class="hidden"
-      id="layout-checkbox"
       type="checkbox"
+      id="layout-checkbox"
+      class="hidden"
+      aria-hidden="true"
     />
     <div
       class="w-full grow scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
     >
       <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
         <label
-          class="big-button font-medium inline-block sm:hidden"
           for="layout-checkbox"
+          class="big-button font-medium inline-block sm:hidden"
         >
           <i class="fas fa-bars"></i>
           Menu
         </label>
         <div class="prose text-right overflow-ellipsis">
           <h3 class="uppercase">
-            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+            <a href="/index.html" class="invis-link"> Creative Portfolio </a>
           </h3>
         </div>
       </header>
 
       <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-        <section class="grid justify-items-center" id="headshot">
+        <section id="headshot" class="grid justify-items-center">
           <img
             class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-            height="1164"
-            loading="lazy"
-            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-            srcset="
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-            "
-            width="1164"
+            src="face.png"
           />
         </section>
 
         <section id="about-me">
           <div class="markdown mx-2">
-            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
             <p>I also really like dogs.</p>
             <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
           </div>
@@ -127,7 +121,7 @@
             >
               <span class="github-stars">
                 <i class="fas fa-star"></i>
-                264
+                270
               </span>
 
               <span class="github-forks">
@@ -136,8 +130,8 @@
               </span>
 
               <a
-                class="big-button invis-link border-dashed"
                 href="https://github.com/ms-jpq/gay"
+                class="big-button invis-link border-dashed"
               >
                 View on Github
                 <i class="fab fa-github"></i>
@@ -163,64 +157,41 @@
                 <h2 id="show-me">Show me</h2>
                 <h3 id="text">Text</h3>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="nb">echo</span> <span class="s1">&#x27;message&#x27;</span> <span class="p">|</span> gay
+                  <pre><span></span><code><span class="nb">echo</span> <span class="s1">&#39;message&#39;</span> <span class="p">|</span> gay
 </code></pre>
                 </div>
 
                 <p>
                   <img
                     alt="help.png"
-                    height="364"
-                    loading="lazy"
-                    src="/03c6a3dfab511dd3ba1fe3d284a746b47318c9e3c3cbda7923981cd0057772d1.webp"
-                    srcset="
-                      /03c6a3dfab511dd3ba1fe3d284a746b47318c9e3c3cbda7923981cd0057772d1--200x106.webp 200w,
-                      /03c6a3dfab511dd3ba1fe3d284a746b47318c9e3c3cbda7923981cd0057772d1--400x212.webp 400w,
-                      /03c6a3dfab511dd3ba1fe3d284a746b47318c9e3c3cbda7923981cd0057772d1--600x318.webp 600w,
-                      /03c6a3dfab511dd3ba1fe3d284a746b47318c9e3c3cbda7923981cd0057772d1--686x364.webp 686w
-                    "
-                    width="686"
+                    src="https://raw.githubusercontent.com/ms-jpq/gay/%3C3/preview/help.png"
                   />
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >-i 1d, --interpolation 1d
+                  <pre><span></span><code>-i 1d, --interpolation 1d
 </code></pre>
                 </div>
 
                 <p>
                   <img
                     alt="1d.png"
-                    height="232"
-                    loading="lazy"
-                    src="/b38913a46b941d72e4f0003800b7a8d63acf3da75e2cd03dbe1bb7650fe0bec5.webp"
-                    srcset="
-                      /b38913a46b941d72e4f0003800b7a8d63acf3da75e2cd03dbe1bb7650fe0bec5--200x134.webp 200w,
-                      /b38913a46b941d72e4f0003800b7a8d63acf3da75e2cd03dbe1bb7650fe0bec5--345x232.webp 345w
-                    "
-                    width="345"
+                    src="https://raw.githubusercontent.com/ms-jpq/gay/%3C3/preview/1d.png"
                   />
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >-i 2d, --interpolation 2d
+                  <pre><span></span><code>-i 2d, --interpolation 2d
 </code></pre>
                 </div>
 
                 <p>
                   <img
                     alt="2d.png"
-                    height="227"
-                    loading="lazy"
-                    src="/684317a56b35288bdc3a3e0c1ab0199c1f1d6c101559112155ddafdfd992cdfe.webp"
-                    srcset="
-                      /684317a56b35288bdc3a3e0c1ab0199c1f1d6c101559112155ddafdfd992cdfe--200x131.webp 200w,
-                      /684317a56b35288bdc3a3e0c1ab0199c1f1d6c101559112155ddafdfd992cdfe--346x227.webp 346w
-                    "
-                    width="346"
+                    src="https://raw.githubusercontent.com/ms-jpq/gay/%3C3/preview/2d.png"
                   />
                 </p>
                 <h3 id="flag">Flag</h3>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code >gay --flag
+                  <pre><span></span><code>gay --flag
 </code></pre>
                 </div>
 
@@ -228,17 +199,7 @@
                 <p>
                   <img
                     alt="flags.gif"
-                    height="690"
-                    loading="lazy"
-                    src="/6f5896b33becb08af2ed696b71a8b2f40131d1d01b06012c5891067ec8fead41.webp"
-                    srcset="
-                      /6f5896b33becb08af2ed696b71a8b2f40131d1d01b06012c5891067ec8fead41--1000x595.webp 1000w,
-                      /6f5896b33becb08af2ed696b71a8b2f40131d1d01b06012c5891067ec8fead41--200x119.webp   200w,
-                      /6f5896b33becb08af2ed696b71a8b2f40131d1d01b06012c5891067ec8fead41--400x238.webp   400w,
-                      /6f5896b33becb08af2ed696b71a8b2f40131d1d01b06012c5891067ec8fead41--600x357.webp   600w,
-                      /6f5896b33becb08af2ed696b71a8b2f40131d1d01b06012c5891067ec8fead41--800x476.webp   800w
-                    "
-                    width="1160"
+                    src="https://raw.githubusercontent.com/ms-jpq/gay/%3C3/preview/flags.gif"
                   />
                 </p>
                 <h2 id="thank-yous">Thank yous</h2>
@@ -262,7 +223,7 @@
               </div>
               <div>
                 <i class="fas fa-user-edit text-left"></i>
-                <time datetime="2022-11-21T18:38:42+0000"></time>
+                <time datetime="2022-12-16T11:12:53+0000"></time>
               </div>
             </section>
           </div>

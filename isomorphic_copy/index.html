@@ -1,64 +1,58 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
-      content="Cross platform clipboard | networkless! remote copy"
       name="description"
+      content="Cross platform clipboard | networkless! remote copy"
     />
     <title>Creative Portfolio</title>
-    <link href="/pages_repo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/pages_repo.css" />
 
-    <script src="/layout.js" type="module"></script>
+    <script type="module" src="/layout.js"></script>
   </head>
 
   <body class="m-0 p-0 w-screen min-h-screen flex">
     <input
-      aria-hidden="true"
-      class="hidden"
-      id="layout-checkbox"
       type="checkbox"
+      id="layout-checkbox"
+      class="hidden"
+      aria-hidden="true"
     />
     <div
       class="w-full grow scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
     >
       <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
         <label
-          class="big-button font-medium inline-block sm:hidden"
           for="layout-checkbox"
+          class="big-button font-medium inline-block sm:hidden"
         >
           <i class="fas fa-bars"></i>
           Menu
         </label>
         <div class="prose text-right overflow-ellipsis">
           <h3 class="uppercase">
-            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+            <a href="/index.html" class="invis-link"> Creative Portfolio </a>
           </h3>
         </div>
       </header>
 
       <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-        <section class="grid justify-items-center" id="headshot">
+        <section id="headshot" class="grid justify-items-center">
           <img
             class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-            height="1164"
-            loading="lazy"
-            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-            srcset="
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-            "
-            width="1164"
+            src="face.png"
           />
         </section>
 
         <section id="about-me">
           <div class="markdown mx-2">
-            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
             <p>I also really like dogs.</p>
             <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
           </div>
@@ -127,7 +121,7 @@
             >
               <span class="github-stars">
                 <i class="fas fa-star"></i>
-                168
+                174
               </span>
 
               <span class="github-forks">
@@ -136,8 +130,8 @@
               </span>
 
               <a
-                class="big-button invis-link border-dashed"
                 href="https://github.com/ms-jpq/isomorphic_copy"
+                class="big-button invis-link border-dashed"
               >
                 View on Github
                 <i class="fab fa-github"></i>
@@ -169,15 +163,7 @@
                 <p>
                   <img
                     alt="clippy"
-                    height="315"
-                    loading="lazy"
-                    src="/5979cc80dddd1f6eb5ad0b3e5f512f2fcfd23010cd300eafe82a1103f8f13d7d.webp"
-                    srcset="
-                      /5979cc80dddd1f6eb5ad0b3e5f512f2fcfd23010cd300eafe82a1103f8f13d7d--200x133.webp 200w,
-                      /5979cc80dddd1f6eb5ad0b3e5f512f2fcfd23010cd300eafe82a1103f8f13d7d--400x266.webp 400w,
-                      /5979cc80dddd1f6eb5ad0b3e5f512f2fcfd23010cd300eafe82a1103f8f13d7d--474x315.webp 474w
-                    "
-                    width="474"
+                    src="https://raw.githubusercontent.com/ms-jpq/isomorphic-copy/master/preview/clippy.jpg"
                   />
                 </p>
                 <hr />
@@ -194,17 +180,7 @@
                 <p>
                   <img
                     alt="diagram"
-                    height="859"
-                    loading="lazy"
-                    src="/01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5.webp"
-                    srcset="
-                      /01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5--1000x825.webp 1000w,
-                      /01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5--200x165.webp   200w,
-                      /01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5--400x330.webp   400w,
-                      /01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5--600x495.webp   600w,
-                      /01ea9d7edf6cd26aefa6c7ee3671b7aeca1fe703982b1320882ee83da792aad5--800x660.webp   800w
-                    "
-                    width="1041"
+                    src="https://raw.githubusercontent.com/ms-jpq/isomorphic-copy/master/preview/diagram.png"
                   />
                 </p>
                 <hr />
@@ -214,9 +190,9 @@
                   <code>cdocker &lt;container-name&gt;</code>.
                 </p>
                 <p>
-                  No local daemon required. The remote “daemon” is just a
-                  subprocess of a subprocess. Zero cost when you are not using
-                  it.
+                  No local daemon required. The remote &ldquo;daemon&rdquo; is
+                  just a subprocess of a subprocess. Zero cost when you are not
+                  using it.
                 </p>
                 <hr />
                 <h2 id="how-to-use">How to use</h2>
@@ -235,12 +211,12 @@
                 <p>
                   <code
                     >export
-                    PATH=&quot;$XDG_CONFIG_HOME/isomorphic-copy/bin:$PATH&quot;</code
+                    PATH="$XDG_CONFIG_HOME/isomorphic-copy/bin:$PATH"</code
                   >
                   in your <code>bash/zshrc</code> file.
                 </p>
                 <p>You need to do this on both local and remote.</p>
-                <p>–</p>
+                <p>&ndash;</p>
                 <p>
                   <strong>Automatically</strong> most applications that use
                   <code>xclip</code>, <code>wl-clipboard</code>,
@@ -248,10 +224,10 @@
                   <code>isomorphic-copy</code> with zero setup.
                 </p>
                 <p>Works just like python <code>virtualenv</code>!</p>
-                <p>–</p>
+                <p>&ndash;</p>
                 <p>I added two <strong>convenience functions</strong>:</p>
                 <p>
-                  You don’t have to use these. Things like
+                  You don&rsquo;t have to use these. Things like
                   <code>pbcopy</code> and <code>pbpaste</code> will continue to
                   work.
                 </p>
@@ -263,7 +239,7 @@
                   <code>p &gt; my_message.txt</code> Use <code>p</code> to paste
                   from system clipboard
                 </p>
-                <p>–</p>
+                <p>&ndash;</p>
                 <p><strong>Connect to remote</strong> with one of</p>
                 <p><code>cssh &lt;ssh-args&gt;</code></p>
                 <p><code>cdocker &lt;docker container name&gt;</code></p>
@@ -276,7 +252,7 @@
                   <code>pbcopy</code>, <code>wl-copy</code> will propagate to
                   local system clipboard.
                 </p>
-                <p>–</p>
+                <p>&ndash;</p>
                 <p><strong>Local -&gt; SSH -&gt; Docker</strong></p>
                 <p>
                   If you want to copy from a <code>Docker</code> container on a
@@ -306,7 +282,7 @@
                 </p>
                 <p>Copying <em>FROM</em> tmux will require this snippet.</p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="nv">set</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">mouse</span> <span class="nv">on</span>
+                  <pre><span></span><code><span class="nv">set</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">mouse</span> <span class="nv">on</span>
 
 <span class="nv">bind</span> <span class="o">-</span><span class="nv">T</span> <span class="nv">copy</span><span class="o">-</span><span class="nv">mode</span> <span class="nv">MouseDragEnd1Pane</span> \
   <span class="k">send</span><span class="o">-</span><span class="nv">keys</span> <span class="o">-</span><span class="nv">X</span> <span class="nv">stop</span><span class="o">-</span><span class="nv">selection</span>
@@ -334,14 +310,14 @@
                   vims.
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="k">if</span> <span class="n">has</span><span class="p">(&#x27;</span><span class="n">nvim</span><span class="p">&#x27;)</span>
+                  <pre><span></span><code><span class="k">if</span> <span class="n">has</span><span class="p">(&#39;</span><span class="n">nvim</span><span class="p">&#39;)</span>
   <span class="s">&quot; use unnamedplus only! or else will double set</span>
   <span class="n">set</span> <span class="n">clipboard</span><span class="o">=</span><span class="n">unnamedplus</span>
-  <span class="k">if</span> <span class="n">getenv</span><span class="p">(&#x27;</span><span class="n">DISPLAY</span><span class="p">&#x27;)</span> <span class="o">==</span> <span class="nl">v:</span><span class="n">null</span>
-    <span class="n">exe</span> <span class="n">setenv</span><span class="p">(&#x27;</span><span class="n">DISPLAY</span><span class="p">&#x27;,</span> <span class="p">&#x27;</span><span class="n">FAKE</span><span class="p">&#x27;)</span>
+  <span class="k">if</span> <span class="n">getenv</span><span class="p">(&#39;</span><span class="n">DISPLAY</span><span class="p">&#39;)</span> <span class="o">==</span> <span class="nl">v:</span><span class="n">null</span>
+    <span class="n">exe</span> <span class="n">setenv</span><span class="p">(&#39;</span><span class="n">DISPLAY</span><span class="p">&#39;,</span> <span class="p">&#39;</span><span class="n">FAKE</span><span class="p">&#39;)</span>
   <span class="n">endif</span>
 <span class="k">else</span>
-  <span class="n">autocmd</span> <span class="n">TextYankPost</span> <span class="o">*</span> <span class="n">call</span> <span class="n">system</span><span class="p">(</span><span class="s">&quot;c&quot;</span><span class="p">,</span> <span class="n">getreg</span><span class="p">(</span><span class="sc">&#x27;&quot;&#x27;</span><span class="p">))</span>
+  <span class="n">autocmd</span> <span class="n">TextYankPost</span> <span class="o">*</span> <span class="n">call</span> <span class="n">system</span><span class="p">(</span><span class="s">&quot;c&quot;</span><span class="p">,</span> <span class="n">getreg</span><span class="p">(</span><span class="sc">&#39;&quot;&#39;</span><span class="p">))</span>
 <span class="n">endif</span>
 </code></pre>
                 </div>
@@ -374,7 +350,7 @@
               </div>
               <div>
                 <i class="fas fa-user-edit text-left"></i>
-                <time datetime="2022-11-25T15:49:25+0000"></time>
+                <time datetime="2022-12-20T04:05:19+0000"></time>
               </div>
             </section>
           </div>

@@ -1,61 +1,55 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Minimalist Classless Redux in Swift" name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Minimalist Classless Redux in Swift" />
     <title>Creative Portfolio</title>
-    <link href="/pages_repo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/pages_repo.css" />
 
-    <script src="/layout.js" type="module"></script>
+    <script type="module" src="/layout.js"></script>
   </head>
 
   <body class="m-0 p-0 w-screen min-h-screen flex">
     <input
-      aria-hidden="true"
-      class="hidden"
-      id="layout-checkbox"
       type="checkbox"
+      id="layout-checkbox"
+      class="hidden"
+      aria-hidden="true"
     />
     <div
       class="w-full grow scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
     >
       <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
         <label
-          class="big-button font-medium inline-block sm:hidden"
           for="layout-checkbox"
+          class="big-button font-medium inline-block sm:hidden"
         >
           <i class="fas fa-bars"></i>
           Menu
         </label>
         <div class="prose text-right overflow-ellipsis">
           <h3 class="uppercase">
-            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+            <a href="/index.html" class="invis-link"> Creative Portfolio </a>
           </h3>
         </div>
       </header>
 
       <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-        <section class="grid justify-items-center" id="headshot">
+        <section id="headshot" class="grid justify-items-center">
           <img
             class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-            height="1164"
-            loading="lazy"
-            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-            srcset="
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-            "
-            width="1164"
+            src="face.png"
           />
         </section>
 
         <section id="about-me">
           <div class="markdown mx-2">
-            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
             <p>I also really like dogs.</p>
             <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
           </div>
@@ -133,8 +127,8 @@
               </span>
 
               <a
-                class="big-button invis-link border-dashed"
                 href="https://github.com/ms-jpq/simple-reeducks"
+                class="big-button invis-link border-dashed"
               >
                 View on Github
                 <i class="fab fa-github"></i>
@@ -158,13 +152,13 @@
                       href="https://github.com/crymetothemoon/simple-reeducks/blob/master/core/simple-redux.swift"
                       >stupidly simple</a
                     ></em
-                  >: It uses 3 things – Functions, Closures, and Queues.
+                  >: It uses 3 things &ndash; Functions, Closures, and Queues.
                 </p>
-                <p>It’s also classless ☭☭☭</p>
+                <p>It&rsquo;s also classless ☭☭☭</p>
                 <h2 id="trivial-example">Trivial Example</h2>
                 <p>Run <code>./demo.sh</code>: contains the following code</p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="kd">struct</span> <span class="nc">State</span> <span class="p">{</span>
+                  <pre><span></span><code><span class="kd">struct</span> <span class="nc">State</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nv">counter</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">}</span>
 
 
@@ -245,8 +239,8 @@
                   <code>NSFetchedResultsController</code>.
                 </p>
                 <p>
-                  Honestly I’d say its probably not worth it until the more
-                  declarative
+                  Honestly I&rsquo;d say its probably not worth it until the
+                  more declarative
                   <a href="https://developer.apple.com/xcode/swiftui/"
                     >SwiftUI</a
                   >
@@ -254,8 +248,8 @@
                   <strong>Reeducks 🦆🦆</strong> another shot.
                 </p>
                 <p>
-                  Swift’s pattern match syntax also quite verbose compared to
-                  say <code>F#</code>, which has its own Unidirectional
+                  Swift&rsquo;s pattern match syntax also quite verbose compared
+                  to say <code>F#</code>, which has its own Unidirectional
                   framework, and can be used to build both iOS and MacOS apps.
                 </p>
               </article>

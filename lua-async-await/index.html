@@ -1,61 +1,55 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Async Await in 90 lines of code." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Async Await in 90 lines of code." />
     <title>Creative Portfolio</title>
-    <link href="/pages_repo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/pages_repo.css" />
 
-    <script src="/layout.js" type="module"></script>
+    <script type="module" src="/layout.js"></script>
   </head>
 
   <body class="m-0 p-0 w-screen min-h-screen flex">
     <input
-      aria-hidden="true"
-      class="hidden"
-      id="layout-checkbox"
       type="checkbox"
+      id="layout-checkbox"
+      class="hidden"
+      aria-hidden="true"
     />
     <div
       class="w-full grow scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
     >
       <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
         <label
-          class="big-button font-medium inline-block sm:hidden"
           for="layout-checkbox"
+          class="big-button font-medium inline-block sm:hidden"
         >
           <i class="fas fa-bars"></i>
           Menu
         </label>
         <div class="prose text-right overflow-ellipsis">
           <h3 class="uppercase">
-            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
+            <a href="/index.html" class="invis-link"> Creative Portfolio </a>
           </h3>
         </div>
       </header>
 
       <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
-        <section class="grid justify-items-center" id="headshot">
+        <section id="headshot" class="grid justify-items-center">
           <img
             class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
-            height="1164"
-            loading="lazy"
-            src="/e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d.webp"
-            srcset="
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--1000x1000.webp 1000w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--200x200.webp    200w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--400x400.webp    400w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--600x600.webp    600w,
-              /e107ea3b2f28b156c79a435e1b92e7ceab6c66669ce34fd5b2bd33172e91a23d--800x800.webp    800w
-            "
-            width="1164"
+            src="face.png"
           />
         </section>
 
         <section id="about-me">
           <div class="markdown mx-2">
-            <p>I dunno? I guess im pretty good at programming, and … tetris.</p>
+            <p>
+              I dunno? I guess im pretty good at programming, and &hellip;
+              tetris.
+            </p>
             <p>I also really like dogs.</p>
             <p>🐶🐕🦮🐩🐕‍🦺🐾 are really good frens.</p>
           </div>
@@ -124,7 +118,7 @@
             >
               <span class="github-stars">
                 <i class="fas fa-star"></i>
-                224
+                227
               </span>
 
               <span class="github-forks">
@@ -133,8 +127,8 @@
               </span>
 
               <a
-                class="big-button invis-link border-dashed"
                 href="https://github.com/ms-jpq/lua-async-await"
+                class="big-button invis-link border-dashed"
               >
                 View on Github
                 <i class="fab fa-github"></i>
@@ -198,7 +192,7 @@
                 <p>Our goal is avoid the dreaded calback hell.</p>
                 <h2 id="preview">Preview</h2>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;async&quot;</span>
+                  <pre><span></span><code><span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;async&quot;</span>
 
 <span class="kd">local</span> <span class="n">do_thing</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="n">sync</span><span class="p">(</span><span class="kr">function</span> <span class="p">(</span><span class="n">val</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">o</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="n">async_func</span><span class="p">())</span>
@@ -220,8 +214,8 @@
                   <a href="https://www.lua.org/pil/9.1.html">Coroutines</a>
                 </h2>
                 <p>
-                  If you don’t know how coroutines work, go read the section on
-                  generators on
+                  If you don&rsquo;t know how coroutines work, go read the
+                  section on generators on
                   <a
                     href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators"
                     >MDN</a
@@ -243,7 +237,7 @@
                   code.
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">co</span> <span class="o">=</span> <span class="n">coroutine</span>
+                  <pre><span></span><code><span class="kd">local</span> <span class="n">co</span> <span class="o">=</span> <span class="n">coroutine</span>
 
 <span class="kd">local</span> <span class="n">thread</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="kr">function</span> <span class="p">()</span>
   <span class="kd">local</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">yield</span><span class="p">(</span><span class="n">something</span><span class="p">)</span>
@@ -279,17 +273,17 @@
                 </p>
                 <p>Here is how you send values to a coroutine:</p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="n">co</span><span class="p">.</span><span class="n">resume</span><span class="p">(</span><span class="n">thread</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+                  <pre><span></span><code><span class="n">co</span><span class="p">.</span><span class="n">resume</span><span class="p">(</span><span class="n">thread</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 </code></pre>
                 </div>
 
                 <hr />
                 <p>
                   The idea is that we will repeat this until the coroutine has
-                  been “unrolled”
+                  been &ldquo;unrolled&rdquo;
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">pong</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">thread</span><span class="p">)</span>
+                  <pre><span></span><code><span class="kd">local</span> <span class="n">pong</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">thread</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">nxt</span> <span class="o">=</span> <span class="kc">nil</span>
   <span class="n">nxt</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">cont</span><span class="p">,</span> <span class="p">...)</span>
     <span class="kr">if</span> <span class="ow">not</span> <span class="n">cont</span>
@@ -308,7 +302,7 @@
                   recursively run the coroutine until completion
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">thread</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="kr">function</span> <span class="p">()</span>
+                  <pre><span></span><code><span class="kd">local</span> <span class="n">thread</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="kr">function</span> <span class="p">()</span>
   <span class="kd">local</span> <span class="n">x</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">yield</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">yield</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
@@ -346,7 +340,7 @@
                   <code>arg -&gt; (callback -&gt; void) -&gt; void</code>
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">read_fs</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">file</span><span class="p">)</span>
+                  <pre><span></span><code><span class="kd">local</span> <span class="n">read_fs</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">file</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">thunk</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">callback</span><span class="p">)</span>
     <span class="n">fs</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
   <span class="kr">end</span>
@@ -358,7 +352,7 @@
                 <hr />
                 <p>This too, is a process that can be automated:</p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">wrap</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">func</span><span class="p">)</span>
+                  <pre><span></span><code><span class="kd">local</span> <span class="n">wrap</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">func</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">factory</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(...)</span>
     <span class="kd">local</span> <span class="n">params</span> <span class="o">=</span> <span class="p">{...}</span>
     <span class="kd">local</span> <span class="n">thunk</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">step</span><span class="p">)</span>
@@ -391,7 +385,7 @@
                   coroutine.
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">pong</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+                  <pre><span></span><code><span class="kd">local</span> <span class="n">pong</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
   <span class="nb">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">func</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;function&quot;</span><span class="p">,</span> <span class="s2">&quot;type error :: expected func&quot;</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">thread</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">step</span> <span class="o">=</span> <span class="kc">nil</span>
@@ -416,7 +410,7 @@
                 <hr />
                 <p>We can see it in action here:</p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">echo</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(...)</span>
+                  <pre><span></span><code><span class="kd">local</span> <span class="n">echo</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(...)</span>
   <span class="kd">local</span> <span class="n">args</span> <span class="o">=</span> <span class="p">{...}</span>
   <span class="kd">local</span> <span class="n">thunk</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">step</span><span class="p">)</span>
     <span class="n">step</span><span class="p">(</span><span class="n">unpack</span><span class="p">(</span><span class="n">args</span><span class="p">))</span>
@@ -441,7 +435,7 @@
                 </p>
                 <p>
                   Note, we are using a synchronous <code>echo</code> for
-                  illustration purposes. It doesn’t matter when the
+                  illustration purposes. It doesn&rsquo;t matter when the
                   <code>callback</code> is invoked. The whole mechanism is
                   agnostic to timing.
                 </p>
@@ -457,7 +451,7 @@
                 </p>
                 <p>Such as joining together many thunks.</p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">join</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">thunks</span><span class="p">)</span>
+                  <pre><span></span><code><span class="kd">local</span> <span class="n">join</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">thunks</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">len</span> <span class="o">=</span> <span class="n">table</span><span class="p">.</span><span class="n">getn</span><span class="p">(</span><span class="n">thunks</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">done</span> <span class="o">=</span> <span class="mi">0</span>
   <span class="kd">local</span> <span class="n">acc</span> <span class="o">=</span> <span class="p">{}</span>
@@ -490,14 +484,14 @@
                 <p>
                   All this explicit handling of coroutines are abit ugly. The
                   good thing is that we can completely hide the implementation
-                  detail to the point where we don’t even need to require the
-                  <code>coroutine</code> namespace!
+                  detail to the point where we don&rsquo;t even need to require
+                  the <code>coroutine</code> namespace!
                 </p>
                 <p>
                   Simply wrap the coroutine interface with some friendly helpers
                 </p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">pong</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+                  <pre><span></span><code><span class="kd">local</span> <span class="n">pong</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
   <span class="kd">local</span> <span class="n">thread</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
   <span class="p">...</span>
 <span class="kr">end</span>
@@ -515,7 +509,7 @@
                 <h2 id="composable">Composable</h2>
                 <p>At this point we are almost there, just one more step!</p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">sync</span> <span class="o">=</span> <span class="n">wrap</span><span class="p">(</span><span class="n">pong</span><span class="p">)</span>
+                  <pre><span></span><code><span class="kd">local</span> <span class="n">sync</span> <span class="o">=</span> <span class="n">wrap</span><span class="p">(</span><span class="n">pong</span><span class="p">)</span>
 </code></pre>
                 </div>
 
@@ -525,7 +519,7 @@
                   This is how we can compose together our <code>async</code>
                   <code>await</code>.
                 </p>
-                <p>It’s thunks all the way down.</p>
+                <p>It&rsquo;s thunks all the way down.</p>
                 <h2 id="tips-and-tricks">Tips and Tricks</h2>
                 <p>
                   In Neovim, we have something called <code>textlock</code>,
@@ -539,14 +533,14 @@
                 </p>
                 <p>Here is how you break back to the main loop:</p>
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="kd">local</span> <span class="n">main_loop</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">f</span><span class="p">)</span>
+                  <pre><span></span><code><span class="kd">local</span> <span class="n">main_loop</span> <span class="o">=</span> <span class="kr">function</span> <span class="p">(</span><span class="n">f</span><span class="p">)</span>
   <span class="n">vim</span><span class="p">.</span><span class="n">schedule</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <span class="kr">end</span>
 </code></pre>
                 </div>
 
                 <div class="codehilite friendly">
-                  <pre><span ></span><code ><span class="n">a</span><span class="p">.</span><span class="n">sync</span><span class="p">(</span><span class="kr">function</span> <span class="p">()</span>
+                  <pre><span></span><code><span class="n">a</span><span class="p">.</span><span class="n">sync</span><span class="p">(</span><span class="kr">function</span> <span class="p">()</span>
   <span class="c1">-- do something in other loop</span>
   <span class="n">a</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="n">main_loop</span><span class="p">)</span>
   <span class="c1">-- you are back!</span>
@@ -560,10 +554,7 @@
                   install it the usual way.
                 </p>
                 <p>
-                  <code
-                    >Plug &#x27;ms-jpq/lua-async-await&#x27;,
-                    {&#x27;branch&#x27;: &#x27;neo&#x27;}</code
-                  >
+                  <code>Plug 'ms-jpq/lua-async-await', {'branch': 'neo'}</code>
                 </p>
                 <p>and then call the test functions like so:</p>
                 <p><code>:LuaAsyncExample</code></p>
@@ -582,7 +573,7 @@
               </div>
               <div>
                 <i class="fas fa-user-edit text-left"></i>
-                <time datetime="2022-11-20T13:49:49+0000"></time>
+                <time datetime="2022-12-17T01:49:16+0000"></time>
               </div>
             </section>
           </div>
