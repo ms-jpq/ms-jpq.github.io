@@ -11,7 +11,7 @@
     <script type="module" src="/layout.js"></script>
   </head>
 
-  <body class="m-0 p-0 w-screen min-h-screen flex">
+  <body class="m-0 flex min-h-screen w-screen p-0">
     <input
       type="checkbox"
       id="layout-checkbox"
@@ -19,27 +19,27 @@
       aria-hidden="true"
     />
     <div
-      class="w-full grow scroll-smooth grid gap-4 bg-gray-50 break-words text-secondary-800 selection:bg-tertiary-200"
+      class="grid w-full grow gap-4 scroll-smooth break-words bg-gray-50 text-secondary-800 selection:bg-tertiary-200"
     >
-      <header class="grid grid-flow-col justify-between gap-x-2 pt-4 px-8">
+      <header class="grid grid-flow-col justify-between gap-x-2 px-8 pt-4">
         <label
           for="layout-checkbox"
-          class="big-button font-medium inline-block sm:hidden"
+          class="big-button inline-block font-medium sm:hidden"
         >
           <i class="fas fa-bars"></i>
           Menu
         </label>
-        <div class="prose text-right overflow-ellipsis">
+        <div class="prose overflow-ellipsis text-right">
           <h3 class="uppercase">
             <a href="/index.html" class="invis-link"> Creative Portfolio </a>
           </h3>
         </div>
       </header>
 
-      <aside class="grid-flow-row grid-cols-1 gap-4 content-start px-8">
+      <aside class="grid-flow-row grid-cols-1 content-start gap-4 px-8">
         <section id="headshot" class="grid justify-items-center">
           <img
-            class="aspect-square object-cover rounded-full w-full h-full px-3 py-3"
+            class="aspect-square h-full w-full rounded-full object-cover px-3 py-3"
             src="https://raw.githubusercontent.com/ms-jpq/simple-markdown-showcase/show/assets/images/face.png"
           />
         </section>
@@ -88,21 +88,21 @@
 
         <section class="flex flex-wrap px-2">
           <a
-            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            class="m-1 flex items-center justify-center rounded-full border-2 border-solid border-secondary-500 p-2 text-center text-secondary-500 no-underline hover:border-primary-400 hover:text-primary-400"
             href="mailto:github@bigly.dog"
           >
             <i class="far fa-envelope"></i>
           </a>
 
           <a
-            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            class="m-1 flex items-center justify-center rounded-full border-2 border-solid border-secondary-500 p-2 text-center text-secondary-500 no-underline hover:border-primary-400 hover:text-primary-400"
             href="https://github.com/ms-jpq"
           >
             <i class="fab fa-github"></i>
           </a>
 
           <a
-            class="border-solid border-2 border-secondary-500 rounded-full flex items-center justify-center p-2 m-1 no-underline text-center text-secondary-500 hover:text-primary-400 hover:border-primary-400"
+            class="m-1 flex items-center justify-center rounded-full border-2 border-solid border-secondary-500 p-2 text-center text-secondary-500 no-underline hover:border-primary-400 hover:text-primary-400"
             href="https://stackexchange.com/users/15744711"
           >
             <i class="fab fa-stack-overflow"></i>
@@ -114,7 +114,7 @@
         <main class="grid grid-flow-row grid-cols-1 justify-items-center">
           <div class="grid grid-flow-row grid-cols-1 gap-y-8">
             <section
-              class="grid grid-flow-col justify-end items-center gap-x-4"
+              class="grid grid-flow-col items-center justify-end gap-x-4"
             >
               <span class="github-stars">
                 <i class="fas fa-star"></i>
@@ -240,7 +240,7 @@
             </section>
 
             <section
-              class="grid grid-flow-col justify-end items-center gap-x-4"
+              class="grid grid-flow-col items-center justify-end gap-x-4"
             >
               <div>
                 <i class="fas fa-baby text-left"></i>
@@ -255,7 +255,7 @@
         </main>
       </div>
 
-      <footer class="grid justify-items-center items-center">
+      <footer class="grid items-center justify-items-center">
         <div class="markdown">
           <a href="https://github.com/ms-jpq">
             <span>©</span>
