@@ -16,9 +16,9 @@
 
   <body class="m-0 flex min-h-screen w-screen p-0">
     <input
-      type="checkbox"
-      id="layout-checkbox"
       class="hidden"
+      id="layout-checkbox"
+      type="checkbox"
       aria-hidden="true"
     />
     <div
@@ -26,21 +26,21 @@
     >
       <header class="grid grid-flow-col justify-between gap-x-2 px-8 pt-4">
         <label
-          for="layout-checkbox"
           class="big-button inline-block font-medium sm:hidden"
+          for="layout-checkbox"
         >
           <i class="fas fa-bars"></i>
           Menu
         </label>
         <div class="prose overflow-ellipsis text-right">
           <h3 class="uppercase">
-            <a href="/index.html" class="invis-link"> Creative Portfolio </a>
+            <a class="invis-link" href="/index.html"> Creative Portfolio </a>
           </h3>
         </div>
       </header>
 
       <aside class="grid-flow-row grid-cols-1 content-start gap-4 px-8">
-        <section id="headshot" class="grid justify-items-center">
+        <section class="grid justify-items-center" id="headshot">
           <img
             class="aspect-square h-full w-full rounded-full object-cover px-3 py-3"
             src="https://raw.githubusercontent.com/ms-jpq/simple-markdown-showcase/show/assets/images/face.png"
@@ -130,8 +130,8 @@
               </span>
 
               <a
-                href="https://github.com/ms-jpq/cda"
                 class="big-button invis-link border-dashed"
+                href="https://github.com/ms-jpq/cda"
               >
                 View on Github
                 <i class="fab fa-github"></i>
