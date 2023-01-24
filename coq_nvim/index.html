@@ -22,7 +22,7 @@
       aria-hidden="true"
     />
     <div
-      class="grid w-full grow gap-4 scroll-smooth break-words bg-gray-50 text-secondary-800 selection:bg-tertiary-200"
+      class="group/layout grid w-full grow gap-4 scroll-smooth break-words bg-gray-50 text-secondary-800 selection:bg-tertiary-200"
     >
       <header class="grid grid-flow-col justify-between gap-x-2 px-8 pt-4">
         <label
@@ -39,7 +39,9 @@
         </div>
       </header>
 
-      <aside class="grid-flow-row grid-cols-1 content-start gap-4 px-8">
+      <aside
+        class="hidden grid-flow-row grid-cols-1 content-start gap-4 px-8 group-[input:checked+_&]/layout:grid sm:grid"
+      >
         <section class="grid justify-items-center" id="headshot">
           <img
             class="aspect-square h-full w-full rounded-full object-cover px-3 py-3"
@@ -113,7 +115,9 @@
         </section>
       </aside>
 
-      <div class="w-full px-8">
+      <div
+        class="w-full bg-secondary-100 px-8 pt-2 group-[input:checked+_&]/layout:hidden sm:!block sm:pt-8"
+      >
         <main class="grid grid-flow-row grid-cols-1 justify-items-center">
           <div class="grid grid-flow-row grid-cols-1 gap-y-8">
             <section
@@ -121,12 +125,12 @@
             >
               <span class="github-stars">
                 <i class="fas fa-star"></i>
-                2851
+                2857
               </span>
 
               <span class="github-forks">
                 <i class="fas fa-code-branch"></i>
-                85
+                86
               </span>
 
               <a
@@ -1165,7 +1169,7 @@ Plug &#39;ms-jpq/coq.thirdparty&#39;, {&#39;branch&#39;: &#39;3p&#39;}
               </div>
               <div>
                 <i class="fas fa-user-edit text-left"></i>
-                <time datetime="2023-01-21T19:05:29+0000"></time>
+                <time datetime="2023-01-24T06:12:32+0000"></time>
               </div>
             </section>
           </div>
